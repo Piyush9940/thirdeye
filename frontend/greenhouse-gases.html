@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atmospheric Methane (CH₄) Analysis — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Earth Explorer</a></li>
+        <li class="nav-item"><a href="dataset-explorer.html" class="nav-link"><i class="fa-solid fa-database"></i> Datasets</a></li>
+        <li class="nav-item nav-dropdown">
+          <a href="#" class="nav-link active"><i class="fa-solid fa-flask"></i> Analysis <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="greenhouse-gases.html"><i class="fa-solid fa-smog"></i> Methane (CH₄)</a></li>
+            <li class="nav-dropdown-item"><a href="climate-analysis.html"><i class="fa-solid fa-cloud-sun"></i> Climate Context</a></li>
+            <li class="nav-dropdown-item"><a href="hotspot-detection.html"><i class="fa-solid fa-fire"></i> Hotspot Patterns</a></li>
+            <li class="nav-dropdown-item"><a href="trend-analysis.html"><i class="fa-solid fa-arrow-trend-up"></i> Temporal Trends</a></li>
+            <li class="nav-dropdown-item"><a href="ocean-analysis.html"><i class="fa-solid fa-water"></i> Marine Context</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="forecasting.html" class="nav-link"><i class="fa-solid fa-brain"></i> ML & Forecast</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="reports.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Reports</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">
+    <div class="page-header">
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <span class="badge-scientific badge-satellite">Sentinel-5P TROPOMI</span>
+        <span class="badge-scientific badge-verified">SWIR Band 7 (2305–2385 nm)</span>
+      </div>
+      <h1 class="page-title"><i class="fa-solid fa-smog" style="color: var(--cyan-primary);"></i> Atmospheric Methane (CH₄) In-Depth Analysis</h1>
+      <p class="page-description">
+        Comprehensive scientific exploration of column-averaged methane abundance ($X\text{CH}_4$) across India. Incorporating quality-assurance filtering, geographical variance, and temporal evolution across four snapshot periods.
+      </p>
+    </div>
+
+    <!-- Scientific Warning -->
+    <div class="scientific-warning-callout">
+      <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <div class="content">
+        <strong>Atmospheric Concentration vs. Surface Emissions</strong>
+        Satellite-derived $X\text{CH}_4$ measurements represent the total vertical column of methane molecules above a given surface area. They do NOT identify specific emission points, illegal releases, or industrial facility discharges without inverse atmospheric transport modeling.
+      </div>
+    </div>
+
+    <!-- Methane Statistics Grid -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-header"><span class="kpi-label">Observed Mean</span><i class="fa-solid fa-chart-column kpi-icon"></i></div>
+        <div class="kpi-value" style="color: var(--cyan-primary);">1903.0 ppb</div>
+        <div class="kpi-context">Subcontinent overall mean across all periods</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-header"><span class="kpi-label">Minimum Sounding</span><i class="fa-solid fa-arrow-down kpi-icon"></i></div>
+        <div class="kpi-value" style="color: var(--earth-green);">1788.8 ppb</div>
+        <div class="kpi-context">Observed in May 2019 (Node 17_11)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-header"><span class="kpi-label">Maximum Sounding</span><i class="fa-solid fa-arrow-up kpi-icon"></i></div>
+        <div class="kpi-value" style="color: var(--danger-crimson);">2021.8 ppb</div>
+        <div class="kpi-context">Observed in Nov 2023 (Node 11_4)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-header"><span class="kpi-label">Standard Deviation</span><i class="fa-solid fa-wave-square kpi-icon"></i></div>
+        <div class="kpi-value">43.5 ppb</div>
+        <div class="kpi-context">Subcontinent dispersion metric</div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="grid-2col" style="margin-bottom: 2.5rem;">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">Methane Evolution Across Observation Snapshots</div>
+            <div class="chart-desc">Box & whisker distribution for each available observation month</div>
+          </div>
+          <span class="metric-pill">4 Snapshots</span>
+        </div>
+        <div id="chartMethaneTemporalBox" class="chart-container"></div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">Zonal Concentration Gradient</div>
+            <div class="chart-desc">Mean concentration by latitude band (South to North)</div>
+          </div>
+          <span class="metric-pill">Latitude Gradient</span>
+        </div>
+        <div id="chartLatitudinalGradient" class="chart-container"></div>
+      </div>
+    </div>
+
+    <!-- Future Extensibility Section -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem;">
+      <div class="nasa-card-header">
+        <span class="nasa-card-title"><i class="fa-solid fa-diagram-project" style="color: var(--cyan-primary);"></i> Multi-Greenhouse Gas Framework Extensibility</span>
+        <span class="badge-scientific badge-experimental">Roadmap</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+        While this verified release focuses strictly on atmospheric methane ($\text{CH}_4$) from Sentinel-5P, the data pipeline is architected to ingest future validated greenhouse gases and aerosol optical products without altering downstream analytics:
+      </p>
+
+      <div class="grid-3col">
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <strong style="color: #ffffff;">Carbon Dioxide (CO₂)</strong>
+            <span class="badge-scientific badge-missing">Planned</span>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--text-muted);">
+            Targeted sensor: NASA OCO-2 & OCO-3 Lite files. Catalogued during exploratory phase; pending regional spatial co-registration.
+          </p>
+        </div>
+
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <strong style="color: #ffffff;">Nitrous Oxide (N₂O)</strong>
+            <span class="badge-scientific badge-missing">Planned</span>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--text-muted);">
+            Agricultural and biogeochemical forcer. Dependent on high-resolution reanalysis from Copernicus CAMS models.
+          </p>
+        </div>
+
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <strong style="color: #ffffff;">Aerosol Optical Depth (AOD)</strong>
+            <span class="badge-scientific badge-missing">Evaluating</span>
+          </div>
+          <p style="font-size: 0.78rem; color: var(--text-muted);">
+            MODIS MCD19A2 AOD data for solar scattering corrections and atmospheric aerosol context.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Scientific exploration of atmospheric methane dynamics over India.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Tools</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="dataset-explorer.html">Datasets</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Analysis</div>
+        <ul class="footer-links">
+          <li><a href="greenhouse-gases.html">Methane Analysis</a></li>
+          <li><a href="climate-analysis.html">Climate Context</a></li>
+          <li><a href="hotspot-detection.html">Hotspot Detection</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Attribution</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P</li>
+          <li>NASA Space Apps 2026</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Verified Data Stream</div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await API.getMethaneObservations({ limit: 10000 });
+        const obs = res.records || [];
+
+        // 1. Box plot across 4 periods
+        const periods = ['2019-05', '2021-02', '2021-08', '2023-11'];
+        const traces = periods.map(p => ({
+          y: obs.filter(o => o.observation_period === p).map(o => o.methane_median_ppb),
+          type: 'box',
+          name: p,
+          boxpoints: 'all',
+          jitter: 0.3,
+          pointpos: -1.8,
+          marker: { size: 4 }
+        }));
+
+        Plotly.newPlot('chartMethaneTemporalBox', traces, {
+          paper_bgcolor: 'transparent',
+          plot_bgcolor: 'transparent',
+          font: { family: 'Inter, sans-serif', color: '#94a3b8', size: 11 },
+          margin: { t: 25, r: 25, b: 45, l: 55 },
+          yaxis: { title: 'CH₄ Median (ppb)', gridcolor: 'rgba(255,255,255,0.06)' },
+          xaxis: { gridcolor: 'rgba(255,255,255,0.06)' },
+          showlegend: false
+        }, { responsive: true, displayModeBar: false });
+
+        // 2. Latitudinal Gradient (mean CH4 by latitude)
+        const latGroups = {};
+        obs.forEach(o => {
+          const lat = o.latitude;
+          latGroups[lat] = latGroups[lat] || [];
+          latGroups[lat].push(o.methane_median_ppb);
+        });
+
+        const sortedLats = Object.keys(latGroups).map(Number).sort((a, b) => a - b);
+        const meanByLat = sortedLats.map(l => (latGroups[l].reduce((a, b) => a + b, 0) / latGroups[l].length).toFixed(1));
+
+        Plotly.newPlot('chartLatitudinalGradient', [{
+          x: sortedLats,
+          y: meanByLat,
+          type: 'scatter',
+          mode: 'lines+markers',
+          line: { color: '#00d2ff', width: 2.5 },
+          marker: { color: '#38bdf8', size: 7 },
+          hovertemplate: 'Latitude: %{x}°N<br>Mean CH₄: %{y} ppb<extra></extra>'
+        }], {
+          paper_bgcolor: 'transparent',
+          plot_bgcolor: 'transparent',
+          font: { family: 'Inter, sans-serif', color: '#94a3b8', size: 11 },
+          margin: { t: 25, r: 25, b: 45, l: 55 },
+          xaxis: { title: 'Latitude (°N)', gridcolor: 'rgba(255,255,255,0.06)' },
+          yaxis: { title: 'Mean CH₄ (ppb)', gridcolor: 'rgba(255,255,255,0.06)' }
+        }, { responsive: true, displayModeBar: false });
+
+      } catch (err) {
+        console.error('Methane analysis chart error:', err);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{
+    "experiment_name": "corrected_chronological_three_way_feature_ablation",
+    "feature_groups": {
+        "Climate_only": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "Month_only": [
+            6,
+            7
+        ],
+        "Climate_plus_month": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7
+        ]
+    },
+    "folds": {
+        "1": {
+            "train_periods": [
+                "201905"
+            ],
+            "evaluation": "202102"
+        },
+        "2": {
+            "train_periods": [
+                "201905",
+                "202102"
+            ],
+            "evaluation": "202108"
+        },
+        "3": {
+            "train_periods": [
+                "201905",
+                "202102",
+                "202108"
+            ],
+            "evaluation": "202311"
+        }
+    },
+    "seeds": [
+        7,
+        21,
+        42,
+        77,
+        123
+    ],
+    "architecture": {
+        "type": "MLP",
+        "hidden_units": 32,
+        "activation": "ReLU",
+        "dropout": 0.2,
+        "output_units": 1
+    },
+    "training": {
+        "epochs": 250,
+        "optimizer": "Adam",
+        "loss": "MSELoss",
+        "batch_strategy": "full_batch",
+        "learning_rate": 0.01,
+        "weight_decay": 0.0001
+    },
+    "preprocessing": {
+        "climate": "existing training-fold-only standardized features",
+        "month": "existing unscaled sine and cosine features",
+        "target": "existing training-label-only standardization",
+        "excluded_features": [
+            "latitude",
+            "longitude"
+        ]
+    },
+    "evaluation": "held-out chronological period",
+    "aggregation": "equal-weight average of three fold-level metrics",
+    "note": "Optimizer, loss, and full-batch strategy are explicitly selected for this reconstruction; the original MLP training implementation was not recovered."
+}

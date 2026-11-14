@@ -1,0 +1,20 @@
+{
+  "dataset": "Sentinel-5P TROPOMI CH4",
+  "spatial_scope": "India ADM0 polygon",
+  "qa_threshold": "> 0.5",
+  "pixel_count": 749,
+  "unique_scanlines": 54,
+  "unique_timestamps": 54,
+  "scanlines_with_one_timestamp": 54,
+  "scanlines_with_multiple_timestamps": 0,
+  "timestamps_with_one_scanline": 54,
+  "timestamps_with_multiple_scanlines": 0,
+  "maximum_pixels_per_scanline": 35,
+  "duplicate_scanline_pixel_pairs": 0,
+  "median_scanline_interval_seconds": 0.84,
+  "minimum_scanline_interval_seconds": 0.839,
+  "maximum_scanline_interval_seconds": 2.52,
+  "outputs": {
+    "scanline_summary_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_scanline_summary.csv"
+  }
+}

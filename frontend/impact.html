@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environmental Impact — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link active"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="content-wrapper" style="padding-top: 3.5rem; padding-bottom: 1.5rem; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <span class="badge-scientific badge-satellite" style="margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-earth-americas"></i> Environmental Relevance
+      </span>
+      <h1 style="font-size: 2.85rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">
+        FROM SATELLITE OBSERVATIONS TO ENVIRONMENTAL UNDERSTANDING
+      </h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+        Demonstrating how open Earth observation data, surface meteorology, and interactive web tools can bridge the gap between space science and public climate literacy.
+      </p>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Mandatory Prototype Disclaimer -->
+    <div class="scientific-warning-callout" style="margin-bottom: 3rem;">
+      <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+      <div class="content">
+        <strong>Distinguishing Demonstrated Capabilities from Potential Future Impact</strong><br>
+        This prototype demonstrates interactive data synthesis, quality filtering, and transparent exploration for research and education. It does <em>not</em> directly reduce emissions, detect illegal activity, or enforce environmental policy.
+      </div>
+    </div>
+
+    <!-- 5 Pillars of Potential Impact -->
+    <div class="grid-2col" style="margin-bottom: 3.5rem;">
+      <!-- Pillar 1 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-flask" style="color: var(--cyan-primary);"></i> 1. Environmental Research</span>
+          <span class="badge-scientific badge-verified">Exploration Tool</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          Helping environmental scientists and atmospheric researchers explore geographical patterns in atmospheric methane across multiple seasons without having to write custom NetCDF ingest pipelines from scratch.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> Ready-to-query 2° regular spatial lattice</li>
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> Direct correlation with collocated NASA POWER weather parameters</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-bullhorn" style="color: var(--earth-green);"></i> 2. Climate Awareness</span>
+          <span class="badge-scientific badge-satellite">Public Literacy</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          Translating complex satellite soundings and ppb (parts per billion) measurements into intuitive visual representations that ordinary citizens, teachers, and journalists can readily comprehend.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> Clear distinction between concentration and emissions</li>
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> Elimination of misleading "zero concentration" artifacts</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-graduation-cap" style="color: var(--warning-amber);"></i> 3. Interactive Education</span>
+          <span class="badge-scientific badge-warning">Classroom Ready</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          Providing students with a hands-on laboratory to explore how remote-sensing satellites like Sentinel-5P function, why clouds obscure optical soundings, and how seasonal cycles alter gas dispersion.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> Interactive 3D Earth and Leaflet geospatial map</li>
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> AI Research Assistant to explain scientific terms in plain English</li>
+        </ul>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-layer-group" style="color: var(--blue-accent);"></i> 4. Environmental Monitoring</span>
+          <span class="badge-scientific badge-verified">Multi-sensor Fusion</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          Demonstrating a reproducible architectural pattern for combining multi-agency Earth observation streams (Copernicus Sentinel-5P + NASA POWER surface meteorology) into unified spatial graphs.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.4rem;">
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> Standardized spatial schema across diverse coordinate systems</li>
+          <li><i class="fa-solid fa-check" style="color: var(--earth-green);"></i> Scalable backend API architecture for real-time querying</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pillar 5: Foundation for Future Research -->
+    <div class="nasa-card" style="margin-bottom: 3.5rem;">
+      <h3 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">
+        <i class="fa-solid fa-rocket" style="color: var(--cyan-primary);"></i> 5. A Foundation for Future Research
+      </h3>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+        This prototype represents an initial proof-of-concept for atmospheric methane exploration. The architectural framework is designed to grow into an expansive multi-gas Earth systems monitoring platform:
+      </p>
+
+      <div class="grid-3col">
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+          <h4 style="font-size: 0.95rem; color: #fff; margin-bottom: 0.5rem;"><i class="fa-solid fa-calendar-plus" style="color: var(--cyan-primary);"></i> Continuous Time Series</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            Expanding beyond 4 discrete snapshot months into an unbroken multi-year monthly archive covering all of South Asia.
+          </p>
+        </div>
+
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+          <h4 style="font-size: 0.95rem; color: #fff; margin-bottom: 0.5rem;"><i class="fa-solid fa-up-right-and-down-left-from-center" style="color: var(--earth-green);"></i> Higher Spatial Resolution</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            Transitioning from a 2° regional grid (~220 km) to sub-degree grids collocated with land-use and wetland inventories.
+          </p>
+        </div>
+
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+          <h4 style="font-size: 0.95rem; color: #fff; margin-bottom: 0.5rem;"><i class="fa-solid fa-wind" style="color: var(--warning-amber);"></i> Atmospheric Inverse Modeling</h4>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0;">
+            Coupling column abundance observations with Lagrangian particle dispersion models (FLEXPART) to estimate surface fluxes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demonstrated vs Future Table -->
+    <div class="nasa-card" style="margin-bottom: 3.5rem;">
+      <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem;">
+        <i class="fa-solid fa-code-compare" style="color: var(--cyan-primary);"></i> Demonstrated Today vs. Future Roadmap
+      </h3>
+
+      <div class="table-responsive">
+        <table class="nasa-table">
+          <thead>
+            <tr>
+              <th style="width: 50%; color: var(--earth-green);"><i class="fa-solid fa-circle-check"></i> Already Demonstrated</th>
+              <th style="width: 50%; color: var(--cyan-primary);"><i class="fa-solid fa-hourglass-half"></i> Future Research Roadmap</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>73,045 quality-filtered Sentinel-5P satellite soundings.</td>
+              <td>Integration of daily operational Level-2 stream via automated pipelines.</td>
+            </tr>
+            <tr>
+              <td>255-node spatial lattice and six-region geographic partition.</td>
+              <td>Sub-degree multi-scale nested grid with local topographic elevation.</td>
+            </tr>
+            <tr>
+              <td>Interactive 3D Earth and Leaflet India environmental map.</td>
+              <td>Integration of microwave sounders to penetrate monsoon cloud decks.</td>
+            </tr>
+            <tr>
+              <td>Honest chronological ML evaluation showing GCN vs MLP limits.</td>
+              <td>Physics-informed neural networks (PINNs) incorporating mass conservation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Navigation Footer -->
+    <div class="nasa-card" style="text-align: center; padding: 3rem 2rem;">
+      <h3 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">
+        Ready to Explore the Platform?
+      </h3>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem;">
+        Dive into the interactive map, read our scientific methodology, or download the verified data exports.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="earth-explorer.html" class="btn-nasa btn-nasa-primary">Launch Earth Explorer</a>
+        <a href="methodology.html" class="btn-nasa btn-nasa-outline">Scientific Methodology</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>
+          Transforming satellite Earth observations and climate datasets into an accessible, interactive environmental exploration platform that helps ordinary people understand atmospheric methane patterns across India.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="earth-explorer.html">Explore Earth</a></li>
+          <li><a href="why-methane.html">Why Methane?</a></li>
+          <li><a href="findings.html">Our Findings</a></li>
+          <li><a href="dashboard.html">India Explorer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Science & Data</div>
+        <ul class="footer-links">
+          <li><a href="impact.html">Environmental Impact</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="data-research.html">Data Downloads</a></li>
+          <li><a href="advanced-research.html">ML Lab (Experimental)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team. Built for the NASA Space Apps Challenge.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">
+        Status: Experimental Reference Model • Open Environmental Science
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

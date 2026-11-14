@@ -1,0 +1,240 @@
+{
+  "collection_id": "C2912085112-GES_DISC",
+  "temporal_range": "2024-01-01T00:00:00Z,2024-12-31T23:59:59Z",
+  "india_bbox": "68,6,98,38",
+  "without_bbox": {
+    "cmr_hits": "367",
+    "entries_returned": 367
+  },
+  "with_india_bbox": {
+    "cmr_hits": "367",
+    "entries_returned": 367
+  },
+  "same_hit_count": true,
+  "spatial_metadata_distribution": {
+    "[\"-90 -180 90 180\"]": 367
+  },
+  "sample_spatial_records": [
+    {
+      "id": "G3265612595-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_231231_B11210Ar_240919184624s.nc4",
+      "time_start": "2023-12-31T00:00:00.000Z",
+      "time_end": "2024-01-01T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612634-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+      "time_start": "2024-01-01T00:00:00.000Z",
+      "time_end": "2024-01-02T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612617-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240102_B11210Ar_240919185948s.nc4",
+      "time_start": "2024-01-02T00:00:00.000Z",
+      "time_end": "2024-01-03T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612627-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240103_B11210Ar_240919190052s.nc4",
+      "time_start": "2024-01-03T00:00:00.000Z",
+      "time_end": "2024-01-04T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612734-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240104_B11210Ar_240919190109s.nc4",
+      "time_start": "2024-01-04T00:00:00.000Z",
+      "time_end": "2024-01-05T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612636-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240105_B11210Ar_240919190219s.nc4",
+      "time_start": "2024-01-05T00:00:00.000Z",
+      "time_end": "2024-01-06T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612749-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240106_B11210Ar_240919190231s.nc4",
+      "time_start": "2024-01-06T00:00:00.000Z",
+      "time_end": "2024-01-07T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612847-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240107_B11210Ar_240919190329s.nc4",
+      "time_start": "2024-01-07T00:00:00.000Z",
+      "time_end": "2024-01-08T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612769-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240108_B11210Ar_240919190351s.nc4",
+      "time_start": "2024-01-08T00:00:00.000Z",
+      "time_end": "2024-01-09T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612838-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240109_B11210Ar_240919190449s.nc4",
+      "time_start": "2024-01-09T00:00:00.000Z",
+      "time_end": "2024-01-10T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612848-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240110_B11210Ar_240919190511s.nc4",
+      "time_start": "2024-01-10T00:00:00.000Z",
+      "time_end": "2024-01-11T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265612855-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240111_B11210Ar_240919190610s.nc4",
+      "time_start": "2024-01-11T00:00:00.000Z",
+      "time_end": "2024-01-12T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613186-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240112_B11210Ar_240919190636s.nc4",
+      "time_start": "2024-01-12T00:00:00.000Z",
+      "time_end": "2024-01-13T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613188-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240113_B11210Ar_240919190727s.nc4",
+      "time_start": "2024-01-13T00:00:00.000Z",
+      "time_end": "2024-01-14T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613194-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240114_B11210Ar_240919190755s.nc4",
+      "time_start": "2024-01-14T00:00:00.000Z",
+      "time_end": "2024-01-15T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613171-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240115_B11210Ar_240919190847s.nc4",
+      "time_start": "2024-01-15T00:00:00.000Z",
+      "time_end": "2024-01-16T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613175-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240116_B11210Ar_240919190913s.nc4",
+      "time_start": "2024-01-16T00:00:00.000Z",
+      "time_end": "2024-01-17T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613172-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240117_B11210Ar_240919190956s.nc4",
+      "time_start": "2024-01-17T00:00:00.000Z",
+      "time_end": "2024-01-18T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613158-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240118_B11210Ar_240919191026s.nc4",
+      "time_start": "2024-01-18T00:00:00.000Z",
+      "time_end": "2024-01-19T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    },
+    {
+      "id": "G3265613190-GES_DISC",
+      "title": "OCO2_L2_Lite_FP.11.2r:oco2_LtCO2_240119_B11210Ar_240919191117s.nc4",
+      "time_start": "2024-01-19T00:00:00.000Z",
+      "time_end": "2024-01-20T00:00:00.000Z",
+      "boxes": [
+        "-90 -180 90 180"
+      ],
+      "polygons": null,
+      "orbit_number": null
+    }
+  ],
+  "interpretation": "Granule-level CMR spatial metadata may be global and may not represent the actual sounding-level orbital coverage."
+}

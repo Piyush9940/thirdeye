@@ -1,0 +1,25 @@
+{
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "mean": [
+        19.036497116088867,
+        3.1835427284240723,
+        63.72987365722656,
+        3.985625743865967
+    ],
+    "std": [
+        13.484525680541992,
+        4.811038017272949,
+        19.049213409423828,
+        1.6679474115371704
+    ],
+    "normalization": "z-score",
+    "statistics_fit_on": "training data only",
+    "training_months": 84,
+    "validation_months": 24,
+    "testing_months": 12
+}

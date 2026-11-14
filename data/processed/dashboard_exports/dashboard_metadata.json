@@ -1,0 +1,81 @@
+{
+  "project": "NASA Earth Systems Trend Detective",
+  "model_name": "Original MLP Reference Model",
+  "model_type": "MLP",
+  "model_status": "Experimental reference model",
+  "target": {
+    "name": "Methane median concentration",
+    "unit": "ppb"
+  },
+  "coverage": {
+    "spatial_grid_nodes": 255,
+    "observed_nodes": 98,
+    "observation_records": 226,
+    "observation_periods": [
+      "2019-05",
+      "2021-02",
+      "2021-08",
+      "2023-11"
+    ],
+    "evaluation_prediction_rows": 720,
+    "folds": [
+      1,
+      2,
+      3
+    ],
+    "seeds": [
+      7,
+      21,
+      42,
+      77,
+      123
+    ]
+  },
+  "fold_period_mapping": {
+    "1": {
+      "year": 2021,
+      "month": 2,
+      "period": "2021-02"
+    },
+    "2": {
+      "year": 2021,
+      "month": 8,
+      "period": "2021-08"
+    },
+    "3": {
+      "year": 2023,
+      "month": 11,
+      "period": "2023-11"
+    }
+  },
+  "prediction_semantics": {
+    "error_definition": "predicted_methane_ppb - actual_methane_ppb",
+    "absolute_error_definition": "absolute value of error_ppb",
+    "prediction_scope": "Chronological evaluation predictions only",
+    "not_a_future_live_forecast": true
+  },
+  "scientific_warnings": [
+    "Only four methane observation periods are available.",
+    "The dataset is a sparse pilot, not continuous national coverage.",
+    "Some grid nodes have no methane observations.",
+    "The August 2021 evaluation period contains only 11 nodes.",
+    "The model has weak predictive performance and negative R2 in prior evaluation.",
+    "No demonstrated GNN advantage has been established.",
+    "The November 2023 period influenced model selection and is not an independent final holdout.",
+    "Predictions must not be presented as validated operational forecasts.",
+    "Climate variables are contextual features and do not establish causation."
+  ],
+  "generated_files": [
+    "spatial_nodes.csv",
+    "spatial_nodes.json",
+    "methane_observations.csv",
+    "methane_observations.json",
+    "mlp_predictions.csv",
+    "mlp_predictions.json",
+    "fold_seed_metrics.csv",
+    "fold_seed_metrics.json",
+    "fold_summary.csv",
+    "fold_summary.json",
+    "spatial_nodes.geojson"
+  ]
+}

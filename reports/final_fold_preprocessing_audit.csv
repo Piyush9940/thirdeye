@@ -1,0 +1,4 @@
+fold,training_periods,evaluation_period,training_labels,evaluation_labels,target_mean_ppb,target_std_ppb,max_abs_scaled_input,month_features_unchanged,saved_file
+1,201905,202102,82,67,1861.163330078125,17.342565536499023,11.275853157043457,True,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\gnn_dataset\final_fold_1_prepared.npz
+2,"201905,202102",202108,149,11,1876.375244140625,22.91864585876465,14.221747398376465,True,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\gnn_dataset\final_fold_2_prepared.npz
+3,"201905,202102,202108",202311,160,66,1881.9632568359375,30.613935470581055,7.6572465896606445,True,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\gnn_dataset\final_fold_3_prepared.npz

@@ -1,0 +1,19 @@
+{
+  "filename": "S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc",
+  "total_pixel_positions": 697675,
+  "valid_geolocation_pixels": 697675,
+  "valid_methane_precision_pixels": 48417,
+  "high_qa_pixels_global": 28231,
+  "valid_methane_pixels_inside_india": 12,
+  "high_quality_pixels_inside_india": 0,
+  "qa_threshold": "> 0.5",
+  "methane_variable": "methane_mixing_ratio_bias_corrected",
+  "saved_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_pilot\\pilot_2019_monsoon_india_high_quality_pixels.csv",
+  "methane_units_original": "1e-9",
+  "precision_units_original": "1e-9",
+  "stored_values_already_in_ppb": true,
+  "conversion_factor_to_ppb": 1.0,
+  "incorrect_previous_conversion_factor": 1000.0,
+  "unit_correction_applied": true,
+  "high_quality_pixel_count": 0
+}

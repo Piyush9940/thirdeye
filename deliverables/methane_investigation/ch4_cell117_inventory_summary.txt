@@ -1,0 +1,36 @@
+FINAL METHANE INVESTIGATION ARTIFACT INVENTORY
+=================================================================
+
+Project directory: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective
+Coverage directory: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage
+
+Total discovered files: 101
+Cell output files: 90
+Total inventoried size: 0.631 MB
+
+IMPORTANT FINAL ARTIFACTS
+-----------------------------------------------------------------
+FOUND: Original matched geometry dataset | ch4_cell_34_78_matches_with_actual_geometry_angles.csv
+  Path: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage\ch4_cell_34_78_matches_with_actual_geometry_angles.csv
+FOUND: Final evidence register | ch4_cell112_final_evidence_register.csv
+  Path: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage\ch4_cell112_final_evidence_register.csv
+FOUND: Scientific limitations | ch4_cell112_scientific_limitations.txt
+  Path: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage\ch4_cell112_scientific_limitations.txt
+FOUND: Original investigation report | ch4_cell113_final_investigation_report.md
+  Path: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage\ch4_cell113_final_investigation_report.md
+FOUND: Numerical reproduction audit | ch4_cell115_numerical_audit.csv
+  Path: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage\ch4_cell115_numerical_audit.csv
+FOUND: Audited final report | ch4_cell116_audited_final_report.md
+  Path: C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage\ch4_cell116_audited_final_report.md
+
+FILE TYPE SUMMARY
+-----------------------------------------------------------------
+.csv: 98 files, 0.608 MB
+.md: 2 files, 0.022 MB
+.txt: 1 files, 0.001 MB
+
+INVENTORY CSV
+C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\interim\sentinel5p_ch4_coverage\ch4_cell117_artifact_inventory.csv
+
+This inventory records file presence and metadata. It does not
+independently validate the scientific correctness of every artifact.

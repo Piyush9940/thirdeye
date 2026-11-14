@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth Systems Trend Detective — NASA Space Apps Challenge 2026</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/earth.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/charts.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <!-- CDN Scripts for 3D & Visualization -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> NASA POWER: 30,600 Obs (100% Complete)</span>
+      <span class="status-pill"><span class="status-dot amber"></span> Sentinel-5P Pilot: 4 Snapshots</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026 • Earth Science Intelligence</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link active"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- 3D Earth Hero Viewport -->
+  <section class="hero-viewport">
+    <canvas id="earth-canvas"></canvas>
+
+    <div class="hero-overlay">
+      <div class="hero-badge">
+        <i class="fas fa-satellite-dish"></i> NASA Space Apps Challenge 2026
+      </div>
+      <h1 class="hero-title">
+        Discover What Is Changing on Earth.<br>
+        <span class="gradient-text">Understand Where. Measure How Much.</span>
+      </h1>
+      <p class="hero-description">
+        Transform decadal satellite observations, NASA MERRA-2 assimilation, and geospatial graph topologies into verified statistical environmental intelligence across India.
+      </p>
+      <div class="hero-actions">
+        <button id="btn-fly-india" class="btn btn-primary" onclick="window.earthViz?.flyToIndia(() => { window.location.href = '/pages/trend-detective.html'; })">
+          <i class="fas fa-crosshairs"></i> Zoom Into India & Launch Analysis
+        </button>
+        <a href="/pages/trend-detective.html" class="btn btn-secondary">
+          <i class="fas fa-chart-line"></i> Open Trend Detective
+        </a>
+      </div>
+    </div>
+
+    <!-- HUD Telemetry -->
+    <div class="earth-hud">
+      <div class="hud-item">SPATIAL MESH: <span>255 NODES (2.0° RES)</span></div>
+      <div class="hud-item">TEMPORAL SERIES: <span>120 MONTHS (2015-2024)</span></div>
+      <div class="hud-item">HYPOTHESIS TEST: <span>MANN-KENDALL (α=0.05)</span></div>
+      <div class="hud-item">ESTIMATOR: <span>THEIL-SEN ROBUST MEDIAN</span></div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll to explore mission data</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Mission Overview & Four Challenge Requirements -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h2 class="page-title">Fulfilling the <span>NASA Challenge</span></h2>
+        <p class="page-subtitle">Direct, rigorous execution of the four mandatory criteria of "Be An Earth System Trend Detective!"</p>
+      </div>
+    </div>
+
+    <div class="scorecard-grid">
+      <div class="stat-card">
+        <div class="stat-header">1. Identified Variables</div>
+        <div class="stat-value text-cyan" style="font-size: 1.25rem;">5 Earth Systems</div>
+        <div class="stat-sub">Air Temp (T2M), Precip (PRECTOTCORR), Humidity (RH2M), Wind Speed (WS10M), Methane (CH4).</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">2. Geographic Regions</div>
+        <div class="stat-value text-cyan" style="font-size: 1.25rem;">255 Nodes in 6 Zones</div>
+        <div class="stat-sub">Validated NW, NE, CW, CE, SW, SE partitions & 8-NN spherical network.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">3. Time Series Acquired</div>
+        <div class="stat-value text-cyan" style="font-size: 1.25rem;">10 Continuous Years</div>
+        <div class="stat-sub">120 monthly steps (2015-01 to 2024-12) with 0 missing observations.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">4. Rate & Significance</div>
+        <div class="stat-value text-cyan" style="font-size: 1.25rem;">OLS + Sen + Mann-Kendall</div>
+        <div class="stat-sub">Formal hypothesis testing, exact two-tailed p-values & 95% confidence intervals.</div>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Hub -->
+    <div class="card" style="margin-top: 2rem;">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-compass text-cyan"></i> Environmental Intelligence Modules</div>
+      </div>
+      <div class="scorecard-grid" style="margin-bottom: 0;">
+        <a href="/pages/trend-detective.html" class="stat-card" style="text-decoration: none;">
+          <div class="stat-header">Primary Workspace</div>
+          <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-top: 4px;">Trend Detective</div>
+          <div class="stat-sub">Interactive time-series, regression lines, Sen's slope & plain-language verdicts.</div>
+        </a>
+        <a href="/pages/dataset-explorer.html" class="stat-card" style="text-decoration: none;">
+          <div class="stat-header">Data Ingestion Engine</div>
+          <div style="font-weight: 700; color: #00f0ff; font-size: 1.1rem; margin-top: 4px;">Dataset Explorer</div>
+          <div class="stat-sub">Upload custom CSV/NetCDF datasets, validate data completeness & calculate trends.</div>
+        </a>
+        <a href="/pages/earth-explorer.html" class="stat-card" style="text-decoration: none;">
+          <div class="stat-header">Geospatial Mesh</div>
+          <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-top: 4px;">Earth Explorer</div>
+          <div class="stat-sub">Interactive Leaflet dark map with 255 nodes, 8-NN edges & localized micro-trends.</div>
+        </a>
+        <a href="/pages/regional-comparison.html" class="stat-card" style="text-decoration: none;">
+          <div class="stat-header">Spatial Analysis</div>
+          <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-top: 4px;">Regional Comparison</div>
+          <div class="stat-sub">Side-by-side ranking of changes across India's 6 custom geographical zones.</div>
+        </a>
+        <a href="/pages/methane-analysis.html" class="stat-card" style="text-decoration: none;">
+          <div class="stat-header">Satellite Soundings</div>
+          <div style="font-weight: 700; color: #fff; font-size: 1.1rem; margin-top: 4px;">Sentinel-5P Methane</div>
+          <div class="stat-sub">Pilot observations, QA>=0.5 filtering & Southeast data gap analysis.</div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective<br>
+        <span class="text-dim">Built with Node.js, Express, Three.js, Leaflet, Plotly, SciPy, and ReportLab.</span>
+      </div>
+      <div class="footer-badges">
+        <span class="badge badge-cyan"><i class="fas fa-satellite"></i> NASA POWER</span>
+        <span class="badge badge-emerald"><i class="fas fa-database"></i> Sentinel-5P</span>
+        <span class="badge badge-amber"><i class="fas fa-code"></i> Node.js Express</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/earth-animation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.earthViz = new EarthVisualizer('earth-canvas');
+    });
+  </script>
+</body>
+</html>

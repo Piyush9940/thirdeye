@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML Research Insights — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot amber"></span> Secondary ML Research: Not Production Approved</span>
+      <span class="status-pill"><span class="status-dot"></span> 15 PyTorch CPU Checkpoints</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link active"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">ML Research <span>Insights</span></h1>
+        <p class="page-subtitle">Scientific review of exploratory neural network and graph convolutional experiments.</p>
+      </div>
+      <span class="badge badge-amber"><i class="fas fa-microscope"></i> Exploratory Research Baseline</span>
+    </div>
+
+    <!-- Architecture & Honesty Card -->
+    <div class="card" id="ml-arch-info" style="margin-bottom: 2rem;">
+      <span class="spinner"></span> Loading architecture metadata...
+    </div>
+
+    <!-- Fold Cross-Validation Performance -->
+    <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Spatial Cross-Validation Folds</h2>
+    <div class="scorecard-grid" id="ml-folds-container" style="margin-bottom: 2rem;">
+      <!-- Populated via JS -->
+    </div>
+
+    <!-- Model Comparison Table -->
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-code-compare text-cyan"></i> Empirical Model Benchmark</div>
+        <span class="badge badge-cyan">Validation Error Metrics</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-dim); text-transform: uppercase; font-size: 0.78rem;">
+              <th style="padding: 0.75rem 1rem;">Model Candidate</th>
+              <th style="padding: 0.75rem 1rem;">Family</th>
+              <th style="padding: 0.75rem 1rem;">Val RMSE</th>
+              <th style="padding: 0.75rem 1rem;">Val MAE</th>
+              <th style="padding: 0.75rem 1rem;">Val R²</th>
+              <th style="padding: 0.75rem 1rem;">Scientific Finding</th>
+            </tr>
+          </thead>
+          <tbody id="ml-comparison-body">
+            <!-- Populated via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Live CPU Inference Sandbox Form -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-terminal text-cyan"></i> Live CPU PyTorch Inference Sandbox</div>
+        <span class="badge badge-emerald">Real Checkpoint Execution</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+        Input environmental features to execute a live CPU forward pass through the trained MLP checkpoint:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+        <div class="form-group">
+          <label class="form-label">Air Temp (T2M) °C</label>
+          <input type="number" id="inf-t2m" class="form-input font-mono" value="26.5" step="0.5">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Precip (mm/day)</label>
+          <input type="number" id="inf-prec" class="form-input font-mono" value="4.2" step="0.5">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Humidity (RH2M) %</label>
+          <input type="number" id="inf-rh" class="form-input font-mono" value="65.0" step="1.0">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Wind Speed (m/s)</label>
+          <input type="number" id="inf-ws" class="form-input font-mono" value="3.1" step="0.2">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Latitude (°N)</label>
+          <input type="number" id="inf-lat" class="form-input font-mono" value="23.0" step="1.0">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Longitude (°E)</label>
+          <input type="number" id="inf-lon" class="form-input font-mono" value="83.0" step="1.0">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Fold</label>
+          <select id="inf-fold" class="form-select font-mono">
+            <option value="1">Fold 1</option>
+            <option value="2">Fold 2</option>
+            <option value="3">Fold 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Seed</label>
+          <select id="inf-seed" class="form-select font-mono">
+            <option value="42">Seed 42</option>
+            <option value="7">Seed 7</option>
+            <option value="21">Seed 21</option>
+            <option value="77">Seed 77</option>
+            <option value="123">Seed 123</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
+        <button id="btn-run-inference" class="btn btn-primary">
+          <i class="fas fa-play"></i> Run CPU Inference
+        </button>
+        <div id="inf-result" style="flex: 1; min-height: 40px; padding: 0.5rem 1rem; background: rgba(0,0,0,0.3); border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; flex-direction: column; justify-content: center;">
+          <span class="text-dim font-mono" style="font-size: 0.85rem;">Click 'Run CPU Inference' to evaluate model.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div><b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective</div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/ml-insights.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.mlApp = new MLInsights();
+    });
+  </script>
+</body>
+</html>

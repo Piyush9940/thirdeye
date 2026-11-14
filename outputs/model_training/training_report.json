@@ -1,0 +1,15 @@
+{
+    "architecture": "GCN-GRU",
+    "device": "cuda",
+    "epochs_configured": 100,
+    "epochs_completed": 100,
+    "best_epoch": 100,
+    "best_validation_loss": 0.1553070085744063,
+    "batch_size": 4,
+    "learning_rate_initial": 0.001,
+    "weight_decay": 1e-05,
+    "early_stopping_patience": 15,
+    "training_time_seconds": 29.57006859779358,
+    "checkpoint": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\best_gcn_gru_model.pth",
+    "history_file": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\training_history.csv"
+}

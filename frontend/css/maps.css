@@ -1,0 +1,163 @@
+/* ==========================================================================
+   MAPS STYLESHEET - LEAFLET CUSTOMIZATION & GEOSPATIAL INTELLIGENCE
+   NASA Earth Systems Trend Detective
+   ========================================================================== */
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-lg);
+  background: #020617;
+}
+
+#indiaMap {
+  width: 100%;
+  height: 100%;
+  background: #040817;
+}
+
+/* Leaflet Container Overrides */
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  background-color: #040817 !important;
+}
+
+.leaflet-bar {
+  border: 1px solid var(--border-subtle) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-radius: var(--radius-sm) !important;
+  overflow: hidden;
+}
+
+.leaflet-bar a {
+  background-color: rgba(13, 23, 48, 0.9) !important;
+  color: var(--cyan-primary) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  backdrop-filter: var(--glass-backdrop);
+}
+
+.leaflet-bar a:hover {
+  background-color: rgba(30, 58, 138, 0.9) !important;
+  color: #ffffff !important;
+}
+
+/* Custom Marker Styling */
+.node-marker-observed {
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 14px currentColor;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.node-marker-observed:hover {
+  transform: scale(1.4);
+  z-index: 1000 !important;
+}
+
+.node-marker-unobserved {
+  border-radius: 50%;
+  border: 1.5px dashed #64748b;
+  background-color: rgba(100, 116, 139, 0.25);
+  cursor: pointer;
+}
+
+.node-marker-unobserved:hover {
+  border-color: #94a3b8;
+  background-color: rgba(148, 163, 184, 0.4);
+}
+
+/* Map Overlays & Floating Panels */
+.map-floating-panel {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 800;
+  width: 320px;
+  background: rgba(9, 16, 35, 0.92);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-lg);
+  max-height: calc(100% - 2.5rem);
+  overflow-y: auto;
+}
+
+.map-legend-panel {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 800;
+  background: rgba(9, 16, 35, 0.9);
+  backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.legend-scale {
+  display: flex;
+  height: 10px;
+  width: 200px;
+  border-radius: 3px;
+  margin: 0.4rem 0;
+  background: linear-gradient(to right, #10b981, #38bdf8, #f59e0b, #ef4444);
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Custom Leaflet Popup */
+.leaflet-popup-content-wrapper {
+  background: rgba(9, 16, 35, 0.95) !important;
+  backdrop-filter: var(--glass-backdrop);
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-medium) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-lg) !important;
+  padding: 0.5rem !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(9, 16, 35, 0.95) !important;
+}
+
+.map-popup-header {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--cyan-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-popup-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.map-popup-label {
+  color: var(--text-muted);
+}
+
+.map-popup-val {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #ffffff;
+}

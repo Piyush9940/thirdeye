@@ -1,0 +1,9 @@
+﻿test,recomputed_value,expected_value,status
+Matched difference convention,7.105427357601002e-15,0.0,True
+Solar LOOCV MAE,7.963513978983343,7.96351397898335,True
+Solar LOOCV RMSE,10.365837211137436,10.36583721113744,True
+Pooled spatial solar RMSE,10.241807790632127,10.2418,True
+Pooled spatial baseline RMSE,15.707823977294579,15.7078,True
+Pooled spatial RMSE improvement (%),34.79804837744233,34.8,True
+All spatial slopes negative,4.0,4.0,True
+All evidence references populated,0.0,0.0,True

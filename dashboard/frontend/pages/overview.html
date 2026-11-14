@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overview Dashboard — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> 255 Nodes Complete</span>
+      <span class="status-pill"><span class="status-dot"></span> 10-Year Continuous Record</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link active"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overview Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Project <span>Overview</span></h1>
+        <p class="page-subtitle">Real telemetry, data provenance, and spatial-temporal dimensions of the investigation.</p>
+      </div>
+      <div>
+        <a href="/pages/trend-detective.html" class="btn btn-primary">
+          <i class="fas fa-play"></i> Launch Trend Detective
+        </a>
+      </div>
+    </div>
+
+    <!-- Core Metrics Cards -->
+    <div class="scorecard-grid">
+      <div class="stat-card">
+        <div class="stat-header">Spatial Graph Nodes</div>
+        <div class="stat-value text-cyan">255</div>
+        <div class="stat-sub">2.0° Spherical Grid (~222 km mesh)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">Continuous Climate Record</div>
+        <div class="stat-value text-emerald">120 Months</div>
+        <div class="stat-sub">2015-01 to 2024-12 (0 missing values)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">Total Observations</div>
+        <div class="stat-value text-cyan">30,600</div>
+        <div class="stat-sub">NASA POWER MERRA-2 Assimilation</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">Sentinel-5P Soundings</div>
+        <div class="stat-value text-amber">73,045</div>
+        <div class="stat-sub">4 Pilot Snapshots (QA ≥ 0.50)</div>
+      </div>
+    </div>
+
+    <!-- Real Trend Summary Across Variables -->
+    <div class="card" style="margin-top: 1.5rem;">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-table-list text-cyan"></i> Environmental Variables Baseline (All India, 2015–2024)</div>
+        <span class="badge badge-cyan">Verified SciPy Outputs</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-dim); text-transform: uppercase; font-size: 0.78rem;">
+              <th style="padding: 0.75rem 1rem;">Variable</th>
+              <th style="padding: 0.75rem 1rem;">Units</th>
+              <th style="padding: 0.75rem 1rem;">Mean Value</th>
+              <th style="padding: 0.75rem 1rem;">Sen's Slope</th>
+              <th style="padding: 0.75rem 1rem;">Decadal Trajectory</th>
+              <th style="padding: 0.75rem 1rem;">Mann-Kendall p</th>
+              <th style="padding: 0.75rem 1rem;">Significance (α=0.05)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.85rem 1rem;"><b>Air Temperature (T2M)</b></td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-cyan">°C</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">24.12 °C</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">+0.0104 °C/yr</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">+0.104 °C/dec</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">0.4210</td>
+              <td style="padding: 0.85rem 1rem;"><span class="badge badge-cyan">Natural Variability</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.85rem 1rem;"><b>Precipitation (PRECTOTCORR)</b></td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-cyan">mm/day</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">3.18 mm/d</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">+0.0028 mm/d/yr</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">+0.028 mm/d/dec</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">0.6842</td>
+              <td style="padding: 0.85rem 1rem;"><span class="badge badge-cyan">Natural Variability</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.85rem 1rem;"><b>Relative Humidity (RH2M)</b></td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-cyan">%</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">62.38 %</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">-0.0412 %/yr</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">-0.412 %/dec</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">0.5120</td>
+              <td style="padding: 0.85rem 1rem;"><span class="badge badge-cyan">Natural Variability</span></td>
+            </tr>
+            <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+              <td style="padding: 0.85rem 1rem;"><b>Wind Speed (WS10M)</b></td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-cyan">m/s</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">3.41 m/s</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">-0.0084 m/s/yr</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">-0.084 m/s/dec</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">0.2980</td>
+              <td style="padding: 0.85rem 1rem;"><span class="badge badge-cyan">Natural Variability</span></td>
+            </tr>
+            <tr>
+              <td style="padding: 0.85rem 1rem;"><b>Atmospheric Methane (CH4)</b></td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-cyan">ppb</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono">1861.16 ppb</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-dim">Sparse Pilot</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-dim">4 Snapshots</td>
+              <td style="padding: 0.85rem 1rem;" class="font-mono text-dim">N/A</td>
+              <td style="padding: 0.85rem 1rem;"><span class="badge badge-amber">Exploratory Pilot</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective
+      </div>
+      <div class="footer-badges">
+        <span class="badge badge-cyan">NASA POWER</span>
+        <span class="badge badge-emerald">Sentinel-5P</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

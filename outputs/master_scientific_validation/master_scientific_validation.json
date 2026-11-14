@@ -1,0 +1,381 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "report": "Corrected Master Scientific Validation",
+    "generated_at": "2026-11-12T21:12:48.853371",
+    "study_region": "India",
+    "historical_period": "January 2015 - December 2024",
+    "forecast_period": "January 2025 - December 2025",
+    "data_source": "NASA POWER",
+    "dataset": {
+        "historical_tensor_shape": [
+            120,
+            255,
+            4
+        ],
+        "spatial_nodes": 255,
+        "monthly_time_steps": 120,
+        "features": [
+            "T2M",
+            "PRECTOTCORR",
+            "RH2M",
+            "WS10M"
+        ]
+    },
+    "model": {
+        "architecture": "GCN-GRU",
+        "parameters": 20292,
+        "sequence_length": 12,
+        "gcn_hidden": 32,
+        "gru_hidden": 64,
+        "dropout": 0.15,
+        "training_period": "2015-2021",
+        "validation_period": "2022-2023",
+        "test_period": "2024",
+        "training_summary": {
+            "epochs_completed": 100,
+            "best_validation_epoch": 100,
+            "best_validation_loss": 0.1553070085744063,
+            "final_training_loss": 0.1389915028380023,
+            "final_validation_loss": 0.1553070085744063
+        }
+    },
+    "model_metrics": [
+        {
+            "Feature": "T2M",
+            "Unit": "\u00b0C",
+            "GCN_GRU_MAE": 1.5411540269851685,
+            "GCN_GRU_RMSE": 2.27894297960229,
+            "GCN_GRU_R2": 0.9713538885116576,
+            "Persistence_MAE": 2.453355073928833,
+            "Persistence_RMSE": 3.365838791938115,
+            "Persistence_R2": 0.9375136494636536,
+            "MAE_Improvement_Percent": 37.181778399604205,
+            "RMSE_Improvement_Percent": 32.291974735663715
+        },
+        {
+            "Feature": "PRECTOTCORR",
+            "Unit": "mm/day",
+            "GCN_GRU_MAE": 1.3725981712341309,
+            "GCN_GRU_RMSE": 2.5788719251232632,
+            "GCN_GRU_R2": 0.7316609025001526,
+            "Persistence_MAE": 2.134335994720459,
+            "Persistence_RMSE": 3.751027030178259,
+            "Persistence_R2": 0.4322922825813293,
+            "MAE_Improvement_Percent": 35.68968641163246,
+            "RMSE_Improvement_Percent": 31.24891118151425
+        },
+        {
+            "Feature": "RH2M",
+            "Unit": "%",
+            "GCN_GRU_MAE": 4.004586696624756,
+            "GCN_GRU_RMSE": 5.639575131422922,
+            "GCN_GRU_R2": 0.9052045345306396,
+            "Persistence_MAE": 5.733267784118652,
+            "Persistence_RMSE": 8.357177445522922,
+            "Persistence_R2": 0.7918319702148438,
+            "MAE_Improvement_Percent": 30.15175904189234,
+            "RMSE_Improvement_Percent": 32.51818370275079
+        },
+        {
+            "Feature": "WS10M",
+            "Unit": "m/s",
+            "GCN_GRU_MAE": 0.5185045599937439,
+            "GCN_GRU_RMSE": 0.7100049284643054,
+            "GCN_GRU_R2": 0.8247547149658203,
+            "Persistence_MAE": 0.7061140537261963,
+            "Persistence_RMSE": 1.0433620325738044,
+            "Persistence_R2": 0.6215628385543823,
+            "MAE_Improvement_Percent": 26.56929043437508,
+            "RMSE_Improvement_Percent": 31.950281273620934
+        }
+    ],
+    "historical_trends": [
+        {
+            "feature": "T2M",
+            "spatial_nodes": 255,
+            "mean_sen_slope": 0.0151895344327385,
+            "median_sen_slope": 0.0257816314697265,
+            "significant_nodes_after_fdr": 48,
+            "increasing_nodes_after_fdr": 47,
+            "decreasing_nodes_after_fdr": 1,
+            "alpha": 0.05
+        },
+        {
+            "feature": "PRECTOTCORR",
+            "spatial_nodes": 255,
+            "mean_sen_slope": 0.0076452428425959,
+            "median_sen_slope": 0.0023177084513008,
+            "significant_nodes_after_fdr": 3,
+            "increasing_nodes_after_fdr": 3,
+            "decreasing_nodes_after_fdr": 0,
+            "alpha": 0.05
+        },
+        {
+            "feature": "RH2M",
+            "spatial_nodes": 255,
+            "mean_sen_slope": 0.2682993993512796,
+            "median_sen_slope": 0.1314233144124348,
+            "significant_nodes_after_fdr": 74,
+            "increasing_nodes_after_fdr": 69,
+            "decreasing_nodes_after_fdr": 5,
+            "alpha": 0.05
+        },
+        {
+            "feature": "WS10M",
+            "spatial_nodes": 255,
+            "mean_sen_slope": -0.0010308152799883,
+            "median_sen_slope": -0.0017361094554265,
+            "significant_nodes_after_fdr": 17,
+            "increasing_nodes_after_fdr": 0,
+            "decreasing_nodes_after_fdr": 17,
+            "alpha": 0.05
+        }
+    ],
+    "trend_robustness": [
+        {
+            "feature": "PRECTOTCORR",
+            "nodes": 255,
+            "original_significant_nodes": 3,
+            "tfpw_significant_nodes": 26,
+            "significant_in_both": 3,
+            "lost_significance": 0,
+            "newly_significant": 23,
+            "not_significant_in_either": 229,
+            "mean_centered_rho": -0.1091734811117209,
+            "mean_uncentered_rho": -0.0347864158322653,
+            "robustness_label": "Low node overlap"
+        },
+        {
+            "feature": "RH2M",
+            "nodes": 255,
+            "original_significant_nodes": 74,
+            "tfpw_significant_nodes": 90,
+            "significant_in_both": 68,
+            "lost_significance": 6,
+            "newly_significant": 22,
+            "not_significant_in_either": 159,
+            "mean_centered_rho": -0.1062517942101389,
+            "mean_uncentered_rho": -0.060553893201873,
+            "robustness_label": "High node overlap"
+        },
+        {
+            "feature": "T2M",
+            "nodes": 255,
+            "original_significant_nodes": 48,
+            "tfpw_significant_nodes": 61,
+            "significant_in_both": 47,
+            "lost_significance": 1,
+            "newly_significant": 14,
+            "not_significant_in_either": 193,
+            "mean_centered_rho": -0.110936256956028,
+            "mean_uncentered_rho": -0.0662548852762457,
+            "robustness_label": "High node overlap"
+        },
+        {
+            "feature": "WS10M",
+            "nodes": 255,
+            "original_significant_nodes": 17,
+            "tfpw_significant_nodes": 22,
+            "significant_in_both": 17,
+            "lost_significance": 0,
+            "newly_significant": 5,
+            "not_significant_in_either": 233,
+            "mean_centered_rho": -0.0970121935241342,
+            "mean_uncentered_rho": -0.0534532215782222,
+            "robustness_label": "High node overlap"
+        }
+    ],
+    "significance_categories": [
+        {
+            "feature": "PRECTOTCORR",
+            "significance_category": "newly_significant",
+            "node_count": 23
+        },
+        {
+            "feature": "PRECTOTCORR",
+            "significance_category": "not_significant_in_either",
+            "node_count": 229
+        },
+        {
+            "feature": "PRECTOTCORR",
+            "significance_category": "significant_in_both",
+            "node_count": 3
+        },
+        {
+            "feature": "RH2M",
+            "significance_category": "lost_significance",
+            "node_count": 6
+        },
+        {
+            "feature": "RH2M",
+            "significance_category": "newly_significant",
+            "node_count": 22
+        },
+        {
+            "feature": "RH2M",
+            "significance_category": "not_significant_in_either",
+            "node_count": 159
+        },
+        {
+            "feature": "RH2M",
+            "significance_category": "significant_in_both",
+            "node_count": 68
+        },
+        {
+            "feature": "T2M",
+            "significance_category": "lost_significance",
+            "node_count": 1
+        },
+        {
+            "feature": "T2M",
+            "significance_category": "newly_significant",
+            "node_count": 14
+        },
+        {
+            "feature": "T2M",
+            "significance_category": "not_significant_in_either",
+            "node_count": 193
+        },
+        {
+            "feature": "T2M",
+            "significance_category": "significant_in_both",
+            "node_count": 47
+        },
+        {
+            "feature": "WS10M",
+            "significance_category": "newly_significant",
+            "node_count": 5
+        },
+        {
+            "feature": "WS10M",
+            "significance_category": "not_significant_in_either",
+            "node_count": 233
+        },
+        {
+            "feature": "WS10M",
+            "significance_category": "significant_in_both",
+            "node_count": 17
+        }
+    ],
+    "forecast": {
+        "shape": [
+            12,
+            255,
+            4
+        ],
+        "method": "12-month autoregressive",
+        "integrity": {
+            "project": "NASA Earth Systems Trend Detective",
+            "report": "2025 Forecast Integrity Verification",
+            "generated_at": "2026-11-12T21:09:11.021354",
+            "model": "GCN-GRU",
+            "historical_period": "2015-01 to 2024-12",
+            "forecast_period": "2025-01 to 2025-12",
+            "spatial_nodes": 255,
+            "features": [
+                "T2M",
+                "PRECTOTCORR",
+                "RH2M",
+                "WS10M"
+            ],
+            "forecast_method": "12-month autoregressive forecasting",
+            "adjacency": "Normalized symmetric spatial adjacency",
+            "reproducibility": {
+                "maximum_absolute_difference": 0.0043487548828125,
+                "mean_absolute_difference": 3.289145024609752e-05,
+                "median_absolute_difference": 2.384185791015625e-07,
+                "percentile_95": 0.00014832019805908168,
+                "percentile_99": 0.000705327987670909,
+                "within_1e-4_percent": 93.29248366013073,
+                "within_1e-3_percent": 99.4607843137255,
+                "exact_match": false
+            },
+            "precipitation_validation": {
+                "negative_predictions": 181,
+                "total_predictions": 3060,
+                "negative_percentage": 5.9150326797385615,
+                "minimum_prediction_mm_per_day": -0.9353306293487549,
+                "physical_constraint_satisfied": false
+            },
+            "validation_checks": {
+                "historical_tensor_valid": true,
+                "original_forecast_valid": true,
+                "independent_forecast_valid": true,
+                "original_forecast_finite": true,
+                "independent_forecast_finite": true,
+                "numerical_agreement_within_0_001": true,
+                "precipitation_nonnegative": false
+            },
+            "scientific_limitations": [
+                "The forecast is exploratory and is not an operational climate prediction.",
+                "The model uses a limited 10-year historical period.",
+                "External climate forcing is not included.",
+                "Negative precipitation predictions violate physical non-negativity.",
+                "Numerical reproduction is close but not bit-for-bit identical.",
+                "Forecast uncertainty has not been fully quantified."
+            ]
+        },
+        "feature_summary": [
+            {
+                "Feature": "T2M",
+                "Unit": "\u00b0C",
+                "Minimum": -17.175859451293945,
+                "Maximum": 37.30113220214844,
+                "Mean": 19.58892250061035,
+                "Standard_Deviation": 13.275370597839355,
+                "Negative_Values": 369
+            },
+            {
+                "Feature": "PRECTOTCORR",
+                "Unit": "mm/day",
+                "Minimum": -0.9353306293487549,
+                "Maximum": 29.520658493041992,
+                "Mean": 3.2984492778778076,
+                "Standard_Deviation": 3.746708393096924,
+                "Negative_Values": 181
+            },
+            {
+                "Feature": "RH2M",
+                "Unit": "%",
+                "Minimum": 18.422088623046875,
+                "Maximum": 90.43975830078125,
+                "Mean": 65.02284240722656,
+                "Standard_Deviation": 17.665027618408203,
+                "Negative_Values": 0
+            },
+            {
+                "Feature": "WS10M",
+                "Unit": "m/s",
+                "Minimum": 1.0966875553131104,
+                "Maximum": 8.669187545776367,
+                "Mean": 4.045323371887207,
+                "Standard_Deviation": 1.5637365579605103,
+                "Negative_Values": 0
+            }
+        ]
+    },
+    "validation_checks": {
+        "four_variables_evaluated": true,
+        "model_beats_persistence_mae": true,
+        "model_beats_persistence_rmse": true,
+        "trend_results_cover_255_nodes": true,
+        "forecast_dimensions_valid": true,
+        "forecast_finite": true,
+        "forecast_reproduction_within_0_001": true,
+        "precipitation_nonnegative": false
+    },
+    "interpretation_warnings": [
+        "The 2024 test results measure historical held-out performance.",
+        "The 2025 forecast has not been validated against observed 2025 data.",
+        "Forecast numerical reproducibility does not establish forecast accuracy.",
+        "Negative precipitation values violate physical non-negativity.",
+        "The TFPW analysis is a sensitivity analysis, not a definitive correction.",
+        "Direction-agreement columns from the earlier robustness output are excluded because their calculation is not an independent direction comparison.",
+        "The historical record covers only ten years.",
+        "Trend significance is subject to temporal autocorrelation and short-record uncertainty.",
+        "Trend associations do not establish causal attribution.",
+        "The geographic graph does not represent atmospheric transport.",
+        "The model does not explicitly incorporate external climate forcing.",
+        "The analysis uses four NASA POWER variables, not a comprehensive multi-source Earth-system dataset."
+    ]
+}

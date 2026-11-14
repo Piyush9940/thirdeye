@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Methodology & Technical Architecture — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link active"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">
+    <div class="page-header">
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <span class="badge-scientific badge-verified">End-to-End Pipeline</span>
+        <span class="badge-scientific badge-satellite">11 Sequential Stages</span>
+      </div>
+      <h1 class="page-title"><i class="fa-solid fa-book-journal-whills" style="color: var(--cyan-primary);"></i> Scientific Methodology & Technical Framework</h1>
+      <p class="page-description">
+        Comprehensive scientific explanation of data acquisition, quality assessment, spatial binning, meteorological integration, model architectures, and chronological validation protocols.
+      </p>
+    </div>
+
+    <!-- 11-Step Workflow Grid -->
+    <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3.5rem;">
+      
+      <!-- Stage 1 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">01</span> Satellite Data Acquisition</span>
+          <span class="badge-scientific badge-verified">Sentinel-5P TROPOMI</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          Total column atmospheric methane ($X\text{CH}_4$) soundings were acquired from the European Space Agency (ESA) Copernicus Data Space. TROPOMI measures solar backscattered radiance in the shortwave infrared (SWIR Band 7, 2305–2385 nm) with high sensitivity to the lower troposphere where greenhouse gas sources originate.
+        </p>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">02</span> Quality Assessment & Stringent Filtering</span>
+          <span class="badge-scientific badge-verified">QA &ge; 0.50</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          Each TROPOMI pixel contains a rigorous quality value (<span style="font-family: var(--font-mono);">qa_value</span>) from 0 (bad) to 1 (perfect). Pixels with $\text{QA} &lt; 0.50$ (cloud contamination, snow cover, high solar zenith angles, aerosol scattering artifacts) are filtered out, leaving 73,045 high-fidelity soundings.
+        </p>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">03</span> Spatial Discretization (2° Regular Lattice)</span>
+          <span class="badge-scientific badge-verified">255 Grid Nodes</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          India's bounding box [69°E–97°E, 7°N–37°N] is discretized into a 2° &times; 2° spherical grid resulting in 255 discrete spatial nodes. Each node represents the geometric center of a spatial bin and is partitioned into six geographic zones (North-West, North-East, Central-West, Central-East, South-West, South-East).
+        </p>
+      </div>
+
+      <!-- Stage 4 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">04</span> Methane Spatial Aggregation</span>
+          <span class="badge-scientific badge-verified">Robust Statistics</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          Soundings falling within each 2° bin during an observation period are aggregated into median, mean, and standard deviation. Median concentration ($X\text{CH}_4$ in ppb) was selected as the primary target variable due to its resilience against extreme boundary-layer outliers.
+        </p>
+      </div>
+
+      <!-- Stage 5 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">05</span> NASA POWER Meteorological Integration</span>
+          <span class="badge-scientific badge-verified">4 Surface Parameters</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          Surface meteorology from NASA POWER (Prediction of Worldwide Energy Resources) reanalysis was spatially matched to each grid node: Air Temperature at 2m (T2M), Corrected Precipitation (PRECTOTCORR), Relative Humidity (RH2M), and Wind Speed at 10m (WS10M).
+        </p>
+      </div>
+
+      <!-- Stage 6 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">06</span> Spatial Graph Construction</span>
+          <span class="badge-scientific badge-verified">Haversine Distance Weighting</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          A spatial adjacency matrix was constructed connecting neighboring grid nodes within spherical distance thresholds. Both distance-weighted Gaussian kernel edges and unweighted binary edges were computed to evaluate graph neural network representations.
+        </p>
+      </div>
+
+      <!-- Stage 7 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">07</span> Feature Engineering & Standardization</span>
+          <span class="badge-scientific badge-verified">8 Input Dimensions</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          The final feature space comprises 8 ordered features: [T2M, PRECTOTCORR, RH2M, WS10M, Latitude, Longitude, Month Sine, Month Cosine]. Features 0–5 are standardized to zero mean and unit variance using strictly training-set statistics. Target values are normalized and later de-normalized to ppb.
+        </p>
+      </div>
+
+      <!-- Stage 8 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">08</span> Machine Learning Experimentation</span>
+          <span class="badge-scientific badge-experimental">MLP vs GCN Benchmark</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          Four core models and diagnostic ablations were trained: Original MLP (32 units, ReLU, Dropout 0.2), Distance-Weighted GCN, Unweighted GCN, Month-only diagnostic, and Climate-only ablation. All trained for 250 epochs using Adam optimizer.
+        </p>
+      </div>
+
+      <!-- Stage 9 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">09</span> Chronological Expanding-Window Validation</span>
+          <span class="badge-scientific badge-verified">3 Folds &times; 5 Random Seeds</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          To avoid temporal data leakage, models were evaluated strictly forward in time across 3 folds: Fold 1 evaluated on 2021-02, Fold 2 evaluated on 2021-08, and Fold 3 evaluated on 2023-11. Each fold was trained and tested across 5 random seeds (7, 21, 42, 77, 123) yielding 15 verified checkpoints.
+        </p>
+      </div>
+
+      <!-- Stage 10 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">10</span> Evaluation Metrics & Scientific Transparency</span>
+          <span class="badge-scientific badge-warning">Negative R² & Underprediction</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          Performance was measured using MAE, RMSE, $R^2$, and Bias. The metrics demonstrate weak predictive generalization across distant time gaps (negative $R^2$) and negative bias due to Rising national methane baselines. GCN models did not outperform the simple MLP.
+        </p>
+      </div>
+
+      <!-- Stage 11 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><span class="badge-scientific badge-satellite">11</span> Dashboard & API Delivery</span>
+          <span class="badge-scientific badge-verified">Verified Data Integration</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
+          The entire analytical output is published via production-quality REST APIs, interactive Leaflet maps, 10 Plotly charts, AI-assisted grounded retrieval, and downloadable research dossiers.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Scientific methodology and technical architecture for satellite Earth observation data.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Platform</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="dataset-explorer.html">Datasets</a></li>
+          <li><a href="forecasting.html">ML Predictor</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Methodology</div>
+        <ul class="footer-links">
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="research-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Attribution</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P</li>
+          <li>NASA POWER Meteorology</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Peer-Reviewed Scientific Protocol</div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

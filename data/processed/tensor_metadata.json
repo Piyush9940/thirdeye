@@ -1,0 +1,24 @@
+{
+    "project": "Earth Systems Trend Detective",
+    "start_date": "2015-01-01",
+    "end_date": "2024-12-01",
+    "time_steps": 120,
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "tensor_shape": [
+        120,
+        255,
+        4
+    ],
+    "tensor_order": [
+        "time",
+        "spatial_node",
+        "feature"
+    ],
+    "grid_resolution_degrees": 2.0
+}

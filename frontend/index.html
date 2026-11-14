@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth Systems Trend Detective — Immersive 3D Earth & Environmental Intelligence</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/earth-3d.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/maps.css">
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Three.js & GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(5, 11, 24, 0.88); backdrop-filter: blur(14px);">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3D Earth Three.js Fixed Canvas Container -->
+  <div id="earthCanvasContainer"></div>
+
+  <!-- 6-Scene Scroll Storytelling Layer -->
+  <div id="earthScrollStory">
+
+    <!-- Scene 1: Opening in Space -->
+    <section class="scroll-scene" id="scene1" style="min-height: 100vh;">
+      <div class="scene-card scene-hero-card">
+        <div class="scene-tag">
+          <i class="fa-solid fa-satellite"></i> NASA Space Apps Challenge
+        </div>
+        <h1 class="scene-title" style="font-size: 3.25rem;">
+          EARTH SYSTEMS <br>
+          <span style="background: linear-gradient(135deg, #00d2ff, #00ff88); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">TREND DETECTIVE</span>
+        </h1>
+        <p class="scene-subtitle">
+          Explore Earth's environmental patterns through satellite observations and climate information. Investigate how atmospheric methane variations shape our changing world.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="#scene2" class="btn-nasa btn-nasa-primary" style="padding: 0.85rem 1.75rem; font-size: 1rem;">
+            <i class="fa-solid fa-compass"></i> START EXPLORING
+          </a>
+          <a href="why-methane.html" class="btn-nasa btn-nasa-outline" style="padding: 0.85rem 1.75rem; font-size: 1rem;">
+            <i class="fa-solid fa-circle-play"></i> DISCOVER THE PROJECT
+          </a>
+        </div>
+
+        <div class="scroll-indicator-wrap">
+          <span>SCROLL TO EXPLORE EARTH</span>
+          <i class="fa-solid fa-chevron-down scroll-indicator-arrow"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 2: Global Exploration -->
+    <section class="scroll-scene" id="scene2">
+      <div class="scene-card">
+        <div class="scene-tag">
+          <i class="fa-solid fa-globe"></i> Global Perspective
+        </div>
+        <h2 class="scene-title">OUR PLANET IS CONSTANTLY CHANGING.</h2>
+        <p class="scene-subtitle">
+          Satellite observations help us investigate patterns across Earth's atmosphere and environment. Spaceborne instruments monitor planetary circulation, temperature gradients, and greenhouse gas dynamics around the globe.
+        </p>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <span class="badge-scientific badge-satellite"><i class="fa-solid fa-satellite"></i> Copernicus Sentinel-5P</span>
+          <span class="badge-scientific badge-verified"><i class="fa-solid fa-sun"></i> NASA POWER Meteorology</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 3: Understanding Methane -->
+    <section class="scroll-scene" id="scene3">
+      <div class="scene-card">
+        <div class="scene-tag">
+          <i class="fa-solid fa-fire-flame-simple"></i> Atmospheric Dynamics
+        </div>
+        <h2 class="scene-title">A SMALL GAS WITH A BIG CLIMATE IMPACT.</h2>
+        <p class="scene-subtitle">
+          Methane (<span style="color: var(--cyan-primary); font-family: var(--font-mono); font-weight: 700;">CH₄</span>) is a greenhouse gas that traps heat in Earth's atmosphere. Over a 20-year timescale, it possesses more than 80 times the warming potential of carbon dioxide. Studying its atmospheric concentration helps researchers understand an important part of our changing climate.
+        </p>
+
+        <!-- Distinction: Concentration vs Emissions -->
+        <div class="comparison-pill-box">
+          <div class="pill-card">
+            <h4><i class="fa-solid fa-cloud"></i> Atmospheric Concentration</h4>
+            <p>How much methane is present in a given volume of ambient atmosphere (measured in parts per billion, ppb). This is what satellites observe.</p>
+          </div>
+          <div class="pill-card" style="border-color: rgba(245, 158, 11, 0.3);">
+            <h4 style="color: var(--warning-amber);"><i class="fa-solid fa-industry"></i> Methane Emissions</h4>
+            <p>The rate at which methane is released into the air from sources. Our project studies atmospheric concentration, not direct emission rates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 4: Rotate toward India -->
+    <section class="scroll-scene" id="scene4">
+      <div class="scene-card">
+        <div class="scene-tag" style="color: var(--earth-green); border-color: rgba(0, 255, 136, 0.3);">
+          <i class="fa-solid fa-location-crosshairs"></i> Target Region
+        </div>
+        <h2 class="scene-title">TARGET REGION: INDIA</h2>
+        <p class="scene-subtitle">
+          Exploring available atmospheric methane observations and climate information across the Indian subcontinent [7°N – 37°N, 69°E – 97°E].
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+          India's dynamic monsoon cycles, agricultural rhythms, diverse terrain, and tropical climate create distinct atmospheric patterns that make it an essential focus for Earth observation research.
+        </p>
+        <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-primary);">
+          Coordinates: 22.0°N, 79.0°E Centroid • 2° Spatial Resolution Lattice
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 5: Cinematic Zoom into India -->
+    <section class="scroll-scene" id="scene5">
+      <div class="scene-card" style="max-width: 760px;">
+        <div class="scene-tag">
+          <i class="fa-solid fa-map-location-dot"></i> Geographical Partition
+        </div>
+        <h2 class="scene-title" style="font-size: 2rem;">SIX STUDY REGIONS & 255 NODES</h2>
+        <p class="scene-subtitle" style="font-size: 1rem; margin-bottom: 1rem;">
+          To understand geographic variations, the subcontinent is mapped onto a 255-node spatial grid partitioned into six zones based on geographical boundaries:
+        </p>
+
+        <div class="region-chips-grid">
+          <div class="region-chip">
+            <span class="region-chip-name">1. Northwest</span>
+            <span class="region-chip-status">Lat ≥ 25°N, Lon &lt; 82°E</span>
+          </div>
+          <div class="region-chip">
+            <span class="region-chip-name">2. Northeast</span>
+            <span class="region-chip-status">Lat ≥ 25°N, Lon ≥ 82°E</span>
+          </div>
+          <div class="region-chip">
+            <span class="region-chip-name">3. Central-West</span>
+            <span class="region-chip-status">15° ≤ Lat &lt; 25°, Lon &lt; 82°</span>
+          </div>
+          <div class="region-chip">
+            <span class="region-chip-name">4. Central-East</span>
+            <span class="region-chip-status">15° ≤ Lat &lt; 25°, Lon ≥ 82°</span>
+          </div>
+          <div class="region-chip">
+            <span class="region-chip-name">5. Southwest</span>
+            <span class="region-chip-status">Lat &lt; 15°N, Lon &lt; 82°E</span>
+          </div>
+          <div class="region-chip unavailable">
+            <span class="region-chip-name">6. Southeast</span>
+            <span class="region-chip-status">⚠️ Unavailable in Pilot Data</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.25rem; font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+          *Scientific Note: The Southeast region has 0 valid soundings in this pilot release due to cloud cover and QA filtering (&lt; 0.50). It is displayed as an area with unavailable observations, not zero concentration.
+        </div>
+      </div>
+    </section>
+
+    <!-- Scene 6: Seamless Transition into Environmental Dashboard -->
+    <section class="scroll-scene" id="scene6" style="padding-top: 6rem; align-items: flex-start;">
+      <div style="width: 100%; max-width: 1200px; margin: 0 auto;">
+        
+        <!-- Dashboard Overview Header -->
+        <div class="scene-card" style="max-width: 100%; margin-bottom: 2.5rem; text-align: center;">
+          <div class="scene-tag">
+            <i class="fa-solid fa-chart-pie"></i> Public Environmental Overview
+          </div>
+          <h2 class="scene-title" style="font-size: 2.6rem;">
+            EXPLORE ATMOSPHERIC METHANE PATTERNS ACROSS INDIA.
+          </h2>
+          <p class="scene-subtitle" style="max-width: 840px; margin: 0 auto 2rem;">
+            This project combines satellite observations, geographical information, and climate data to explore how atmospheric methane concentration varies across available observation locations and periods.
+          </p>
+
+          <!-- 5 Verified Project Metrics -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Filtered Pixels</span>
+                <i class="fa-solid fa-filter kpi-icon"></i>
+              </div>
+              <div class="kpi-value" style="color: var(--cyan-primary);">73,045</div>
+              <div class="kpi-context">Quality-filtered satellite soundings (QA ≥ 0.50)</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Spatial Grid</span>
+                <i class="fa-solid fa-network-wired kpi-icon"></i>
+              </div>
+              <div class="kpi-value">255</div>
+              <div class="kpi-context">2° resolution grid nodes across India</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Node-Month Records</span>
+                <i class="fa-solid fa-database kpi-icon"></i>
+              </div>
+              <div class="kpi-value">226</div>
+              <div class="kpi-context">Aggregated spatial observations</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Observed Nodes</span>
+                <i class="fa-solid fa-location-dot kpi-icon" style="color: var(--earth-green);"></i>
+              </div>
+              <div class="kpi-value" style="color: var(--earth-green);">98</div>
+              <div class="kpi-context">Unique nodes with valid observations</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-label">Observation Months</span>
+                <i class="fa-solid fa-calendar-check kpi-icon"></i>
+              </div>
+              <div class="kpi-value">4</div>
+              <div class="kpi-context">May 2019, Feb 2021, Aug 2021, Nov 2023</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-secondary); background: rgba(5, 11, 24, 0.6); padding: 0.85rem 1.25rem; border-radius: 8px; border: 1px solid var(--border-subtle); display: inline-block;">
+            <i class="fa-solid fa-circle-info" style="color: var(--cyan-primary);"></i>
+            <strong>Data Scope:</strong> This is a sparse pilot research dataset across 4 snapshot periods, not a continuous national monthly record.
+          </div>
+        </div>
+
+        <!-- Interactive Map Preview Section -->
+        <div class="nasa-card" style="margin-bottom: 3rem;">
+          <div class="nasa-card-header" style="flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3 class="nasa-card-title"><i class="fa-solid fa-earth-asia" style="color: var(--cyan-primary);"></i> Interactive India Geospatial Explorer</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.25rem 0 0;">
+                Click any grid node to inspect measured methane concentration and local climate context.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <select id="homePeriodSelect" class="nasa-select" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+                <option value="ALL">All Available Snapshots</option>
+                <option value="2019-05">May 2019 (Pre-monsoon - 82 Obs)</option>
+                <option value="2021-02">Feb 2021 (Winter - 67 Obs)</option>
+                <option value="2021-08">Aug 2021 (Monsoon Gap - 11 Obs)</option>
+                <option value="2023-11">Nov 2023 (Post-monsoon - 66 Obs)</option>
+              </select>
+              <a href="earth-explorer.html" class="btn-nasa btn-nasa-primary btn-sm">
+                <i class="fa-solid fa-up-right-from-square"></i> Full Screen Map
+              </a>
+            </div>
+          </div>
+
+          <div id="homeLeafletMap" style="height: 480px; width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);"></div>
+
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.8rem; color: var(--text-secondary); flex-wrap: wrap; gap: 0.75rem;">
+            <div style="display: flex; gap: 1.5rem; align-items: center;">
+              <span><span style="display: inline-block; width: 12px; height: 12px; background: #00ff88; border-radius: 50%; vertical-align: middle; margin-right: 4px;"></span> Observed Sounding (ppb)</span>
+              <span><span style="display: inline-block; width: 12px; height: 12px; border: 2px dashed #3b82f6; border-radius: 50%; vertical-align: middle; margin-right: 4px;"></span> Unobserved / Missing Node</span>
+            </div>
+            <div>
+              <span style="color: var(--warning-amber);"><i class="fa-solid fa-triangle-exclamation"></i> Missing values are unobserved, never zero.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8-Stage Storytelling Cards Sequence -->
+        <div class="page-header" style="text-align: center; border-bottom: none; margin-bottom: 2.5rem;">
+          <span class="badge-scientific badge-satellite" style="margin-bottom: 0.5rem;">Comprehensive Story</span>
+          <h2 style="font-size: 2.2rem; font-weight: 700; color: #ffffff;">From Satellite Orbit to Public Understanding</h2>
+          <p style="color: var(--text-secondary); max-width: 680px; margin: 0.5rem auto 0;">
+            Follow the complete research journey designed to make Earth observation and climate science accessible to everyone.
+          </p>
+        </div>
+
+        <div class="grid-2col" style="margin-bottom: 4rem;">
+          <!-- 1. Our planet is changing -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">1. Our Planet Is Changing</span>
+              <span class="badge-scientific badge-verified">Earth Systems</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Human activities, natural ecosystems, and shifting atmospheric circulation are driving worldwide environmental transformations. Continuous satellite monitoring provides the broad spatial perspective needed to observe these changes.
+            </p>
+          </div>
+
+          <!-- 2. Why methane matters -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">2. Why Methane Matters</span>
+              <span class="badge-scientific badge-warning">80x Warming</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Methane accounts for ~30% of global warming since the pre-industrial era. With an atmospheric lifetime of roughly 12 years, actions addressing methane can yield rapid climate benefits compared to longer-lived gases.
+            </p>
+            <a href="why-methane.html" class="btn-nasa btn-nasa-outline btn-sm" style="margin-top: 0.5rem;">Read More About Methane <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- 3. How satellites observe atmospheric gases -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">3. How Satellites Observe Earth</span>
+              <span class="badge-scientific badge-satellite">Sentinel-5P</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              The Copernicus Sentinel-5P satellite carries the TROPOMI spectrometer in a 824-km polar orbit. It measures solar radiation reflected from Earth's surface and atmosphere across the shortwave infrared (SWIR) absorption band.
+            </p>
+            <a href="methodology.html" class="btn-nasa btn-nasa-outline btn-sm" style="margin-top: 0.5rem;">Satellite Explainer <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- 4. Why we are studying India -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">4. Why We Are Studying India</span>
+              <span class="badge-scientific badge-verified">Regional Study</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              India represents a vital cross-section of tropical meteorology, intense seasonal monsoons, agricultural rice paddy wetlands, and diverse topographic corridors spanning from the Himalayas to the Indian Ocean.
+            </p>
+            <a href="earth-explorer.html" class="btn-nasa btn-nasa-outline btn-sm" style="margin-top: 0.5rem;">Explore India Map <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- 5. What information our project collected -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">5. What Information Was Collected</span>
+              <span class="badge-scientific badge-satellite">Verified Exports</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              73,045 quality-filtered Sentinel-5P pixels (QA ≥ 0.50) aggregated into 226 node-month records across 4 snapshot periods, combined with NASA POWER surface meteorology (T2M, PRECTOTCORR, RH2M, WS10M).
+            </p>
+            <a href="data-research.html" class="btn-nasa btn-nasa-outline btn-sm" style="margin-top: 0.5rem;">Download Data <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- 6. What patterns we can explore -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">6. What Patterns We Can Explore</span>
+              <span class="badge-scientific badge-verified">10 Charts</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Examine regional concentration comparisons, climate distributions, seasonal shifts, monsoon cloud gaps (August 2021 sparsity), and latitudinal gradients without making unsupported trend claims.
+            </p>
+            <a href="dashboard.html" class="btn-nasa btn-nasa-outline btn-sm" style="margin-top: 0.5rem;">Launch Dashboard <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- 7. Why this research is important -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">7. Why This Research Matters</span>
+              <span class="badge-scientific badge-verified">Public Impact</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              Open environmental intelligence empowers students, educators, and researchers to explore satellite data directly, fostering informed climate awareness and transparent scientific literacy.
+            </p>
+            <a href="impact.html" class="btn-nasa btn-nasa-outline btn-sm" style="margin-top: 0.5rem;">Environmental Impact <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- 8. How the project works -->
+          <div class="nasa-card">
+            <div class="nasa-card-header">
+              <span class="nasa-card-title">8. How the Project Works</span>
+              <span class="badge-scientific badge-experimental">Open Pipeline</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+              From raw netCDF Level-3 granules to spatial graph discretization, strict QA thresholding, and reproducible REST APIs with complete scientific caveats against operational forecasting hype.
+            </p>
+            <a href="findings.html" class="btn-nasa btn-nasa-outline btn-sm" style="margin-top: 0.5rem;">View Our Findings <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Optional Advanced Machine Learning Lab Callout -->
+        <div class="nasa-card" style="margin-bottom: 4rem; border-color: rgba(245, 158, 11, 0.4); background: rgba(18, 12, 4, 0.65);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <span class="badge-scientific badge-experimental" style="margin-bottom: 0.5rem;">Secondary Research Feature</span>
+              <h3 style="font-size: 1.4rem; color: #ffffff; margin-bottom: 0.4rem;">
+                Looking for Technical Machine Learning Details?
+              </h3>
+              <p style="color: var(--text-secondary); max-width: 750px; font-size: 0.88rem; margin: 0;">
+                Visit our optional <strong>Advanced Research Lab</strong> to explore graph neural network (GCN) benchmarks, multi-layer perceptron (MLP) architectures, chronological evaluation folds, negative R² diagnostics, and live CPU inference.
+              </p>
+            </div>
+            <a href="advanced-research.html" class="btn-nasa btn-nasa-outline" style="border-color: var(--warning-amber); color: var(--warning-amber);">
+              <i class="fa-solid fa-flask"></i> Enter ML Lab
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="nasa-footer" style="position: relative; z-index: 10;">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>
+          Transforming satellite Earth observations and climate datasets into an accessible, interactive environmental exploration platform that helps ordinary people understand atmospheric methane patterns across India.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Exploration Pages</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home (3D Earth)</a></li>
+          <li><a href="earth-explorer.html">Explore Earth & India Map</a></li>
+          <li><a href="why-methane.html">Why Methane Matters</a></li>
+          <li><a href="dashboard.html">India Explorer Dashboard</a></li>
+          <li><a href="findings.html">What We Discovered</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Science & Data</div>
+        <ul class="footer-links">
+          <li><a href="impact.html">Environmental Impact</a></li>
+          <li><a href="methodology.html">Scientific Methodology</a></li>
+          <li><a href="data-research.html">Data & Research Downloads</a></li>
+          <li><a href="advanced-research.html">ML Lab (Experimental)</a></li>
+          <li><a href="about.html">About the Project</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Data Attribution</div>
+        <ul class="footer-links">
+          <li><a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-5p" target="_blank" rel="noopener">Copernicus Sentinel-5P</a></li>
+          <li><a href="https://power.larc.nasa.gov/" target="_blank" rel="noopener">NASA POWER Project</a></li>
+          <li><a href="https://www.spaceappschallenge.org/" target="_blank" rel="noopener">NASA Space Apps</a></li>
+          <li><a href="research-assistant.html">AI Research Assistant</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team. Built for the NASA Space Apps Challenge.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">
+        Status: Experimental Reference Model • Open Environmental Science
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/earth/globe-3d.js"></script>
+
+  <script>
+    // Initialize Home Leaflet Map Preview
+    document.addEventListener('DOMContentLoaded', async () => {
+      let map = null;
+      let nodeLayer = L.layerGroup();
+
+      try {
+        map = L.map('homeLeafletMap', {
+          center: [22.0, 79.0],
+          zoom: 4,
+          minZoom: 3,
+          maxZoom: 8,
+          scrollWheelZoom: false
+        });
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; OpenStreetMap &copy; CARTO',
+          subdomains: 'abcd',
+          maxZoom: 19
+        }).addTo(map);
+
+        nodeLayer.addTo(map);
+
+        // Fetch India ADM0 Boundary
+        try {
+          const boundaryRes = await fetch('/api/geo/boundary');
+          if (boundaryRes.ok) {
+            const boundaryGeo = await boundaryRes.json();
+            L.geoJSON(boundaryGeo, {
+              style: {
+                color: '#00d2ff',
+                weight: 1.5,
+                opacity: 0.6,
+                fillColor: '#00d2ff',
+                fillOpacity: 0.04
+              }
+            }).addTo(map);
+          }
+        } catch (e) {
+          console.warn('Boundary load note:', e.message);
+        }
+
+        async function loadMapNodes(period) {
+          nodeLayer.clearLayers();
+          try {
+            const url = period === 'ALL' ? '/api/geo/nodes' : `/api/geo/nodes?period=${period}`;
+            const res = await fetch(url);
+            const json = await res.json();
+            if (json && json.data) {
+              json.data.forEach(node => {
+                const isObserved = period === 'ALL' ? node.has_methane_observation : node.observed_in_period;
+                const obs = node.observation;
+
+                if (isObserved) {
+                  const marker = L.circleMarker([node.latitude, node.longitude], {
+                    radius: 6,
+                    color: '#00ff88',
+                    fillColor: '#00ff88',
+                    fillOpacity: 0.8,
+                    weight: 1.5
+                  });
+                  marker.bindPopup(`
+                    <div style="font-family: sans-serif; font-size: 12px; color: #111;">
+                      <strong>Node ID: ${node.node_id}</strong><br>
+                      Lat: ${node.latitude}°N, Lon: ${node.longitude}°E<br>
+                      Status: <span style="color: green; font-weight: bold;">Observed</span><br>
+                      ${obs ? `CH₄ Median: <strong>${obs.methane_median_ppb.toFixed(2)} ppb</strong><br>Pixels: ${obs.methane_pixel_count}` : ''}
+                    </div>
+                  `);
+                  nodeLayer.addLayer(marker);
+                } else {
+                  const marker = L.circleMarker([node.latitude, node.longitude], {
+                    radius: 4,
+                    color: '#3b82f6',
+                    dashArray: '3, 3',
+                    fillColor: 'transparent',
+                    fillOpacity: 0,
+                    weight: 1.2
+                  });
+                  marker.bindPopup(`
+                    <div style="font-family: sans-serif; font-size: 12px; color: #111;">
+                      <strong>Node ID: ${node.node_id}</strong><br>
+                      Lat: ${node.latitude}°N, Lon: ${node.longitude}°E<br>
+                      Status: <span style="color: #666; font-style: italic;">Unobserved / Missing in Period</span><br>
+                      <small style="color: #b91c1c;">(Missing due to QA threshold &lt; 0.50 or cloud cover, never zero)</small>
+                    </div>
+                  `);
+                  nodeLayer.addLayer(marker);
+                }
+              });
+            }
+          } catch (err) {
+            console.error('Failed to load nodes:', err);
+          }
+        }
+
+        loadMapNodes('ALL');
+
+        document.getElementById('homePeriodSelect').addEventListener('change', (e) => {
+          loadMapNodes(e.target.value);
+        });
+
+      } catch (err) {
+        console.error('Leaflet init error:', err);
+      }
+    });
+  </script>
+</body>
+</html>

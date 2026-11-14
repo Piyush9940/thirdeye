@@ -1,0 +1,5 @@
+feature,unit,model_mae,model_rmse,model_r2,persistence_mae,persistence_rmse,persistence_r2,mae_improvement_percent,rmse_improvement_percent
+T2M,degree Celsius,1.5412,2.2789,0.9714,2.4534,3.3658,0.9375,37.18,32.29
+PRECTOTCORR,mm/day,1.3726,2.5789,0.7317,2.1343,3.751,0.4323,35.69,31.25
+RH2M,%,4.0046,5.6396,0.9052,5.7333,8.3572,0.7918,30.15,32.52
+WS10M,m/s,0.5185,0.71,0.8248,0.7061,1.0434,0.6216,26.57,31.95

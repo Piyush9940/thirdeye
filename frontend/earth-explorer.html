@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth Explorer — Interactive Geospatial Intelligence</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/maps.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link active"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper" style="padding-bottom: 2rem;">
+    <!-- Page Header -->
+    <div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <span class="badge-scientific badge-satellite"><i class="fa-solid fa-satellite"></i> Sentinel-5P Level-3</span>
+          <span class="badge-scientific badge-verified"><i class="fa-solid fa-layer-group"></i> 2° Spatial Grid Framework</span>
+        </div>
+        <h1 class="page-title"><i class="fa-solid fa-earth-asia" style="color: var(--cyan-primary);"></i> Earth Explorer: India Subcontinent</h1>
+        <p class="page-description">
+          Interactive geospatial visualization of 255 grid nodes. Color-coded atmospheric methane column concentration ($X\text{CH}_4$), unobserved/missing node tracking, and climate metadata inspection.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 0.5rem;">
+        <button class="btn-nasa btn-nasa-outline btn-sm" id="btnCenterMap"><i class="fa-solid fa-compress"></i> Recenter Map</button>
+        <a href="dataset-explorer.html" class="btn-nasa btn-nasa-secondary btn-sm"><i class="fa-solid fa-table"></i> Tabular View</a>
+      </div>
+    </div>
+
+    <!-- Map Filter & Layer Bar -->
+    <div class="filter-toolbar">
+      <div class="filter-group">
+        <label class="filter-label" for="mapPeriodSelector"><i class="fa-solid fa-clock"></i> Observation Snapshot:</label>
+        <select class="form-select" id="mapPeriodSelector">
+          <option value="2019-05">2019-05 (Pre-monsoon • 82 Observed Nodes)</option>
+          <option value="2021-02" selected>2021-02 (Winter • 67 Observed Nodes)</option>
+          <option value="2021-08">2021-08 (Monsoon • 11 Observed Nodes)</option>
+          <option value="2023-11">2023-11 (Post-monsoon • 66 Observed Nodes)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label" for="layerToggle"><i class="fa-solid fa-eye"></i> Show Layer:</label>
+        <select class="form-select" id="layerToggle">
+          <option value="all">All 255 Nodes (Observed + Missing)</option>
+          <option value="observedOnly">Observed Nodes Only in Selected Period</option>
+          <option value="unobservedOnly">Unobserved / QA-Filtered Nodes</option>
+        </select>
+      </div>
+
+      <div style="margin-left: auto; display: flex; align-items: center; gap: 1rem;">
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);" id="mapStatusText">
+          Loading spatial telemetry...
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Container with Floating Inspector and Legend -->
+    <div class="map-wrapper">
+      <div id="indiaMap"></div>
+
+      <!-- Floating Node Detail Inspector -->
+      <div class="map-floating-panel" id="nodeInspectorPanel">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+          <span style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--cyan-primary); font-weight: 600;">
+            <i class="fa-solid fa-crosshairs"></i> NODE INSPECTOR
+          </span>
+          <span id="inspectorStatusBadge" class="badge-scientific badge-verified">SELECT A NODE</span>
+        </div>
+
+        <div id="inspectorContent" style="font-size: 0.82rem; color: var(--text-secondary);">
+          <p style="color: var(--text-muted); font-style: italic; line-height: 1.5;">
+            Click any spatial node on the map of India to view detailed satellite soundings, precision statistics, and NASA POWER climate variables.
+          </p>
+        </div>
+      </div>
+
+      <!-- Map Legend -->
+      <div class="map-legend-panel">
+        <div style="font-weight: 600; color: #ffffff; margin-bottom: 0.25rem;">Atmospheric CH₄ (ppb)</div>
+        <div class="legend-scale"></div>
+        <div class="legend-labels">
+          <span>&lt; 1850</span>
+          <span>1900</span>
+          <span>1950</span>
+          <span>&gt; 2000</span>
+        </div>
+        <div style="margin-top: 0.6rem; display: flex; align-items: center; gap: 0.5rem; font-size: 0.7rem; color: var(--text-muted);">
+          <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; border: 1.5px dashed #94a3b8; background: rgba(100,116,139,0.3);"></span>
+          Unobserved / QA &lt; 0.50 (Never Zero)
+        </div>
+      </div>
+    </div>
+
+    <!-- Scientific Context Below Map -->
+    <div style="margin-top: 2rem;" class="grid-3col">
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-compass" style="color: var(--cyan-primary);"></i> Coordinate Geometry</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary);">
+          Grid nodes are positioned on a regular 2° by 2° spherical coordinate lattice across the bounding box [69°E–97°E, 7°N–37°N]. Each node represents a 2° spatial bin center.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-cloud-rain" style="color: var(--warning-amber);"></i> Monsoon Data Gap</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary);">
+          During the Indian summer monsoon (e.g. August 2021), thick convective cloud cover leads to severe QA masking. Only 11 nodes pass quality filtering, demonstrating genuine satellite data sparsity.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-scale-balanced" style="color: var(--earth-green);"></i> Concentration Integrity</span>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary);">
+          Observed concentrations vary from ~1788 to ~2022 ppb. Unobserved nodes are rendered with dashed borders to prevent misleading interpretations of zero emissions or data fabrication.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Interactive geospatial exploration engine for Copernicus Sentinel-5P observations over India.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Platform</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="dataset-explorer.html">Datasets</a></li>
+          <li><a href="forecasting.html">ML Predictor</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Methodology</div>
+        <ul class="footer-links">
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="greenhouse-gases.html">Greenhouse Gases</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Attribution</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P Level-3</li>
+          <li>CartoDB Dark Matter Basemap</li>
+          <li>NASA POWER Meteorology</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Verified Geospatial Pipeline</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize Leaflet Map centered on India
+      const map = L.map('indiaMap', {
+        center: [22.5, 82.0],
+        zoom: 5,
+        minZoom: 4,
+        maxZoom: 10,
+        zoomControl: true
+      });
+
+      // CartoDB Dark Matter Tiles
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }).addTo(map);
+
+      // Load India Boundary Polygon
+      try {
+        const boundaryGeoJSON = await API.getIndiaBoundary();
+        if (boundaryGeoJSON) {
+          L.geoJSON(boundaryGeoJSON, {
+            style: {
+              color: '#00d2ff',
+              weight: 1.5,
+              opacity: 0.6,
+              fillColor: '#0284c7',
+              fillOpacity: 0.04
+            }
+          }).addTo(map);
+        }
+      } catch (err) {
+        console.warn('India boundary GeoJSON load note:', err.message);
+      }
+
+      // Layer groups for markers
+      const nodesLayerGroup = L.layerGroup().addTo(map);
+
+      const periodSelector = document.getElementById('mapPeriodSelector');
+      const layerToggle = document.getElementById('layerToggle');
+      const statusText = document.getElementById('mapStatusText');
+      const inspectorContent = document.getElementById('inspectorContent');
+      const inspectorBadge = document.getElementById('inspectorStatusBadge');
+      const btnCenter = document.getElementById('btnCenterMap');
+
+      btnCenter.addEventListener('click', () => {
+        map.setView([22.5, 82.0], 5);
+      });
+
+      async function renderMapNodes() {
+        const period = periodSelector.value;
+        const filterMode = layerToggle.value;
+
+        statusText.textContent = `Loading period [${period}]...`;
+        nodesLayerGroup.clearLayers();
+
+        try {
+          // Fetch augmented nodes for current period
+          const res = await API.getSpatialNodes(period);
+          if (!res || !res.data) throw new Error('No nodes data');
+          const nodes = res.data;
+
+          let renderedCount = 0;
+          let observedCount = 0;
+
+          nodes.forEach(node => {
+            const isObserved = node.observed_in_period && node.observation;
+
+            if (filterMode === 'observedOnly' && !isObserved) return;
+            if (filterMode === 'unobservedOnly' && isObserved) return;
+
+            renderedCount++;
+            if (isObserved) observedCount++;
+
+            let marker;
+            if (isObserved) {
+              const ch4 = node.observation.methane_median_ppb;
+              const color = window.APP_CONFIG.getCH4Color(ch4);
+
+              marker = L.circleMarker([node.latitude, node.longitude], {
+                radius: 8,
+                fillColor: color,
+                color: '#ffffff',
+                weight: 1.5,
+                opacity: 0.9,
+                fillOpacity: 0.85
+              });
+
+              marker.bindTooltip(`
+                <strong>Node ${node.node_id}</strong><br>
+                CH₄ Median: <strong>${ch4.toFixed(1)} ppb</strong><br>
+                Period: ${period}
+              `, { direction: 'top', className: 'map-tooltip' });
+
+            } else {
+              // Unobserved node
+              marker = L.circleMarker([node.latitude, node.longitude], {
+                radius: 6,
+                fillColor: '#475569',
+                color: '#94a3b8',
+                weight: 1.5,
+                dashArray: '3, 3',
+                opacity: 0.6,
+                fillOpacity: 0.15
+              });
+
+              marker.bindTooltip(`
+                <strong>Node ${node.node_id}</strong><br>
+                <span style="color: #94a3b8;">Unobserved / QA-filtered</span><br>
+                Period: ${period}
+              `, { direction: 'top' });
+            }
+
+            // Click Handler: Populate Inspector
+            marker.on('click', () => {
+              displayNodeInInspector(node, period);
+            });
+
+            marker.addTo(nodesLayerGroup);
+          });
+
+          statusText.textContent = `Displaying ${renderedCount} nodes (${observedCount} observed in ${period})`;
+        } catch (err) {
+          console.error('Error rendering map nodes:', err);
+          statusText.textContent = `Error: ${err.message}`;
+        }
+      }
+
+      function displayNodeInInspector(node, period) {
+        const obs = node.observation;
+        const region = window.APP_CONFIG.getRegionForCoords(node.latitude, node.longitude);
+
+        if (obs) {
+          inspectorBadge.textContent = 'OBSERVED';
+          inspectorBadge.className = 'badge-scientific badge-verified';
+
+          inspectorContent.innerHTML = `
+            <div style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">
+              Node ID: <span style="color: var(--cyan-primary); font-family: var(--font-mono);">${node.node_id}</span>
+            </div>
+
+            <div class="map-popup-row"><span class="map-popup-label">Latitude:</span><span class="map-popup-val">${node.latitude.toFixed(1)}°N</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Longitude:</span><span class="map-popup-val">${node.longitude.toFixed(1)}°E</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Region Zone:</span><span class="map-popup-val">${region.replace('_', ' ')}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Period:</span><span class="map-popup-val">${period}</span></div>
+
+            <div style="margin: 0.75rem 0 0.5rem; border-top: 1px solid var(--border-subtle); padding-top: 0.5rem; font-weight: 600; color: var(--cyan-primary);">
+              SATELLITE SOUNDINGS
+            </div>
+            <div class="map-popup-row"><span class="map-popup-label">CH₄ Median:</span><span class="map-popup-val" style="color: ${window.APP_CONFIG.getCH4Color(obs.methane_median_ppb)}; font-size: 0.95rem;">${obs.methane_median_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">CH₄ Mean:</span><span class="map-popup-val">${obs.methane_mean_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">CH₄ Std Dev:</span><span class="map-popup-val">&plusmn;${obs.methane_std_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">QA Pixel Count:</span><span class="map-popup-val">${obs.methane_pixel_count || 'N/A'}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Median Precision:</span><span class="map-popup-val">${obs.median_precision_ppb ? obs.median_precision_ppb.toFixed(2) + ' ppb' : 'N/A'}</span></div>
+
+            <div style="margin: 0.75rem 0 0.5rem; border-top: 1px solid var(--border-subtle); padding-top: 0.5rem; font-weight: 600; color: var(--earth-green);">
+              NASA POWER CLIMATE
+            </div>
+            <div class="map-popup-row"><span class="map-popup-label">Temperature (T2M):</span><span class="map-popup-val">${obs.T2M.toFixed(1)} °C</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Precipitation:</span><span class="map-popup-val">${obs.PRECTOTCORR.toFixed(2)} mm/d</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Relative Humidity:</span><span class="map-popup-val">${obs.RH2M.toFixed(1)} %</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Wind Speed:</span><span class="map-popup-val">${obs.WS10M.toFixed(2)} m/s</span></div>
+
+            <div style="margin-top: 1rem;">
+              <a href="dataset-explorer.html" class="btn-nasa btn-nasa-outline btn-sm" style="width: 100%;"><i class="fa-solid fa-table"></i> Query in Dataset Explorer</a>
+            </div>
+          `;
+        } else {
+          inspectorBadge.textContent = 'UNOBSERVED';
+          inspectorBadge.className = 'badge-scientific badge-missing';
+
+          inspectorContent.innerHTML = `
+            <div style="font-size: 1.05rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">
+              Node ID: <span style="color: var(--text-muted); font-family: var(--font-mono);">${node.node_id}</span>
+            </div>
+
+            <div class="map-popup-row"><span class="map-popup-label">Latitude:</span><span class="map-popup-val">${node.latitude.toFixed(1)}°N</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Longitude:</span><span class="map-popup-val">${node.longitude.toFixed(1)}°E</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Region Zone:</span><span class="map-popup-val">${region.replace('_', ' ')}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Topology Degree:</span><span class="map-popup-val">${node.degree || 8}</span></div>
+
+            <div class="scientific-warning-callout" style="margin-top: 1rem; padding: 0.75rem;">
+              <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+              <div class="content" style="font-size: 0.78rem;">
+                No quality-filtered satellite soundings passed the QA &ge; 0.50 threshold at this coordinate during <strong>${period}</strong>. This is treated strictly as missing data, not zero concentration.
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      periodSelector.addEventListener('change', renderMapNodes);
+      layerToggle.addEventListener('change', renderMapNodes);
+
+      // Initial render
+      renderMapNodes();
+    });
+  </script>
+</body>
+</html>

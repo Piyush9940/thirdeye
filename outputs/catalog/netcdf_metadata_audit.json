@@ -1,0 +1,8451 @@
+[
+    {
+        "file_name": "S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+        "relative_path": "copernicus\\S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+        "size_mb": 59.6078,
+        "read_status": "SUCCESS",
+        "data_variables": [],
+        "dimensions": {},
+        "coordinates": [],
+        "time_range": null,
+        "latitude_range": null,
+        "longitude_range": null,
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_2015_2024.nc",
+        "relative_path": "nasa_power\\PRECTOTCORR_2015_2024.nc",
+        "size_mb": 1.7292,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 65,
+            "lon": 48
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_2015_2024.nc",
+        "relative_path": "nasa_power\\RH2M_2015_2024.nc",
+        "size_mb": 1.7798,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 65,
+            "lon": 48
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_2015_2024.nc",
+        "relative_path": "nasa_power\\T2M_2015_2024.nc",
+        "size_mb": 1.7521,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 65,
+            "lon": 48
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_2015_2024.nc",
+        "relative_path": "nasa_power\\WS10M_2015_2024.nc",
+        "size_mb": 1.715,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 65,
+            "lon": 48
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+        "relative_path": "oco2_sample\\oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+        "size_mb": 57.924,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "date",
+            "latitude",
+            "longitude",
+            "time",
+            "solar_zenith_angle",
+            "sensor_zenith_angle",
+            "xco2_quality_flag",
+            "xco2_qf_bitflag",
+            "xco2_qf_simple_bitflag",
+            "file_index",
+            "vertex_latitude",
+            "vertex_longitude",
+            "xco2",
+            "xco2_x2019",
+            "xco2_uncertainty",
+            "xco2_apriori",
+            "pressure_levels",
+            "co2_profile_apriori",
+            "xco2_averaging_kernel",
+            "pressure_weight"
+        ],
+        "dimensions": {
+            "sounding_id": 146539,
+            "epoch_dimension": 7,
+            "vertices": 4,
+            "levels": 20,
+            "bands": 3,
+            "source_files": 18,
+            "frames": 125090,
+            "footprints": 8
+        },
+        "coordinates": [
+            "sounding_id",
+            "levels",
+            "bands",
+            "vertices",
+            "source_files",
+            "frames",
+            "footprints"
+        ],
+        "time_range": null,
+        "latitude_range": null,
+        "longitude_range": null,
+        "error": null
+    },
+    {
+        "file_name": "S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc",
+        "relative_path": "copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc",
+        "size_mb": 50.444,
+        "read_status": "SUCCESS",
+        "data_variables": [],
+        "dimensions": {},
+        "coordinates": [],
+        "time_range": null,
+        "latitude_range": null,
+        "longitude_range": null,
+        "error": null
+    },
+    {
+        "file_name": "S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc",
+        "relative_path": "copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc",
+        "size_mb": 51.2999,
+        "read_status": "SUCCESS",
+        "data_variables": [],
+        "dimensions": {},
+        "coordinates": [],
+        "time_range": null,
+        "latitude_range": null,
+        "longitude_range": null,
+        "error": null
+    },
+    {
+        "file_name": "S5P_RPRO_L2__CH4____20190909T064333_20190909T082503_09873_03_020400_20221114T123649.nc",
+        "relative_path": "copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190909T064333_20190909T082503_09873_03_020400_20221114T123649.nc",
+        "size_mb": 54.0212,
+        "read_status": "SUCCESS",
+        "data_variables": [],
+        "dimensions": {},
+        "coordinates": [],
+        "time_range": null,
+        "latitude_range": null,
+        "longitude_range": null,
+        "error": null
+    },
+    {
+        "file_name": "S5P_RPRO_L2__CH4____20190910T080555_20190910T094724_09888_03_020400_20221114T123938.nc",
+        "relative_path": "copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190910T080555_20190910T094724_09888_03_020400_20221114T123938.nc",
+        "size_mb": 68.3147,
+        "read_status": "SUCCESS",
+        "data_variables": [],
+        "dimensions": {},
+        "coordinates": [],
+        "time_range": null,
+        "latitude_range": null,
+        "longitude_range": null,
+        "error": null
+    },
+    {
+        "file_name": "S5P_RPRO_L2__CH4____20190926T080412_20190926T094541_10115_03_020400_20221115T020105.nc",
+        "relative_path": "copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190926T080412_20190926T094541_10115_03_020400_20221115T020105.nc",
+        "size_mb": 58.8497,
+        "read_status": "SUCCESS",
+        "data_variables": [],
+        "dimensions": {},
+        "coordinates": [],
+        "time_range": null,
+        "latitude_range": null,
+        "longitude_range": null,
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_001.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_001.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_002.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_002.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_003.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_003.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_004.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_004.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_005.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_005.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_006.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_006.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_007.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_007.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_008.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_008.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_009.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_009.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_010.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_010.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_011.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_011.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_012.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_012.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_013.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_013.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_014.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_014.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_015.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_015.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_016.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_016.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_017.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_017.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_018.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_018.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_019.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_019.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_020.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_020.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_021.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_021.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_022.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_022.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_023.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_023.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_024.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_024.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_025.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_025.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_026.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_026.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_027.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_027.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_028.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_028.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_029.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_029.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_030.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_030.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_031.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_031.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_032.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_032.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_033.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_033.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_034.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_034.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_035.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_035.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_036.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_036.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_037.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_037.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_038.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_038.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_039.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_039.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_040.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_040.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_041.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_041.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_042.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_042.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_043.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_043.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_044.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_044.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_045.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_045.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_046.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_046.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_047.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_047.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_048.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_048.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_049.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_049.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_050.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_050.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_051.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_051.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_052.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_052.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_053.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_053.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_054.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_054.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_055.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_055.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_056.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_056.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_057.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_057.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_058.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_058.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_059.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_059.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_060.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_060.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_061.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_061.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_062.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_062.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_063.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_063.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "PRECTOTCORR_tile_064.nc",
+        "relative_path": "nasa_power\\tiles\\PRECTOTCORR_tile_064.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "PRECTOTCORR"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_001.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_001.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_002.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_002.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_003.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_003.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_004.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_004.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_005.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_005.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_006.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_006.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_007.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_007.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_008.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_008.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_009.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_009.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_010.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_010.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_011.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_011.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_012.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_012.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_013.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_013.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_014.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_014.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_015.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_015.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_016.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_016.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_017.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_017.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_018.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_018.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_019.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_019.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_020.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_020.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_021.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_021.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_022.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_022.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_023.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_023.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_024.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_024.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_025.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_025.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_026.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_026.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_027.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_027.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_028.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_028.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_029.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_029.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_030.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_030.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_031.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_031.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_032.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_032.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_033.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_033.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_034.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_034.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_035.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_035.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_036.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_036.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_037.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_037.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_038.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_038.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_039.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_039.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_040.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_040.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_041.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_041.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_042.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_042.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_043.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_043.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_044.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_044.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_045.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_045.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_046.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_046.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_047.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_047.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_048.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_048.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_049.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_049.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_050.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_050.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_051.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_051.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_052.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_052.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_053.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_053.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_054.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_054.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_055.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_055.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_056.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_056.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_057.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_057.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_058.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_058.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_059.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_059.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_060.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_060.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_061.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_061.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_062.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_062.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_063.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_063.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "RH2M_tile_064.nc",
+        "relative_path": "nasa_power\\tiles\\RH2M_tile_064.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "RH2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_001.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_001.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_002.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_002.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_003.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_003.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_004.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_004.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_005.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_005.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_006.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_006.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_007.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_007.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_008.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_008.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_009.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_009.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_010.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_010.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_011.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_011.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_012.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_012.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_013.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_013.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_014.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_014.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_015.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_015.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_016.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_016.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_017.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_017.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_018.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_018.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_019.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_019.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_020.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_020.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_021.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_021.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_022.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_022.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_023.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_023.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_024.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_024.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_025.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_025.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_026.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_026.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_027.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_027.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_028.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_028.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_029.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_029.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_030.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_030.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_031.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_031.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_032.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_032.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_033.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_033.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_034.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_034.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_035.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_035.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_036.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_036.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_037.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_037.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_038.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_038.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_039.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_039.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_040.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_040.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_041.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_041.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_042.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_042.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_043.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_043.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_044.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_044.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_045.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_045.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_046.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_046.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_047.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_047.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_048.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_048.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_049.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_049.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_050.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_050.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_051.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_051.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_052.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_052.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_053.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_053.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_054.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_054.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_055.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_055.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_056.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_056.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_057.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_057.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_058.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_058.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_059.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_059.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_060.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_060.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_061.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_061.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_062.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_062.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_063.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_063.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "T2M_tile_064.nc",
+        "relative_path": "nasa_power\\tiles\\T2M_tile_064.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "T2M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_001.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_001.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_002.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_002.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_003.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_003.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_004.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_004.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_005.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_005.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_006.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_006.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_007.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_007.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_008.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_008.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            6.0,
+            10.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_009.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_009.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_010.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_010.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_011.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_011.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_012.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_012.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_013.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_013.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_014.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_014.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_015.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_015.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_016.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_016.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            10.0,
+            14.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_017.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_017.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_018.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_018.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_019.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_019.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_020.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_020.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_021.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_021.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_022.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_022.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_023.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_023.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_024.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_024.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            14.0,
+            18.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_025.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_025.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_026.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_026.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_027.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_027.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_028.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_028.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_029.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_029.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_030.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_030.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_031.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_031.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_032.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_032.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            18.0,
+            22.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_033.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_033.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_034.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_034.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_035.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_035.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_036.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_036.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_037.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_037.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_038.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_038.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_039.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_039.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_040.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_040.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            22.0,
+            26.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_041.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_041.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_042.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_042.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_043.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_043.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_044.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_044.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_045.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_045.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_046.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_046.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_047.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_047.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_048.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_048.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            26.0,
+            30.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_049.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_049.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_050.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_050.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_051.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_051.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_052.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_052.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_053.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_053.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_054.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_054.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_055.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_055.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_056.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_056.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            30.0,
+            34.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_057.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_057.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            68.125,
+            71.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_058.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_058.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            72.5,
+            75.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_059.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_059.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            76.25,
+            80.0
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_060.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_060.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            80.0,
+            83.75
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_061.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_061.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            84.375,
+            87.5
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_062.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_062.nc",
+        "size_mb": 0.0813,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 7
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            88.125,
+            91.875
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_063.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_063.nc",
+        "size_mb": 0.0723,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 6
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            92.5,
+            95.625
+        ],
+        "error": null
+    },
+    {
+        "file_name": "WS10M_tile_064.nc",
+        "relative_path": "nasa_power\\tiles\\WS10M_tile_064.nc",
+        "size_mb": 0.0455,
+        "read_status": "SUCCESS",
+        "data_variables": [
+            "WS10M"
+        ],
+        "dimensions": {
+            "time": 130,
+            "lat": 9,
+            "lon": 3
+        },
+        "coordinates": [
+            "lat",
+            "lon",
+            "time"
+        ],
+        "time_range": [
+            "201501",
+            "202413"
+        ],
+        "latitude_range": [
+            34.0,
+            38.0
+        ],
+        "longitude_range": [
+            96.25,
+            97.5
+        ],
+        "error": null
+    }
+]

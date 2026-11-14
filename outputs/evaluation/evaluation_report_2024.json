@@ -1,0 +1,57 @@
+{
+    "evaluation_period": "January 2024 to December 2024",
+    "model": "GCN-GRU",
+    "baseline": "Persistence",
+    "test_months": 12,
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "best_training_epoch": 100,
+    "best_validation_loss": 0.1553070085744063,
+    "metrics": [
+        {
+            "Feature": "T2M",
+            "Unit": "\u00b0C",
+            "GCN_GRU_MAE": 1.5411540269851685,
+            "GCN_GRU_RMSE": 2.27894297960229,
+            "GCN_GRU_R2": 0.9713538885116577,
+            "Persistence_MAE": 2.453355073928833,
+            "Persistence_RMSE": 3.365838791938115,
+            "Persistence_R2": 0.9375136494636536
+        },
+        {
+            "Feature": "PRECTOTCORR",
+            "Unit": "mm/day",
+            "GCN_GRU_MAE": 1.3725981712341309,
+            "GCN_GRU_RMSE": 2.5788719251232632,
+            "GCN_GRU_R2": 0.7316609025001526,
+            "Persistence_MAE": 2.134335994720459,
+            "Persistence_RMSE": 3.751027030178259,
+            "Persistence_R2": 0.43229228258132935
+        },
+        {
+            "Feature": "RH2M",
+            "Unit": "%",
+            "GCN_GRU_MAE": 4.004586696624756,
+            "GCN_GRU_RMSE": 5.639575131422922,
+            "GCN_GRU_R2": 0.9052045345306396,
+            "Persistence_MAE": 5.733267784118652,
+            "Persistence_RMSE": 8.357177445522922,
+            "Persistence_R2": 0.7918319702148438
+        },
+        {
+            "Feature": "WS10M",
+            "Unit": "m/s",
+            "GCN_GRU_MAE": 0.5185045599937439,
+            "GCN_GRU_RMSE": 0.7100049284643054,
+            "GCN_GRU_R2": 0.8247547149658203,
+            "Persistence_MAE": 0.7061140537261963,
+            "Persistence_RMSE": 1.0433620325738044,
+            "Persistence_R2": 0.6215628385543823
+        }
+    ]
+}

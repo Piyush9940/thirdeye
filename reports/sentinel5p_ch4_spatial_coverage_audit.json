@@ -1,0 +1,37 @@
+{
+  "dataset": "Sentinel-5P TROPOMI CH4",
+  "source_file": "sentinel5p_ch4_india_bbox_pixels.csv",
+  "quality_threshold": "qa_value > 0.5",
+  "bounding_box": {
+    "latitude": [
+      6,
+      38
+    ],
+    "longitude": [
+      68,
+      98
+    ]
+  },
+  "high_quality_pixels": 2952,
+  "grid_resolution_degrees": 2.0,
+  "occupied_grid_cells": 41,
+  "top1_grid_share_percent": 22.696476964769648,
+  "top5_grid_share_percent": 62.5,
+  "top10_grid_share_percent": 89.22764227642277,
+  "latitude_range": [
+    15.79455,
+    37.99251
+  ],
+  "longitude_range": [
+    78.3365,
+    97.995926
+  ],
+  "grid_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_2deg_grid.csv",
+  "high_quality_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_high_quality.csv",
+  "map_path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_sample_map.png",
+  "india_boundary_files": [
+    "data\\external\\india_boundary\\india_adm0.geojson",
+    "data\\external\\india_boundary\\india_adm0_metadata.json"
+  ],
+  "interpretation": "Single-granule spatial sample; not a national or temporal methane climatology."
+}

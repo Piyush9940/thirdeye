@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning Experiment Explorer & Live Predictor — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Earth Explorer</a></li>
+        <li class="nav-item"><a href="dataset-explorer.html" class="nav-link"><i class="fa-solid fa-database"></i> Datasets</a></li>
+        <li class="nav-item nav-dropdown">
+          <a href="#" class="nav-link"><i class="fa-solid fa-flask"></i> Analysis <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="greenhouse-gases.html"><i class="fa-solid fa-smog"></i> Methane (CH₄)</a></li>
+            <li class="nav-dropdown-item"><a href="climate-analysis.html"><i class="fa-solid fa-cloud-sun"></i> Climate Context</a></li>
+            <li class="nav-dropdown-item"><a href="hotspot-detection.html"><i class="fa-solid fa-fire"></i> Hotspot Patterns</a></li>
+            <li class="nav-dropdown-item"><a href="trend-analysis.html"><i class="fa-solid fa-arrow-trend-up"></i> Temporal Trends</a></li>
+            <li class="nav-dropdown-item"><a href="ocean-analysis.html"><i class="fa-solid fa-water"></i> Marine Context</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="forecasting.html" class="nav-link active"><i class="fa-solid fa-brain"></i> ML & Forecast</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="reports.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Reports</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">
+    <!-- Header -->
+    <div class="page-header">
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+        <span class="badge-scientific badge-experimental"><i class="fa-solid fa-triangle-exclamation"></i> Experimental Reference Model</span>
+        <span class="badge-scientific badge-warning">Not Production Approved</span>
+        <span class="badge-scientific badge-verified">15 Verified PyTorch Checkpoints</span>
+      </div>
+      <h1 class="page-title"><i class="fa-solid fa-brain" style="color: var(--cyan-primary);"></i> Machine Learning Experiment Explorer & Live Predictor</h1>
+      <p class="page-description">
+        Scientific transparency dossier detailing model architectures, chronological validation across 3 folds and 5 random seeds, benchmark comparisons against Graph Neural Networks (GCN), and an interactive experimental test bench.
+      </p>
+    </div>
+
+    <!-- Mandatory Scientific Disclaimer -->
+    <div class="scientific-warning-callout">
+      <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="content">
+        <strong>Mandatory Scientific Integrity Standard</strong>
+        The machine learning models developed in this project are experimental research reference baselines, NOT operational environmental forecasting engines. Negative $R^2$ across chronological evaluation folds indicates performance does not beat the historical target mean. Negative bias indicates systematic underprediction. Graph Neural Networks did not outperform the multi-layer perceptron. Predictions must never be cited as true future forecasts or proof of ground emissions.
+      </div>
+    </div>
+
+    <!-- Model Architecture & Parameters Card -->
+    <div class="nasa-card" style="margin-bottom: 2rem;">
+      <div class="nasa-card-header">
+        <span class="nasa-card-title"><i class="fa-solid fa-network-wired" style="color: var(--cyan-primary);"></i> Model Architecture: Original MLP Reference</span>
+        <span class="badge-scientific badge-verified">PyTorch 2.x</span>
+      </div>
+
+      <div class="grid-2col" style="gap: 2rem;">
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--cyan-primary); margin-bottom: 0.75rem;">NETWORK SPECIFICATIONS</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+            <li><strong style="color: #fff;">Input Dimension:</strong> 8 continuous standardized features</li>
+            <li><strong style="color: #fff;">Hidden Layer:</strong> 32 linear units + ReLU activation</li>
+            <li><strong style="color: #fff;">Regularization:</strong> Dropout ($p = 0.20$)</li>
+            <li><strong style="color: #fff;">Output Layer:</strong> 1 linear unit (Standardized $X\text{CH}_4$, rescaled to ppb)</li>
+            <li><strong style="color: #fff;">Training Strategy:</strong> Adam optimizer, 250 epochs, MSE loss</li>
+            <li><strong style="color: #fff;">Checkpoint Count:</strong> 15 models (Folds 1, 2, 3 &times; Seeds 7, 21, 42, 77, 123)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--cyan-primary); margin-bottom: 0.75rem;">THE 8 INPUT FEATURES (IN EXACT ORDER)</h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.82rem; font-family: var(--font-mono); color: var(--text-primary);">
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">1. T2M (Air Temp)</div>
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">2. PRECTOTCORR</div>
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">3. RH2M (Humidity)</div>
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">4. WS10M (Wind Speed)</div>
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">5. Latitude (°N)</div>
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">6. Longitude (°E)</div>
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">7. Month Sine</div>
+            <div style="background: rgba(5,11,24,0.6); padding: 0.45rem; border-radius: 4px; border: 1px solid var(--border-subtle);">8. Month Cosine</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chronological Evaluation Protocol Table -->
+    <div class="nasa-card" style="margin-bottom: 2rem;">
+      <div class="nasa-card-header">
+        <span class="nasa-card-title"><i class="fa-solid fa-timeline" style="color: var(--cyan-primary);"></i> Chronological Expanding-Window Validation Protocol</span>
+        <span class="badge-scientific badge-verified">Temporal Leakage Prevention</span>
+      </div>
+
+      <div class="nasa-table-container">
+        <table class="nasa-table">
+          <thead>
+            <tr>
+              <th>Fold</th>
+              <th>Training Periods</th>
+              <th>Evaluation Period</th>
+              <th>Evaluation Nodes</th>
+              <th>Mean MAE (ppb)</th>
+              <th>Mean RMSE (ppb)</th>
+              <th>Mean R²</th>
+              <th>Mean Bias (ppb)</th>
+              <th>Key Evaluation Diagnostic</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge-scientific badge-verified">Fold 1</span></td>
+              <td>2019-05 (82 nodes)</td>
+              <td><strong>2021-02 (Winter)</strong></td>
+              <td>67 nodes</td>
+              <td>45.60</td>
+              <td>47.58</td>
+              <td style="color: #ef4444; font-weight: 600;">-12.41</td>
+              <td style="color: #ef4444;">-45.60</td>
+              <td>Model underpredicts winter 2021 baseline by ~45 ppb.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-scientific badge-warning">Fold 2</span></td>
+              <td>2019-05, 2021-02 (149 nodes)</td>
+              <td><strong>2021-08 (Monsoon)</strong></td>
+              <td><span style="color: #f59e0b; font-weight: 700;">11 nodes only</span></td>
+              <td>99.93</td>
+              <td>102.17</td>
+              <td style="color: #ef4444; font-weight: 600;">-27.67</td>
+              <td style="color: #ef4444;">-99.93</td>
+              <td>Severe monsoon cloud filtering causes extreme sparsity and high underprediction.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-scientific badge-verified">Fold 3</span></td>
+              <td>2019-05, 2021-02, 2021-08 (160 nodes)</td>
+              <td><strong>2023-11 (Post-monsoon)</strong></td>
+              <td>66 nodes (56 repeated)</td>
+              <td>15.82</td>
+              <td>20.87</td>
+              <td style="color: #10b981; font-weight: 600;">+0.043</td>
+              <td style="color: #ef4444;">-7.01</td>
+              <td>Slightly positive R², but 56 nodes were previously observed in train set.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Benchmark Model Comparison Table -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem;">
+      <div class="nasa-card-header">
+        <span class="nasa-card-title"><i class="fa-solid fa-scale-balanced" style="color: var(--cyan-primary);"></i> Benchmark Comparison: GNN vs. MLP vs. Ablations</span>
+        <span class="badge-scientific badge-experimental">Equal-Fold Mean Results</span>
+      </div>
+
+      <div class="nasa-table-container">
+        <table class="nasa-table">
+          <thead>
+            <tr>
+              <th>Model Architecture</th>
+              <th>Features Used</th>
+              <th>Equal-Fold Mean MAE</th>
+              <th>Equal-Fold Mean RMSE</th>
+              <th>Equal-Fold Mean R²</th>
+              <th>Equal-Fold Mean Bias</th>
+              <th>Scientific Finding</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: rgba(16, 185, 129, 0.05);">
+              <td><strong>Month-only Diagnostic</strong></td>
+              <td>Month Sine & Cosine</td>
+              <td style="color: #10b981; font-weight: 700;">49.04 ppb</td>
+              <td>52.68 ppb</td>
+              <td>-10.49</td>
+              <td>-46.49 ppb</td>
+              <td>Strongest single baseline; seasonal calendar signal outperforms complex networks.</td>
+            </tr>
+            <tr style="background: rgba(0, 210, 255, 0.08); font-weight: 600;">
+              <td><strong>Original MLP Reference</strong></td>
+              <td>All 8 Features</td>
+              <td>53.79 ppb</td>
+              <td>56.87 ppb</td>
+              <td>-13.35</td>
+              <td>-50.85 ppb</td>
+              <td>Selected experimental reference. Fully reconstructed and verified.</td>
+            </tr>
+            <tr>
+              <td><strong>Distance-Weighted GCN</strong></td>
+              <td>8 Features + Adjacency Graph</td>
+              <td>58.48 ppb</td>
+              <td>60.76 ppb</td>
+              <td>-11.49</td>
+              <td>-58.01 ppb</td>
+              <td>Does NOT outperform MLP. Spatial graph edges add noise under sparse sampling.</td>
+            </tr>
+            <tr>
+              <td><strong>Global Training Mean Baseline</strong></td>
+              <td>Historical Mean</td>
+              <td>62.72 ppb</td>
+              <td>65.07 ppb</td>
+              <td>-11.90</td>
+              <td>-62.43 ppb</td>
+              <td>Constant prediction baseline across all spatial nodes.</td>
+            </tr>
+            <tr>
+              <td><strong>Climate-only Ablation</strong></td>
+              <td>T2M, Precip, RH, Wind, Lat, Lon</td>
+              <td>59.09 ppb</td>
+              <td>63.26 ppb</td>
+              <td>-13.09</td>
+              <td>-58.66 ppb</td>
+              <td>Without calendar sine/cosine, error increases noticeably.</td>
+            </tr>
+            <tr>
+              <td><strong>Unweighted GCN</strong></td>
+              <td>8 Features + Binary Graph</td>
+              <td>70.93 ppb</td>
+              <td>75.87 ppb</td>
+              <td>-23.94</td>
+              <td>-64.82 ppb</td>
+              <td>Poorest performance due to oversmoothing across disconnected subgraphs.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Live Inference Test Bench -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem; border-color: var(--border-medium);">
+      <div class="nasa-card-header">
+        <span class="nasa-card-title"><i class="fa-solid fa-flask-vial" style="color: var(--cyan-primary);"></i> Interactive Live Predictor Test Bench</span>
+        <span class="badge-scientific badge-experimental">Verified Checkpoint Inference</span>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Test the live PyTorch MLP predictor by varying contextual surface parameters. The backend standardizes inputs using training-set statistics and de-normalizes the output into ppb.
+      </p>
+
+      <form id="predictionForm" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+        <div class="form-group">
+          <label class="form-label" for="inpT2M">T2M Air Temp (°C):</label>
+          <input type="number" step="0.1" class="form-control" id="inpT2M" value="25.0" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpPrecip">Precipitation (mm/d):</label>
+          <input type="number" step="0.1" class="form-control" id="inpPrecip" value="1.0" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpRH2M">Relative Humidity (%):</label>
+          <input type="number" step="0.5" class="form-control" id="inpRH2M" value="50.0" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpWS10M">Wind Speed (m/s):</label>
+          <input type="number" step="0.1" class="form-control" id="inpWS10M" value="3.0" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpLat">Latitude (°N):</label>
+          <input type="number" step="1.0" class="form-control" id="inpLat" value="23.0" min="7" max="37" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpLon">Longitude (°E):</label>
+          <input type="number" step="1.0" class="form-control" id="inpLon" value="83.0" min="69" max="97" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpMonth">Month (1–12):</label>
+          <select class="form-control" id="inpMonth">
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="5" selected>May (Pre-monsoon)</option>
+            <option value="8">August (Monsoon)</option>
+            <option value="11">November (Post-monsoon)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpFold">Model Fold Checkpoint:</label>
+          <select class="form-control" id="inpFold">
+            <option value="1">Fold 1 (Trained on 2019-05)</option>
+            <option value="2">Fold 2 (Trained up to 2021-02)</option>
+            <option value="3" selected>Fold 3 (Trained up to 2021-08)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inpSeed">Checkpoint Seed:</label>
+          <select class="form-control" id="inpSeed">
+            <option value="7">Seed 7</option>
+            <option value="21">Seed 21</option>
+            <option value="42" selected>Seed 42</option>
+            <option value="77">Seed 77</option>
+            <option value="123">Seed 123</option>
+          </select>
+        </div>
+      </form>
+
+      <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+        <button type="button" class="btn-nasa btn-nasa-primary" id="btnRunInference">
+          <i class="fa-solid fa-play"></i> Run Experimental Inference
+        </button>
+        <span id="inferenceStatus" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+          Ready to compute
+        </span>
+      </div>
+
+      <!-- Inference Result Box -->
+      <div id="inferenceResultBox" style="display: none; background: rgba(7, 13, 30, 0.85); border: 1px solid var(--border-medium); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--cyan-primary); text-transform: uppercase;">
+            INFERENCE OUTPUT TELEMETRY
+          </span>
+          <span class="badge-scientific badge-experimental">EXPERIMENTAL ESTIMATE</span>
+        </div>
+
+        <div style="display: flex; gap: 2rem; align-items: baseline; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">PREDICTED METHANE CONCENTRATION</div>
+            <div id="resPredVal" style="font-size: 2.2rem; font-weight: 800; font-family: var(--font-mono); color: var(--cyan-primary);">
+              -- ppb
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">EVALUATION FOLD & SEED</div>
+            <div id="resFoldSeed" style="font-size: 1.1rem; font-weight: 600; color: #fff;">
+              --
+            </div>
+          </div>
+        </div>
+
+        <div id="resWarning" style="margin-top: 1rem; font-size: 0.78rem; color: #fde68a; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Scientific transparency & machine learning experiment explorer for environmental satellite observations.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Platform</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="forecasting.html">ML Predictor</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Scientific Integrity</div>
+        <ul class="footer-links">
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="research-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Attribution</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P</li>
+          <li>NASA POWER Meteorology</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Experimental Reference Model</div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnRun = document.getElementById('btnRunInference');
+      const statusEl = document.getElementById('inferenceStatus');
+      const resultBox = document.getElementById('inferenceResultBox');
+      const resVal = document.getElementById('resPredVal');
+      const resFoldSeed = document.getElementById('resFoldSeed');
+      const resWarning = document.getElementById('resWarning');
+
+      btnRun.addEventListener('click', async () => {
+        const t2m = parseFloat(document.getElementById('inpT2M').value);
+        const precip = parseFloat(document.getElementById('inpPrecip').value);
+        const rh = parseFloat(document.getElementById('inpRH2M').value);
+        const ws = parseFloat(document.getElementById('inpWS10M').value);
+        const lat = parseFloat(document.getElementById('inpLat').value);
+        const lon = parseFloat(document.getElementById('inpLon').value);
+        const month = parseInt(document.getElementById('inpMonth').value);
+        const fold = parseInt(document.getElementById('inpFold').value);
+        const seed = parseInt(document.getElementById('inpSeed').value);
+
+        // Calculate month_sin and month_cos
+        const monthAngle = (2 * Math.PI * (month - 1)) / 12;
+        const monthSin = Math.sin(monthAngle);
+        const monthCos = Math.cos(monthAngle);
+
+        const features = [t2m, precip, rh, ws, lat, lon, monthSin, monthCos];
+
+        statusEl.textContent = 'Running PyTorch inference through Python client...';
+        btnRun.disabled = true;
+
+        try {
+          const res = await API.predictMethane(features, fold, seed);
+          if (res && res.data) {
+            const pred = res.data;
+            const ppb = Array.isArray(pred.prediction_ppb) ? pred.prediction_ppb[0] : pred.prediction_ppb;
+            resVal.textContent = `${ppb.toFixed(2)} ppb`;
+            resFoldSeed.textContent = `Fold ${pred.fold} • Seed ${pred.seed} (${pred.model})`;
+            resWarning.textContent = `Scientific Warning: ${pred.scientific_warning || 'Experimental reference prediction only. Not validated for operational forecasting.'}`;
+            resultBox.style.display = 'block';
+            statusEl.textContent = 'Inference complete.';
+            window.showToast('Experimental estimate computed!', 'info');
+          }
+        } catch (err) {
+          console.error('Inference error:', err);
+          statusEl.textContent = `Inference failed: ${err.message}`;
+          window.showToast(`Error: ${err.message}`, 'error');
+        } finally {
+          btnRun.disabled = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

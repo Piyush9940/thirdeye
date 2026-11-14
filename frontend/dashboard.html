@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environmental Intelligence Dashboard — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link active"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">
+    <!-- Page Header -->
+    <div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <span class="badge-scientific badge-verified"><i class="fa-solid fa-check"></i> Verified Data Stream</span>
+          <span class="badge-scientific badge-experimental"><i class="fa-solid fa-flask"></i> Experimental Reference Release</span>
+        </div>
+        <h1 class="page-title"><i class="fa-solid fa-chart-line" style="color: var(--cyan-primary);"></i> Environmental Intelligence Dashboard</h1>
+        <p class="page-description">
+          Real telemetry from Sentinel-5P TROPOMI Level-3 soundings and NASA POWER climate reanalysis over the 2° Indian spatial grid. Driven exclusively by verified export data.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="reports.html" class="btn-nasa btn-nasa-outline btn-sm"><i class="fa-solid fa-file-export"></i> Export Report</a>
+        <a href="earth-explorer.html" class="btn-nasa btn-nasa-primary btn-sm"><i class="fa-solid fa-map-location-dot"></i> View on Map</a>
+      </div>
+    </div>
+
+    <!-- KPI Metric Cards Grid -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Spatial Grid Nodes</span>
+          <i class="fa-solid fa-network-wired kpi-icon"></i>
+        </div>
+        <div class="kpi-value" id="kpiNodes">255</div>
+        <div class="kpi-context">2° grid covering 7°N–37°N, 69°E–97°E</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">CH₄ Observations</span>
+          <i class="fa-solid fa-satellite-dish kpi-icon"></i>
+        </div>
+        <div class="kpi-value" id="kpiObservations">226</div>
+        <div class="kpi-context">QA-filtered Sentinel-5P soundings</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">ML Evaluations</span>
+          <i class="fa-solid fa-microchip kpi-icon"></i>
+        </div>
+        <div class="kpi-value" id="kpiPredictions">720</div>
+        <div class="kpi-context">3 folds × 5 seeds evaluation rows</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Evaluation Periods</span>
+          <i class="fa-solid fa-calendar-days kpi-icon"></i>
+        </div>
+        <div class="kpi-value" id="kpiPeriods">4 Snapshots</div>
+        <div class="kpi-context">2019-05, 2021-02, 2021-08, 2023-11</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Model Checkpoints</span>
+          <i class="fa-solid fa-box-archive kpi-icon"></i>
+        </div>
+        <div class="kpi-value" id="kpiCheckpoints">15 Checkpoints</div>
+        <div class="kpi-context">Original MLP Reference (Seeds 7, 21, 42, 77, 123)</div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-header">
+          <span class="kpi-label">Observed Range</span>
+          <i class="fa-solid fa-arrows-left-right-to-line kpi-icon"></i>
+        </div>
+        <div class="kpi-value" id="kpiRange" style="font-size: 1.55rem;">1788 – 2022 ppb</div>
+        <div class="kpi-context">Column concentration ($X\text{CH}_4$)</div>
+      </div>
+    </div>
+
+    <!-- Scientific Warning Callout -->
+    <div class="scientific-warning-callout">
+      <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <div class="content">
+        <strong>Important Scientific Guidance</strong>
+        Atmospheric methane concentration is not surface emission flux. The 4 observation periods do not form a continuous monthly time series. August 2021 contains only 11 observed nodes due to monsoon cloud filtering. The machine learning reference model exhibits negative $R^2$ in prior evaluation and must not be used for operational environmental forecasting.
+      </div>
+    </div>
+
+    <!-- Interactive Filter Toolbar -->
+    <div class="filter-toolbar">
+      <div class="filter-group">
+        <label class="filter-label" for="periodFilter"><i class="fa-solid fa-calendar"></i> Observation Period:</label>
+        <select class="form-select" id="periodFilter">
+          <option value="ALL">All Periods (226 observations)</option>
+          <option value="2019-05">2019-05 (Pre-monsoon, 82 nodes)</option>
+          <option value="2021-02">2021-02 (Winter, 67 nodes)</option>
+          <option value="2021-08">2021-08 (Monsoon, 11 nodes)</option>
+          <option value="2023-11">2023-11 (Post-monsoon, 66 nodes)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label" for="regionFilter"><i class="fa-solid fa-location-dot"></i> Geographical Zone:</label>
+        <select class="form-select" id="regionFilter">
+          <option value="ALL">All Regions (India)</option>
+          <option value="North_West">North-West (Lat &ge; 25°, Lon &lt; 82°)</option>
+          <option value="North_East">North-East (Lat &ge; 25°, Lon &ge; 82°)</option>
+          <option value="Central_West">Central-West (15° &le; Lat &lt; 25°, Lon &lt; 82°)</option>
+          <option value="Central_East">Central-East (15° &le; Lat &lt; 25°, Lon &ge; 82°)</option>
+          <option value="South_West">South-West (Lat &lt; 15°, Lon &lt; 82°)</option>
+          <option value="South_East">South-East (Lat &lt; 15°, Lon &ge; 82°)</option>
+        </select>
+      </div>
+
+      <button class="btn-nasa btn-nasa-secondary btn-sm" id="resetFiltersBtn">
+        <i class="fa-solid fa-rotate-left"></i> Reset Filters
+      </button>
+
+      <div style="margin-left: auto; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);" id="filterStatusText">
+        Showing all verified records
+      </div>
+    </div>
+
+    <!-- 10 Dashboard Charts Grid -->
+    <div class="dashboard-charts-grid">
+      
+      <!-- Chart 1: Methane Concentration Distribution -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">1. Methane Concentration Distribution</div>
+            <div class="chart-desc">Kernel density & histogram of observed column XCH₄ (ppb)</div>
+          </div>
+          <span class="metric-pill">Unit: ppb</span>
+        </div>
+        <div id="chartCH4Distribution" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 2: Regional Methane Comparison -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">2. Regional Methane Comparison</div>
+            <div class="chart-desc">Box & whisker distributions across the 6 geographical zones</div>
+          </div>
+          <span class="metric-pill">6 Zones</span>
+        </div>
+        <div id="chartRegionalComparison" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 3: Observations Across Available Periods -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">3. Temporal Period Distribution</div>
+            <div class="chart-desc">Number of quality-filtered observations by temporal snapshot</div>
+          </div>
+          <span class="metric-pill">4 Snapshots</span>
+        </div>
+        <div id="chartPeriodCounts" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 4: Climate Variable Distributions -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">4. Contextual Climate Distributions</div>
+            <div class="chart-desc">NASA POWER parameters (T2M in °C, PRECTOTCORR in mm/d, RH2M in %, WS10M in m/s)</div>
+          </div>
+          <span class="metric-pill">NASA POWER</span>
+        </div>
+        <div id="chartClimateDist" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 5: Observed vs Predicted Methane -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">5. Observed vs. Predicted Methane</div>
+            <div class="chart-desc">Evaluation observations vs. Original MLP predictions with 1:1 diagonal</div>
+          </div>
+          <span class="metric-pill">Seed 42 / Folds 1-3</span>
+        </div>
+        <div id="chartObsVsPred" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 6: Model Evaluation Metrics -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">6. Chronological Fold Evaluation Metrics</div>
+            <div class="chart-desc">MAE, RMSE, R², and Bias across Folds 1 (2021-02), 2 (2021-08), 3 (2023-11)</div>
+          </div>
+          <span class="metric-pill">Folds 1, 2, 3</span>
+        </div>
+        <div id="chartFoldMetrics" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 7: Fold-wise Performance Across Seeds -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">7. Seed Stability Analysis</div>
+            <div class="chart-desc">MAE stability across 5 random seeds (7, 21, 42, 77, 123) for each fold</div>
+          </div>
+          <span class="metric-pill">5 Seeds</span>
+        </div>
+        <div id="chartSeedStability" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 8: Prediction Error Distribution -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">8. Prediction Error Distribution</div>
+            <div class="chart-desc">Residuals (Predicted - Actual in ppb) showing systematic negative bias</div>
+          </div>
+          <span class="metric-pill">Residuals</span>
+        </div>
+        <div id="chartErrorDist" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 9: Spatial Observation Distribution -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">9. Spatial Grid Node Observation Status</div>
+            <div class="chart-desc">Observed nodes (98) vs. unobserved nodes (157) out of 255 total grid nodes</div>
+          </div>
+          <span class="metric-pill">255 Nodes</span>
+        </div>
+        <div id="chartSpatialCoverage" class="chart-container"></div>
+      </div>
+
+      <!-- Chart 10: Missing Data and Observation Coverage -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <div class="chart-title">10. Temporal Missingness & Coverage</div>
+            <div class="chart-desc">Percentage of grid nodes observed vs unobserved across each temporal period</div>
+          </div>
+          <span class="metric-pill">QA Missingness</span>
+        </div>
+        <div id="chartMissingness" class="chart-container"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Telemetry dashboard based on verified export data. No interpolated or fabricated observations.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Platform</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="dataset-explorer.html">Datasets</a></li>
+          <li><a href="forecasting.html">ML Benchmarks</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Documentation</div>
+        <ul class="footer-links">
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="research-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Credits</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P</li>
+          <li>NASA POWER Project</li>
+          <li>Space Apps 2026</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Verified Data Stream</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/dashboard/overview.js"></script>
+</body>
+</html>

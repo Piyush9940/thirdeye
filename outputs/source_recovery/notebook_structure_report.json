@@ -1,0 +1,945 @@
+{
+    "notebook_path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\model.ipynb",
+    "total_cells": 49,
+    "code_cells": 49,
+    "markdown_cells": 0,
+    "headings": [],
+    "cell_inventory": [
+        {
+            "cell": 0,
+            "line_count": 1,
+            "character_count": 122,
+            "imports": [],
+            "definitions": [],
+            "syntax_error": "invalid syntax, line 1"
+        },
+        {
+            "cell": 1,
+            "line_count": 67,
+            "character_count": 1606,
+            "imports": [
+                "io",
+                "joblib",
+                "json",
+                "matplotlib.pyplot",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "random",
+                "requests",
+                "scipy.stats",
+                "sklearn.impute",
+                "sklearn.metrics",
+                "sklearn.neighbors",
+                "sklearn.preprocessing",
+                "statsmodels.stats.multitest",
+                "time",
+                "torch",
+                "torch.nn",
+                "torch.nn.functional",
+                "torch.utils.data",
+                "tqdm.auto",
+                "warnings",
+                "xarray",
+                "zipfile"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 2,
+            "line_count": 91,
+            "character_count": 2534,
+            "imports": [
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 3,
+            "line_count": 11,
+            "character_count": 400,
+            "imports": [],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 4,
+            "line_count": 42,
+            "character_count": 1063,
+            "imports": [
+                "requests"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 5,
+            "line_count": 49,
+            "character_count": 1038,
+            "imports": [
+                "requests"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 6,
+            "line_count": 57,
+            "character_count": 1380,
+            "imports": [
+                "requests"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 7,
+            "line_count": 360,
+            "character_count": 8537,
+            "imports": [
+                "io",
+                "numpy",
+                "pathlib",
+                "requests",
+                "time",
+                "xarray",
+                "zipfile"
+            ],
+            "definitions": [
+                "function: generate_tiles (line 49)",
+                "function: extract_netcdf (line 103)",
+                "function: download_one_tile (line 144)",
+                "function: merge_tiles (line 237)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 8,
+            "line_count": 344,
+            "character_count": 8200,
+            "imports": [
+                "numpy",
+                "pandas",
+                "pathlib",
+                "xarray"
+            ],
+            "definitions": [
+                "function: find_coordinate (line 55)",
+                "function: normalize_time_column (line 72)",
+                "function: netcdf_to_dataframe (line 123)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 9,
+            "line_count": 212,
+            "character_count": 4824,
+            "imports": [
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 10,
+            "line_count": 242,
+            "character_count": 6014,
+            "imports": [
+                "matplotlib.pyplot",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 11,
+            "line_count": 199,
+            "character_count": 4257,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 12,
+            "line_count": 206,
+            "character_count": 5829,
+            "imports": [
+                "json",
+                "numpy",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 13,
+            "line_count": 341,
+            "character_count": 7704,
+            "imports": [
+                "json",
+                "matplotlib.pyplot",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.sparse",
+                "sklearn.neighbors"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 14,
+            "line_count": 269,
+            "character_count": 5901,
+            "imports": [
+                "json",
+                "numpy",
+                "pathlib"
+            ],
+            "definitions": [
+                "function: create_sequences (line 41)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 15,
+            "line_count": 404,
+            "character_count": 8910,
+            "imports": [
+                "json",
+                "numpy",
+                "os",
+                "pandas",
+                "pathlib",
+                "random",
+                "scipy.sparse",
+                "torch",
+                "torch.nn"
+            ],
+            "definitions": [
+                "class: GraphConvolution (line 167)",
+                "class: GCNGRU (line 197)",
+                "function: __init__ (line 169)",
+                "function: forward (line 178)",
+                "function: __init__ (line 199)",
+                "function: forward (line 239)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 16,
+            "line_count": 466,
+            "character_count": 10788,
+            "imports": [
+                "copy",
+                "json",
+                "numpy",
+                "os",
+                "pandas",
+                "pathlib",
+                "time",
+                "torch",
+                "torch.nn",
+                "torch.utils.data"
+            ],
+            "definitions": [
+                "function: train_one_epoch (line 188)",
+                "function: validate_model (line 244)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 17,
+            "line_count": 251,
+            "character_count": 5409,
+            "imports": [
+                "json",
+                "matplotlib.pyplot",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 18,
+            "line_count": 424,
+            "character_count": 9979,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "sklearn.metrics",
+                "torch"
+            ],
+            "definitions": [
+                "function: inverse_transform (line 127)",
+                "function: calculate_metrics (line 203)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 19,
+            "line_count": 67,
+            "character_count": 1836,
+            "imports": [],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 20,
+            "line_count": 19,
+            "character_count": 401,
+            "imports": [
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 21,
+            "line_count": 452,
+            "character_count": 10650,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.sparse",
+                "torch"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 22,
+            "line_count": 323,
+            "character_count": 7046,
+            "imports": [
+                "json",
+                "matplotlib.pyplot",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 23,
+            "line_count": 331,
+            "character_count": 6984,
+            "imports": [
+                "json",
+                "matplotlib.pyplot",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 24,
+            "line_count": 588,
+            "character_count": 12270,
+            "imports": [
+                "json",
+                "matplotlib.pyplot",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.stats"
+            ],
+            "definitions": [
+                "function: seasonal_mann_kendall_sen (line 98)",
+                "function: benjamini_hochberg (line 231)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 25,
+            "line_count": 391,
+            "character_count": 8111,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.stats"
+            ],
+            "definitions": [
+                "function: calculate_autocorrelation (line 87)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 26,
+            "line_count": 709,
+            "character_count": 14420,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.stats"
+            ],
+            "definitions": [
+                "function: seasonal_mk_test (line 99)",
+                "function: benjamini_hochberg (line 182)",
+                "function: seasonal_tfpw (line 238)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 27,
+            "line_count": 706,
+            "character_count": 14348,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.stats"
+            ],
+            "definitions": [
+                "function: seasonal_mk_test (line 96)",
+                "function: benjamini_hochberg (line 176)",
+                "function: seasonal_aligned_tfpw (line 232)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 28,
+            "line_count": 638,
+            "character_count": 13393,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [
+                "function: estimate_rho_uncentered (line 105)",
+                "function: estimate_rho_centered (line 128)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 29,
+            "line_count": 1224,
+            "character_count": 22351,
+            "imports": [
+                "datetime",
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [
+                "function: load_csv (line 54)",
+                "function: find_column (line 100)",
+                "function: detect_feature_column (line 122)",
+                "function: detect_node_column (line 130)",
+                "function: detect_significance_column (line 138)",
+                "function: detect_q_column (line 155)",
+                "function: detect_direction_column (line 172)",
+                "function: detect_slope_column (line 186)",
+                "function: to_boolean (line 205)",
+                "function: standardize_trends (line 237)",
+                "function: normalize_direction (line 521)",
+                "function: classify_robustness (line 884)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 30,
+            "line_count": 56,
+            "character_count": 1125,
+            "imports": [
+                "IPython.display",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 31,
+            "line_count": 636,
+            "character_count": 19246,
+            "imports": [
+                "datetime",
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.sparse"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 32,
+            "line_count": 513,
+            "character_count": 11988,
+            "imports": [
+                "IPython.display",
+                "json",
+                "models.gcn_gru",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.sparse",
+                "sklearn.metrics",
+                "sys",
+                "torch"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 33,
+            "line_count": 51,
+            "character_count": 1263,
+            "imports": [
+                "json",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 34,
+            "line_count": 62,
+            "character_count": 1615,
+            "imports": [
+                "inspect",
+                "pathlib",
+                "torch"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 35,
+            "line_count": 1045,
+            "character_count": 22485,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.sparse",
+                "torch"
+            ],
+            "definitions": [
+                "function: find_scaler_values (line 108)",
+                "function: calculate_metrics (line 392)",
+                "function: make_json_serializable (line 877)"
+            ],
+            "syntax_error": null
+        },
+        {
+            "cell": 36,
+            "line_count": 137,
+            "character_count": 3413,
+            "imports": [
+                "numpy",
+                "pathlib",
+                "scipy.sparse",
+                "torch"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 37,
+            "line_count": 81,
+            "character_count": 2193,
+            "imports": [
+                "numpy"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 38,
+            "line_count": 353,
+            "character_count": 9035,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "sklearn.metrics",
+                "torch"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 39,
+            "line_count": 330,
+            "character_count": 8278,
+            "imports": [
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "torch"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 40,
+            "line_count": 160,
+            "character_count": 4025,
+            "imports": [
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 41,
+            "line_count": 253,
+            "character_count": 7825,
+            "imports": [
+                "datetime",
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 42,
+            "line_count": 555,
+            "character_count": 16644,
+            "imports": [
+                "datetime",
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib",
+                "scipy.sparse"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 43,
+            "line_count": 171,
+            "character_count": 4440,
+            "imports": [
+                "json",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 44,
+            "line_count": 619,
+            "character_count": 18055,
+            "imports": [
+                "datetime",
+                "json",
+                "numpy",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 45,
+            "line_count": 608,
+            "character_count": 15763,
+            "imports": [
+                "datetime",
+                "json",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 46,
+            "line_count": 167,
+            "character_count": 4542,
+            "imports": [
+                "json",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 47,
+            "line_count": 111,
+            "character_count": 2992,
+            "imports": [
+                "json",
+                "pandas",
+                "pathlib"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        },
+        {
+            "cell": 48,
+            "line_count": 146,
+            "character_count": 3651,
+            "imports": [
+                "pathlib",
+                "subprocess"
+            ],
+            "definitions": [],
+            "syntax_error": null
+        }
+    ],
+    "imports": [
+        "IPython.display",
+        "copy",
+        "datetime",
+        "inspect",
+        "io",
+        "joblib",
+        "json",
+        "matplotlib.pyplot",
+        "models.gcn_gru",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "random",
+        "requests",
+        "scipy.sparse",
+        "scipy.stats",
+        "sklearn.impute",
+        "sklearn.metrics",
+        "sklearn.neighbors",
+        "sklearn.preprocessing",
+        "statsmodels.stats.multitest",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional",
+        "torch.utils.data",
+        "tqdm.auto",
+        "warnings",
+        "xarray",
+        "zipfile"
+    ],
+    "definitions": [
+        {
+            "cell": 7,
+            "definition": "function: generate_tiles (line 49)"
+        },
+        {
+            "cell": 7,
+            "definition": "function: extract_netcdf (line 103)"
+        },
+        {
+            "cell": 7,
+            "definition": "function: download_one_tile (line 144)"
+        },
+        {
+            "cell": 7,
+            "definition": "function: merge_tiles (line 237)"
+        },
+        {
+            "cell": 8,
+            "definition": "function: find_coordinate (line 55)"
+        },
+        {
+            "cell": 8,
+            "definition": "function: normalize_time_column (line 72)"
+        },
+        {
+            "cell": 8,
+            "definition": "function: netcdf_to_dataframe (line 123)"
+        },
+        {
+            "cell": 14,
+            "definition": "function: create_sequences (line 41)"
+        },
+        {
+            "cell": 15,
+            "definition": "class: GraphConvolution (line 167)"
+        },
+        {
+            "cell": 15,
+            "definition": "class: GCNGRU (line 197)"
+        },
+        {
+            "cell": 15,
+            "definition": "function: __init__ (line 169)"
+        },
+        {
+            "cell": 15,
+            "definition": "function: forward (line 178)"
+        },
+        {
+            "cell": 15,
+            "definition": "function: __init__ (line 199)"
+        },
+        {
+            "cell": 15,
+            "definition": "function: forward (line 239)"
+        },
+        {
+            "cell": 16,
+            "definition": "function: train_one_epoch (line 188)"
+        },
+        {
+            "cell": 16,
+            "definition": "function: validate_model (line 244)"
+        },
+        {
+            "cell": 18,
+            "definition": "function: inverse_transform (line 127)"
+        },
+        {
+            "cell": 18,
+            "definition": "function: calculate_metrics (line 203)"
+        },
+        {
+            "cell": 24,
+            "definition": "function: seasonal_mann_kendall_sen (line 98)"
+        },
+        {
+            "cell": 24,
+            "definition": "function: benjamini_hochberg (line 231)"
+        },
+        {
+            "cell": 25,
+            "definition": "function: calculate_autocorrelation (line 87)"
+        },
+        {
+            "cell": 26,
+            "definition": "function: seasonal_mk_test (line 99)"
+        },
+        {
+            "cell": 26,
+            "definition": "function: benjamini_hochberg (line 182)"
+        },
+        {
+            "cell": 26,
+            "definition": "function: seasonal_tfpw (line 238)"
+        },
+        {
+            "cell": 27,
+            "definition": "function: seasonal_mk_test (line 96)"
+        },
+        {
+            "cell": 27,
+            "definition": "function: benjamini_hochberg (line 176)"
+        },
+        {
+            "cell": 27,
+            "definition": "function: seasonal_aligned_tfpw (line 232)"
+        },
+        {
+            "cell": 28,
+            "definition": "function: estimate_rho_uncentered (line 105)"
+        },
+        {
+            "cell": 28,
+            "definition": "function: estimate_rho_centered (line 128)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: load_csv (line 54)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: find_column (line 100)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: detect_feature_column (line 122)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: detect_node_column (line 130)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: detect_significance_column (line 138)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: detect_q_column (line 155)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: detect_direction_column (line 172)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: detect_slope_column (line 186)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: to_boolean (line 205)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: standardize_trends (line 237)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: normalize_direction (line 521)"
+        },
+        {
+            "cell": 29,
+            "definition": "function: classify_robustness (line 884)"
+        },
+        {
+            "cell": 35,
+            "definition": "function: find_scaler_values (line 108)"
+        },
+        {
+            "cell": 35,
+            "definition": "function: calculate_metrics (line 392)"
+        },
+        {
+            "cell": 35,
+            "definition": "function: make_json_serializable (line 877)"
+        }
+    ],
+    "syntax_errors": [
+        {
+            "cell": 0,
+            "error": "invalid syntax, line 1"
+        }
+    ],
+    "executed_code_cells": 48,
+    "output_count": 146
+}

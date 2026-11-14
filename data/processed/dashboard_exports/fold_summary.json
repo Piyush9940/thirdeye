@@ -1,0 +1,32 @@
+[
+  {
+    "fold":1,
+    "evaluation_period":"2021-02",
+    "seed_count":5,
+    "observations_per_seed":67.0,
+    "mean_MAE_ppb":45.6022836258,
+    "mean_RMSE_ppb":47.5768118448,
+    "mean_R2":-12.406855987,
+    "mean_bias_ppb":-45.6022836258
+  },
+  {
+    "fold":2,
+    "evaluation_period":"2021-08",
+    "seed_count":5,
+    "observations_per_seed":11.0,
+    "mean_MAE_ppb":99.934876598,
+    "mean_RMSE_ppb":102.1663449611,
+    "mean_R2":-27.6718861403,
+    "mean_bias_ppb":-99.934876598
+  },
+  {
+    "fold":3,
+    "evaluation_period":"2023-11",
+    "seed_count":5,
+    "observations_per_seed":66.0,
+    "mean_MAE_ppb":15.820703125,
+    "mean_RMSE_ppb":20.871490161,
+    "mean_R2":0.0433475448,
+    "mean_bias_ppb":-7.0113399621
+  }
+]

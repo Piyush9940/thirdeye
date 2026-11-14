@@ -1,0 +1,38 @@
+{
+  "method": "Original six approximate geographic zones",
+  "source_boundary": "India ADM0 GeoJSON",
+  "crs_source": "EPSG:4326",
+  "crs_area": "EPSG:6933",
+  "partition_parameters": {
+    "longitude_split_degrees": 82.0,
+    "southern_latitude_degrees": 15.0,
+    "northern_latitude_degrees": 25.0
+  },
+  "india_area_km2": 3268751.5188402245,
+  "sum_region_area_km2": 3268751.4823633903,
+  "union_area_km2": 3268751.482363393,
+  "missing_area_km2": 0.03554558722435468,
+  "missing_geometry_area_km2": 7.656296928913731e-16,
+  "region_areas_km2": {
+    "North_West": 918076.8612737847,
+    "North_East": 361647.9565889973,
+    "Central_West": 1166096.0645637913,
+    "Central_East": 478111.2459560553,
+    "South_West": 340468.9735639424,
+    "South_East": 4350.380416819251
+  },
+  "region_validity": {
+    "North_West": true,
+    "North_East": true,
+    "Central_West": true,
+    "Central_East": true,
+    "South_West": true,
+    "South_East": true
+  },
+  "missing_fragment_boundary_attribution_m2": {
+    "Latitude 25N": 35088.68854624097,
+    "Latitude 15N": 53.87613108754158,
+    "Longitude 82E": 403.02254702616483
+  },
+  "missing_area_m2": 35545.58722435468
+}

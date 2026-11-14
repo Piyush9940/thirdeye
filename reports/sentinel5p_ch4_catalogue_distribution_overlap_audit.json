@@ -1,0 +1,48 @@
+{
+  "catalogue_rows": 5051,
+  "unique_product_ids": 5051,
+  "rows_in_repeated_ids": 0,
+  "unique_product_names": 5051,
+  "rows_in_repeated_names": 0,
+  "unparsed_filenames": 0,
+  "missing_stream": 0,
+  "missing_year": 0,
+  "missing_month": 0,
+  "stream_counts": {
+    "RPRO": 3041,
+    "OFFL": 2010
+  },
+  "possible_rpro_offl_overlap_date_orbit_groups": 0,
+  "estimated_total_size_bytes": null,
+  "yearly_distribution": {
+    "2019": {
+      "OFFL": 3,
+      "RPRO": 837
+    },
+    "2020": {
+      "OFFL": 0,
+      "RPRO": 844
+    },
+    "2021": {
+      "OFFL": 3,
+      "RPRO": 838
+    },
+    "2022": {
+      "OFFL": 352,
+      "RPRO": 490
+    },
+    "2023": {
+      "OFFL": 822,
+      "RPRO": 22
+    },
+    "2024": {
+      "OFFL": 830,
+      "RPRO": 10
+    }
+  },
+  "files": {
+    "yearly_distribution": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_yearly_stream_distribution.csv",
+    "seasonal_distribution": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_yearly_seasonal_distribution.csv",
+    "overlap_candidates": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_cross_stream_overlap_candidates.csv"
+  }
+}

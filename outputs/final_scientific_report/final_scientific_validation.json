@@ -1,0 +1,383 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "generated_at": "2026-11-12T20:38:46.345505",
+    "study_region": "India",
+    "historical_period": "January 2015 - December 2024",
+    "forecast_period": "January 2025 - December 2025",
+    "data_source": "NASA POWER",
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "validation_sections": {
+        "dataset": {
+            "tensor_shape": [
+                120,
+                255,
+                4
+            ],
+            "time_steps": 120,
+            "spatial_nodes": 255,
+            "features": 4,
+            "missing_values": 0,
+            "infinite_values": 0,
+            "all_values_finite": true,
+            "coordinate_columns": [
+                "node_id",
+                "grid_latitude",
+                "grid_longitude"
+            ],
+            "latitude_min": 7.0,
+            "latitude_max": 39.0,
+            "longitude_min": 69.0,
+            "longitude_max": 97.0
+        },
+        "spatial_graph": {
+            "adjacency_shape": [
+                255,
+                255
+            ],
+            "node_count": 255,
+            "symmetric": true,
+            "self_loops_present": true,
+            "nonzero_entries": 2221,
+            "average_degree_including_self_loops": 8.709803921568627,
+            "graph_method": "BallTree haversine K-nearest-neighbor proximity graph",
+            "nearest_neighbors": 6,
+            "saved_metadata": {
+                "graph_type": "spherical_haversine_knn",
+                "num_nodes": 255,
+                "num_edges": 2221,
+                "k_neighbors": 6,
+                "earth_radius_km": 6371.0088,
+                "distance_metric": "haversine",
+                "edge_weight_method": "gaussian_kernel",
+                "self_loops": true,
+                "bidirectional": true,
+                "adjacency_shape": [
+                    255,
+                    255
+                ]
+            }
+        },
+        "model_evaluation": {
+            "architecture": "GCN-GRU",
+            "device_used": "CUDA GPU",
+            "training_period": "2015-2021",
+            "validation_period": "2022-2023",
+            "testing_period": "2024",
+            "evaluation_type": "Rolling one-step-ahead",
+            "metrics": {
+                "T2M": {
+                    "unit": "degree Celsius",
+                    "model_mae": 1.5412,
+                    "model_rmse": 2.2789,
+                    "model_r2": 0.9714,
+                    "persistence_mae": 2.4534,
+                    "persistence_rmse": 3.3658,
+                    "persistence_r2": 0.9375,
+                    "mae_improvement_percent": 37.18,
+                    "rmse_improvement_percent": 32.29
+                },
+                "PRECTOTCORR": {
+                    "unit": "mm/day",
+                    "model_mae": 1.3726,
+                    "model_rmse": 2.5789,
+                    "model_r2": 0.7317,
+                    "persistence_mae": 2.1343,
+                    "persistence_rmse": 3.751,
+                    "persistence_r2": 0.4323,
+                    "mae_improvement_percent": 35.69,
+                    "rmse_improvement_percent": 31.25
+                },
+                "RH2M": {
+                    "unit": "%",
+                    "model_mae": 4.0046,
+                    "model_rmse": 5.6396,
+                    "model_r2": 0.9052,
+                    "persistence_mae": 5.7333,
+                    "persistence_rmse": 8.3572,
+                    "persistence_r2": 0.7918,
+                    "mae_improvement_percent": 30.15,
+                    "rmse_improvement_percent": 32.52
+                },
+                "WS10M": {
+                    "unit": "m/s",
+                    "model_mae": 0.5185,
+                    "model_rmse": 0.71,
+                    "model_r2": 0.8248,
+                    "persistence_mae": 0.7061,
+                    "persistence_rmse": 1.0434,
+                    "persistence_r2": 0.6216,
+                    "mae_improvement_percent": 26.57,
+                    "rmse_improvement_percent": 31.95
+                }
+            },
+            "beats_persistence_on_all_features": true
+        },
+        "forecast": {
+            "forecast_shape": [
+                12,
+                255,
+                4
+            ],
+            "forecast_months": 12,
+            "finite_values": true,
+            "feature_ranges": {
+                "T2M": {
+                    "minimum": -17.175859451293945,
+                    "maximum": 37.30113220214844,
+                    "mean": 19.58892250061035,
+                    "negative_values": 369
+                },
+                "PRECTOTCORR": {
+                    "minimum": -0.9353306293487549,
+                    "maximum": 29.520658493041992,
+                    "mean": 3.2984492778778076,
+                    "negative_values": 181
+                },
+                "RH2M": {
+                    "minimum": 18.422088623046875,
+                    "maximum": 90.43975830078125,
+                    "mean": 65.02284240722656,
+                    "negative_values": 0
+                },
+                "WS10M": {
+                    "minimum": 1.0966875553131104,
+                    "maximum": 8.669187545776367,
+                    "mean": 4.045323371887207,
+                    "negative_values": 0
+                }
+            },
+            "negative_precipitation_warning": "Negative precipitation predictions exist. Raw model outputs have not been silently clipped. A future model version should enforce nonnegative precipitation."
+        },
+        "historical_trends": {
+            "primary_method": "Seasonal Mann-Kendall with Sen's slope",
+            "multiple_testing_correction": "Benjamini-Hochberg FDR",
+            "total_node_feature_tests": 1020,
+            "robustness_method": "Seasonally aligned TFPW sensitivity analysis",
+            "primary_trend_summary": [
+                {
+                    "feature": "T2M",
+                    "spatial_nodes": 255,
+                    "mean_sen_slope": 0.0151895344327385,
+                    "median_sen_slope": 0.0257816314697265,
+                    "significant_nodes_after_fdr": 48,
+                    "increasing_nodes_after_fdr": 47,
+                    "decreasing_nodes_after_fdr": 1,
+                    "alpha": 0.05
+                },
+                {
+                    "feature": "PRECTOTCORR",
+                    "spatial_nodes": 255,
+                    "mean_sen_slope": 0.0076452428425959,
+                    "median_sen_slope": 0.0023177084513008,
+                    "significant_nodes_after_fdr": 3,
+                    "increasing_nodes_after_fdr": 3,
+                    "decreasing_nodes_after_fdr": 0,
+                    "alpha": 0.05
+                },
+                {
+                    "feature": "RH2M",
+                    "spatial_nodes": 255,
+                    "mean_sen_slope": 0.2682993993512796,
+                    "median_sen_slope": 0.1314233144124348,
+                    "significant_nodes_after_fdr": 74,
+                    "increasing_nodes_after_fdr": 69,
+                    "decreasing_nodes_after_fdr": 5,
+                    "alpha": 0.05
+                },
+                {
+                    "feature": "WS10M",
+                    "spatial_nodes": 255,
+                    "mean_sen_slope": -0.0010308152799883,
+                    "median_sen_slope": -0.0017361094554265,
+                    "significant_nodes_after_fdr": 17,
+                    "increasing_nodes_after_fdr": 0,
+                    "decreasing_nodes_after_fdr": 17,
+                    "alpha": 0.05
+                }
+            ],
+            "robustness_summary": [
+                {
+                    "feature": "PRECTOTCORR",
+                    "nodes": 255,
+                    "original_significant_nodes": 3,
+                    "tfpw_significant_nodes": 26,
+                    "significant_in_both": 3,
+                    "lost_significance": 0,
+                    "newly_significant": 23,
+                    "not_significant_in_either": 229,
+                    "original_increasing_nodes": 0,
+                    "original_decreasing_nodes": 0,
+                    "tfpw_increasing_nodes": 26,
+                    "tfpw_decreasing_nodes": 0,
+                    "direction_agreement_all_nodes": 15,
+                    "direction_agreement_significant_both": 0,
+                    "mean_original_sen_slope": 0.0076452428425959,
+                    "mean_tfpw_sen_slope": 0.0076452428425959,
+                    "mean_centered_rho": -0.1091734811117209,
+                    "mean_uncentered_rho": -0.0347864158322653,
+                    "robustness_label": "Low node overlap"
+                },
+                {
+                    "feature": "RH2M",
+                    "nodes": 255,
+                    "original_significant_nodes": 74,
+                    "tfpw_significant_nodes": 90,
+                    "significant_in_both": 68,
+                    "lost_significance": 6,
+                    "newly_significant": 22,
+                    "not_significant_in_either": 159,
+                    "original_increasing_nodes": 0,
+                    "original_decreasing_nodes": 0,
+                    "tfpw_increasing_nodes": 84,
+                    "tfpw_decreasing_nodes": 6,
+                    "direction_agreement_all_nodes": 0,
+                    "direction_agreement_significant_both": 0,
+                    "mean_original_sen_slope": 0.2682993993512796,
+                    "mean_tfpw_sen_slope": 0.2682993993512796,
+                    "mean_centered_rho": -0.1062517942101389,
+                    "mean_uncentered_rho": -0.060553893201873,
+                    "robustness_label": "High node overlap"
+                },
+                {
+                    "feature": "T2M",
+                    "nodes": 255,
+                    "original_significant_nodes": 48,
+                    "tfpw_significant_nodes": 61,
+                    "significant_in_both": 47,
+                    "lost_significance": 1,
+                    "newly_significant": 14,
+                    "not_significant_in_either": 193,
+                    "original_increasing_nodes": 0,
+                    "original_decreasing_nodes": 0,
+                    "tfpw_increasing_nodes": 56,
+                    "tfpw_decreasing_nodes": 5,
+                    "direction_agreement_all_nodes": 0,
+                    "direction_agreement_significant_both": 0,
+                    "mean_original_sen_slope": 0.0151895344327384,
+                    "mean_tfpw_sen_slope": 0.0151895344327384,
+                    "mean_centered_rho": -0.110936256956028,
+                    "mean_uncentered_rho": -0.0662548852762457,
+                    "robustness_label": "High node overlap"
+                },
+                {
+                    "feature": "WS10M",
+                    "nodes": 255,
+                    "original_significant_nodes": 17,
+                    "tfpw_significant_nodes": 22,
+                    "significant_in_both": 17,
+                    "lost_significance": 0,
+                    "newly_significant": 5,
+                    "not_significant_in_either": 233,
+                    "original_increasing_nodes": 0,
+                    "original_decreasing_nodes": 0,
+                    "tfpw_increasing_nodes": 1,
+                    "tfpw_decreasing_nodes": 21,
+                    "direction_agreement_all_nodes": 0,
+                    "direction_agreement_significant_both": 0,
+                    "mean_original_sen_slope": -0.0010308152799883,
+                    "mean_tfpw_sen_slope": -0.0010308152799883,
+                    "mean_centered_rho": -0.0970121935241342,
+                    "mean_uncentered_rho": -0.0534532215782222,
+                    "robustness_label": "High node overlap"
+                }
+            ]
+        },
+        "autocorrelation": [
+            {
+                "feature": "T2M",
+                "spatial_nodes": 255,
+                "lag1_mean": 0.7806597976306605,
+                "lag1_median": 0.7885847745986231,
+                "lag1_positive_nodes": 255,
+                "lag1_negative_nodes": 0,
+                "lag1_strong_nodes": 255,
+                "lag1_valid_nodes": 255,
+                "lag12_mean": 0.9200284926150176,
+                "lag12_median": 0.956493660068192,
+                "lag12_positive_nodes": 255,
+                "lag12_negative_nodes": 0,
+                "lag12_strong_nodes": 255,
+                "lag12_valid_nodes": 255
+            },
+            {
+                "feature": "PRECTOTCORR",
+                "spatial_nodes": 255,
+                "lag1_mean": 0.5043072706173776,
+                "lag1_median": 0.5412006110855223,
+                "lag1_positive_nodes": 242,
+                "lag1_negative_nodes": 0,
+                "lag1_strong_nodes": 242,
+                "lag1_valid_nodes": 255,
+                "lag12_mean": 0.6312548506985375,
+                "lag12_median": 0.7234644460464624,
+                "lag12_positive_nodes": 247,
+                "lag12_negative_nodes": 0,
+                "lag12_strong_nodes": 247,
+                "lag12_valid_nodes": 255
+            },
+            {
+                "feature": "RH2M",
+                "spatial_nodes": 255,
+                "lag1_mean": 0.6783360854949777,
+                "lag1_median": 0.7321052893819919,
+                "lag1_positive_nodes": 253,
+                "lag1_negative_nodes": 0,
+                "lag1_strong_nodes": 253,
+                "lag1_valid_nodes": 255,
+                "lag12_mean": 0.7222925164179486,
+                "lag12_median": 0.7864379076488422,
+                "lag12_positive_nodes": 253,
+                "lag12_negative_nodes": 0,
+                "lag12_strong_nodes": 253,
+                "lag12_valid_nodes": 255
+            },
+            {
+                "feature": "WS10M",
+                "spatial_nodes": 255,
+                "lag1_mean": 0.5907606480189462,
+                "lag1_median": 0.6110272541122527,
+                "lag1_positive_nodes": 255,
+                "lag1_negative_nodes": 0,
+                "lag1_strong_nodes": 255,
+                "lag1_valid_nodes": 255,
+                "lag12_mean": 0.7433318180154517,
+                "lag12_median": 0.790335482153258,
+                "lag12_positive_nodes": 251,
+                "lag12_negative_nodes": 0,
+                "lag12_strong_nodes": 251,
+                "lag12_valid_nodes": 255
+            }
+        ],
+        "scientific_limitations": [
+            "The current model uses NASA POWER data with four meteorological variables.",
+            "The current analysis does not yet integrate all planned satellite and greenhouse-gas datasets.",
+            "The spatial graph is a BallTree haversine proximity graph, not an exact HEALPix spherical grid.",
+            "The spatial graph does not explicitly model atmospheric transport or physical conservation laws.",
+            "The historical record covers only ten years, which is short for robust climate-trend attribution.",
+            "Seasonal autocorrelation estimates are uncertain because each calendar-month series contains only ten annual observations.",
+            "TFPW results are sensitivity analyses and are not definitive corrections for all temporal dependence.",
+            "Trend detection does not establish causal relationships.",
+            "The 2025 autoregressive forecast is exploratory and does not include future external forcing.",
+            "The 2024 test evaluation is rolling one-step-ahead, whereas the 2025 forecast is autoregressive.",
+            "Negative precipitation predictions indicate a physical plausibility limitation of the current model.",
+            "The analysis should not be presented as an operational weather or climate forecasting service."
+        ]
+    },
+    "validation_checks": {
+        "dataset_dimensions_valid": true,
+        "dataset_values_finite": true,
+        "graph_dimensions_valid": true,
+        "graph_symmetric": true,
+        "model_beats_persistence": true,
+        "forecast_dimensions_valid": true,
+        "forecast_values_finite": true,
+        "trend_analysis_available": true,
+        "robustness_analysis_available": true
+    },
+    "all_structural_checks_passed": true
+}

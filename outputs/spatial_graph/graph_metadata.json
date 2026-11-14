@@ -1,0 +1,15 @@
+{
+    "graph_type": "spherical_haversine_knn",
+    "num_nodes": 255,
+    "num_edges": 2221,
+    "k_neighbors": 6,
+    "earth_radius_km": 6371.0088,
+    "distance_metric": "haversine",
+    "edge_weight_method": "gaussian_kernel",
+    "self_loops": true,
+    "bidirectional": true,
+    "adjacency_shape": [
+        255,
+        255
+    ]
+}

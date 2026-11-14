@@ -1,0 +1,36 @@
+{
+  "dataset": "OCO-2 L2 Lite FP V11.2r",
+  "all_quality_observations": 270,
+  "quality0_observations": 180,
+  "valid_records_used": 180,
+  "columns": {
+    "latitude": "latitude",
+    "longitude": "longitude",
+    "time": "observation_time_utc",
+    "xco2": "xco2_x2019_ppm"
+  },
+  "geographic_statistics": {
+    "latitude_min": 25.62920570373535,
+    "latitude_max": 26.72229385375977,
+    "latitude_mean": 26.30633986790975,
+    "longitude_min": 89.58499908447266,
+    "longitude_max": 89.8682861328125,
+    "longitude_mean": 89.70032717386881
+  },
+  "temporal_statistics": {
+    "first_observation_utc": "2024-01-01T07:20:51.615004+00:00",
+    "last_observation_utc": "2024-01-01T07:21:09.669020+00:00",
+    "unique_observation_dates": 1,
+    "unique_observation_hours": 1
+  },
+  "spatial_coverage": {
+    "occupied_2_degree_cells": 2,
+    "top_1_cell_observation_share": 0.8333333333333334,
+    "top_5_cells_observation_share": 1.0,
+    "top_10_cells_observation_share": 1.0
+  },
+  "grid_resolution_degrees": 2,
+  "grid_counts_file": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\oco2_india_sample\\oco2_sample_india_quality0_2deg_coverage.csv",
+  "daily_counts_file": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\oco2_india_sample\\oco2_sample_india_quality0_daily_coverage.csv",
+  "note": "Single-granule sample only; not representative of monthly or annual India-wide XCO2 coverage."
+}

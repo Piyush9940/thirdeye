@@ -1,0 +1,474 @@
+{
+  "T2M": {
+    "annual_comparisons": [
+      {
+        "year": 2015,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.770301282051282,
+        "weighted_monthly_mean": 19.77034481910783,
+        "mae": 0.0024628029504742254,
+        "rmse": 0.0028570840896970503,
+        "bias": -4.353705655076122e-05,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.999999972859767
+      },
+      {
+        "year": 2016,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 20.127528846153847,
+        "weighted_monthly_mean": 20.127550143617768,
+        "mae": 0.0024884755499509316,
+        "rmse": 0.0028772620393121497,
+        "bias": -2.129746392034647e-05,
+        "max_absolute_error": 0.005000000000002558,
+        "spatial_correlation": 0.9999999715388552
+      },
+      {
+        "year": 2017,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.8369358974359,
+        "weighted_monthly_mean": 19.836858280646293,
+        "mae": 0.002510019318580988,
+        "rmse": 0.002895082471860504,
+        "bias": 7.761678960308564e-05,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999719043455
+      },
+      {
+        "year": 2018,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.728628205128206,
+        "weighted_monthly_mean": 19.72860524236038,
+        "mae": 0.0024809009483666516,
+        "rmse": 0.0028688806954635525,
+        "bias": 2.29627678257716e-05,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999727987102
+      },
+      {
+        "year": 2019,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.58305769230769,
+        "weighted_monthly_mean": 19.58301911661398,
+        "mae": 0.002503187565858782,
+        "rmse": 0.002892287148870759,
+        "bias": 3.85756937126099e-05,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999734223556
+      },
+      {
+        "year": 2020,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.345647435897437,
+        "weighted_monthly_mean": 19.345666964410817,
+        "mae": 0.0024933095138012736,
+        "rmse": 0.0028845786201724907,
+        "bias": -1.9528513380917483e-05,
+        "max_absolute_error": 0.005000000000002558,
+        "spatial_correlation": 0.999999973136708
+      },
+      {
+        "year": 2021,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.68519871794872,
+        "weighted_monthly_mean": 19.68523349139445,
+        "mae": 0.0024753775904461685,
+        "rmse": 0.002863352909119729,
+        "bias": -3.477344573233589e-05,
+        "max_absolute_error": 0.004986301369864776,
+        "spatial_correlation": 0.9999999728452015
+      },
+      {
+        "year": 2022,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.693608974358977,
+        "weighted_monthly_mean": 19.69351024762908,
+        "mae": 0.0025022040744644225,
+        "rmse": 0.002895354610137059,
+        "bias": 9.872672989112931e-05,
+        "max_absolute_error": 0.004986301369864776,
+        "spatial_correlation": 0.9999999709770031
+      },
+      {
+        "year": 2023,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 19.870121794871796,
+        "weighted_monthly_mean": 19.870127976817702,
+        "mae": 0.00250158061116964,
+        "rmse": 0.0028912688895328773,
+        "bias": -6.18194590795388e-06,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999718905579
+      },
+      {
+        "year": 2024,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 20.120551282051284,
+        "weighted_monthly_mean": 20.12055611601513,
+        "mae": 0.0025531035449068433,
+        "rmse": 0.002937540502573255,
+        "bias": -4.833963850412167e-06,
+        "max_absolute_error": 0.005000000000002558,
+        "spatial_correlation": 0.9999999708489716
+      }
+    ],
+    "mean_annual_mae": 0.0024970961668019922,
+    "mean_annual_rmse": 0.0028862691976739427,
+    "mean_annual_bias": 1.0772959168986935e-05,
+    "interpretation": "Annual summary compared with day-weighted mean of the twelve monthly records."
+  },
+  "PRECTOTCORR": {
+    "annual_comparisons": [
+      {
+        "year": 2015,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.1024999999999996,
+        "weighted_monthly_mean": 3.102509106076572,
+        "mae": 0.0025266859852476355,
+        "rmse": 0.002914275678136545,
+        "bias": -9.1060765718202e-06,
+        "max_absolute_error": 0.004986301369865664,
+        "spatial_correlation": 0.9999993200769959
+      },
+      {
+        "year": 2016,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.1393173076923078,
+        "weighted_monthly_mean": 3.139372232730839,
+        "mae": 0.002515184951660361,
+        "rmse": 0.002892678141625422,
+        "bias": -5.4925038531597773e-05,
+        "max_absolute_error": 0.0050000000000003375,
+        "spatial_correlation": 0.9999995245296017
+      },
+      {
+        "year": 2017,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.4029583333333333,
+        "weighted_monthly_mean": 3.402867632595715,
+        "mae": 0.002518414120126448,
+        "rmse": 0.002901601025029377,
+        "bias": 9.07007376185518e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999995680113686
+      },
+      {
+        "year": 2018,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.131096153846154,
+        "weighted_monthly_mean": 3.1311306726378647,
+        "mae": 0.002464164032314716,
+        "rmse": 0.002855004612076644,
+        "bias": -3.4518791710552386e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999994741949979
+      },
+      {
+        "year": 2019,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.393009615384615,
+        "weighted_monthly_mean": 3.392976563048823,
+        "mae": 0.0025172989111345253,
+        "rmse": 0.0029008680240746377,
+        "bias": 3.3052335792061916e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999995035561593
+      },
+      {
+        "year": 2020,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.673496794871795,
+        "weighted_monthly_mean": 3.673561834454252,
+        "mae": 0.002469551282051295,
+        "rmse": 0.002867848835638178,
+        "bias": -6.503958245759442e-05,
+        "max_absolute_error": 0.0050000000000001155,
+        "spatial_correlation": 0.9999994391834907
+      },
+      {
+        "year": 2021,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.5221955128205127,
+        "weighted_monthly_mean": 3.5222028187565857,
+        "mae": 0.002540024587284851,
+        "rmse": 0.002930371313970659,
+        "bias": -7.305936073053964e-06,
+        "max_absolute_error": 0.004986301369863444,
+        "spatial_correlation": 0.9999993257463907
+      },
+      {
+        "year": 2022,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.5125576923076918,
+        "weighted_monthly_mean": 3.5124814892869685,
+        "mae": 0.0024936951176677325,
+        "rmse": 0.0028858040383855873,
+        "bias": 7.62030207235731e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999992770602713
+      },
+      {
+        "year": 2023,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.1025160256410254,
+        "weighted_monthly_mean": 3.1024399894625923,
+        "mae": 0.0025164295749912223,
+        "rmse": 0.0028922614461748767,
+        "bias": 7.603617843343589e-05,
+        "max_absolute_error": 0.004986301369863444,
+        "spatial_correlation": 0.9999991751296944
+      },
+      {
+        "year": 2024,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.501807692307692,
+        "weighted_monthly_mean": 3.5018623020877118,
+        "mae": 0.0024850252206809454,
+        "rmse": 0.0028784674109119343,
+        "bias": -5.4609780019590875e-05,
+        "max_absolute_error": 0.005000000000000782,
+        "spatial_correlation": 0.9999993791490872
+      }
+    ],
+    "mean_annual_mae": 0.0025046473783159728,
+    "mean_annual_rmse": 0.0028919180526023863,
+    "mean_annual_bias": 5.048706720341309e-06,
+    "interpretation": "Annual summary compared with day-weighted mean of the twelve monthly records."
+  },
+  "RH2M": {
+    "annual_comparisons": [
+      {
+        "year": 2015,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 64.11730769230769,
+        "weighted_monthly_mean": 64.11736268879523,
+        "mae": 0.0025023445732350203,
+        "rmse": 0.0028870379775385708,
+        "bias": -5.499648753052624e-05,
+        "max_absolute_error": 0.005013698630136787,
+        "spatial_correlation": 0.9999999817538994
+      },
+      {
+        "year": 2016,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 63.075923076923075,
+        "weighted_monthly_mean": 63.075927516813785,
+        "mae": 0.0025001663864367097,
+        "rmse": 0.002884136188243269,
+        "bias": -4.439890710493353e-06,
+        "max_absolute_error": 0.005000000000009663,
+        "spatial_correlation": 0.9999999831452971
+      },
+      {
+        "year": 2017,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 64.36108012820513,
+        "weighted_monthly_mean": 64.36108074288724,
+        "mae": 0.0025343519494207987,
+        "rmse": 0.002924631499083653,
+        "bias": -6.14682121432763e-07,
+        "max_absolute_error": 0.004986301369875434,
+        "spatial_correlation": 0.9999999824300383
+      },
+      {
+        "year": 2018,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 63.36991346153845,
+        "weighted_monthly_mean": 63.36990749034071,
+        "mae": 0.0024929926238146235,
+        "rmse": 0.002883434032419436,
+        "bias": 5.97119775186309e-06,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999840916135
+      },
+      {
+        "year": 2019,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 66.15962820512821,
+        "weighted_monthly_mean": 66.15963575693713,
+        "mae": 0.0025187038988408283,
+        "rmse": 0.0029025012777523455,
+        "bias": -7.551808921795018e-06,
+        "max_absolute_error": 0.004986301369875434,
+        "spatial_correlation": 0.9999999768369705
+      },
+      {
+        "year": 2020,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 67.32116346153845,
+        "weighted_monthly_mean": 67.3211949698753,
+        "mae": 0.0025024695250105973,
+        "rmse": 0.002883735008436649,
+        "bias": -3.1508336836233016e-05,
+        "max_absolute_error": 0.005000000000023874,
+        "spatial_correlation": 0.9999999772134814
+      },
+      {
+        "year": 2021,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 65.7766858974359,
+        "weighted_monthly_mean": 65.77670827186512,
+        "mae": 0.002499121882683459,
+        "rmse": 0.0028975266862543525,
+        "bias": -2.2374429223868348e-05,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999803500396
+      },
+      {
+        "year": 2022,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 66.87372435897437,
+        "weighted_monthly_mean": 66.87367631717598,
+        "mae": 0.002434905163329758,
+        "rmse": 0.0028294151974345857,
+        "bias": 4.804179838441992e-05,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999786735854
+      },
+      {
+        "year": 2023,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 65.64246153846155,
+        "weighted_monthly_mean": 65.64246394450298,
+        "mae": 0.0024691956445382244,
+        "rmse": 0.002856381230296835,
+        "bias": -2.406041446955935e-06,
+        "max_absolute_error": 0.004986301369868329,
+        "spatial_correlation": 0.9999999789345401
+      },
+      {
+        "year": 2024,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 66.07823717948718,
+        "weighted_monthly_mean": 66.07824126909065,
+        "mae": 0.0024831424267903975,
+        "rmse": 0.002873384556792767,
+        "bias": -4.089603474581985e-06,
+        "max_absolute_error": 0.005000000000009663,
+        "spatial_correlation": 0.9999999782711714
+      }
+    ],
+    "mean_annual_mae": 0.002493739407410042,
+    "mean_annual_rmse": 0.0028822183654252467,
+    "mean_annual_bias": -7.3968284129603645e-06,
+    "interpretation": "Annual summary compared with day-weighted mean of the twelve monthly records."
+  },
+  "WS10M": {
+    "annual_comparisons": [
+      {
+        "year": 2015,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.977673076923077,
+        "weighted_monthly_mean": 3.977656884439761,
+        "mae": 0.002535405690200214,
+        "rmse": 0.0029028696049194797,
+        "bias": 1.619248331577973e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999974769087321
+      },
+      {
+        "year": 2016,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 4.0791891025641025,
+        "weighted_monthly_mean": 4.079150492153565,
+        "mae": 0.0024856995236093526,
+        "rmse": 0.002880706749921698,
+        "bias": 3.8610410536646166e-05,
+        "max_absolute_error": 0.005000000000000782,
+        "spatial_correlation": 0.9999978089961852
+      },
+      {
+        "year": 2017,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 4.066516025641026,
+        "weighted_monthly_mean": 4.066500799086758,
+        "mae": 0.002495152792413068,
+        "rmse": 0.0028690200230099194,
+        "bias": 1.5226554267659249e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999977771463403
+      },
+      {
+        "year": 2018,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 4.050150641025642,
+        "weighted_monthly_mean": 4.0501784685633995,
+        "mae": 0.0025052247980330063,
+        "rmse": 0.002884579079247956,
+        "bias": -2.782753775904438e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999976018113295
+      },
+      {
+        "year": 2019,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 4.052900641025641,
+        "weighted_monthly_mean": 4.0528061029153495,
+        "mae": 0.002521390937829287,
+        "rmse": 0.0029008094722018994,
+        "bias": 9.453811029153707e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999976892808181
+      },
+      {
+        "year": 2020,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.9537243589743585,
+        "weighted_monthly_mean": 3.953773942132549,
+        "mae": 0.002515447667087004,
+        "rmse": 0.00289979650218015,
+        "bias": -4.9583158189708995e-05,
+        "max_absolute_error": 0.004999999999999893,
+        "spatial_correlation": 0.9999976323401404
+      },
+      {
+        "year": 2021,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 4.005740384615384,
+        "weighted_monthly_mean": 4.005757402528978,
+        "mae": 0.0024642606252195214,
+        "rmse": 0.0028515177849257342,
+        "bias": -1.701791359324793e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999977537663939
+      },
+      {
+        "year": 2022,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.9703749999999998,
+        "weighted_monthly_mean": 3.9703996399719004,
+        "mae": 0.002543976115208979,
+        "rmse": 0.0029208791891766534,
+        "bias": -2.4639971900252317e-05,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999975757149007
+      },
+      {
+        "year": 2023,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 3.9744070512820517,
+        "weighted_monthly_mean": 3.97454669827889,
+        "mae": 0.002494248331577102,
+        "rmse": 0.002874503768590855,
+        "bias": -0.00013964699683878182,
+        "max_absolute_error": 0.004986301369863888,
+        "spatial_correlation": 0.9999977347012051
+      },
+      {
+        "year": 2024,
+        "valid_grid_cells": 3120,
+        "annual_record_mean": 4.056753205128205,
+        "weighted_monthly_mean": 4.056748449978983,
+        "mae": 0.002476714656017942,
+        "rmse": 0.0028753898356067213,
+        "bias": 4.755149222358172e-06,
+        "max_absolute_error": 0.005000000000000782,
+        "spatial_correlation": 0.9999978749346208
+      }
+    ],
+    "mean_annual_mae": 0.0025037521137195482,
+    "mean_annual_rmse": 0.002886007200978107,
+    "mean_annual_bias": -8.939287064705505e-06,
+    "interpretation": "Annual summary compared with day-weighted mean of the twelve monthly records."
+  }
+}

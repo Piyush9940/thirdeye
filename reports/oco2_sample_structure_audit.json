@@ -1,0 +1,2256 @@
+{
+  "file": "oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+  "format": "NETCDF4",
+  "root_dimensions": {
+    "sounding_id": 146539,
+    "levels": 20,
+    "bands": 3,
+    "vertices": 4,
+    "source_files": 18,
+    "epoch_dimension": 7,
+    "frames": 125090,
+    "footprints": 8
+  },
+  "root_groups": [
+    "Auxiliary",
+    "Meteorology",
+    "Preprocessors",
+    "Retrieval",
+    "Sounding",
+    "L1b"
+  ],
+  "variables": [
+    {
+      "group": "/",
+      "name": "sounding_id",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "uint64",
+      "attributes": {
+        "units": "YYYYMMDDhhmmssmf",
+        "long_name": "OCO2 Sounding ID",
+        "missing_value": "0",
+        "comment": "from scan time in UTC"
+      }
+    },
+    {
+      "group": "/",
+      "name": "levels",
+      "dimensions": [
+        "levels"
+      ],
+      "shape": [
+        20
+      ],
+      "dtype": "int16",
+      "attributes": {}
+    },
+    {
+      "group": "/",
+      "name": "bands",
+      "dimensions": [
+        "bands"
+      ],
+      "shape": [
+        3
+      ],
+      "dtype": "int16",
+      "attributes": {}
+    },
+    {
+      "group": "/",
+      "name": "vertices",
+      "dimensions": [
+        "vertices"
+      ],
+      "shape": [
+        4
+      ],
+      "dtype": "int16",
+      "attributes": {}
+    },
+    {
+      "group": "/",
+      "name": "date",
+      "dimensions": [
+        "sounding_id",
+        "epoch_dimension"
+      ],
+      "shape": [
+        146539,
+        7
+      ],
+      "dtype": "int16",
+      "attributes": {
+        "units": "none",
+        "long_name": "Observation date and time matching sounding_id",
+        "missing_value": "-9999",
+        "comment": "Year, month (1-12), day (1-31), hour (0-23), minute (0-59), second (0-59), millisecond (0,300,or 700). Note this time is chosen to correspond exactly to the first 15 digits of sounding_id"
+      }
+    },
+    {
+      "group": "/",
+      "name": "latitude",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees_north",
+        "long_name": "latitude",
+        "missing_value": "-999999.0",
+        "comment": "center latitude of the measurement"
+      }
+    },
+    {
+      "group": "/",
+      "name": "longitude",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees_east",
+        "long_name": "longitude",
+        "missing_value": "-999999.0",
+        "comment": "center longitude of the measurement"
+      }
+    },
+    {
+      "group": "/",
+      "name": "time",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float64",
+      "attributes": {
+        "units": "seconds since 1970-01-01 00:00:00",
+        "long_name": "time",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/",
+      "name": "solar_zenith_angle",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees",
+        "long_name": "sounding_solar_zenith",
+        "missing_value": "-999999.0",
+        "comment": "solar zenith angle at the time of the measurement"
+      }
+    },
+    {
+      "group": "/",
+      "name": "sensor_zenith_angle",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees",
+        "long_name": "sounding_zenith",
+        "missing_value": "-999999.0",
+        "comment": "zenith angle of the satellite at the time of the measurement"
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2_quality_flag",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "XCO2_Quality_Flag",
+        "missing_value": "127",
+        "comment": "0=Good, 1=Bad"
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2_qf_bitflag",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "uint64",
+      "attributes": {
+        "units": "none",
+        "long_name": "xco2_quality_flag bitflag",
+        "missing_value": "0",
+        "comment": "xco2_quality_flag bit flag",
+        "qf_variables": "co2_ratio_bc, h2o_ratio_bc, altitude_stddev, max_declocking_wco2, dp_o2a, dpfrac, co2_grad_del, albedo_slope_sco2, aod_total, aod_ice, albedo_sco2, albedo_quad_wco2, albedo_quad_sco2, rms_rel_wco2, rms_rel_sco2, chi2_sco2, deltaT, aod_fine, aod_water, dust_height, aod_strataer, aod_seasalt, fs_rel, dws, dp_abp, h_continuum_wco2, snow_flag, brdf_weight_slope_sco2, dp_sco2, chi2_wco2, max_declocking_sco2, albedo_difference, brdf_weight_slope_wco2, albedo_o2a, xco2_uncertainty, abs(eof3_1_rel), ice_height, color_slice_noise_ratio_wco2, airmass, windspeed"
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2_qf_simple_bitflag",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "uint8",
+      "attributes": {
+        "units": "none",
+        "long_name": "xco2_quality_flag simple bitflag",
+        "missing_value": "-1",
+        "comment": "Bits: 0=Direct Exclusion; 1=Signal-related; 2=Preprocessor-related; 3=Surface reflectivity related; 4=Cloud+Aerosol related; 5=Fit Quality related; 6=Other Retrieval variables; 7=Unused."
+      }
+    },
+    {
+      "group": "/",
+      "name": "source_files",
+      "dimensions": [
+        "source_files"
+      ],
+      "shape": [
+        18
+      ],
+      "dtype": "<class 'str'>",
+      "attributes": {
+        "units": "none",
+        "long_name": "L2 Source File",
+        "missing_value": "Missing",
+        "comment": "Source L2 File Names for these soundings"
+      }
+    },
+    {
+      "group": "/",
+      "name": "file_index",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "uint8",
+      "attributes": {
+        "units": "none",
+        "long_name": "L2 File Index",
+        "missing_value": "-1",
+        "comment": "1-Based Index of L2 File for each sounding"
+      }
+    },
+    {
+      "group": "/",
+      "name": "vertex_latitude",
+      "dimensions": [
+        "sounding_id",
+        "vertices"
+      ],
+      "shape": [
+        146539,
+        4
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees_north",
+        "long_name": "vertex_latitude",
+        "missing_value": "-999999.0",
+        "comment": "corner latitudes of the measurement FOV"
+      }
+    },
+    {
+      "group": "/",
+      "name": "vertex_longitude",
+      "dimensions": [
+        "sounding_id",
+        "vertices"
+      ],
+      "shape": [
+        146539,
+        4
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees_east",
+        "long_name": "vertex_longitude",
+        "missing_value": "-999999.0",
+        "comment": "corner longitudes of the measurement FOV"
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "Bias-corrected XCO2 on X2007 scale",
+        "missing_value": "-999999.0",
+        "comment": "Column-averaged dry-air mole fraction of CO2, including bias correction, on X2007 CO2 scale.XCO2_X2019 (in this file) contains the same information on the X2019 CO2 scale.",
+        "Coordinates": "time longitude latitude"
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2_x2019",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "Bias-corrected XCO2 on X2019 scale",
+        "missing_value": "-999999.0",
+        "comment": "XCO2 on X2019 scale.  For more information, see Hall et al.(2021, AMT, DOI:10.5194/amt-14-3015-2021)."
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2_uncertainty",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "XCO2_Posterior_Error",
+        "missing_value": "-999999.0",
+        "comment": "This uncertainty is purely noise-driven and does not include most potential systematic errors"
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2_apriori",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "A priori XCO2 Value",
+        "missing_value": "-999999.0",
+        "comment": "The a priori CO2 profile uses the same formulation as used for TCCON GGG2020 retrievals"
+      }
+    },
+    {
+      "group": "/",
+      "name": "pressure_levels",
+      "dimensions": [
+        "sounding_id",
+        "levels"
+      ],
+      "shape": [
+        146539,
+        20
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Pressure_Levels",
+        "missing_value": "-999999.0",
+        "comment": "Pressure at each level; Defined on layer boundaries. These are oriented space-to-surface, so the first element defines the TOA, the last element defines the surface."
+      }
+    },
+    {
+      "group": "/",
+      "name": "co2_profile_apriori",
+      "dimensions": [
+        "sounding_id",
+        "levels"
+      ],
+      "shape": [
+        146539,
+        20
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "CO2 Apriori Profile",
+        "missing_value": "-999999.0",
+        "comment": "The a priori CO2 profile uses the same formulation as used for TCCON GGG2020 retrievals, as described in Laughner et al., (2023, AMT, https://doi.org/10.5194/amt-16-1121-2023). Defined on layer boundaries. These are oriented space-to-surface, so the first element defines the TOA, the last element defines the surface."
+      }
+    },
+    {
+      "group": "/",
+      "name": "xco2_averaging_kernel",
+      "dimensions": [
+        "sounding_id",
+        "levels"
+      ],
+      "shape": [
+        146539,
+        20
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "XCO2 Column Averaging Kernel",
+        "missing_value": "-999999.0",
+        "comment": "Normalized XCO2 averaging kernel; Defined on layer boundaries. These are oriented space-to-surface, so the first element defines the TOA, the last element defines the surface."
+      }
+    },
+    {
+      "group": "/",
+      "name": "pressure_weight",
+      "dimensions": [
+        "sounding_id",
+        "levels"
+      ],
+      "shape": [
+        146539,
+        20
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "Pressure Weighting Function",
+        "missing_value": "-999999.0",
+        "comment": "Pressure weighting function for each level; Defined on layer boundaries. These are oriented space-to-surface, so the first element defines the TOA, the last element defines the surface."
+      }
+    },
+    {
+      "group": "/",
+      "name": "frames",
+      "dimensions": [
+        "frames"
+      ],
+      "shape": [
+        125090
+      ],
+      "dtype": "int32",
+      "attributes": {}
+    },
+    {
+      "group": "/",
+      "name": "footprints",
+      "dimensions": [
+        "footprints"
+      ],
+      "shape": [
+        8
+      ],
+      "dtype": "int16",
+      "attributes": {}
+    },
+    {
+      "group": "/Auxiliary",
+      "name": "altitude_b11",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "meters",
+        "long_name": "Original B11 Altitude",
+        "missing_value": "-999999.0",
+        "comment": "Original B11 Surface Altitude in meters above sea level, used in the L2FP retrieval."
+      }
+    },
+    {
+      "group": "/Auxiliary",
+      "name": "altitude_stddev_b11",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "meters",
+        "long_name": "Original B11 Altitude Stddev",
+        "missing_value": "-999999.0",
+        "comment": "Original B11 Standard deviation of surface elevation within the FOV, from the same source as altitude_l2."
+      }
+    },
+    {
+      "group": "/Meteorology",
+      "name": "psurf_apriori_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Band 1 Prior Surface Pressure",
+        "missing_value": "-999999.0",
+        "comment": "Prior surface pressure for Band 1 location, as determined by GEOS5 IT short-term (0-9 hour) forecast"
+      }
+    },
+    {
+      "group": "/Meteorology",
+      "name": "psurf_apriori_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Band 2 Prior Surface Pressure",
+        "missing_value": "-999999.0",
+        "comment": "Prior surface pressure for Band 2 location, as determined by GEOS5 IT short-term (0-9 hour) forecast"
+      }
+    },
+    {
+      "group": "/Meteorology",
+      "name": "psurf_apriori_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Band 3 Prior Surface Pressure",
+        "missing_value": "-999999.0",
+        "comment": "Prior surface pressure for Band 3 location, as determined by GEOS5 IT short-term (0-9 hour) forecast"
+      }
+    },
+    {
+      "group": "/Meteorology",
+      "name": "windspeed_u_met",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "m/s",
+        "long_name": "Prior Meteorology Surface Wind Speed, U Component",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Meteorology",
+      "name": "windspeed_v_met",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "m/s",
+        "long_name": "Prior Meteorology Surface Wind Speed, V Component",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "co2_ratio_bc",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "CO2 Ratio BC",
+        "missing_value": "-999999.0",
+        "comment": "Bias- and Footprint-corrected Band 3 / Band 2 Ratio of retrieved Single-band XCO2 using IMAP-DOAS algorithm"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "h2o_ratio_bc",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "H2O Ratio BC",
+        "missing_value": "-999999.0",
+        "comment": "Bias- and Footprint-corrected Band 3 / Band 2 Ratio of retrieved Single-band XH2O using IMAP-DOAS algorithm"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "xco2_weak_idp",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "xco2_weak",
+        "missing_value": "-999999.0",
+        "comment": "XCO2 from Weak CO2 Band only, IMAP-DOAS algorithm"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "xco2_strong_idp",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "xco2_strong",
+        "missing_value": "-999999.0",
+        "comment": "XCO2 from Strong CO2 Band only, IMAP-DOAS algorithm"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "max_declocking_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "max_declocking_o2a",
+        "missing_value": "-999999.0",
+        "comment": "ABS(MaxDeclockingFactor_O2A_Band - 1)*100"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "max_declocking_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "max_declocking_wco2",
+        "missing_value": "-999999.0",
+        "comment": "ABS(MaxDeclockingFactor_WeakCO2_Band - 1)*100"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "max_declocking_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "max_declocking_sco2",
+        "missing_value": "-999999.0",
+        "comment": "ABS(MaxDeclockingFactor_StrongCO2_Band - 1)*100"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "color_slice_noise_ratio_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "continuum_color_slice_noise_ratio_o2a",
+        "missing_value": "-999999.0",
+        "comment": "Ratio between continuum color slice spatial standard deviation and expected noise level in Band 1"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "color_slice_noise_ratio_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "continuum_color_slice_noise_ratio_wco2",
+        "missing_value": "-999999.0",
+        "comment": "Ratio between continuum color slice spatial standard deviation and expected noise level in Band 2"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "color_slice_noise_ratio_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "continuum_color_slice_noise_ratio_sco2",
+        "missing_value": "-999999.0",
+        "comment": "Ratio between continuum color slice spatial standard deviation and expected noise level in Band 3"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "h_continuum_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "percent",
+        "long_name": "h_continuum_o2a",
+        "missing_value": "-999999.0",
+        "comment": "Relative variability of continuum radiance across neighboring soundings (Stddev/Mean) in Band 1"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "h_continuum_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "percent",
+        "long_name": "h_continuum_wco2",
+        "missing_value": "-999999.0",
+        "comment": "Relative variability of continuum radiance across neighboring soundings (Stddev/Mean) in Band 2"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "h_continuum_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "percent",
+        "long_name": "h_continuum_sco2",
+        "missing_value": "-999999.0",
+        "comment": "Relative variability of continuum radiance across neighboring soundings (Stddev/Mean) in Band 3"
+      }
+    },
+    {
+      "group": "/Preprocessors",
+      "name": "dp_abp",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "delta_surface_pressure_abp",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved-Prior Pressure from the fast O2A-band only preprocessor retrieval"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "surface_type",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "0=ocean;1=land",
+        "long_name": "Surface Type",
+        "missing_value": "127",
+        "comment": "Surface type used in the retrieval: 0=ocean and corresponds to a scaled Cox-Munk surface; 1=land and corresponds to a scaled soil BRDF surface"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "psurf",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Retrieved Surface Pressure",
+        "missing_value": "-999999.0",
+        "comment": "Surface pressure retrieved by the Level-2 retrieval",
+        "Coordinates": "time longitude latitude"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "SigmaB",
+      "dimensions": [
+        "levels"
+      ],
+      "shape": [
+        20
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "SigmaB_Coefficient",
+        "missing_value": "-999999.0",
+        "comment": "Multiply Psurf by these values to get the pressure layer boundaries (= pressure levels)"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "windspeed",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "m/s",
+        "long_name": "Retrieved Surface Wind Speed",
+        "missing_value": "-999999.0",
+        "comment": "Surface wind speed retrieved by the Level-2 retrieval"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "windspeed_apriori",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "m/s",
+        "long_name": "Prior Surface Wind Speed",
+        "missing_value": "-999999.0",
+        "comment": "Surface wind speed retrieved by the Level-2 retrieval"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "psurf_apriori",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Prior Surface Pressure",
+        "missing_value": "-999999.0",
+        "comment": "Prior surface pressure used in the retrieval, as determined by GEOS5 IT analysis"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "t700",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "K",
+        "long_name": "Temperature_at_700hPa",
+        "missing_value": "-999999.0",
+        "comment": "Temperature at 700 hPa (from GEOS5-FP-IT)"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "fs",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "W/m^2/um/sr",
+        "long_name": "Retrieved Fluorescence at 757 nm",
+        "missing_value": "-999999.0",
+        "comment": "Simultaneous Fluorescence retrieval (at 757 nm) by L2 code; note this is different than the dedicated retrieval using only solar lines"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "fs_rel",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Retrieved L2 Fluorescence relative to Band 1 signal",
+        "missing_value": "-999999.0",
+        "comment": "Retrieval Fluorescence relative to Band 1 signal"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "tcwv",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "kg/m^2",
+        "long_name": "Total Column Water Vapor",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved TCWV obtained by multiplying retrieved h2o_scale factor to prior TCWV",
+        "Coordinates": "time longitude latitude"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "tcwv_apriori",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "kg/m^2",
+        "long_name": "Total Column Water Vapor A Priori",
+        "missing_value": "-999999.0",
+        "comment": "Prior TCWV (from GEOS5 IT analysis)"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "tcwv_uncertainty",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "kg/m^2",
+        "long_name": "Total Column Water Vapor Uncertainty",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved TCWV Posterior Uncertainty"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "xco2_raw",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "Raw value of Retrieved XCO2",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "dp",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Delta Psurf from L2, using original (B11) Prior",
+        "missing_value": "-999999.0",
+        "comment": "Prior Psurf constructed with NASADEM30Plus (original) B11 DEM"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "dp_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Delta Psurf from L2, Copernicus-DEM Adjusted O2A-band Prior",
+        "missing_value": "-999999.0",
+        "comment": "Prior Psurf constructed with the Copernicus GLO-90 DEM"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "dp_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "hPa",
+        "long_name": "Delta Psurf from L2, Copernicus-DEM Adjusted SCO2-band Prior",
+        "missing_value": "-999999.0",
+        "comment": "Prior Psurf constructed with the Copernicus GLO-90 DEM"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "dpfrac",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "dpfrac (using Copernicus-DEM Adjusted SCO2-band Prior)",
+        "missing_value": "-999999.0",
+        "comment": "xco2_raw*(1-{Meteorology/psurf_apriori_band3}/{Retrieval/psurf}"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "s31",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "Signal_band3/Signal_band1",
+        "missing_value": "-999999.0",
+        "comment": "Ratio of Band 3 to Band 1 signal level"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "s32",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "Signal_band3/Signal_band2",
+        "missing_value": "-999999.0",
+        "comment": "Ratio of Band 3 to Band 2 signal level"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "co2_grad_del",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "ppm",
+        "long_name": "Change in CO2 vertical gradient (surface minus level 13), retrieved-apriori",
+        "missing_value": "-999999.0",
+        "comment": "level 13 is at P/Psurf=0.631579"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "dws",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Dust+Water+SeaSalt",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved AOD_dust+AOD_water+AOD_seasalt at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "eof3_1_rel",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "3rd EOF of Band 1 , relative to Signal",
+        "missing_value": "-999999.0",
+        "comment": "A scaled version of the EOF 3, Band 1 amplitude"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "snow_flag",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "Inferred Snow Flag",
+        "missing_value": "127",
+        "comment": "0=not snow, 1=snow"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_dust",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Dust Aerosol Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Dust Aerosol Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_bc",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Black Carbon Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Black Carbon Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_oc",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Organic Carbon Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Organic Carbon Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_seasalt",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Sea Salt Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Sea Salt Carbon Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_sulfate",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Sulfate Aerosol Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Sulfate Aerosol Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_strataer",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Stratospheric Aerosol Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Upper Trop+Stratospheric Aerosol Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_water",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Water Cloud Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Water Cloud Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_ice",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Ice Cloud Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Ice Cloud Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_total",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Total Cloud+Aerosol Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Total Cloud+Aerosol Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "dust_height",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "P/Psurf",
+        "long_name": "Dust Aerosol Height",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Dust Aerosol Vertical Height"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "ice_height",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "P/Psurf",
+        "long_name": "Ice Cloud Height",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Ice Cloud Vertical Height"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "water_height",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "P/Psurf",
+        "long_name": "Water Cloud Height",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Water Cloud Vertical Height"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_total_apriori",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Prior Total Cloud+Aerosol Optical Depth",
+        "missing_value": "-999999.0",
+        "comment": "A priori Total Cloud+Aerosol Optical Depth at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "dws_apriori",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Prior Dust+Water+SeaSalt",
+        "missing_value": "-999999.0",
+        "comment": "A priori AOD_dust+AOD_water+AOD_seasalt at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "aod_fine_apriori",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Prior Organic Carbon + Sulfate",
+        "missing_value": "-999999.0",
+        "comment": "A priori AOD_sulfate+AOD_oc at 0.755 microns"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "h2o_scale",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Retrieved scale factor to Prior Water Vapor Profile",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "deltaT",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "Kelvin",
+        "long_name": "Retrieved Offset to Prior Temperature Profile in Kelvin",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "Band 1 Albedo",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Band 1 reflectance (land), or lambertian albedo equivalent (ocean)"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "Band 2 Albedo",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Band 2 reflectance (land), or lambertian albedo equivalent (ocean)"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "Band 3 Albedo",
+        "missing_value": "-999999.0",
+        "comment": "Retrieved Band 3 reflectance (land), or lambertian albedo equivalent (ocean)"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_slope_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn",
+        "long_name": "Retrieved Band 1 reflectance slope (land), or slope of lambertian albedo equivalent (ocean)",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_slope_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn",
+        "long_name": "Retrieved Band 2 reflectance slope (land), or slope of lambertian albedo equivalent (ocean)",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_slope_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn",
+        "long_name": "Retrieved Band 3 reflectance slope (land), or slope of lambertian albedo equivalent (ocean)",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_quad_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn^2",
+        "long_name": "Retrieved Band 1 reflectance quadratic component (land), n/a (ocean)",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_quad_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn^2",
+        "long_name": "Retrieved Band 2 reflectance quadratic component (land), n/a (ocean)",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "albedo_quad_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn^2",
+        "long_name": "Retrieved Band 3 reflectance quadratic component (land), n/a (ocean)",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "brdf_weight_slope_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn",
+        "long_name": "Retrieved Band 2 BRDF slope weight",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "brdf_weight_slope_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "per wn",
+        "long_name": "Retrieved Band 3 BRDF slope weight",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "chi2_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Band 1 Reduced Chi-Squared of L2 Fit",
+        "missing_value": "-999999.0",
+        "comment": "Reduced Chi-Squared for Band 1 (O2A band) of L2 spectral fit"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "chi2_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Band 2 Reduced Chi-Squared of L2 Fit",
+        "missing_value": "-999999.0",
+        "comment": "Reduced Chi-Squared for Band 2 (Weak CO2 band) of L2 spectral fit"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "chi2_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "dimensionless",
+        "long_name": "Band 3 Reduced Chi-Squared of L2 Fit",
+        "missing_value": "-999999.0",
+        "comment": "Reduced Chi-Squared for Band 3 (Strong CO2 band) of L2 spectral fit"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "rms_rel_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "percent",
+        "long_name": "relative_rms_o2a_band",
+        "missing_value": "-999999.0",
+        "comment": "RMS of the L2 fit residuals in the o2a band, relative to the continuum signal, times 100 [so it is in percent]"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "rms_rel_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "percent",
+        "long_name": "relative_rms_weak_co2_band",
+        "missing_value": "-999999.0",
+        "comment": "RMS of the L2 fit residuals in the weak co2 band, relative to the continuum signal, times 100 [so it is in percent]"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "rms_rel_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "percent",
+        "long_name": "relative_rms_strong_co2_band",
+        "missing_value": "-999999.0",
+        "comment": "RMS of the L2 fit residuals in the strong co2 band, relative to the continuum signal, times 100 [so it is in percent]"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "iterations",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "Iterations",
+        "missing_value": "127",
+        "comment": "No. of iterations used in retrieval"
+      }
+    },
+    {
+      "group": "/Retrieval",
+      "name": "diverging_steps",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "diverging_steps",
+        "missing_value": "127",
+        "comment": "No. of diverging steps taken in retrieval"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "solar_azimuth_angle",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees East of North",
+        "long_name": "sounding_solar_azimuth",
+        "missing_value": "-999999.0",
+        "comment": "solar azimuth angle at the time of the measurement"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "sensor_azimuth_angle",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees East of North",
+        "long_name": "sounding_azimuth",
+        "missing_value": "-999999.0",
+        "comment": "azimuth angle of the satellite at the time of the measurement"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "polarization_angle",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees",
+        "long_name": "sounding_polarization_angle",
+        "missing_value": "-999999.0"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "land_fraction",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "percent",
+        "long_name": "Land Fraction",
+        "missing_value": "127",
+        "comment": "Fraction of the footprint that contains land in percent"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "glint_angle",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees",
+        "long_name": "sounding_glint_angle",
+        "missing_value": "-999999.0",
+        "comment": "Angular distance from viewing along the perfect glint direction"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "airmass",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees",
+        "long_name": "relative_airmass",
+        "missing_value": "-999999.0",
+        "comment": "Airmass, computed as 1/cos(solar_zenith_angle) + 1/cos(sensor_zenith_angle)"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "snr_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "snr_O2_L1b",
+        "missing_value": "-999999.0",
+        "comment": "O2A-Band Continuum Signal-to-Noise Ratio"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "snr_wco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "snr_weak_CO2_L1b",
+        "missing_value": "-999999.0",
+        "comment": "Weak CO2-Band Continuum Signal-to-Noise Ratio"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "snr_sco2",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "snr_strong_CO2_L1b",
+        "missing_value": "-999999.0",
+        "comment": "Strong CO2-Band Continuum Signal-to-Noise Ratio"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "operation_mode",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "OCO-2 Operation Mode: 0=Nadir, 1=Glint, 2=Target, 3=Transition",
+        "missing_value": "127"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "orbit",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int32",
+      "attributes": {
+        "units": "none",
+        "long_name": "orbit number",
+        "missing_value": "-9999",
+        "comment": "OCO-2 orbit number since mission start"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "path",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "uint8",
+      "attributes": {
+        "units": "none",
+        "long_name": "OCO-2 orbit path number",
+        "missing_value": "-1",
+        "comment": "OCO-2 fixed orbit path number ranging from 1-233"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "footprint",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "Footprint Number",
+        "missing_value": "127",
+        "comment": "Index of OCO-2 Sounding 1-8"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "land_water_indicator",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "Land Water Indicator",
+        "missing_value": "127",
+        "comment": "0=Land;1=Ocean;2=Inland Water;3=Mixed"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "altitude",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "meters",
+        "long_name": "Copernicus DEM-based Altitude",
+        "missing_value": "-999999.0",
+        "comment": "Surface Altitude in meters above sea level"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "altitude_stddev",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "meters",
+        "long_name": "Copernicus DEM-based Altitude Stddev",
+        "missing_value": "-999999.0",
+        "comment": "Standard deviation of surface elevation within the FOV"
+      }
+    },
+    {
+      "group": "/Sounding",
+      "name": "zlo_o2a",
+      "dimensions": [
+        "sounding_id"
+      ],
+      "shape": [
+        146539
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "none",
+        "long_name": "O2A Band ZLO Correction from ARP",
+        "missing_value": "-999999.0",
+        "comment": "Average of all L1b columns"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "time",
+      "dimensions": [
+        "frames"
+      ],
+      "shape": [
+        125090
+      ],
+      "dtype": "int32",
+      "attributes": {
+        "units": "hhmmssm",
+        "long_name": "Time of Day",
+        "missing_value": "-9999",
+        "comment": "UTC Time of Day in HHMMSSm"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "orbit",
+      "dimensions": [
+        "frames"
+      ],
+      "shape": [
+        125090
+      ],
+      "dtype": "int32",
+      "attributes": {
+        "units": "none",
+        "long_name": "orbit number",
+        "missing_value": "-9999",
+        "comment": "OCO-2 orbit number since mission start"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "latitude",
+      "dimensions": [
+        "frames",
+        "footprints"
+      ],
+      "shape": [
+        125090,
+        8
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees_north",
+        "long_name": "latitude",
+        "missing_value": "-999999.0",
+        "comment": "center latitude of the measurement"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "longitude",
+      "dimensions": [
+        "frames",
+        "footprints"
+      ],
+      "shape": [
+        125090,
+        8
+      ],
+      "dtype": "float32",
+      "attributes": {
+        "units": "degrees_east",
+        "long_name": "longitude",
+        "missing_value": "-999999.0",
+        "comment": "center longitude of the measurement"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "selection_flag_sel",
+      "dimensions": [
+        "frames",
+        "footprints"
+      ],
+      "shape": [
+        125090,
+        8
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "L2FP Selection Flag",
+        "missing_value": "127",
+        "comment": "0=Selected for L2 Full-Physics processing, otherwise not selected"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "sounding_l1b_quality_flag",
+      "dimensions": [
+        "frames",
+        "footprints"
+      ],
+      "shape": [
+        125090,
+        8
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "Level1B Sounding Quality Flag",
+        "missing_value": "127",
+        "comment": "0=Good L1b, 1=Bad L1b"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "land_fraction",
+      "dimensions": [
+        "frames",
+        "footprints"
+      ],
+      "shape": [
+        125090,
+        8
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "percent (%)",
+        "long_name": "Land Fraction",
+        "missing_value": "127",
+        "comment": "0=Good, otherwise not good"
+      }
+    },
+    {
+      "group": "/L1b",
+      "name": "operation_mode",
+      "dimensions": [
+        "frames",
+        "footprints"
+      ],
+      "shape": [
+        125090,
+        8
+      ],
+      "dtype": "int8",
+      "attributes": {
+        "units": "none",
+        "long_name": "OCO-2/3 Operation Mode: 0=Nadir, 1=Glint, 2=Target, 3=Transition, 4=SAM",
+        "missing_value": "127"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "dataset": "geoBoundaries",
+  "release_type": "gbOpen",
+  "country": "India",
+  "iso3": "IND",
+  "boundary_type": "ADM0",
+  "year_represented": "2014",
+  "source": "geoBoundaries, Wikimedia Commons",
+  "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+  "api_url": "https://www.geoboundaries.org/api/current/gbOpen/IND/ADM0/",
+  "geojson_url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IND/ADM0/geoBoundaries-IND-ADM0_simplified.geojson",
+  "feature_count": 1,
+  "geometry_type": "MultiPolygon",
+  "geometry_valid": true,
+  "bounds": [
+    68.17852781880384,
+    6.815314425620272,
+    97.39385212087876,
+    36.99365514796676
+  ],
+  "geojson_file": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\external\\india_boundary\\india_adm0.geojson"
+}

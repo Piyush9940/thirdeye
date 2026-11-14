@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regional Comparison — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/charts.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> 6 Custom Geographical Zones</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link active"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Regional <span>Comparison</span></h1>
+        <p class="page-subtitle">Rank and compare rates of change and statistical significance across India's 6 custom zones.</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <label for="compare-var-select" style="font-size: 0.85rem; color: var(--text-muted);">Variable:</label>
+        <select id="compare-var-select" class="form-select" style="width: auto;">
+          <option value="T2M">Air Temperature (T2M)</option>
+          <option value="PRECTOTCORR">Precipitation Rate</option>
+          <option value="RH2M">Relative Humidity (RH2M)</option>
+          <option value="WS10M">Wind Speed (WS10M)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Comparison Bar Chart Card -->
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-chart-bar text-cyan"></i> Sen's Robust Rate of Change by Region</div>
+      </div>
+      <div id="compare-chart" style="width: 100%; height: 350px;"></div>
+    </div>
+
+    <!-- Detailed Ranking Table Card -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-table text-cyan"></i> Statistical Significance & Decadal Metrics</div>
+        <span class="badge badge-cyan">Full Region Breakdown</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-dim); text-transform: uppercase; font-size: 0.78rem;">
+              <th style="padding: 0.75rem 1rem;">Region Name</th>
+              <th style="padding: 0.75rem 1rem;">10-Yr Mean</th>
+              <th style="padding: 0.75rem 1rem;">Sen's Slope (Yr)</th>
+              <th style="padding: 0.75rem 1rem;">Decadal Projection</th>
+              <th style="padding: 0.75rem 1rem;">Mann-Kendall p</th>
+              <th style="padding: 0.75rem 1rem;">Hypothesis Test Verdict</th>
+            </tr>
+          </thead>
+          <tbody id="compare-table-body">
+            <tr><td colspan="6" class="text-center"><span class="spinner"></span> Loading regional comparison...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div><b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective</div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/regional-comparison.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.regComp = new RegionalComparison();
+    });
+  </script>
+</body>
+</html>

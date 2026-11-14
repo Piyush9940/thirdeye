@@ -1,0 +1,5 @@
+feature,nodes,original_significant_nodes,tfpw_significant_nodes,significant_in_both,lost_significance,newly_significant,not_significant_in_either,mean_centered_rho,mean_uncentered_rho,robustness_label
+PRECTOTCORR,255,3,26,3,0,23,229,-0.1091734811117209,-0.0347864158322653,Low node overlap
+RH2M,255,74,90,68,6,22,159,-0.1062517942101389,-0.060553893201873,High node overlap
+T2M,255,48,61,47,1,14,193,-0.110936256956028,-0.0662548852762457,High node overlap
+WS10M,255,17,22,17,0,5,233,-0.0970121935241342,-0.0534532215782222,High node overlap

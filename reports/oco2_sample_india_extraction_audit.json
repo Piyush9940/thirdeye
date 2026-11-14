@@ -1,0 +1,53 @@
+{
+    "source": "NASA OCO-2 L2 Lite FP",
+    "processing_version": "11.2r",
+    "granule": "oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+    "calibration_scale": "X2019",
+    "variable": "xco2_x2019",
+    "variable_units": "ppm",
+    "variable_description": "Column-averaged dry-air mole fraction of carbon dioxide",
+    "boundary_source": "geoBoundaries",
+    "boundary_country": "India",
+    "boundary_level": "ADM0",
+    "boundary_year_represented": 2014,
+    "boundary_license": "CC0 1.0 Universal",
+    "global_soundings": 146539,
+    "bounding_box_candidates": 2236,
+    "india_soundings": 270,
+    "india_quality0_soundings": 180,
+    "quality_flag_counts": {
+        "0": 180,
+        "1": 90
+    },
+    "quality0_xco2_valid_count": 180,
+    "quality0_xco2_mean_ppm": 419.18787655300565,
+    "quality0_xco2_median_ppm": 419.19801330566406,
+    "quality0_xco2_std_ppm": 0.7765031001399249,
+    "quality0_uncertainty_valid_count": 180,
+    "quality0_uncertainty_mean_ppm": 0.6186193118492762,
+    "first_observation_utc": "2024-01-01 07:20:46.562004+00:00",
+    "last_observation_utc": "2024-01-01 07:21:10.748998+00:00",
+    "latitude_min": 25.33437156677246,
+    "latitude_max": 26.740102767944336,
+    "longitude_min": 89.57743835449219,
+    "longitude_max": 89.95501708984375,
+    "parquet_exports": {
+        "all_quality": {
+            "status": "saved",
+            "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\oco2_india_sample\\oco2_sample_india_all_quality.parquet"
+        },
+        "quality0": {
+            "status": "saved",
+            "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\oco2_india_sample\\oco2_sample_india_quality0.parquet"
+        }
+    },
+    "csv_all_quality": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\oco2_india_sample\\oco2_sample_india_all_quality.csv",
+    "csv_quality0": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\oco2_india_sample\\oco2_sample_india_quality0.csv",
+    "created_utc": "2026-11-13T14:06:22.285712+00:00",
+    "limitations": [
+        "One OCO-2 granule only; not a national annual estimate.",
+        "Satellite soundings are spatially and temporally sparse.",
+        "XCO2 is a column-average measurement, not surface CO2.",
+        "Quality flag 0 is used for the primary analysis."
+    ]
+}

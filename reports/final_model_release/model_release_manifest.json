@@ -1,0 +1,117 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "release": {
+        "release_name": "Experimental MLP Reference Model",
+        "release_version": "1.0.0-documentation",
+        "release_date_utc": "2026-11-14T07:29:43.032210+00:00",
+        "release_status": "EXPERIMENTAL_REFERENCE_NOT_PRODUCTION_APPROVED",
+        "deployment_approved": false
+    },
+    "model": {
+        "selected_reference": "Original MLP",
+        "secondary_diagnostic_reference": "Month-only MLP",
+        "architecture": {
+            "input_features": 8,
+            "hidden_units": 32,
+            "output_units": 1,
+            "activation": "ReLU",
+            "dropout": 0.2,
+            "epochs": 250
+        },
+        "feature_order": [
+            "T2M",
+            "PRECTOTCORR",
+            "RH2M",
+            "WS10M",
+            "latitude",
+            "longitude",
+            "month_sin",
+            "month_cos"
+        ],
+        "target": "Methane concentration in ppb",
+        "target_transform": "Training-fold standardization followed by inverse transformation",
+        "checkpoint_count_expected": 15,
+        "checkpoint_count_found": 15
+    },
+    "validation": {
+        "chronological_folds": 3,
+        "seeds_per_fold": 5,
+        "historical_mlp_prediction_rows": 720,
+        "historical_rows_within_1e_4_ppb": 719,
+        "maximum_absolute_reproduction_difference_ppb": 0.0001220703,
+        "mean_absolute_reproduction_difference_ppb": 1.695e-07,
+        "prediction_correlation": 1.0,
+        "reusable_predictor_test": "PASSED",
+        "predictor_test_comparison": "Exact agreement at displayed precision for tested samples"
+    },
+    "reported_equal_fold_mean_metrics": {
+        "GCN_distance_weighted": {
+            "MAE_ppb": 58.479,
+            "RMSE_ppb": 60.765,
+            "R2": -11.492
+        },
+        "GCN_unweighted": {
+            "MAE_ppb": 70.934,
+            "RMSE_ppb": 75.871,
+            "R2": -23.944
+        },
+        "Original_MLP": {
+            "MAE_ppb": 53.786,
+            "RMSE_ppb": 56.872,
+            "R2": -13.345
+        },
+        "Month_only_ablation": {
+            "MAE_ppb": 49.039,
+            "RMSE_ppb": 52.684,
+            "R2": -10.486
+        }
+    },
+    "data_summary": {
+        "qa_filtered_methane_pixels": 73045,
+        "unique_satellite_granules": 7,
+        "methane_node_month_observations": 226,
+        "spatial_nodes": 255,
+        "methane_observation_months": [
+            "2019-05",
+            "2021-02",
+            "2021-08",
+            "2023-11"
+        ]
+    },
+    "scientific_limitations": [
+        "Only four methane observation months are available.",
+        "The data do not provide continuous monthly coverage from 2019 to 2024.",
+        "The August 2021 evaluation fold contains only 11 nodes.",
+        "Many November 2023 evaluation locations were previously observed in training.",
+        "November 2023 influenced model selection and is not an independent final holdout.",
+        "Most reported R2 values are negative.",
+        "No reliable future forecasting skill has been demonstrated.",
+        "No GNN performance advantage has been established.",
+        "Climate variables provide contextual information and do not prove causality.",
+        "Satellite concentration observations alone cannot identify exact emission sources.",
+        "Unobserved spatial nodes must not be interpreted as zero methane."
+    ],
+    "reproducibility": {
+        "checkpoint_hashes_included": true,
+        "preprocessing_metadata_included": true,
+        "predictor_source_included": true,
+        "release_inventory": "reports\\final_model_release\\release_file_inventory.csv",
+        "environment": {
+            "python_version": "3.12.9",
+            "python_implementation": "CPython",
+            "platform": "Windows-11-10.0.26300-SP0",
+            "python_executable": "c:\\Program Files\\Python312\\python.exe",
+            "pytorch_version": "2.11.0+cu128",
+            "cuda_available": true,
+            "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU"
+        }
+    },
+    "asset_verification": {
+        "required_asset_count": 39,
+        "available_asset_count": 39,
+        "missing_asset_count": 0,
+        "all_required_assets_present": true,
+        "expected_dashboard_exports": 12,
+        "available_dashboard_exports": 12
+    }
+}

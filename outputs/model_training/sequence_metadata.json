@@ -1,0 +1,14 @@
+{
+    "sequence_length": 12,
+    "prediction_horizon_months": 1,
+    "num_spatial_nodes": 255,
+    "num_features": 4,
+    "training_sequences": 72,
+    "validation_sequences": 24,
+    "testing_sequences": 12,
+    "input_shape": [
+        12,
+        255,
+        4
+    ]
+}

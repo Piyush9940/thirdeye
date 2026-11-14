@@ -1,0 +1,70 @@
+{
+    "experiment_name": "final_exploratory_spherical_gnn_comparison",
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M",
+        "latitude",
+        "longitude",
+        "month_sin",
+        "month_cos"
+    ],
+    "target": "Sentinel-5P methane concentration (ppb)",
+    "folds": [
+        {
+            "fold": 1,
+            "train": [
+                "201905"
+            ],
+            "evaluation": "202102"
+        },
+        {
+            "fold": 2,
+            "train": [
+                "201905",
+                "202102"
+            ],
+            "evaluation": "202108"
+        },
+        {
+            "fold": 3,
+            "train": [
+                "201905",
+                "202102",
+                "202108"
+            ],
+            "evaluation": "202311"
+        }
+    ],
+    "random_seeds": [
+        7,
+        21,
+        42,
+        77,
+        123
+    ],
+    "models": [
+        "global_training_mean",
+        "last_node_observation",
+        "full_feature_mlp",
+        "unweighted_spherical_gcn",
+        "distance_weighted_spherical_gcn"
+    ],
+    "hidden_channels": 32,
+    "dropout": 0.2,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0001,
+    "max_epochs": 250,
+    "preprocessing": {
+        "climate_location": "training-fold-only standardization",
+        "month_sin_cos": "unscaled natural values",
+        "target": "training-label-only standardization"
+    },
+    "metrics": [
+        "MAE_ppb",
+        "RMSE_ppb",
+        "R2"
+    ],
+    "limitation": "Exploratory retrospective evaluation. November 2023 has previously influenced model selection."
+}

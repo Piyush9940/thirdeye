@@ -1,0 +1,7 @@
+{
+    "negative_precipitation_count": 181,
+    "negative_wind_speed_count": 0,
+    "humidity_below_zero_count": 0,
+    "humidity_above_100_count": 0,
+    "temperature_outside_historical_range_count": 0
+}

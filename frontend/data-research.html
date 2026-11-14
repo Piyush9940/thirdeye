@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data & Research Downloads — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link active"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="content-wrapper" style="padding-top: 3.5rem; padding-bottom: 1.5rem; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <span class="badge-scientific badge-satellite" style="margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-download"></i> Open Science Repository
+      </span>
+      <h1 style="font-size: 2.85rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">
+        DATA & RESEARCH DOWNLOADS
+      </h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+        Access verified exports from the pilot study. Download spatial coordinates, satellite soundings, climate parameters, and machine learning evaluation logs in open CSV and JSON formats.
+      </p>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Mandatory Scientific Labeling Banner -->
+    <div class="scientific-warning-callout" style="margin-bottom: 3rem;">
+      <div class="icon"><i class="fa-solid fa-tag"></i></div>
+      <div class="content">
+        <strong>Dataset Categorization & Integrity Rules</strong><br>
+        To preserve scientific transparency, all datasets below are strictly categorized into:
+        <span style="color: var(--earth-green); font-weight: bold;">[Measured Satellite Observations]</span>, 
+        <span style="color: var(--cyan-primary); font-weight: bold;">[Climate Context]</span>, 
+        <span style="color: var(--warning-amber); font-weight: bold;">[Experimental Model Estimates]</span>, and 
+        <span style="color: #a855f7; font-weight: bold;">[Evaluation Metrics]</span>. 
+        <em>Never treat experimental model estimates as measured ground truth.</em>
+      </div>
+    </div>
+
+    <!-- Category 1: Measured Satellite Observations -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem;">
+      <div class="nasa-card-header">
+        <div>
+          <span class="badge-scientific badge-satellite" style="margin-bottom: 0.35rem;">Category 1</span>
+          <h3 class="nasa-card-title" style="color: var(--earth-green);">
+            <i class="fa-solid fa-satellite-dish"></i> Measured Satellite Observations
+          </h3>
+        </div>
+        <span class="badge-scientific badge-verified">226 Records • QA ≥ 0.50</span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+        Aggregated total column atmospheric methane measurements ($X\text{CH}_4$ in ppb) from Copernicus Sentinel-5P TROPOMI. Spans 4 temporal snapshot months (May 2019, Feb 2021, Aug 2021, Nov 2023). Contains median precision, pixel counts, and distance-to-node metrics.
+      </p>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="/api/data/download/methane_observations.csv" class="btn-nasa btn-nasa-primary btn-sm">
+          <i class="fa-solid fa-file-csv"></i> Download CSV (226 rows)
+        </a>
+        <a href="/api/data/download/methane_observations.json" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-file-code"></i> Download JSON
+        </a>
+      </div>
+    </div>
+
+    <!-- Category 2: Spatial Lattice & Boundaries -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem;">
+      <div class="nasa-card-header">
+        <div>
+          <span class="badge-scientific badge-verified" style="margin-bottom: 0.35rem;">Category 2</span>
+          <h3 class="nasa-card-title" style="color: var(--cyan-primary);">
+            <i class="fa-solid fa-network-wired"></i> Spatial Lattice & Geospatial Boundaries
+          </h3>
+        </div>
+        <span class="badge-scientific badge-verified">255 Nodes • 2° Grid</span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+        The 255 spherical grid nodes discretizing the Indian subcontinent [7°N–37°N, 69°E–97°E]. Includes graph topology metrics (node degrees, connected components) and observation presence flags, alongside the official India ADM0 polygon.
+      </p>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="/api/data/download/spatial_nodes.csv" class="btn-nasa btn-nasa-primary btn-sm">
+          <i class="fa-solid fa-file-csv"></i> Download Nodes CSV
+        </a>
+        <a href="/api/data/download/spatial_nodes.json" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-file-code"></i> Download Nodes JSON
+        </a>
+        <a href="/api/data/download/spatial_nodes.geojson" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-map"></i> Download Nodes GeoJSON
+        </a>
+        <a href="/api/data/download/india_adm0.geojson" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-draw-polygon"></i> Download India Boundary GeoJSON
+        </a>
+      </div>
+    </div>
+
+    <!-- Category 3: Climate Context (NASA POWER) -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem;">
+      <div class="nasa-card-header">
+        <div>
+          <span class="badge-scientific badge-verified" style="margin-bottom: 0.35rem;">Category 3</span>
+          <h3 class="nasa-card-title" style="color: #60a5fa;">
+            <i class="fa-solid fa-cloud-sun"></i> Climate Context (NASA POWER Meteorology)
+          </h3>
+        </div>
+        <span class="badge-scientific badge-verified">Collocated Features</span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+        Surface meteorological parameters collocated with each observation node from the NASA POWER reanalysis project. Variables include 2m Air Temperature (<span style="font-family: var(--font-mono);">T2M</span>), Precipitation (<span style="font-family: var(--font-mono);">PRECTOTCORR</span>), Relative Humidity (<span style="font-family: var(--font-mono);">RH2M</span>), and 10m Wind Speed (<span style="font-family: var(--font-mono);">WS10M</span>). Embedded within <span style="font-family: var(--font-mono);">methane_observations.csv</span>.
+      </p>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="/api/climate/data" target="_blank" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Query Climate REST API Endpoint
+        </a>
+      </div>
+    </div>
+
+    <!-- Category 4: Experimental Model Estimates -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem; border-color: rgba(245, 158, 11, 0.4); background: rgba(18, 12, 4, 0.65);">
+      <div class="nasa-card-header">
+        <div>
+          <span class="badge-scientific badge-warning" style="margin-bottom: 0.35rem;">Category 4</span>
+          <h3 class="nasa-card-title" style="color: var(--warning-amber);">
+            <i class="fa-solid fa-microchip"></i> Experimental ML Model Estimates
+          </h3>
+        </div>
+        <span class="badge-scientific badge-experimental">720 Predictions • Not Measured Truth</span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+        Out-of-sample predictions generated by the experimental Multi-Layer Perceptron (MLP) reference model evaluated across 3 chronological folds and 5 random seeds (7, 21, 42, 77, 123). Provided strictly for model evaluation, residual analysis, and reproducibility.
+      </p>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="/api/data/download/mlp_predictions.csv" class="btn-nasa btn-nasa-primary btn-sm" style="background: var(--warning-amber); border-color: var(--warning-amber); color: #000;">
+          <i class="fa-solid fa-file-csv"></i> Download Predictions CSV (720 rows)
+        </a>
+        <a href="/api/data/download/mlp_predictions.json" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-file-code"></i> Download Predictions JSON
+        </a>
+      </div>
+    </div>
+
+    <!-- Category 5: Evaluation Summaries & Metadata -->
+    <div class="nasa-card" style="margin-bottom: 3.5rem;">
+      <div class="nasa-card-header">
+        <div>
+          <span class="badge-scientific badge-verified" style="margin-bottom: 0.35rem;">Category 5</span>
+          <h3 class="nasa-card-title" style="color: #c084fc;">
+            <i class="fa-solid fa-chart-line"></i> Chronological Evaluation Metrics & Metadata
+          </h3>
+        </div>
+        <span class="badge-scientific badge-verified">15 Seeds • 3 Folds</span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+        Rigorous evaluation metrics (MAE, RMSE, R², Bias) across folds and random seeds, accompanied by complete pipeline metadata and scientific release documentation.
+      </p>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="/api/data/download/fold_summary.csv" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-file-csv"></i> Fold Summary CSV
+        </a>
+        <a href="/api/data/download/fold_seed_metrics.csv" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-file-csv"></i> Seed Metrics CSV (15 rows)
+        </a>
+        <a href="/api/data/download/dashboard_metadata.json" class="btn-nasa btn-nasa-outline btn-sm">
+          <i class="fa-solid fa-file-code"></i> Dashboard Metadata JSON
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>
+          Transforming satellite Earth observations and climate datasets into an accessible, interactive environmental exploration platform that helps ordinary people understand atmospheric methane patterns across India.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="earth-explorer.html">Explore Earth</a></li>
+          <li><a href="why-methane.html">Why Methane?</a></li>
+          <li><a href="findings.html">Our Findings</a></li>
+          <li><a href="dashboard.html">India Explorer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Science & Data</div>
+        <ul class="footer-links">
+          <li><a href="impact.html">Environmental Impact</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="data-research.html">Data Downloads</a></li>
+          <li><a href="advanced-research.html">ML Lab (Experimental)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team. Built for the NASA Space Apps Challenge.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">
+        Status: Experimental Reference Model • Open Environmental Science
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

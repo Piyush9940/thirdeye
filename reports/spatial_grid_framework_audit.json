@@ -1,0 +1,34 @@
+{
+  "nasa_power_grid": {
+    "latitude_count": 65,
+    "longitude_count": 48,
+    "grid_cell_count": 3120,
+    "latitude_min": 6.0,
+    "latitude_max": 38.0,
+    "longitude_min": 68.125,
+    "longitude_max": 97.5,
+    "latitude_spacing": 0.5,
+    "longitude_spacing": 0.625,
+    "regular_latitude": true,
+    "regular_longitude": true
+  },
+  "existing_nodes": {
+    "file_exists": true,
+    "row_count": 255,
+    "columns": [
+      "node_id",
+      "grid_latitude",
+      "grid_longitude"
+    ]
+  },
+  "existing_tensor": {
+    "file_exists": true,
+    "shape": [
+      120,
+      255,
+      4
+    ]
+  },
+  "tensor_metadata_exists": true,
+  "tensor_time_index_exists": true
+}

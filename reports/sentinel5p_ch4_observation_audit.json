@@ -1,0 +1,166 @@
+{
+  "dataset": "Sentinel-5P TROPOMI methane",
+  "filename": "S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+  "file_size_mb": 59.608,
+  "pixel_shape": [
+    4172,
+    215
+  ],
+  "total_pixel_positions": 896980,
+  "valid_geolocation_pixels": 896980,
+  "valid_methane_pixels": 40268,
+  "global_qa_distribution": {
+    "0.0": 856712,
+    "0.1599999964237213": 2,
+    "0.3999999761581421": 18590,
+    "1.0": 21676
+  },
+  "india_bbox": {
+    "latitude": [
+      6,
+      38
+    ],
+    "longitude": [
+      68,
+      98
+    ],
+    "valid_geolocation_pixels": 103540,
+    "valid_methane_pixels": 5978,
+    "qa_distribution": {
+      "0.0": 97562,
+      "0.3999999761581421": 3026,
+      "1.0": 2952
+    },
+    "original_methane_statistics": {
+      "count": 5978,
+      "min": 1457.552490234375,
+      "max": 2256.294921875,
+      "mean": 1856.98681640625,
+      "median": 1870.6971435546875,
+      "std": 46.59151077270508,
+      "p01": 1708.0628662109375,
+      "p25": 1830.3243408203125,
+      "p75": 1887.63330078125,
+      "p99": 1942.3953857421875
+    },
+    "bias_corrected_methane_statistics": {
+      "count": 5978,
+      "min": 1496.8526611328125,
+      "max": 2271.52783203125,
+      "mean": 1866.0396728515625,
+      "median": 1886.949462890625,
+      "std": 50.93283462524414,
+      "p01": 1724.38134765625,
+      "p25": 1822.307373046875,
+      "p75": 1900.497802734375,
+      "p99": 1958.5460205078125
+    }
+  },
+  "global_original_methane_statistics": {
+    "count": 40268,
+    "min": 1330.75634765625,
+    "max": 2256.294921875,
+    "mean": 1755.96826171875,
+    "median": 1736.678466796875,
+    "std": 86.39600372314453,
+    "p01": 1578.490966796875,
+    "p25": 1682.50146484375,
+    "p75": 1831.902587890625,
+    "p99": 1908.59375
+  },
+  "global_bias_corrected_methane_statistics": {
+    "count": 40268,
+    "min": 1360.0552978515625,
+    "max": 2271.52783203125,
+    "mean": 1767.7742919921875,
+    "median": 1756.2811279296875,
+    "std": 83.68132019042969,
+    "p01": 1605.3668212890625,
+    "p25": 1695.71630859375,
+    "p75": 1837.5927734375,
+    "p99": 1925.2735595703125
+  },
+  "global_precision_statistics": {
+    "count": 40268,
+    "min": 0.9496233463287354,
+    "max": 29.924301147460938,
+    "mean": 3.1490583419799805,
+    "median": 2.492025852203369,
+    "std": 2.3256115913391113,
+    "p01": 1.0436259508132935,
+    "p25": 2.0225636959075928,
+    "p75": 3.2909092903137207,
+    "p99": 13.908658981323242
+  },
+  "bias_correction_difference_statistics": {
+    "count": 40268,
+    "min": -22.661376953125,
+    "max": 46.1922607421875,
+    "mean": 11.805927276611328,
+    "median": 12.17926025390625,
+    "std": 11.789633750915527,
+    "p01": -19.244979858398438,
+    "p25": 6.947021484375,
+    "p75": 19.540985107421875,
+    "p99": 39.04969787597656
+  },
+  "time_utc_first": "2020-01-01T06:18:51.238000Z",
+  "time_utc_last": "2020-01-01T07:17:14.800000Z",
+  "variable_metadata": {
+    "methane_mixing_ratio": {
+      "units": "1e-9",
+      "standard_name": "dry_atmosphere_mole_fraction_of_methane",
+      "long_name": "column averaged dry air mixing ratio of methane",
+      "coordinates": "longitude latitude",
+      "ancillary_variables": "methane_mixing_ratio_precision column_averaging_kernel chi_square degreess_of_freedom",
+      "_FillValue": "9.96921e+36"
+    },
+    "methane_mixing_ratio_bias_corrected": {
+      "units": "1e-9",
+      "standard_name": "dry_atmosphere_mole_fraction_of_methane",
+      "long_name": "corrected column-averaged dry-air mole fraction of methane",
+      "coordinates": "longitude latitude",
+      "ancillary_variables": "methane_mixing_ratio_precision column_averaging_kernel chi_square degrees_of_freedom",
+      "comment": "This value will be filled with data after the commissioning phase, this is known to be empty for now",
+      "_FillValue": "9.96921e+36"
+    },
+    "methane_mixing_ratio_precision": {
+      "units": "1e-9",
+      "standard_name": "dry_atmosphere_mole_fraction_of_methane standard_error",
+      "long_name": "precision of the column averaged dry air mixing ratio of methane",
+      "coordinates": "longitude latitude",
+      "_FillValue": "9.96921e+36"
+    },
+    "qa_value": {
+      "units": "1",
+      "scale_factor": "0.01",
+      "add_offset": "0.0",
+      "valid_min": "0",
+      "valid_max": "100",
+      "long_name": "data quality value",
+      "comment": "A continuous quality descriptor, varying between 0 (no data) and 1 (full quality data). Recommend to ignore data with qa_value < 0.5",
+      "coordinates": "longitude latitude",
+      "_FillValue": "255"
+    },
+    "latitude": {
+      "long_name": "pixel center latitude",
+      "units": "degrees_north",
+      "standard_name": "latitude",
+      "valid_min": "-90.0",
+      "valid_max": "90.0",
+      "bounds": "/PRODUCT/SUPPORT_DATA/GEOLOCATIONS/latitude_bounds",
+      "_FillValue": "9.96921e+36"
+    },
+    "longitude": {
+      "long_name": "pixel center longitude",
+      "units": "degrees_east",
+      "standard_name": "longitude",
+      "valid_min": "-180.0",
+      "valid_max": "180.0",
+      "bounds": "/PRODUCT/SUPPORT_DATA/GEOLOCATIONS/longitude_bounds",
+      "_FillValue": "9.96921e+36"
+    }
+  },
+  "india_sample_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_bbox_pixels.csv",
+  "india_sample_parquet_status": "saved"
+}

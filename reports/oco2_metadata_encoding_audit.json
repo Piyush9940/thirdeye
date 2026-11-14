@@ -1,0 +1,82 @@
+[
+    {
+        "file": "oco2_harmony_capabilities.json",
+        "size_bytes": 124950,
+        "encoding": "utf-16",
+        "top_level_type": "dict",
+        "top_level_keys": [
+            "conceptId",
+            "shortName",
+            "summary",
+            "services",
+            "variables",
+            "capabilitiesVersion"
+        ],
+        "status": "success"
+    },
+    {
+        "file": "OCO2_L2_Lite_FP_collections.csv",
+        "size_bytes": 2008,
+        "encoding": "utf-8-sig",
+        "rows": 2,
+        "columns": [
+            "concept_id",
+            "short_name",
+            "version",
+            "title",
+            "provider",
+            "summary",
+            "time_start",
+            "time_end"
+        ],
+        "relevant_columns": [
+            "title",
+            "time_start",
+            "time_end"
+        ],
+        "status": "success"
+    },
+    {
+        "file": "OCO2_L2_Lite_FP_collections.json",
+        "size_bytes": 2357,
+        "encoding": "utf-8-sig",
+        "top_level_type": "list",
+        "status": "success"
+    },
+    {
+        "file": "OCO2_L2_Lite_FP_granules.csv",
+        "size_bytes": 81232,
+        "encoding": "utf-8-sig",
+        "rows": 20,
+        "columns": [
+            "granule_id",
+            "title",
+            "short_name",
+            "version",
+            "provider",
+            "collection_concept_id",
+            "time_start",
+            "time_end",
+            "size",
+            "bounding_box",
+            "download_links",
+            "all_links"
+        ],
+        "relevant_columns": [
+            "granule_id",
+            "title",
+            "time_start",
+            "time_end",
+            "download_links",
+            "all_links"
+        ],
+        "status": "success"
+    },
+    {
+        "file": "OCO2_L2_Lite_FP_granules.json",
+        "size_bytes": 115064,
+        "encoding": "utf-8-sig",
+        "top_level_type": "list",
+        "status": "success"
+    }
+]

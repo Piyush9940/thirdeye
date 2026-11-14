@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Earth Explorer</a></li>
+        <li class="nav-item"><a href="dataset-explorer.html" class="nav-link"><i class="fa-solid fa-database"></i> Datasets</a></li>
+        <li class="nav-item"><a href="forecasting.html" class="nav-link"><i class="fa-solid fa-brain"></i> ML & Forecast</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="reports.html" class="nav-link"><i class="fa-solid fa-file-lines"></i> Reports</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-primary btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-outline btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-container">
+    <div class="auth-card" id="authBox">
+      <div class="auth-header">
+        <div class="logo-badge"><i class="fa-solid fa-user-astronaut"></i></div>
+        <h1 class="auth-title">Researcher Access</h1>
+        <p class="auth-subtitle">Sign in to manage saved analyses & research history</p>
+      </div>
+
+      <div id="authAlert" style="display: none; padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; margin-bottom: 1rem;"></div>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input type="email" class="form-control" id="loginEmail" placeholder="researcher@institution.edu" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-nasa btn-nasa-primary" style="width: 100%; margin-top: 0.5rem;" id="btnLogin">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 1.5rem; font-size: 0.82rem; color: var(--text-muted);">
+        Don't have a researcher account? <a href="register.html" style="color: var(--cyan-primary); font-weight: 600;">Register here</a>
+      </div>
+    </div>
+
+    <!-- Logged In Profile Dashboard (shown if already logged in) -->
+    <div class="auth-card" id="profileBox" style="display: none; max-width: 600px;">
+      <div class="auth-header" style="text-align: left; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <span class="badge-scientific badge-verified">Active Session</span>
+            <h2 id="profName" style="color: #fff; font-size: 1.4rem; font-weight: 700; margin-top: 0.25rem;">Researcher</h2>
+            <div id="profEmail" style="color: var(--text-muted); font-size: 0.85rem;"></div>
+          </div>
+          <button class="btn-nasa btn-nasa-outline btn-sm" id="btnLogout"><i class="fa-solid fa-power-off"></i> Log Out</button>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1rem; color: #fff; margin-bottom: 0.75rem;"><i class="fa-solid fa-bookmark" style="color: var(--cyan-primary);"></i> My Saved Analyses</h3>
+      <div id="savedAnalysesList" style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 250px; overflow-y: auto; margin-bottom: 1.5rem;">
+        <div style="color: var(--text-muted); font-size: 0.82rem; font-style: italic;">No saved analyses yet. Explore the dashboard or Earth Explorer to save.</div>
+      </div>
+
+      <div style="display: flex; gap: 0.5rem;">
+        <a href="dashboard.html" class="btn-nasa btn-nasa-primary btn-sm"><i class="fa-solid fa-chart-line"></i> Go to Dashboard</a>
+        <a href="reports.html" class="btn-nasa btn-nasa-secondary btn-sm"><i class="fa-solid fa-file-lines"></i> Reports Module</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const loginForm = document.getElementById('loginForm');
+      const authBox = document.getElementById('authBox');
+      const profileBox = document.getElementById('profileBox');
+      const authAlert = document.getElementById('authAlert');
+      const btnLogout = document.getElementById('btnLogout');
+
+      // Check session
+      if (Auth.isAuthenticated()) {
+        try {
+          const profile = await API.getUserProfile();
+          if (profile && profile.user) {
+            authBox.style.display = 'none';
+            profileBox.style.display = 'block';
+            document.getElementById('profName').textContent = profile.user.name;
+            document.getElementById('profEmail').textContent = `${profile.user.email} • ${profile.user.institution || 'Researcher'}`;
+
+            const listEl = document.getElementById('savedAnalysesList');
+            if (profile.user.savedAnalyses && profile.user.savedAnalyses.length > 0) {
+              listEl.innerHTML = profile.user.savedAnalyses.map(a => `
+                <div style="background: rgba(5,11,24,0.6); padding: 0.75rem; border-radius: 4px; border: 1px solid var(--border-subtle); font-size: 0.8rem;">
+                  <strong style="color: var(--cyan-primary);">${a.title || 'Analysis'}</strong> (${a.period || 'All Periods'})<br>
+                  <span style="color: var(--text-muted);">${a.notes || 'No notes added'}</span>
+                </div>
+              `).join('');
+            }
+          }
+        } catch (e) {
+          Auth.logout();
+        }
+      }
+
+      loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('loginEmail').value.trim();
+        const password = document.getElementById('loginPassword').value;
+
+        authAlert.style.display = 'none';
+
+        try {
+          const res = await API.login({ email, password });
+          if (res && res.token) {
+            Auth.setSession(res.token, res.user);
+            window.location.reload();
+          }
+        } catch (err) {
+          authAlert.style.display = 'block';
+          authAlert.style.background = 'rgba(239, 68, 68, 0.15)';
+          authAlert.style.border = '1px solid #ef4444';
+          authAlert.style.color = '#f87171';
+          authAlert.textContent = err.message || 'Login failed. Please check your credentials.';
+        }
+      });
+
+      btnLogout.addEventListener('click', () => {
+        Auth.logout();
+      });
+    });
+  </script>
+</body>
+</html>

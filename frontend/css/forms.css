@@ -1,0 +1,98 @@
+/* ==========================================================================
+   FORMS & AUTHENTICATION STYLESHEET
+   NASA Earth Systems Trend Detective
+   ========================================================================== */
+
+.auth-container {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(13, 23, 48, 0.85);
+  backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 210, 255, 0.1);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header .logo-badge {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #1e3a8a, #0284c7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #fff;
+  border: 1px solid var(--cyan-primary);
+  box-shadow: 0 0 15px var(--cyan-glow);
+}
+
+.auth-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.auth-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.45rem;
+}
+
+.form-control {
+  width: 100%;
+  background: rgba(8, 15, 33, 0.85);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.875rem;
+  color: #ffffff;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--cyan-primary);
+  box-shadow: 0 0 10px var(--cyan-glow);
+  background: rgba(10, 20, 44, 0.95);
+}
+
+.form-feedback {
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.form-feedback.error {
+  color: #f87171;
+}
+
+.form-feedback.success {
+  color: #34d399;
+}

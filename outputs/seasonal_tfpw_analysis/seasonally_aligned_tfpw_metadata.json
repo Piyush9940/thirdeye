@@ -1,0 +1,16 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "analysis": "Seasonally aligned trend-free pre-whitening sensitivity",
+    "period": "2015-01 to 2024-12",
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "method": "For each calendar month, remove the original Sen trend, estimate lag-1 autocorrelation across successive years, pre-whiten that month's residual series, and restore the estimated trend and monthly climatological level.",
+    "multiple_testing": "Benjamini-Hochberg FDR",
+    "alpha": 0.05,
+    "limitations": "Only ten annual observations are available per calendar month. Autocorrelation estimates are therefore uncertain. This is a sensitivity analysis, not definitive corrected inference. Residual cross-month and spatial dependence may remain."
+}

@@ -1,0 +1,31 @@
+{
+  "name": "earth-systems-trend-detective",
+  "version": "1.0.0",
+  "description": "AI-Powered Earth Observation, Methane Analysis & Climate Intelligence Platform for NASA Space Apps Challenge",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "node ../tests/backend.test.js && node ../tests/api_routes.test.js"
+  },
+  "keywords": [
+    "nasa",
+    "space-apps",
+    "earth-observation",
+    "sentinel-5p",
+    "tropomi",
+    "methane",
+    "climate-intelligence",
+    "machine-learning"
+  ],
+  "author": "NASA Space Apps Team",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.24.9"
+  }
+}

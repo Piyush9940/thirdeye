@@ -1,0 +1,15 @@
+feature,significance_category,node_count
+PRECTOTCORR,newly_significant,23
+PRECTOTCORR,not_significant_in_either,229
+PRECTOTCORR,significant_in_both,3
+RH2M,lost_significance,6
+RH2M,newly_significant,22
+RH2M,not_significant_in_either,159
+RH2M,significant_in_both,68
+T2M,lost_significance,1
+T2M,newly_significant,14
+T2M,not_significant_in_either,193
+T2M,significant_in_both,47
+WS10M,newly_significant,5
+WS10M,not_significant_in_either,233
+WS10M,significant_in_both,17

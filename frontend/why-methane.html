@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Methane Matters — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link active"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="content-wrapper" style="padding-top: 3.5rem; padding-bottom: 1.5rem; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <span class="badge-scientific badge-warning" style="margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-fire"></i> Atmospheric Science Explainer
+      </span>
+      <h1 style="font-size: 2.85rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">
+        WHY SHOULD WE CARE ABOUT METHANE?
+      </h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+        A small atmospheric molecule with a major climate impact. Understanding what methane is, how it warms the planet, and why spaceborne satellites observe it.
+      </p>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Mandatory Distinction Banner -->
+    <div class="scientific-warning-callout" style="margin-bottom: 3rem;">
+      <div class="icon"><i class="fa-solid fa-scale-balanced"></i></div>
+      <div class="content">
+        <strong>Important Scientific Distinction: Concentration vs. Emissions</strong><br>
+        <strong>Atmospheric Methane Concentration:</strong> How much methane is present in a given column of ambient air (measured in parts per billion, ppb). This is what Sentinel-5P measures.<br>
+        <strong>Methane Emissions:</strong> The rate at which methane is released into the air from sources (e.g. kg per hour).<br>
+        <em>Our project investigates atmospheric concentration patterns across India. It does not measure total emissions or pinpoint exact illegal emission sources.</em>
+      </div>
+    </div>
+
+    <!-- 4 Key Facts Cards -->
+    <div class="grid-2col" style="margin-bottom: 3.5rem;">
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-temperature-arrow-up" style="color: var(--warning-amber);"></i> 1. Potent Heat-Trapping Gas</span>
+          <span class="badge-scientific badge-warning">84x Impact</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+          Methane (<span style="color: var(--cyan-primary); font-family: var(--font-mono); font-weight: 600;">CH₄</span>) is an exceptionally potent greenhouse gas. Over a 20-year timescale, a ton of methane traps over <strong>80 times more thermal heat</strong> in Earth's atmosphere than a ton of carbon dioxide.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-stopwatch" style="color: var(--cyan-primary);"></i> 2. Short Atmospheric Lifetime</span>
+          <span class="badge-scientific badge-verified">~12 Years</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+          Unlike carbon dioxide which lingers in the atmosphere for centuries, methane breaks down in approximately <strong>12 years</strong> through chemical reactions with tropospheric hydroxyl radicals (<span style="color: var(--cyan-primary); font-family: var(--font-mono);">•OH</span>). Reducing methane delivers rapid near-term climate benefits.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-chart-pie" style="color: var(--earth-green);"></i> 3. One-Third of Modern Warming</span>
+          <span class="badge-scientific badge-satellite">~30%</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+          Scientific assessments by the IPCC and NASA show that atmospheric methane is responsible for roughly <strong>30% of global temperature rise</strong> since the industrial revolution, making it the second most important anthropogenic climate forcer.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-satellite" style="color: var(--blue-accent);"></i> 4. Broad Planetary Monitoring</span>
+          <span class="badge-scientific badge-verified">Sentinel-5P</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">
+          Because methane mixes across large geographical distances, ground sensors only capture localized points. Spaceborne satellites provide the <strong>wide-area perspective</strong> needed to observe regional atmospheric dynamics across continents.
+        </p>
+      </div>
+    </div>
+
+    <!-- Educational Interactive Explainer: The Greenhouse Effect -->
+    <div class="nasa-card" style="margin-bottom: 3.5rem;">
+      <h3 style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">
+        <i class="fa-solid fa-sun" style="color: #f59e0b;"></i> How Greenhouse Gases Trap Heat
+      </h3>
+      <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">
+        Solar radiation warms Earth's surface. In return, the surface radiates thermal infrared energy back toward space. Greenhouse gas molecules absorb specific infrared wavelengths, exciting their molecular bonds and re-radiating heat in all directions, including back toward the surface.
+      </p>
+
+      <div style="background: rgba(4, 11, 24, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 2rem;">
+        <div id="warmingComparisonChart" style="height: 340px; width: 100%;"></div>
+      </div>
+    </div>
+
+    <!-- Satellite Observation Explainer -->
+    <div class="page-header" style="text-align: center; border-bottom: none; margin-bottom: 2rem;">
+      <span class="badge-scientific badge-satellite">Space Technology</span>
+      <h2 style="font-size: 2.2rem; font-weight: 700; color: #ffffff;">HOW DO WE OBSERVE EARTH FROM SPACE?</h2>
+      <p style="color: var(--text-secondary); max-width: 650px; margin: 0.5rem auto 0;">
+        From 824 kilometres in orbit to calibrated environmental data: the five-stage scientific pipeline.
+      </p>
+    </div>
+
+    <div class="grid-3col" style="margin-bottom: 3.5rem;">
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">1. Satellite Orbit</span>
+          <span class="badge-scientific badge-satellite">Sentinel-5P</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;">
+          The Copernicus Sentinel-5 Precursor satellite flies in a sun-synchronous polar orbit, crossing the equator at ~13:30 local solar time to maximize daylight solar backscatter.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">2. TROPOMI Sensor</span>
+          <span class="badge-scientific badge-verified">SWIR Band</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;">
+          The TROPOspheric Monitoring Instrument measures absorption spectra in the shortwave infrared (2305–2385 nm) band, detecting absorption signatures of atmospheric methane molecules.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">3. Quality Filtering</span>
+          <span class="badge-scientific badge-warning">QA ≥ 0.50</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;">
+          Soundings contaminated by dense clouds, aerosol scattering, snow, or high surface roughness are filtered out. Our pilot dataset retains 73,045 high-confidence sub-pixel soundings.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">4. Spatial Grid</span>
+          <span class="badge-scientific badge-verified">2° Resolution</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;">
+          Soundings are geolocated and aggregated onto 255 regular spherical grid nodes across India, yielding 226 verified node-month observations across 4 snapshot periods.
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">5. Climate Integration</span>
+          <span class="badge-scientific badge-satellite">NASA POWER</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;">
+          Observations are joined with surface meteorology: 2-meter air temperature (T2M), precipitation (PRECTOTCORR), relative humidity (RH2M), and 10-meter wind speed (WS10M).
+        </p>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">6. Public Exploration</span>
+          <span class="badge-scientific badge-verified">Interactive Web</span>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55;">
+          Presented through intuitive 3D and 2D interfaces allowing researchers, students, and citizens to explore environmental patterns freely and transparently.
+        </p>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="nasa-card" style="text-align: center; padding: 3rem 2rem; background: radial-gradient(circle at center, rgba(0, 210, 255, 0.1) 0%, transparent 70%);">
+      <h3 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">
+        Explore the Actual Observations
+      </h3>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem;">
+        View verified methane concentration soundings across India, filter by snapshot month, or examine regional distributions on our interactive map.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="earth-explorer.html" class="btn-nasa btn-nasa-primary">Launch India Map</a>
+        <a href="findings.html" class="btn-nasa btn-nasa-outline">Explore Our Findings</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>
+          Transforming satellite Earth observations and climate datasets into an accessible, interactive environmental exploration platform that helps ordinary people understand atmospheric methane patterns across India.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="earth-explorer.html">Explore Earth</a></li>
+          <li><a href="why-methane.html">Why Methane?</a></li>
+          <li><a href="findings.html">Our Findings</a></li>
+          <li><a href="dashboard.html">India Explorer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Science & Data</div>
+        <ul class="footer-links">
+          <li><a href="impact.html">Environmental Impact</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="data-research.html">Data Downloads</a></li>
+          <li><a href="advanced-research.html">ML Lab (Experimental)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team. Built for the NASA Space Apps Challenge.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">
+        Status: Experimental Reference Model • Open Environmental Science
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Plotly chart comparing Global Warming Potential: Methane vs CO2
+      const trace1 = {
+        x: ['20-Year Horizon', '100-Year Horizon'],
+        y: [84, 28],
+        name: 'Methane (CH₄)',
+        type: 'bar',
+        marker: { color: '#00d2ff' }
+      };
+
+      const trace2 = {
+        x: ['20-Year Horizon', '100-Year Horizon'],
+        y: [1, 1],
+        name: 'Carbon Dioxide (CO₂ Benchmark)',
+        type: 'bar',
+        marker: { color: '#64748b' }
+      };
+
+      const layout = {
+        title: {
+          text: 'Global Warming Potential (GWP) Relative to CO₂',
+          font: { color: '#ffffff', size: 14 }
+        },
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent',
+        barmode: 'group',
+        font: { color: '#94a3b8', family: 'Inter, sans-serif' },
+        yaxis: {
+          title: 'Warming Multiplier (x CO₂)',
+          gridcolor: 'rgba(255, 255, 255, 0.08)',
+          type: 'log',
+          dtick: 1
+        },
+        xaxis: {
+          gridcolor: 'transparent'
+        },
+        legend: {
+          font: { color: '#cbd5e1' }
+        },
+        margin: { t: 50, b: 40, l: 60, r: 20 }
+      };
+
+      Plotly.newPlot('warmingComparisonChart', [trace1, trace2], layout, { responsive: true, displayModeBar: false });
+    });
+  </script>
+</body>
+</html>

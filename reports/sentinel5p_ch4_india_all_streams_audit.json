@@ -1,0 +1,517 @@
+{
+  "study_period": "2019-2024",
+  "streams": [
+    "RPRO",
+    "OFFL"
+  ],
+  "india_intersecting_unique_products": 5051,
+  "total_storage_gb": 315.4787915972993,
+  "pagination_audit": [
+    {
+      "year": 2019,
+      "stream": "RPRO",
+      "expected_catalogue_count": 5153,
+      "retrieved_unique_records": 5153,
+      "india_intersecting_records": 837,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2019,
+      "stream": "OFFL",
+      "expected_catalogue_count": 14,
+      "retrieved_unique_records": 14,
+      "india_intersecting_records": 3,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2020,
+      "stream": "RPRO",
+      "expected_catalogue_count": 5183,
+      "retrieved_unique_records": 5183,
+      "india_intersecting_records": 844,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2020,
+      "stream": "OFFL",
+      "expected_catalogue_count": 3,
+      "retrieved_unique_records": 3,
+      "india_intersecting_records": 0,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2021,
+      "stream": "RPRO",
+      "expected_catalogue_count": 5140,
+      "retrieved_unique_records": 5140,
+      "india_intersecting_records": 838,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2021,
+      "stream": "OFFL",
+      "expected_catalogue_count": 18,
+      "retrieved_unique_records": 18,
+      "india_intersecting_records": 3,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2022,
+      "stream": "RPRO",
+      "expected_catalogue_count": 3014,
+      "retrieved_unique_records": 3014,
+      "india_intersecting_records": 490,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2022,
+      "stream": "OFFL",
+      "expected_catalogue_count": 2158,
+      "retrieved_unique_records": 2158,
+      "india_intersecting_records": 352,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2023,
+      "stream": "RPRO",
+      "expected_catalogue_count": 141,
+      "retrieved_unique_records": 141,
+      "india_intersecting_records": 22,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2023,
+      "stream": "OFFL",
+      "expected_catalogue_count": 5034,
+      "retrieved_unique_records": 5034,
+      "india_intersecting_records": 822,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2024,
+      "stream": "RPRO",
+      "expected_catalogue_count": 56,
+      "retrieved_unique_records": 56,
+      "india_intersecting_records": 10,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    },
+    {
+      "year": 2024,
+      "stream": "OFFL",
+      "expected_catalogue_count": 5112,
+      "retrieved_unique_records": 5112,
+      "india_intersecting_records": 830,
+      "missing_or_unreadable_footprints": 0,
+      "pagination_complete": true
+    }
+  ],
+  "all_queries_pagination_complete": true,
+  "yearly_stream_coverage": [
+    {
+      "year": 2019,
+      "stream": "OFFL",
+      "granules": 3,
+      "unique_orbits": 3,
+      "online_granules": 3,
+      "total_size_gb": 0.16877139545977116
+    },
+    {
+      "year": 2019,
+      "stream": "RPRO",
+      "granules": 837,
+      "unique_orbits": 837,
+      "online_granules": 837,
+      "total_size_gb": 46.99023771006614
+    },
+    {
+      "year": 2020,
+      "stream": "RPRO",
+      "granules": 844,
+      "unique_orbits": 844,
+      "online_granules": 844,
+      "total_size_gb": 52.759652002714574
+    },
+    {
+      "year": 2021,
+      "stream": "OFFL",
+      "granules": 3,
+      "unique_orbits": 3,
+      "online_granules": 3,
+      "total_size_gb": 0.19870275352150202
+    },
+    {
+      "year": 2021,
+      "stream": "RPRO",
+      "granules": 838,
+      "unique_orbits": 838,
+      "online_granules": 838,
+      "total_size_gb": 54.14686225913465
+    },
+    {
+      "year": 2022,
+      "stream": "OFFL",
+      "granules": 352,
+      "unique_orbits": 352,
+      "online_granules": 352,
+      "total_size_gb": 22.49221284687519
+    },
+    {
+      "year": 2022,
+      "stream": "RPRO",
+      "granules": 490,
+      "unique_orbits": 490,
+      "online_granules": 490,
+      "total_size_gb": 31.41231145337224
+    },
+    {
+      "year": 2023,
+      "stream": "OFFL",
+      "granules": 822,
+      "unique_orbits": 822,
+      "online_granules": 822,
+      "total_size_gb": 53.47513829357922
+    },
+    {
+      "year": 2023,
+      "stream": "RPRO",
+      "granules": 22,
+      "unique_orbits": 22,
+      "online_granules": 22,
+      "total_size_gb": 1.3832043940201402
+    },
+    {
+      "year": 2024,
+      "stream": "OFFL",
+      "granules": 830,
+      "unique_orbits": 830,
+      "online_granules": 830,
+      "total_size_gb": 51.85463100951165
+    },
+    {
+      "year": 2024,
+      "stream": "RPRO",
+      "granules": 10,
+      "unique_orbits": 10,
+      "online_granules": 10,
+      "total_size_gb": 0.597067479044199
+    }
+  ],
+  "yearly_total_coverage": [
+    {
+      "year": 2019,
+      "granules": 840,
+      "streams": 2,
+      "total_size_gb": 47.15900910552591
+    },
+    {
+      "year": 2020,
+      "granules": 844,
+      "streams": 1,
+      "total_size_gb": 52.759652002714574
+    },
+    {
+      "year": 2021,
+      "granules": 841,
+      "streams": 2,
+      "total_size_gb": 54.34556501265615
+    },
+    {
+      "year": 2022,
+      "granules": 842,
+      "streams": 2,
+      "total_size_gb": 53.90452430024743
+    },
+    {
+      "year": 2023,
+      "granules": 844,
+      "streams": 2,
+      "total_size_gb": 54.85834268759936
+    },
+    {
+      "year": 2024,
+      "granules": 840,
+      "streams": 2,
+      "total_size_gb": 52.45169848855585
+    }
+  ],
+  "seasonal_stream_coverage": [
+    {
+      "year": 2019,
+      "season": "Monsoon",
+      "stream": "RPRO",
+      "granules": 280,
+      "unique_orbits": 280,
+      "total_size_mb": 15251.253987312317
+    },
+    {
+      "year": 2019,
+      "season": "PostMonsoon",
+      "stream": "OFFL",
+      "granules": 1,
+      "unique_orbits": 1,
+      "total_size_mb": 68.03523063659668
+    },
+    {
+      "year": 2019,
+      "season": "PostMonsoon",
+      "stream": "RPRO",
+      "granules": 138,
+      "unique_orbits": 138,
+      "total_size_mb": 9543.63630771637
+    },
+    {
+      "year": 2019,
+      "season": "PreMonsoon",
+      "stream": "OFFL",
+      "granules": 2,
+      "unique_orbits": 2,
+      "total_size_mb": 104.78667831420898
+    },
+    {
+      "year": 2019,
+      "season": "PreMonsoon",
+      "stream": "RPRO",
+      "granules": 210,
+      "unique_orbits": 210,
+      "total_size_mb": 10650.559118270874
+    },
+    {
+      "year": 2019,
+      "season": "Winter",
+      "stream": "RPRO",
+      "granules": 209,
+      "unique_orbits": 209,
+      "total_size_mb": 12672.554001808167
+    },
+    {
+      "year": 2020,
+      "season": "Monsoon",
+      "stream": "RPRO",
+      "granules": 282,
+      "unique_orbits": 282,
+      "total_size_mb": 17040.355600357056
+    },
+    {
+      "year": 2020,
+      "season": "PostMonsoon",
+      "stream": "RPRO",
+      "granules": 142,
+      "unique_orbits": 142,
+      "total_size_mb": 9560.73787021637
+    },
+    {
+      "year": 2020,
+      "season": "PreMonsoon",
+      "stream": "RPRO",
+      "granules": 211,
+      "unique_orbits": 211,
+      "total_size_mb": 12791.06559753418
+    },
+    {
+      "year": 2020,
+      "season": "Winter",
+      "stream": "RPRO",
+      "granules": 209,
+      "unique_orbits": 209,
+      "total_size_mb": 14633.72458267212
+    },
+    {
+      "year": 2021,
+      "season": "Monsoon",
+      "stream": "OFFL",
+      "granules": 2,
+      "unique_orbits": 2,
+      "total_size_mb": 130.22793292999268
+    },
+    {
+      "year": 2021,
+      "season": "Monsoon",
+      "stream": "RPRO",
+      "granules": 278,
+      "unique_orbits": 278,
+      "total_size_mb": 17288.65162372589
+    },
+    {
+      "year": 2021,
+      "season": "PostMonsoon",
+      "stream": "RPRO",
+      "granules": 141,
+      "unique_orbits": 141,
+      "total_size_mb": 9553.555959701538
+    },
+    {
+      "year": 2021,
+      "season": "PreMonsoon",
+      "stream": "RPRO",
+      "granules": 211,
+      "unique_orbits": 211,
+      "total_size_mb": 13733.090152740479
+    },
+    {
+      "year": 2021,
+      "season": "Winter",
+      "stream": "OFFL",
+      "granules": 1,
+      "unique_orbits": 1,
+      "total_size_mb": 73.24368667602539
+    },
+    {
+      "year": 2021,
+      "season": "Winter",
+      "stream": "RPRO",
+      "granules": 208,
+      "unique_orbits": 208,
+      "total_size_mb": 14871.089217185974
+    },
+    {
+      "year": 2022,
+      "season": "Monsoon",
+      "stream": "OFFL",
+      "granules": 140,
+      "unique_orbits": 140,
+      "total_size_mb": 8635.135316848755
+    },
+    {
+      "year": 2022,
+      "season": "Monsoon",
+      "stream": "RPRO",
+      "granules": 143,
+      "unique_orbits": 143,
+      "total_size_mb": 8884.485558509827
+    },
+    {
+      "year": 2022,
+      "season": "PostMonsoon",
+      "stream": "OFFL",
+      "granules": 141,
+      "unique_orbits": 141,
+      "total_size_mb": 9292.11817741394
+    },
+    {
+      "year": 2022,
+      "season": "PreMonsoon",
+      "stream": "RPRO",
+      "granules": 212,
+      "unique_orbits": 212,
+      "total_size_mb": 13755.949016571045
+    },
+    {
+      "year": 2022,
+      "season": "Winter",
+      "stream": "OFFL",
+      "granules": 71,
+      "unique_orbits": 71,
+      "total_size_mb": 5104.7724609375
+    },
+    {
+      "year": 2022,
+      "season": "Winter",
+      "stream": "RPRO",
+      "granules": 135,
+      "unique_orbits": 135,
+      "total_size_mb": 9525.772353172302
+    },
+    {
+      "year": 2023,
+      "season": "Monsoon",
+      "stream": "OFFL",
+      "granules": 282,
+      "unique_orbits": 282,
+      "total_size_mb": 17919.694553375244
+    },
+    {
+      "year": 2023,
+      "season": "PostMonsoon",
+      "stream": "OFFL",
+      "granules": 118,
+      "unique_orbits": 118,
+      "total_size_mb": 7953.033967971802
+    },
+    {
+      "year": 2023,
+      "season": "PostMonsoon",
+      "stream": "RPRO",
+      "granules": 22,
+      "unique_orbits": 22,
+      "total_size_mb": 1416.4012994766235
+    },
+    {
+      "year": 2023,
+      "season": "PreMonsoon",
+      "stream": "OFFL",
+      "granules": 214,
+      "unique_orbits": 214,
+      "total_size_mb": 14141.9076089859
+    },
+    {
+      "year": 2023,
+      "season": "Winter",
+      "stream": "OFFL",
+      "granules": 208,
+      "unique_orbits": 208,
+      "total_size_mb": 14743.905482292175
+    },
+    {
+      "year": 2024,
+      "season": "Monsoon",
+      "stream": "OFFL",
+      "granules": 280,
+      "unique_orbits": 280,
+      "total_size_mb": 16473.518551826477
+    },
+    {
+      "year": 2024,
+      "season": "PostMonsoon",
+      "stream": "OFFL",
+      "granules": 141,
+      "unique_orbits": 141,
+      "total_size_mb": 9445.483437538147
+    },
+    {
+      "year": 2024,
+      "season": "PreMonsoon",
+      "stream": "OFFL",
+      "granules": 209,
+      "unique_orbits": 209,
+      "total_size_mb": 13272.194184303284
+    },
+    {
+      "year": 2024,
+      "season": "PreMonsoon",
+      "stream": "RPRO",
+      "granules": 2,
+      "unique_orbits": 2,
+      "total_size_mb": 128.70157051086426
+    },
+    {
+      "year": 2024,
+      "season": "Winter",
+      "stream": "OFFL",
+      "granules": 200,
+      "unique_orbits": 200,
+      "total_size_mb": 13907.945980072021
+    },
+    {
+      "year": 2024,
+      "season": "Winter",
+      "stream": "RPRO",
+      "granules": 8,
+      "unique_orbits": 8,
+      "total_size_mb": 482.6955280303955
+    }
+  ],
+  "catalogue_json": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_all_streams.json",
+  "catalogue_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_all_streams.csv",
+  "note": "Catalogue metadata only. India intersection is based on product GeoFootprint, not pixel-level QA-filtered coverage. No NetCDF granules were downloaded."
+}

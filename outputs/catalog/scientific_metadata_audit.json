@@ -1,0 +1,1220 @@
+{
+    "power_metadata": [
+        {
+            "file": "PRECTOTCORR_2015_2024.nc",
+            "dimensions": {
+                "time": 130,
+                "lat": 65,
+                "lon": 48
+            },
+            "variables": [
+                "PRECTOTCORR"
+            ],
+            "time_count": 130,
+            "time_start": "1970-01-01 00:00:00.000201501",
+            "time_end": "1970-01-01 00:00:00.000202413",
+            "latitude_range": [
+                6.0,
+                38.0
+            ],
+            "longitude_range": [
+                68.125,
+                97.5
+            ]
+        },
+        {
+            "file": "RH2M_2015_2024.nc",
+            "dimensions": {
+                "time": 130,
+                "lat": 65,
+                "lon": 48
+            },
+            "variables": [
+                "RH2M"
+            ],
+            "time_count": 130,
+            "time_start": "1970-01-01 00:00:00.000201501",
+            "time_end": "1970-01-01 00:00:00.000202413",
+            "latitude_range": [
+                6.0,
+                38.0
+            ],
+            "longitude_range": [
+                68.125,
+                97.5
+            ]
+        },
+        {
+            "file": "T2M_2015_2024.nc",
+            "dimensions": {
+                "time": 130,
+                "lat": 65,
+                "lon": 48
+            },
+            "variables": [
+                "T2M"
+            ],
+            "time_count": 130,
+            "time_start": "1970-01-01 00:00:00.000201501",
+            "time_end": "1970-01-01 00:00:00.000202413",
+            "latitude_range": [
+                6.0,
+                38.0
+            ],
+            "longitude_range": [
+                68.125,
+                97.5
+            ]
+        },
+        {
+            "file": "WS10M_2015_2024.nc",
+            "dimensions": {
+                "time": 130,
+                "lat": 65,
+                "lon": 48
+            },
+            "variables": [
+                "WS10M"
+            ],
+            "time_count": 130,
+            "time_start": "1970-01-01 00:00:00.000201501",
+            "time_end": "1970-01-01 00:00:00.000202413",
+            "latitude_range": [
+                6.0,
+                38.0
+            ],
+            "longitude_range": [
+                68.125,
+                97.5
+            ]
+        }
+    ],
+    "tile_count": 256,
+    "tile_summary": [
+        {
+            "variable": "PRECTOTCORR",
+            "tile_count": 64,
+            "latitude_min": 6.0,
+            "latitude_max": 38.0,
+            "longitude_min": 68.125,
+            "longitude_max": 97.5,
+            "min_time_count": 130,
+            "max_time_count": 130
+        },
+        {
+            "variable": "RH2M",
+            "tile_count": 64,
+            "latitude_min": 6.0,
+            "latitude_max": 38.0,
+            "longitude_min": 68.125,
+            "longitude_max": 97.5,
+            "min_time_count": 130,
+            "max_time_count": 130
+        },
+        {
+            "variable": "T2M",
+            "tile_count": 64,
+            "latitude_min": 6.0,
+            "latitude_max": 38.0,
+            "longitude_min": 68.125,
+            "longitude_max": 97.5,
+            "min_time_count": 130,
+            "max_time_count": 130
+        },
+        {
+            "variable": "WS10M",
+            "tile_count": 64,
+            "latitude_min": 6.0,
+            "latitude_max": 38.0,
+            "longitude_min": 68.125,
+            "longitude_max": 97.5,
+            "min_time_count": 130,
+            "max_time_count": 130
+        }
+    ],
+    "s5p_internal_dataset_count": 98,
+    "s5p_datasets": [
+        {
+            "path": "METADATA/QA_STATISTICS/XCH4_histogram_axis",
+            "shape": [
+                100
+            ],
+            "dtype": ">f4",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/XCH4_pdf_axis",
+            "shape": [
+                400
+            ],
+            "dtype": ">f4",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/methane_mixing_ratio_histogram",
+            "shape": [
+                100
+            ],
+            "dtype": "int32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/methane_mixing_ratio_histogram_axis",
+            "shape": [
+                100
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Histogram of the methane mixing ratio'"
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/methane_mixing_ratio_histogram_bounds",
+            "shape": [
+                100,
+                2
+            ],
+            "dtype": "float32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/methane_mixing_ratio_pdf",
+            "shape": [
+                400
+            ],
+            "dtype": "float32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/methane_mixing_ratio_pdf_axis",
+            "shape": [
+                400
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Probability density function of methane dry air mixing ratio'"
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/methane_mixing_ratio_pdf_bounds",
+            "shape": [
+                400,
+                2
+            ],
+            "dtype": "float32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "METADATA/QA_STATISTICS/vertices",
+            "shape": [
+                2
+            ],
+            "dtype": ">f4",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_mid_altitude",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm'",
+            "long_name": "b'central altitude of aerosol altitude distribution. This is the geometric height above the geoid.'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_mid_altitude_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm'",
+            "long_name": "b'precision of central altitude of aerosol altitude distribution.'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_number_column",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm-2'",
+            "long_name": "b'aerosol total vertical number column'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_number_column_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm-2'",
+            "long_name": "b'precision of aerosol total vertical column'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_optical_thickness_NIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'aerosol optical thickness in NIR band'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_optical_thickness_SWIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'aerosol optical thickness in SWIR channel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_size",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'aerosol size parameter of the power law size distribution'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/aerosol_size_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'precision of the aerosol size parameter of the power law size distribution'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/carbonmonoxide_total_column",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'CO total vertical column'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/carbonmonoxide_total_column_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'CO total vertical column precision'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/chi_square",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'chi squared of fit in both SWIR and NIR band'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/chi_square_NIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'chi squared of fit in NIR band'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/chi_square_SWIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'chi squared of fit in SWIR band'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/column_averaging_kernel",
+            "shape": [
+                1,
+                4172,
+                215,
+                12
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Column averaging kernel for the methane retrieval'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/degrees_of_freedom",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'degrees of freedom for signal'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/degrees_of_freedom_aerosol",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'degrees of freedom for aerosol parameters'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/degrees_of_freedom_methane",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'degrees of freedom for \\\\Methane profile'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/fluorescence",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol s-1 m-2 nm-1 sr-1'",
+            "long_name": "b'fluorescence emission'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/maximum_reflectance_NIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Maximum reflectance in the NIR channel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/maximum_reflectance_SWIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Maximum reflectance in the SWIR channel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_iterations",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "int32",
+            "units": "b'1'",
+            "long_name": "b'number of iterations'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_spectral_points_in_retrieval",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "uint16",
+            "units": "",
+            "long_name": "b'Number of spectral points used in the retrieval'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/number_of_spectral_points_in_retrieval_NIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "uint16",
+            "units": "",
+            "long_name": "b'number of spectral points used in the retrieval.'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/processing_quality_flags",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "uint32",
+            "units": "",
+            "long_name": "b'Processing quality flags'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/surface_albedo_NIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'surface albedo in the NIR channel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/surface_albedo_NIR_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'precision of the surface albedo in the NIR channel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/surface_albedo_SWIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'surface albedo in the SWIR channel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/surface_albedo_SWIR_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'precision of the surface albedo in the SWIR channel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/water_total_column",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'H2O total vertical column'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/water_total_column_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'H2O total vertical column precision'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/wavelength_calibration_offset_NIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'nm'",
+            "long_name": "b'Spectral shift in the NIR band, add value to L1B to obtain best fit result'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/DETAILED_RESULTS/wavelength_calibration_offset_SWIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'nm'",
+            "long_name": "b'Spectral shift in the SWIR band, add value to L1B to obtain best fit result'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/geolocation_flags",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "uint8",
+            "units": "b'1'",
+            "long_name": "b'geolocation flags'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/latitude_bounds",
+            "shape": [
+                1,
+                4172,
+                215,
+                4
+            ],
+            "dtype": "float32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/longitude_bounds",
+            "shape": [
+                1,
+                4172,
+                215,
+                4
+            ],
+            "dtype": "float32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/satellite_altitude",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "float32",
+            "units": "b'm'",
+            "long_name": "b'satellite altitude'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/satellite_latitude",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "float32",
+            "units": "b'degrees_north'",
+            "long_name": "b'sub satellite latitude'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/satellite_longitude",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "float32",
+            "units": "b'degrees_east'",
+            "long_name": "b'satellite_longitude'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/satellite_orbit_phase",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'fractional satellite orbit phase'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/solar_azimuth_angle",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'degree'",
+            "long_name": "b'solar azimuth angle'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/solar_zenith_angle",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'degree'",
+            "long_name": "b'solar zenith angle'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/viewing_azimuth_angle",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'degree'",
+            "long_name": "b'viewing azimuth angle'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/GEOLOCATIONS/viewing_zenith_angle",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'degree'",
+            "long_name": "b'viewing zenith angle'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/altitude_levels",
+            "shape": [
+                1,
+                4172,
+                215,
+                13
+            ],
+            "dtype": "float32",
+            "units": "b'm'",
+            "long_name": "b'height above the geoid'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/apparent_scene_pressure",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'Pa'",
+            "long_name": "b'Apparent scene pressure from oxygen A-band depth'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/apparent_scene_pressure_standard_deviation",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'Pa'",
+            "long_name": "b'Standard deviation of the apparent scene pressure from oxygen A-band depth over 9 ground pixels'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_NIR_IFOV",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the NIR channel for the instantaneous field of view (band 6).'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_NIR_OFOVa",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the SWIR channel for the 10% upscaled field of view'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_NIR_OFOVb",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the SWIR channel for the 50% upscaled field of view'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_NIR_OFOVc",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the SWIR channel for the 100% upscaled field of view'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_SWIR_IFOV",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the SWIR channel for the instantaneous field of view'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_SWIR_OFOVa",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the SWIR channel for the 10% upscaled field of view'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_SWIR_OFOVb",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the SWIR channel for the 50% upscaled field of view'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/cloud_fraction_VIIRS_SWIR_OFOVc",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cloud fraction from VIIRS data in the SWIR channel for the 100% upscaled field of view'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/dry_air_subcolumns",
+            "shape": [
+                1,
+                4172,
+                215,
+                12
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'dry air subcolumns'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/eastward_wind",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm s-1'",
+            "long_name": "b'Eastward wind from ECMWF at 10 meter height level'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/fluorescence_apriori",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol s-1 m-2 nm-1 sr-1'",
+            "long_name": "b'a priori fluorescence emission'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/instrument_configuration_identifier",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "int32",
+            "units": "",
+            "long_name": "b'IcID'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/instrument_configuration_version",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "int16",
+            "units": "",
+            "long_name": "b'IcVersion'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/methane_profile_apriori",
+            "shape": [
+                1,
+                4172,
+                215,
+                12
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'mole content of methane in atmosphere layer'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/methane_ratio_weak_strong_standard_deviation",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Standard deviation of ratio of the methane column from weak and strong band over 9 ground pixels'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/methane_strong_twoband_total_column",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'Vertically integrated CH4 column from strong band'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/methane_weak_twoband_total_column",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'Vertically integrated CH4 column from weak band'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/northward_wind",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm s-1'",
+            "long_name": "b'Northward wind from ECMWF at 10 meter height level'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/pressure_interval",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'Pa'",
+            "long_name": "b'pressure difference between levels in the retrieval'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/reflectance_cirrus_VIIRS_NIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cirrus reflectance from VIIRS for the NIR ground pixel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/reflectance_cirrus_VIIRS_SWIR",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Cirrus reflectance from VIIRS for the SWIR ground pixel'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/scaled_small_pixel_variance",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'scaled small pixel variance'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/surface_altitude",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm'",
+            "long_name": "b'Surface altitude'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/surface_altitude_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'm'",
+            "long_name": "b'surface altitude precision'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/surface_classification",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "uint8",
+            "units": "",
+            "long_name": "b'Land-water mask and surface classification based on a static database'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/surface_pressure",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'Pa'",
+            "long_name": "b'surface air pressure'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/water_ratio_weak_strong_standard_deviation",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1'",
+            "long_name": "b'Standard deviation of ratio of the water vapor column from weak and strong band over 9 ground pixels'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/water_strong_twoband_total_column",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'Vertically integrated H2O column from strong band'"
+        },
+        {
+            "path": "PRODUCT/SUPPORT_DATA/INPUT_DATA/water_weak_twoband_total_column",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'mol m-2'",
+            "long_name": "b'Vertically integrated H2O column from weak band'"
+        },
+        {
+            "path": "PRODUCT/corner",
+            "shape": [
+                4
+            ],
+            "dtype": "int32",
+            "units": "b'1'",
+            "long_name": "b'pixel corner index'"
+        },
+        {
+            "path": "PRODUCT/delta_time",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "int32",
+            "units": "b'milliseconds since 2020-01-01 00:00:00'",
+            "long_name": "b'offset of start time of measurement relative to time_reference'"
+        },
+        {
+            "path": "PRODUCT/ground_pixel",
+            "shape": [
+                215
+            ],
+            "dtype": "int32",
+            "units": "b'1'",
+            "long_name": "b'across-track dimension index'"
+        },
+        {
+            "path": "PRODUCT/latitude",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'degrees_north'",
+            "long_name": "b'pixel center latitude'"
+        },
+        {
+            "path": "PRODUCT/layer",
+            "shape": [
+                12
+            ],
+            "dtype": "int32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "PRODUCT/level",
+            "shape": [
+                13
+            ],
+            "dtype": "int32",
+            "units": "",
+            "long_name": ""
+        },
+        {
+            "path": "PRODUCT/longitude",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'degrees_east'",
+            "long_name": "b'pixel center longitude'"
+        },
+        {
+            "path": "PRODUCT/methane_mixing_ratio",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1e-9'",
+            "long_name": "b'column averaged dry air mixing ratio of methane'"
+        },
+        {
+            "path": "PRODUCT/methane_mixing_ratio_bias_corrected",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1e-9'",
+            "long_name": "b'corrected column-averaged dry-air mole fraction of methane'"
+        },
+        {
+            "path": "PRODUCT/methane_mixing_ratio_precision",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "float32",
+            "units": "b'1e-9'",
+            "long_name": "b'precision of the column averaged dry air mixing ratio of methane'"
+        },
+        {
+            "path": "PRODUCT/qa_value",
+            "shape": [
+                1,
+                4172,
+                215
+            ],
+            "dtype": "uint8",
+            "units": "b'1'",
+            "long_name": "b'data quality value'"
+        },
+        {
+            "path": "PRODUCT/scanline",
+            "shape": [
+                4172
+            ],
+            "dtype": "int32",
+            "units": "b'1'",
+            "long_name": "b'along-track dimension index'"
+        },
+        {
+            "path": "PRODUCT/time",
+            "shape": [
+                1
+            ],
+            "dtype": "int32",
+            "units": "b'seconds since 2010-01-01 00:00:00'",
+            "long_name": "b'reference time for the measurements'"
+        },
+        {
+            "path": "PRODUCT/time_utc",
+            "shape": [
+                1,
+                4172
+            ],
+            "dtype": "object",
+            "units": "",
+            "long_name": "b'Time of observation as ISO 8601 date-time string'"
+        }
+    ],
+    "oco2_csv_summary": [
+        {
+            "file": "OCO2_L2_Lite_FP_collections.csv",
+            "rows": 2,
+            "columns": [
+                "concept_id",
+                "short_name",
+                "version",
+                "title",
+                "provider",
+                "summary",
+                "time_start",
+                "time_end"
+            ]
+        },
+        {
+            "file": "OCO2_L2_Lite_FP_granules.csv",
+            "rows": 20,
+            "columns": [
+                "granule_id",
+                "title",
+                "short_name",
+                "version",
+                "provider",
+                "collection_concept_id",
+                "time_start",
+                "time_end",
+                "size",
+                "bounding_box",
+                "download_links",
+                "all_links"
+            ]
+        }
+    ]
+}

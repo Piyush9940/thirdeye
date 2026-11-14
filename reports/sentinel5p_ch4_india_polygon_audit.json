@@ -1,0 +1,26 @@
+{
+  "cell": "17",
+  "created_utc": "2026-11-13T14:12:04.090057+00:00",
+  "source_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_high_quality.csv",
+  "boundary_file": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\external\\india_boundary\\india_adm0.geojson",
+  "boundary_geometry_type": "MultiPolygon",
+  "boundary_method": "Shapely geometry.covers",
+  "coordinate_reference_system_assumption": "WGS84 longitude/latitude",
+  "qa_threshold": "> 0.5",
+  "input_high_quality_pixels": 2952,
+  "inside_india_polygon_pixels": 749,
+  "outside_india_polygon_pixels": 2203,
+  "india_polygon_pixel_share_percent": 25.37262872628726,
+  "occupied_2_degree_grid_cells": 10,
+  "methane_bias_corrected_mean_ppb": 1901.207479706275,
+  "methane_bias_corrected_median_ppb": 1902.1754,
+  "methane_bias_corrected_std_ppb": 13.054350982349256,
+  "mean_precision_ppb": 2.3614513484646196,
+  "observation_time_start": null,
+  "observation_time_end": null,
+  "outputs": {
+    "india_observations_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_polygon_high_quality.csv",
+    "india_grid_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_polygon_2deg_grid.csv",
+    "map": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_polygon_map.png"
+  }
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Research Assistant — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Marked for markdown formatting -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link active" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper" style="max-width: 1100px;">
+    <div class="page-header" style="text-align: center; border-bottom: none; margin-bottom: 2rem;">
+      <div style="display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <span class="badge-scientific badge-verified"><i class="fa-solid fa-shield-halved"></i> 100% Grounded in Project Data</span>
+        <span class="badge-scientific badge-satellite">Multi-Provider AI Architecture</span>
+      </div>
+      <h1 class="page-title" style="justify-content: center;"><i class="fa-solid fa-robot" style="color: var(--cyan-primary);"></i> AI Environmental Research Assistant</h1>
+      <p class="page-description" style="margin: 0.5rem auto 0;">
+        Ask scientific questions regarding Sentinel-5P observations, NASA POWER meteorology, machine learning benchmarks, and project limitations.
+      </p>
+    </div>
+
+    <!-- Quick Prompt Chips -->
+    <div style="margin-bottom: 1.5rem;">
+      <div style="font-size: 0.75rem; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase;">
+        RECOMMENDED SCIENTIFIC INQUIRIES:
+      </div>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="btn-nasa btn-nasa-secondary btn-sm chip-btn" data-query="Why is atmospheric methane concentration not the same as methane emissions?">
+          Concentration vs. Emissions
+        </button>
+        <button class="btn-nasa btn-nasa-secondary btn-sm chip-btn" data-query="Why did the ML models produce negative R2 values?">
+          Why is R² Negative?
+        </button>
+        <button class="btn-nasa btn-nasa-secondary btn-sm chip-btn" data-query="What does the negative bias in model evaluation indicate?">
+          Negative Bias Explanation
+        </button>
+        <button class="btn-nasa btn-nasa-secondary btn-sm chip-btn" data-query="Did Graph Neural Networks (GCN) outperform the MLP reference model?">
+          MLP vs. GNN Comparison
+        </button>
+        <button class="btn-nasa btn-nasa-secondary btn-sm chip-btn" data-query="What does T2M, PRECTOTCORR, RH2M, and WS10M represent in this dataset?">
+          Climate Features Meaning
+        </button>
+        <button class="btn-nasa btn-nasa-secondary btn-sm chip-btn" data-query="What are the key limitations of the current experimental release?">
+          Scientific Limitations
+        </button>
+      </div>
+    </div>
+
+    <!-- Chat Window Container -->
+    <div class="nasa-card" style="min-height: 500px; display: flex; flex-direction: column; padding: 1.25rem; background: rgba(9, 16, 35, 0.9);">
+      
+      <!-- Messages List -->
+      <div id="chatMessages" style="flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 1.25rem; max-height: 520px; padding-right: 0.5rem;">
+        
+        <!-- Welcome Message -->
+        <div style="display: flex; gap: 1rem; align-items: flex-start;">
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #0284c7, #00d2ff); display: flex; align-items: center; justify-content: center; color: #030712; flex-shrink: 0; box-shadow: 0 0 10px var(--cyan-glow);">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div style="background: rgba(14, 26, 56, 0.85); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem 1.25rem; font-size: 0.88rem; color: var(--text-primary); max-width: 85%; line-height: 1.6;">
+            <div style="font-weight: 700; color: var(--cyan-primary); margin-bottom: 0.35rem; font-size: 0.8rem; font-family: var(--font-mono);">
+              NASA RESEARCH ASSISTANT • SYSTEM ONLINE
+            </div>
+            Hello! I am your scientific intelligence copilot for the <strong>Earth Systems Trend Detective</strong> platform. I have full knowledge of the verified Sentinel-5P methane observations over India, NASA POWER meteorology, machine learning benchmarks, and strict scientific integrity guidelines. How may I assist your research today?
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Chat Input Area -->
+      <form id="chatForm" style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-subtle); padding-top: 1rem;">
+        <input type="text" id="chatInput" class="form-control" placeholder="Ask a question about datasets, models, metrics, or limitations..." style="flex: 1;" required autocomplete="off">
+        <button type="submit" class="btn-nasa btn-nasa-primary" id="btnSend">
+          <i class="fa-solid fa-paper-plane"></i> Send
+        </button>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Grounded environmental AI assistant adhering strictly to documented scientific methodology.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Platform</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="dataset-explorer.html">Datasets</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Research</div>
+        <ul class="footer-links">
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="forecasting.html">ML Predictor</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Attribution</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P</li>
+          <li>NASA POWER Meteorology</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Grounded Research Copilot</div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const messagesContainer = document.getElementById('chatMessages');
+      const chatForm = document.getElementById('chatForm');
+      const chatInput = document.getElementById('chatInput');
+      const btnSend = document.getElementById('btnSend');
+      const conversationHistory = [];
+
+      // Chips click
+      document.querySelectorAll('.chip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          chatInput.value = btn.getAttribute('data-query');
+          chatForm.dispatchEvent(new Event('submit'));
+        });
+      });
+
+      chatForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        // Append User Message
+        appendMessage('user', text);
+        conversationHistory.push({ role: 'user', content: text });
+        chatInput.value = '';
+        btnSend.disabled = true;
+
+        // Show thinking indicator
+        const thinkingId = appendThinking();
+
+        try {
+          const res = await API.chatWithAssistant(text, conversationHistory);
+          removeThinking(thinkingId);
+
+          if (res && res.answer) {
+            appendMessage('assistant', res.answer, res.provider);
+            conversationHistory.push({ role: 'assistant', content: res.answer });
+          } else {
+            appendMessage('assistant', 'I could not generate an answer. Please rephrase your question.');
+          }
+        } catch (err) {
+          removeThinking(thinkingId);
+          console.error('Chat error:', err);
+          appendMessage('assistant', `Error connecting to assistant: ${err.message}. Please try again.`);
+        } finally {
+          btnSend.disabled = false;
+        }
+      });
+
+      function appendMessage(role, text, provider) {
+        const div = document.createElement('div');
+        div.style.cssText = `display: flex; gap: 1rem; align-items: flex-start; ${role === 'user' ? 'justify-content: flex-end;' : ''}`;
+
+        const isUser = role === 'user';
+        const formattedText = marked.parse ? marked.parse(text) : text;
+
+        div.innerHTML = `
+          ${!isUser ? `
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #0284c7, #00d2ff); display: flex; align-items: center; justify-content: center; color: #030712; flex-shrink: 0; box-shadow: 0 0 10px var(--cyan-glow);">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+          ` : ''}
+
+          <div style="background: ${isUser ? 'rgba(0, 210, 255, 0.12)' : 'rgba(14, 26, 56, 0.85)'}; border: 1px solid ${isUser ? 'rgba(0, 210, 255, 0.3)' : 'var(--border-subtle)'}; border-radius: var(--radius-md); padding: 1rem 1.25rem; font-size: 0.88rem; color: var(--text-primary); max-width: 85%; line-height: 1.6;">
+            ${!isUser ? `
+              <div style="font-weight: 700; color: var(--cyan-primary); margin-bottom: 0.35rem; font-size: 0.75rem; font-family: var(--font-mono); display: flex; justify-content: space-between;">
+                <span>AI RESEARCH ASSISTANT</span>
+                ${provider ? `<span style="color: var(--text-muted); font-size: 0.7rem;">[${provider}]</span>` : ''}
+              </div>
+            ` : ''}
+            <div>${formattedText}</div>
+          </div>
+
+          ${isUser ? `
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: #1e3a8a; border: 1px solid var(--border-medium); display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0;">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          ` : ''}
+        `;
+
+        messagesContainer.appendChild(div);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+      }
+
+      function appendThinking() {
+        const id = 'thinking_' + Date.now();
+        const div = document.createElement('div');
+        div.id = id;
+        div.style.cssText = 'display: flex; gap: 1rem; align-items: center; color: var(--cyan-primary); font-family: var(--font-mono); font-size: 0.82rem;';
+        div.innerHTML = `
+          <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(0,210,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--cyan-primary);">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+          </div>
+          Consulting scientific dataset and reports...
+        `;
+        messagesContainer.appendChild(div);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        return id;
+      }
+
+      function removeThinking(id) {
+        const el = document.getElementById(id);
+        if (el) el.remove();
+      }
+    });
+  </script>
+</body>
+</html>

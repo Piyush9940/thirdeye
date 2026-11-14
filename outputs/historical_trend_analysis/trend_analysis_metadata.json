@@ -1,0 +1,22 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "analysis": "Seasonal Mann-Kendall and Sen's slope",
+    "historical_period": "2015-01 to 2024-12",
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "seasonal_method": "Same-calendar-month comparisons across years",
+    "multiple_testing_correction": "Benjamini-Hochberg false discovery rate",
+    "fdr_alpha": 0.05,
+    "slope_unit": {
+        "T2M": "\u00b0C/year",
+        "PRECTOTCORR": "mm/day/year",
+        "RH2M": "%/year",
+        "WS10M": "m/s/year"
+    },
+    "important_limitation": "Results describe trends in the gridded NASA POWER variables and should not be interpreted as causal effects."
+}

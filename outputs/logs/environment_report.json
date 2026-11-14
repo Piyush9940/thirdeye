@@ -1,0 +1,86 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "study_region": "India",
+    "study_period": "2015-2024",
+    "python_version": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "python_executable": "c:\\Program Files\\Python312\\python.exe",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "libraries": [
+        {
+            "library": "numpy",
+            "available": true
+        },
+        {
+            "library": "pandas",
+            "available": true
+        },
+        {
+            "library": "scipy",
+            "available": true
+        },
+        {
+            "library": "sklearn",
+            "available": true
+        },
+        {
+            "library": "torch",
+            "available": true
+        },
+        {
+            "library": "torch_geometric",
+            "available": false
+        },
+        {
+            "library": "matplotlib",
+            "available": true
+        },
+        {
+            "library": "seaborn",
+            "available": true
+        },
+        {
+            "library": "geopandas",
+            "available": true
+        },
+        {
+            "library": "rasterio",
+            "available": false
+        },
+        {
+            "library": "xarray",
+            "available": true
+        },
+        {
+            "library": "netCDF4",
+            "available": true
+        },
+        {
+            "library": "h5py",
+            "available": true
+        },
+        {
+            "library": "requests",
+            "available": true
+        },
+        {
+            "library": "tqdm",
+            "available": true
+        },
+        {
+            "library": "plotly",
+            "available": false
+        },
+        {
+            "library": "folium",
+            "available": false
+        },
+        {
+            "library": "statsmodels",
+            "available": true
+        }
+    ],
+    "project_root": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective",
+    "pytorch_version": "2.11.0+cu128",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU"
+}

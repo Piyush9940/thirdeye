@@ -1,0 +1,724 @@
+{
+    "generated_utc": "2026-11-14T06:58:06.502488+00:00",
+    "project_root": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective",
+    "experiment": {
+        "project": "NASA Earth Systems Trend Detective",
+        "reference_model": "Original MLP",
+        "secondary_diagnostic_reference": "Month-only MLP",
+        "gnn_advantage_established": false,
+        "operational_deployment_approved": false,
+        "validation_strategy": "Chronological expanding-window evaluation",
+        "folds": {
+            "fold_1": {
+                "training_periods": [
+                    "2019-05"
+                ],
+                "evaluation_period": "2021-02"
+            },
+            "fold_2": {
+                "training_periods": [
+                    "2019-05",
+                    "2021-02"
+                ],
+                "evaluation_period": "2021-08"
+            },
+            "fold_3": {
+                "training_periods": [
+                    "2019-05",
+                    "2021-02",
+                    "2021-08"
+                ],
+                "evaluation_period": "2023-11"
+            }
+        },
+        "seeds": [
+            7,
+            21,
+            42,
+            77,
+            123
+        ],
+        "original_model_features": [
+            "T2M",
+            "PRECTOTCORR",
+            "RH2M",
+            "WS10M",
+            "latitude",
+            "longitude",
+            "month_sin",
+            "month_cos"
+        ],
+        "reconstructed_ablation": {
+            "architecture": "Linear(input,32) -> ReLU -> Dropout(0.2) -> Linear(32,1)",
+            "optimizer": "Adam",
+            "loss": "MSELoss",
+            "epochs": 250,
+            "learning_rate": 0.01,
+            "weight_decay": 0.0001,
+            "hidden_units": 32,
+            "dropout": 0.2,
+            "training_mode": "Full-batch",
+            "note": "Reconstructed experiment; not confirmed as an exact reproduction of the original MLP."
+        },
+        "important_limitations": [
+            "Only four methane observation months are available.",
+            "August 2021 evaluation fold contains only 11 observations.",
+            "November 2023 influenced model selection and is not an untouched holdout.",
+            "Most evaluated models have negative R-squared values.",
+            "No consistent GNN advantage has been demonstrated.",
+            "Month-only predictions are period-level and not spatial predictions.",
+            "The current results do not establish reliable long-term methane forecasting.",
+            "Independent future observations are required for stronger validation."
+        ]
+    },
+    "environment": {
+        "python_version": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+        "platform": "Windows-11-10.0.26300-SP0",
+        "machine": "AMD64",
+        "packages": {
+            "torch": "2.11.0+cu128",
+            "numpy": "2.5.4",
+            "pandas": "3.0.2",
+            "scikit-learn": "1.8.0",
+            "scipy": "1.17.1",
+            "networkx": "3.6.1",
+            "pyarrow": "24.0.0"
+        },
+        "pytorch": {
+            "version": "2.11.0+cu128",
+            "cuda_available": true,
+            "cuda_version": "12.8",
+            "device": "NVIDIA GeForce RTX 3050 Laptop GPU"
+        }
+    },
+    "important_files": [
+        {
+            "relative_path": "reports/final_exploratory_experiment_config.json",
+            "exists": true,
+            "size_bytes": 1703,
+            "sha256": "ef7c2f19dca818c9ee6d9071d9fc2645d82abb0a61f1ff106a386c2701dd4d09"
+        },
+        {
+            "relative_path": "reports/final_model_comparison_corrected_fold_summary.csv",
+            "exists": true,
+            "size_bytes": 1266,
+            "sha256": "6cc21035279a37d3b9d695366cb1519d2da9fe82c0bd6e0c57befb5dbc2aa3dd"
+        },
+        {
+            "relative_path": "reports/final_model_evaluation_predictions.csv",
+            "exists": true,
+            "size_bytes": 163493,
+            "sha256": "cf6b08284f8a18d847f3a9ca350ed7ba7fb6e4eeafb41204ae41cafe01317f77"
+        },
+        {
+            "relative_path": "reports/unified_baseline_seed_metrics.csv",
+            "exists": true,
+            "size_bytes": 12137,
+            "sha256": "a42d60e8f6124c660454de60a04f0ace9807a2dd47ad796958cd7e1d50f31172"
+        },
+        {
+            "relative_path": "reports/unified_baseline_fold_comparison.csv",
+            "exists": true,
+            "size_bytes": 3845,
+            "sha256": "848e681f81d3e81d3d4ba519a533d2860303ff66d102ee32b2c6544ef5aba364"
+        },
+        {
+            "relative_path": "reports/unified_baseline_overall_comparison.csv",
+            "exists": true,
+            "size_bytes": 942,
+            "sha256": "910233e7dc21a1eb78de82e3b3e442d045647c2de6ce35a7567f08b35001adaa"
+        },
+        {
+            "relative_path": "reports/corrected_feature_ablation/corrected_three_way_ablation_predictions.csv",
+            "exists": true,
+            "size_bytes": 212635,
+            "sha256": "94c7f2b33c79520dfb38cfd3793c489c6a8ab7493f0f91f3b8a448cb2b39461f"
+        },
+        {
+            "relative_path": "reports/corrected_feature_ablation/corrected_three_way_ablation_overall_summary.csv",
+            "exists": true,
+            "size_bytes": 455,
+            "sha256": "21faccecf41c5c6ba90afaac46e1bfa07bba6c8744e97c25e33f21e80c1d7025"
+        },
+        {
+            "relative_path": "reports/corrected_feature_ablation/ablation_predictions_with_node_ids.csv",
+            "exists": true,
+            "size_bytes": 241796,
+            "sha256": "ced92551191341f20a30714cedbfaec41ba575c90216db7e4d205fcaaed85b8e"
+        },
+        {
+            "relative_path": "reports/final_model_selection/final_model_selection_report.md",
+            "exists": true,
+            "size_bytes": 4452,
+            "sha256": "a3cf66790bdc44e31a993faa8fd0da6c526a199060c643b4256943afa2494438"
+        },
+        {
+            "relative_path": "reports/final_model_selection/final_model_selection_decision.json",
+            "exists": true,
+            "size_bytes": 6638,
+            "sha256": "051eb105b2f7b7a34d23efe870f921cb7629be64805256865148f0b7cb86abbd"
+        },
+        {
+            "relative_path": "reports/final_model_selection/final_model_registry.csv",
+            "exists": true,
+            "size_bytes": 1523,
+            "sha256": "dde11faf5ef0c0e9a2e49083eda213db4884d858ec71044587e342970bf2bf4c"
+        },
+        {
+            "relative_path": "data/processed/gnn_dataset/methane_climate_node_month_pilot.parquet",
+            "exists": true,
+            "size_bytes": 26629,
+            "sha256": "d5a10ed00303db8995572e9bc2e678a99f63b8f5c08206c733fe1bb785fac513"
+        },
+        {
+            "relative_path": "data/processed/gnn_dataset/final_fold_1_prepared.npz",
+            "exists": true,
+            "size_bytes": 22575,
+            "sha256": "65fd148920713e6c4a42925a80ef15fee268bb74eab0bdf6a1eb6c17ab17d81a"
+        },
+        {
+            "relative_path": "data/processed/gnn_dataset/final_fold_2_prepared.npz",
+            "exists": true,
+            "size_bytes": 22549,
+            "sha256": "9d0b936965e309a73e53b572a6f4ad1da2357dbfbe46f8ef75f0b9b45c420d9b"
+        },
+        {
+            "relative_path": "data/processed/gnn_dataset/final_fold_3_prepared.npz",
+            "exists": true,
+            "size_bytes": 22544,
+            "sha256": "62b9032588ca580dfb65c55f24217c6dd8450f7aafa6e5586a18946debb2d52b"
+        }
+    ],
+    "model_checkpoints": [
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_1_corrected_weighted_gcn_seed_123.pt",
+            "size_bytes": 4563,
+            "sha256": "01a81e39a68b98382890c48fab2a4a25880d974af65338a94148e68743449ffd"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_1_corrected_weighted_gcn_seed_21.pt",
+            "size_bytes": 4553,
+            "sha256": "cd6386a146eaa84a8c1ca1603f362f8fb3aeb2c33eaa894a485e2d09e0eb3829"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_1_corrected_weighted_gcn_seed_42.pt",
+            "size_bytes": 4553,
+            "sha256": "c8cbcbf8f9c00ef41fe7922c53779ab32324969dc01b71da5d1b312ca1db066b"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_1_corrected_weighted_gcn_seed_7.pt",
+            "size_bytes": 4543,
+            "sha256": "bf285ab9262f7366b8b61786b223f0cda39ff1058585906ff571b11f3f296c66"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_1_corrected_weighted_gcn_seed_77.pt",
+            "size_bytes": 4553,
+            "sha256": "6f9f2d2ce22c0657a5c0fb3c955f2b1c6f720287cb34872408f32623289bbb3f"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_2_corrected_weighted_gcn_seed_123.pt",
+            "size_bytes": 4563,
+            "sha256": "51bac2c40bcff0aa4d1d5414ecb44336904ee13f1878e575ed663416cf1912bc"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_2_corrected_weighted_gcn_seed_21.pt",
+            "size_bytes": 4553,
+            "sha256": "26a50960f2374e9e22ed7d6d5a8f2d6f450bca8e7270fbaff86b538d89d68751"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_2_corrected_weighted_gcn_seed_42.pt",
+            "size_bytes": 4553,
+            "sha256": "31afb7d45b0ad702eb734ae06efa1b747b61bbbee5ebf001b37686020dfa8648"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_2_corrected_weighted_gcn_seed_7.pt",
+            "size_bytes": 4543,
+            "sha256": "6297089454792eadc346bae08c7578adf5de538f752a776fcf1be5065ad48bf2"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_2_corrected_weighted_gcn_seed_77.pt",
+            "size_bytes": 4553,
+            "sha256": "79232d339dde8e6194dd5f47d535024c196c922f80c4f979099142f26d3965b7"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_3_corrected_weighted_gcn_seed_123.pt",
+            "size_bytes": 4563,
+            "sha256": "13f1580bd0b40983523d8b988b0ed30a69d17a1b69f1d73818bc34a3b9903700"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_3_corrected_weighted_gcn_seed_21.pt",
+            "size_bytes": 4553,
+            "sha256": "ea25c8d6b827271369a06401cd41479f6a83ffd7a552a311a0e9a0d5fbcfbd63"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_3_corrected_weighted_gcn_seed_42.pt",
+            "size_bytes": 4553,
+            "sha256": "30d24c0302cefdb2356361be66f22e0a77be97c46f7aabf151c086715be4d9eb"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_3_corrected_weighted_gcn_seed_7.pt",
+            "size_bytes": 4543,
+            "sha256": "0eaedecf698e835b1a9fa86fb8420ba261787c5e40573f970574abd0e6a510b1"
+        },
+        {
+            "relative_path": "models\\corrected_distance_weighted_gcn\\fold_3_corrected_weighted_gcn_seed_77.pt",
+            "size_bytes": 4553,
+            "sha256": "679593fa6484b218f149da71c9b6ea6bce529cb2f7d5897d4d1f7c80da3cfdb3"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_only_seed_123.pt",
+            "size_bytes": 4143,
+            "sha256": "01feb82aacef706227672ca75a29baa569405dd2ce0f29d5eabe223dd50a41e2"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_only_seed_21.pt",
+            "size_bytes": 4133,
+            "sha256": "ee0e987ffd45f3085ddf0760b742f42c34ab5ddd7902b82e9a0c3810598edd81"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_only_seed_42.pt",
+            "size_bytes": 4133,
+            "sha256": "05ab9ac7b835c7b0373ddf1ba0628bfb8f2db903c1652c65a13a0d0bbc05eb98"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_only_seed_7.pt",
+            "size_bytes": 4123,
+            "sha256": "42caa810cd612724eaa97033de23703808dc918d0d81007fadd2d92c29f014ca"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_only_seed_77.pt",
+            "size_bytes": 4133,
+            "sha256": "a60c70918d45242f82efb9097e1d923d56e39e315a16e5edbb65f6e426a2e6ca"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_plus_month_seed_123.pt",
+            "size_bytes": 4459,
+            "sha256": "1803381c396115ee16ff0e0c2b42038965a80a6937687756dd4cd28ae0c0e405"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_plus_month_seed_21.pt",
+            "size_bytes": 4449,
+            "sha256": "bfe13d7a64b0a31495398b1efc36145ee93952243d0255e490a1df0a06cad230"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_plus_month_seed_42.pt",
+            "size_bytes": 4449,
+            "sha256": "2d013d5ee72ffe0b0b355c3330f69c8e38e82e8c716a867e1ad4da7cb52d5782"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_plus_month_seed_7.pt",
+            "size_bytes": 4439,
+            "sha256": "971d8b2c0cde28e72bd873d13a9ab602ddd8035907a2fea6a2dbffb3d2e40fdd"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Climate_plus_month_seed_77.pt",
+            "size_bytes": 4449,
+            "sha256": "3de47f86606c83f39c17afb70b426ba1027d32df1d14b23f18c970989745ff8e"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Month_only_seed_123.pt",
+            "size_bytes": 3867,
+            "sha256": "19a40a68e52923dc87a6c04959dc5b3212bc989d26d2ec5c83cd4a60469866b4"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Month_only_seed_21.pt",
+            "size_bytes": 3857,
+            "sha256": "ad568a10dec515388ef94fe7cfb676848aec07cf7e261826535068f227d69459"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Month_only_seed_42.pt",
+            "size_bytes": 3857,
+            "sha256": "ac00cfac227bccd33322c28bc67960309b0ca8c6f73bf24cddca8f5dcb5f629b"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Month_only_seed_7.pt",
+            "size_bytes": 3847,
+            "sha256": "4218d107ea0ffc06e934559d0742a00f1a5a6b6966532a132def176395acae12"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_1_Month_only_seed_77.pt",
+            "size_bytes": 3857,
+            "sha256": "3d2dc80259ebf4bba7ecc238589ec897893c46a8d0d447693611f2c53cf7319b"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_only_seed_123.pt",
+            "size_bytes": 4143,
+            "sha256": "ab5a7b819610bca22d5317fe187ca489343a9ceb50421d6f81a07411f2e728d3"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_only_seed_21.pt",
+            "size_bytes": 4133,
+            "sha256": "742508e5e220c154d1a35f9978e27191b1e105a8445b81af102ed7ade2fc0748"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_only_seed_42.pt",
+            "size_bytes": 4133,
+            "sha256": "63f989db31140273ae442eef3ffc3d167f92538de14c493fd8de6cc71a2b6dba"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_only_seed_7.pt",
+            "size_bytes": 4123,
+            "sha256": "4d7fb7035b25d7d04ff8508be6b6eea223283007d56083f742a3403e35fd0a39"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_only_seed_77.pt",
+            "size_bytes": 4133,
+            "sha256": "5005fa12dff9a5686423f1d81a6443c969d90bf866b9eb4d505a36495c614b9c"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_plus_month_seed_123.pt",
+            "size_bytes": 4459,
+            "sha256": "185321d0a8507c7f2214b1f9934feb8fe6e0a970d5c2df1638dfda9d5a7cff70"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_plus_month_seed_21.pt",
+            "size_bytes": 4449,
+            "sha256": "4412449a07b3338ada194fba2b8221b109162e3d6098e0d344018989d5e071b0"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_plus_month_seed_42.pt",
+            "size_bytes": 4449,
+            "sha256": "4c19fa10d340d57397243d451dbdc6378d456f139b62f8715d59f3da89fe7953"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_plus_month_seed_7.pt",
+            "size_bytes": 4439,
+            "sha256": "29806f08261de360f80973b2815e5e84ee0b41c691f718586f1be84fbce9ec90"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Climate_plus_month_seed_77.pt",
+            "size_bytes": 4449,
+            "sha256": "9a41a49a7081f8b4f938fc2a55cd11fedb4af734d31a8ad9eebc6ac512b01833"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Month_only_seed_123.pt",
+            "size_bytes": 3867,
+            "sha256": "66cd8b62839d80981c1958faa416da931292078d0663b25ecf1a09da6ac6218d"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Month_only_seed_21.pt",
+            "size_bytes": 3857,
+            "sha256": "63a9fc1cdf11d581c80706a0f1dcf54b71781e5505aac8015a8d5691d93435ce"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Month_only_seed_42.pt",
+            "size_bytes": 3857,
+            "sha256": "2f7fcee9e372bb61c00e8cddc775dba17ea13c6191707cd4a07ea46b50912dc3"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Month_only_seed_7.pt",
+            "size_bytes": 3847,
+            "sha256": "38b7d4879c6006cef03b7f4a8cab8072e14f5de3dbd614b13c30d04872053559"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_2_Month_only_seed_77.pt",
+            "size_bytes": 3857,
+            "sha256": "ef3a312dcb1b0c6f451aa5d62cdec90558743d71f23d279649ead839af245e80"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_only_seed_123.pt",
+            "size_bytes": 4143,
+            "sha256": "575e4f5038d96cad1dba3df64ec65068e88c9713f854216b0d514bc767563b48"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_only_seed_21.pt",
+            "size_bytes": 4133,
+            "sha256": "e6ee70a0d8a833b088b42dea993a53e7cd7fd63afde665ea57e70cd1da9874a2"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_only_seed_42.pt",
+            "size_bytes": 4133,
+            "sha256": "f8ff0fc229d8d27f682a8314aa3ea76f3baa7f022428dbb36880cab815cd6afd"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_only_seed_7.pt",
+            "size_bytes": 4123,
+            "sha256": "a90cea16cd92d0714a797b8870340d7627317df7bc4b9c31ef42776d19d3f0a7"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_only_seed_77.pt",
+            "size_bytes": 4133,
+            "sha256": "b98b77c02b06fb435abdb4eca11a1b47043ba7c03f5c45430e46e302c81c124f"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_plus_month_seed_123.pt",
+            "size_bytes": 4459,
+            "sha256": "d7c3e280cdeb5aaeb9b6548dd0ca71c8bb014dedf56ce6c5a202f7cb824b6b2d"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_plus_month_seed_21.pt",
+            "size_bytes": 4449,
+            "sha256": "992e3e301751fb26158eae74173376933d65c76d41a6e552a527b98ab750656b"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_plus_month_seed_42.pt",
+            "size_bytes": 4449,
+            "sha256": "50bcf549c4d43adea3a73f7c5aaff6f6c4f01039bc4013ec6921a8db668c101f"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_plus_month_seed_7.pt",
+            "size_bytes": 4439,
+            "sha256": "52a05e50787cba1ddebacbff6f79e5e37c573fa99ca1b3e2598bfedfa392833c"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Climate_plus_month_seed_77.pt",
+            "size_bytes": 4449,
+            "sha256": "7619c6abdbada9a2d8dbf9123f530a6a4ec375c99536df046d293e64336194af"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Month_only_seed_123.pt",
+            "size_bytes": 3867,
+            "sha256": "18f411e7d0de692fd07d9ba155dad371cbbcafe42b3ec6cd4130e1483d9fb18b"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Month_only_seed_21.pt",
+            "size_bytes": 3857,
+            "sha256": "7774ca47492f273c0a2acd040ae0f70014d492aa99d1f7ae9580577a91a547bc"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Month_only_seed_42.pt",
+            "size_bytes": 3857,
+            "sha256": "94d5e9c08c7ba1b80510071c3b6dd1b7a2658cee15787637848a3e29ddeccd54"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Month_only_seed_7.pt",
+            "size_bytes": 3847,
+            "sha256": "ef80b41ddc0c577c0d91c7cf0755e6807d2cafb50ec1698f1a47a6a1a2bfded9"
+        },
+        {
+            "relative_path": "models\\corrected_feature_ablation\\fold_3_Month_only_seed_77.pt",
+            "size_bytes": 3857,
+            "sha256": "0084ffddfc6c150dd6d93fa8748345ff9e4f2039e8f218d26fb7034f59af1b83"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_distance_weighted_seed_123.pt",
+            "size_bytes": 4425,
+            "sha256": "fd054ef7c87920910ab68d94173254483fb61c807150165e0021eb7526a9a90d"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_distance_weighted_seed_21.pt",
+            "size_bytes": 4415,
+            "sha256": "2cc9e144cb71285b4cf1e64807885ae5fe28ecc0ba9a5ff89dadbec18fd1215a"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_distance_weighted_seed_42.pt",
+            "size_bytes": 4415,
+            "sha256": "57b863f4e4f454a0ed811374287e41a714c5787bf988701ffb31b9a43ef3eaf3"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_distance_weighted_seed_7.pt",
+            "size_bytes": 4405,
+            "sha256": "f93782f5501e359fbbe708a5734e03f607283d310cffe24c704dbc3b73e467bc"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_distance_weighted_seed_77.pt",
+            "size_bytes": 4415,
+            "sha256": "a4365dc287e63fc3f554bfeda3a0ced7f3e483638967da296e093b5478efd393"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_unweighted_seed_123.pt",
+            "size_bytes": 4355,
+            "sha256": "534c8c92f0498079bdb060e83e6bda2ba00bb0a8403ca2527f7a13bcf7575b58"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_unweighted_seed_21.pt",
+            "size_bytes": 4345,
+            "sha256": "d1004caf65ad671092d8b8b4f88afe43af18abfb63e06ecc6dc1e5a7dd7dc9f4"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_unweighted_seed_42.pt",
+            "size_bytes": 4345,
+            "sha256": "6a1a2acd61ed3df8f68f91cde5b793457d3a237400e8f6b1352e52e739e9bd89"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_unweighted_seed_7.pt",
+            "size_bytes": 4335,
+            "sha256": "84a48c1e4b5f0feabcc28f5927bfb2d13b5053653f4ddb7cb67c9d2151f3647f"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_GCN_unweighted_seed_77.pt",
+            "size_bytes": 4345,
+            "sha256": "b6533868676bbe607d6a13921b1064ba1c32b88cc69fa526950e89c5f1ea9242"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_MLP_seed_123.pt",
+            "size_bytes": 4245,
+            "sha256": "bdd2afb81a09a91cb6f2d92041d1a1ea47c92964f00d2f8532e74ddd74cd6f43"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_MLP_seed_21.pt",
+            "size_bytes": 4235,
+            "sha256": "e6a3b970b374c9d47575444b78b64b874a68b2ead694ef0501f482690bf867db"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_MLP_seed_42.pt",
+            "size_bytes": 4235,
+            "sha256": "430c2093338934a3df8b7079ed10b39ce09cc228cdaba1b5fe7cc71fd10d8824"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_MLP_seed_7.pt",
+            "size_bytes": 4225,
+            "sha256": "8b09e28906c1375511571d6d6a9fb899be942ee272b2def6a83087fa9371231b"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_1_MLP_seed_77.pt",
+            "size_bytes": 4235,
+            "sha256": "9435baa5bc52eccdc1b26a0d078b93f85a8bcfe5aa1157ffbdf0970f524839de"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_distance_weighted_seed_123.pt",
+            "size_bytes": 4425,
+            "sha256": "4c7da58213e0b287486670daa6673403e7160682ffb809c6204a5341e30218fb"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_distance_weighted_seed_21.pt",
+            "size_bytes": 4415,
+            "sha256": "3bc9de65cdf27eb064cbf3d5ad49441c97048485f65425a747f575842476d545"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_distance_weighted_seed_42.pt",
+            "size_bytes": 4415,
+            "sha256": "35b0441b9ff159084c8002a143d932d6d657d82f5147af9bf174224b47c9e101"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_distance_weighted_seed_7.pt",
+            "size_bytes": 4405,
+            "sha256": "ca3c99bb1082bea46d7ec819fdaec920407fb2b3f8059566e9b1bab756ed35d3"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_distance_weighted_seed_77.pt",
+            "size_bytes": 4415,
+            "sha256": "0fe59794f9fecb8b4ce840a58ef325a1c01dcdc9974592a5f7a243fed464da99"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_unweighted_seed_123.pt",
+            "size_bytes": 4355,
+            "sha256": "8eca19deb00007f36bbb0b4ab608b4a944b0e967cd5f01eaac47c0120d15b406"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_unweighted_seed_21.pt",
+            "size_bytes": 4345,
+            "sha256": "1ce4ef0dce5508634d1f58e9516af006621db36e25a2c69c87e4bf1c53af19a5"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_unweighted_seed_42.pt",
+            "size_bytes": 4345,
+            "sha256": "f46b6a517dd759460f2e2f3172fb58da032942ecbad2c23fe5e3460722628319"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_unweighted_seed_7.pt",
+            "size_bytes": 4335,
+            "sha256": "9c1c26e542081de8375b9f8c2e123e0b97c88c28f5a803837350621e2a158799"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_GCN_unweighted_seed_77.pt",
+            "size_bytes": 4345,
+            "sha256": "670b9154897aa6557b524085018887da002e12384ac17b9c7df7f1302f97f993"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_MLP_seed_123.pt",
+            "size_bytes": 4245,
+            "sha256": "75042cce1d5bc0b768c19c2918b1c88435fef9dc277dd8c4982859bdd42a5ac0"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_MLP_seed_21.pt",
+            "size_bytes": 4235,
+            "sha256": "f2d2dbfe09c4b5573cf379016dc3c2aff9ff41b294a6b3083f187afab658348b"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_MLP_seed_42.pt",
+            "size_bytes": 4235,
+            "sha256": "3e5644263c6d8b307cac5c20ee9446904db74f196d816a380e184ac9af1b83ca"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_MLP_seed_7.pt",
+            "size_bytes": 4225,
+            "sha256": "38c89070e30cf3ba2d1d1353dec31848f236191ac10cba491626820285c30d9c"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_2_MLP_seed_77.pt",
+            "size_bytes": 4235,
+            "sha256": "86a58826f64d6fa876a2b1d9ddd6074809b40eb1c7a615a64bd639fcb606a229"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_distance_weighted_seed_123.pt",
+            "size_bytes": 4425,
+            "sha256": "1a9d5593cfc709429d6c9f9273dec66da160512fb44cfd6083b4dd3ee0574f91"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_distance_weighted_seed_21.pt",
+            "size_bytes": 4415,
+            "sha256": "fa0e7165376a051bcc3cbc5bd4370afd90fea65b03e6b33dc9b445aecc68c419"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_distance_weighted_seed_42.pt",
+            "size_bytes": 4415,
+            "sha256": "a3c2296f90f3ea4e872119e801c75bc00569f4b13f7bffc9c95295710376b8a4"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_distance_weighted_seed_7.pt",
+            "size_bytes": 4405,
+            "sha256": "56ec2bf028952df5be81a148e0dbead146e9c3dfa8aaf7c1b62f0f42b5bea35f"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_distance_weighted_seed_77.pt",
+            "size_bytes": 4415,
+            "sha256": "fd5c5e0afdbf9c72050bb63a544b5c54d66d6e28cb82b67962fe4a53d12b4153"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_unweighted_seed_123.pt",
+            "size_bytes": 4355,
+            "sha256": "8dbcaaf4f8844a85158cb689d38c830ea6b1cae17d10ca4ab0e804506cf0f14d"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_unweighted_seed_21.pt",
+            "size_bytes": 4345,
+            "sha256": "8a34e2ad5dafe3322e2631be879c60da479d18c0a37f49051951389143c59606"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_unweighted_seed_42.pt",
+            "size_bytes": 4345,
+            "sha256": "f776f74bb9c7a06c2880d7e2a61c2b0867fc48687e16ae0e964f6c9436213bd9"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_unweighted_seed_7.pt",
+            "size_bytes": 4335,
+            "sha256": "1fe8b83afe393a9b93033357871ef3e67c1b87049f2a9b1dc5a768eb74ce5919"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_GCN_unweighted_seed_77.pt",
+            "size_bytes": 4345,
+            "sha256": "e3fa1fe2d5a83f6556cc3ede634ea941568785cfb68bd3d477665fae8dcf205c"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_MLP_seed_123.pt",
+            "size_bytes": 4245,
+            "sha256": "3793116847fe305b1827c43ef3ae3b0a0601a884a8562c0b3fab144b812a676d"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_MLP_seed_21.pt",
+            "size_bytes": 4235,
+            "sha256": "25857442730359890a0b0d9d2db3a525ea5d8c79433bc8e06e2952434e8628fc"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_MLP_seed_42.pt",
+            "size_bytes": 4235,
+            "sha256": "66a06045cd9bdf063e14eaefbfa6dc45667d69bf8c1740084c6e97eaf42c0ad4"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_MLP_seed_7.pt",
+            "size_bytes": 4225,
+            "sha256": "d1049a905609591d79697eca4f70310e44273e3ad9e60ea8a093c7edf191d9c2"
+        },
+        {
+            "relative_path": "models\\final_exploratory_experiment\\fold_3_MLP_seed_77.pt",
+            "size_bytes": 4235,
+            "sha256": "1cb44b8bf3e33ca49b4f195ae17661e3b2e7dded29d585f290b20866502f9b98"
+        },
+        {
+            "relative_path": "outputs\\model_training\\best_gcn_gru_model.pth",
+            "size_bytes": 256141,
+            "sha256": "220f95beeeb615bb1d3e53357bee6affd6a0498b56acf3e3c0207ef0629a4967"
+        }
+    ]
+}

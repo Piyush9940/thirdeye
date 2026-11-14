@@ -1,0 +1,35 @@
+{
+  "product_id": "97dee412-35d0-4053-9393-c739a37ded5d",
+  "filename": "S5P_RPRO_L2__CH4____20190909T064333_20190909T082503_09873_03_020400_20221114T123649.nc",
+  "expected_bytes": 56645324,
+  "actual_bytes": 56645324,
+  "sha256": "02f3d1d949282175594c36926c0302929d06f272c56543af871b79e5b4d3e93f",
+  "downloaded_at_utc": "2026-11-13T15:06:48.819039+00:00",
+  "netcdf_valid": true,
+  "groups": [],
+  "dimensions": {
+    "time": 1,
+    "scanline": 4172,
+    "ground_pixel": 215,
+    "corner": 4,
+    "layer": 12,
+    "level": 13
+  },
+  "required_variables": {
+    "latitude": true,
+    "longitude": true,
+    "qa_value": true,
+    "methane_mixing_ratio_bias_corrected": true,
+    "methane_mixing_ratio_precision": true
+  },
+  "units": {
+    "latitude": "degrees_north",
+    "longitude": "degrees_east",
+    "qa_value": "1",
+    "methane_mixing_ratio_bias_corrected": "1e-9",
+    "methane_mixing_ratio_precision": "1e-9"
+  },
+  "all_required_variables_present": true,
+  "size_matches": true,
+  "validation_passed": true
+}

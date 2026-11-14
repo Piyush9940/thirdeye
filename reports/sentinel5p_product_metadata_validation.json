@@ -1,0 +1,48 @@
+{
+  "dataset": "Sentinel-5P TROPOMI L2 CH4",
+  "catalogue_source": "Copernicus Data Space Ecosystem",
+  "catalogue_retrieved_at": "2026-11-10T17:18:23.179288+00:00",
+  "product_id": "e55fc59b-a06b-43d1-a912-7325eea1f2dd",
+  "filename": "S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+  "parsed_filename": {
+    "processing_level": "RPRO",
+    "acquisition_start": "20200101T055716",
+    "acquisition_end": "20200101T073846",
+    "orbit_number": "11490",
+    "collection_number": "03",
+    "processing_baseline": "020400",
+    "processing_time": "20221120T010556",
+    "acquisition_start_utc": "2020-01-01T05:57:16Z",
+    "acquisition_end_utc": "2020-01-01T07:38:46Z",
+    "processing_time_utc": "2022-11-20T01:05:56Z"
+  },
+  "content_date": {
+    "Start": "2020-01-01T06:18:51.000000Z",
+    "End": "2020-01-01T07:17:14.000000Z"
+  },
+  "content_length_bytes": 62503297,
+  "content_length_mb": 59.607789039611816,
+  "online": true,
+  "s3_path": "/eodata/Sentinel-5P/TROPOMI/L2__CH4___/2020/01/01/S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+  "footprint_fields": [
+    "GeoFootprint"
+  ],
+  "india_intersection": {
+    "footprint_available": true,
+    "india_intersection_tested": true,
+    "intersects_india": true,
+    "method": "Shapely geometry intersection",
+    "error": null
+  },
+  "consistency_checks": {
+    "filename_matches_expected_pattern": true,
+    "product_is_ch4": true,
+    "product_id_available": true,
+    "content_length_available": true,
+    "catalogue_online": true,
+    "content_length_mb": 59.607789039611816,
+    "filename_start_matches_catalogue_start": false,
+    "filename_end_matches_catalogue_end": false
+  },
+  "note": "Catalogue metadata validation only. No satellite granules were downloaded."
+}

@@ -1,0 +1,23 @@
+/* Charts stylesheet */
+@import url('dashboard.css');
+
+.chart-legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 0.5rem;
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chart-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

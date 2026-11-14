@@ -1,0 +1,51 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "report": "2025 Forecast Integrity Verification",
+    "generated_at": "2026-11-12T21:09:11.021354",
+    "model": "GCN-GRU",
+    "historical_period": "2015-01 to 2024-12",
+    "forecast_period": "2025-01 to 2025-12",
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "forecast_method": "12-month autoregressive forecasting",
+    "adjacency": "Normalized symmetric spatial adjacency",
+    "reproducibility": {
+        "maximum_absolute_difference": 0.0043487548828125,
+        "mean_absolute_difference": 3.289145024609752e-05,
+        "median_absolute_difference": 2.384185791015625e-07,
+        "percentile_95": 0.00014832019805908168,
+        "percentile_99": 0.000705327987670909,
+        "within_1e-4_percent": 93.29248366013073,
+        "within_1e-3_percent": 99.4607843137255,
+        "exact_match": false
+    },
+    "precipitation_validation": {
+        "negative_predictions": 181,
+        "total_predictions": 3060,
+        "negative_percentage": 5.9150326797385615,
+        "minimum_prediction_mm_per_day": -0.9353306293487549,
+        "physical_constraint_satisfied": false
+    },
+    "validation_checks": {
+        "historical_tensor_valid": true,
+        "original_forecast_valid": true,
+        "independent_forecast_valid": true,
+        "original_forecast_finite": true,
+        "independent_forecast_finite": true,
+        "numerical_agreement_within_0_001": true,
+        "precipitation_nonnegative": false
+    },
+    "scientific_limitations": [
+        "The forecast is exploratory and is not an operational climate prediction.",
+        "The model uses a limited 10-year historical period.",
+        "External climate forcing is not included.",
+        "Negative precipitation predictions violate physical non-negativity.",
+        "Numerical reproduction is close but not bit-for-bit identical.",
+        "Forecast uncertainty has not been fully quantified."
+    ]
+}

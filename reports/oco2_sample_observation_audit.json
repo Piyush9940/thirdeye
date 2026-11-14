@@ -1,0 +1,120 @@
+{
+  "file": "oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+  "total_soundings": 146539,
+  "valid_xco2": 146539,
+  "india_bbox": {
+    "latitude": [
+      6.0,
+      38.0
+    ],
+    "longitude": [
+      68.0,
+      98.0
+    ]
+  },
+  "india_soundings": 2423,
+  "india_valid_xco2": 2423,
+  "india_quality_flag_zero": 1325,
+  "global_quality_counts": {
+    "1": 66703,
+    "0": 79836
+  },
+  "india_quality_counts": {
+    "1": 1098,
+    "0": 1325
+  },
+  "time_units": "seconds since 1970-01-01 00:00:00",
+  "time_calendar": null,
+  "sample_observations": [
+    {
+      "index": 44993,
+      "sounding_id": 2024010107171508,
+      "latitude": 12.514403343200684,
+      "longitude": 92.9090576171875,
+      "xco2": 422.01934814453125,
+      "xco2_uncertainty": 0.45906659960746765,
+      "quality_flag": 1
+    },
+    {
+      "index": 44994,
+      "sounding_id": 2024010107195201,
+      "latitude": 22.04862403869629,
+      "longitude": 90.71321105957031,
+      "xco2": 422.7270812988281,
+      "xco2_uncertainty": 0.5048642158508301,
+      "quality_flag": 0
+    },
+    {
+      "index": 44995,
+      "sounding_id": 2024010107195202,
+      "latitude": 22.04109001159668,
+      "longitude": 90.72007751464844,
+      "xco2": 423.24237060546875,
+      "xco2_uncertainty": 0.5996705293655396,
+      "quality_flag": 1
+    },
+    {
+      "index": 44996,
+      "sounding_id": 2024010107195231,
+      "latitude": 22.068628311157227,
+      "longitude": 90.70836639404297,
+      "xco2": 420.8141784667969,
+      "xco2_uncertainty": 0.5169076323509216,
+      "quality_flag": 0
+    },
+    {
+      "index": 44997,
+      "sounding_id": 2024010107195232,
+      "latitude": 22.061094284057617,
+      "longitude": 90.71524047851562,
+      "xco2": 421.31201171875,
+      "xco2_uncertainty": 0.5975724458694458,
+      "quality_flag": 0
+    },
+    {
+      "index": 44998,
+      "sounding_id": 2024010107195233,
+      "latitude": 22.053482055664062,
+      "longitude": 90.7220687866211,
+      "xco2": 421.4953918457031,
+      "xco2_uncertainty": 0.5519140958786011,
+      "quality_flag": 0
+    },
+    {
+      "index": 44999,
+      "sounding_id": 2024010107195234,
+      "latitude": 22.045812606811523,
+      "longitude": 90.72883605957031,
+      "xco2": 423.08380126953125,
+      "xco2_uncertainty": 0.7228639721870422,
+      "quality_flag": 1
+    },
+    {
+      "index": 45000,
+      "sounding_id": 2024010107195271,
+      "latitude": 22.08863067626953,
+      "longitude": 90.70352172851562,
+      "xco2": 421.12359619140625,
+      "xco2_uncertainty": 0.5274785161018372,
+      "quality_flag": 0
+    },
+    {
+      "index": 45001,
+      "sounding_id": 2024010107195272,
+      "latitude": 22.081100463867188,
+      "longitude": 90.71039581298828,
+      "xco2": 421.45220947265625,
+      "xco2_uncertainty": 0.583243727684021,
+      "quality_flag": 0
+    },
+    {
+      "index": 45002,
+      "sounding_id": 2024010107195273,
+      "latitude": 22.073497772216797,
+      "longitude": 90.71724700927734,
+      "xco2": 421.322509765625,
+      "xco2_uncertainty": 0.524141788482666,
+      "quality_flag": 0
+    }
+  ]
+}

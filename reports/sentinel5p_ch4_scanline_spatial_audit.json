@@ -1,0 +1,132 @@
+{
+  "dataset": "Sentinel-5P TROPOMI CH4",
+  "spatial_scope": "India ADM0 polygon",
+  "observation_date": "2020-01-01",
+  "pixel_count": 749,
+  "scanline_count": 54,
+  "occupied_2_degree_grid_cells": 10,
+  "latitude_min": 18.488316,
+  "latitude_max": 23.815182,
+  "longitude_min": 83.51928,
+  "longitude_max": 91.86585,
+  "median_scanline_centroid_step_km": 12.40767404591232,
+  "maximum_scanline_centroid_step_km": 124.65219114721302,
+  "median_scanline_time_interval_seconds": 0.84,
+  "grid_cells": [
+    {
+      "grid_lat": 20,
+      "grid_lon": 84,
+      "pixel_count": 221,
+      "methane_mean_ppb": 1896.32649321267,
+      "methane_median_ppb": 1898.6235,
+      "methane_std_ppb": 10.580085412969257,
+      "precision_mean_ppb": 2.468478994117647,
+      "scanline_count": 40,
+      "pixel_share_percent": 29.506008010680908
+    },
+    {
+      "grid_lat": 20,
+      "grid_lon": 86,
+      "pixel_count": 186,
+      "methane_mean_ppb": 1898.9822698924731,
+      "methane_median_ppb": 1899.3858500000001,
+      "methane_std_ppb": 9.685658673521088,
+      "precision_mean_ppb": 2.021826876344086,
+      "scanline_count": 38,
+      "pixel_share_percent": 24.833110814419225
+    },
+    {
+      "grid_lat": 22,
+      "grid_lon": 86,
+      "pixel_count": 176,
+      "methane_mean_ppb": 1905.607871590909,
+      "methane_median_ppb": 1905.8733499999998,
+      "methane_std_ppb": 7.087750043463476,
+      "precision_mean_ppb": 2.2097278982954545,
+      "scanline_count": 23,
+      "pixel_share_percent": 23.49799732977303
+    },
+    {
+      "grid_lat": 22,
+      "grid_lon": 90,
+      "pixel_count": 64,
+      "methane_mean_ppb": 1919.8808,
+      "methane_median_ppb": 1916.7166000000002,
+      "methane_std_ppb": 20.902952940323953,
+      "precision_mean_ppb": 3.226374596875,
+      "scanline_count": 17,
+      "pixel_share_percent": 8.544726301735647
+    },
+    {
+      "grid_lat": 22,
+      "grid_lon": 88,
+      "pixel_count": 28,
+      "methane_mean_ppb": 1908.3296928571428,
+      "methane_median_ppb": 1907.81935,
+      "methane_std_ppb": 5.449629319023622,
+      "precision_mean_ppb": 2.8030387035714286,
+      "scanline_count": 11,
+      "pixel_share_percent": 3.7383177570093453
+    },
+    {
+      "grid_lat": 18,
+      "grid_lon": 84,
+      "pixel_count": 28,
+      "methane_mean_ppb": 1899.8126214285714,
+      "methane_median_ppb": 1900.9367,
+      "methane_std_ppb": 9.716351799295529,
+      "precision_mean_ppb": 2.1980676249999997,
+      "scanline_count": 17,
+      "pixel_share_percent": 3.7383177570093453
+    },
+    {
+      "grid_lat": 22,
+      "grid_lon": 84,
+      "pixel_count": 25,
+      "methane_mean_ppb": 1885.9486160000001,
+      "methane_median_ppb": 1883.8271,
+      "methane_std_ppb": 9.260337632824175,
+      "precision_mean_ppb": 2.2042006599999997,
+      "scanline_count": 9,
+      "pixel_share_percent": 3.337783711615487
+    },
+    {
+      "grid_lat": 18,
+      "grid_lon": 82,
+      "pixel_count": 11,
+      "methane_mean_ppb": 1885.328481818182,
+      "methane_median_ppb": 1883.7125,
+      "methane_std_ppb": 7.446800738950686,
+      "precision_mean_ppb": 2.7866856454545452,
+      "scanline_count": 11,
+      "pixel_share_percent": 1.4686248331108143
+    },
+    {
+      "grid_lat": 20,
+      "grid_lon": 82,
+      "pixel_count": 6,
+      "methane_mean_ppb": 1891.3116333333335,
+      "methane_median_ppb": 1889.11265,
+      "methane_std_ppb": 10.08191763617747,
+      "precision_mean_ppb": 2.757100633333333,
+      "scanline_count": 5,
+      "pixel_share_percent": 0.801068090787717
+    },
+    {
+      "grid_lat": 20,
+      "grid_lon": 88,
+      "pixel_count": 4,
+      "methane_mean_ppb": 1895.7513,
+      "methane_median_ppb": 1895.5776999999998,
+      "methane_std_ppb": 2.119959609678197,
+      "precision_mean_ppb": 2.35029485,
+      "scanline_count": 2,
+      "pixel_share_percent": 0.5340453938584779
+    }
+  ],
+  "outputs": {
+    "scanline_spatial_audit": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_scanline_spatial_audit.csv",
+    "pixel_grid_coverage": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_pixel_grid_coverage.csv",
+    "orbital_track_map": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_scanline_track.png"
+  }
+}

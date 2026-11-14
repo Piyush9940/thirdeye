@@ -1,0 +1,25 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "cell": 25,
+    "analysis": "Final trend robustness comparison",
+    "primary_method": "Original Seasonal Mann-Kendall and Sen slope",
+    "sensitivity_method": "Seasonally aligned TFPW",
+    "initial_tfpw_included": true,
+    "features": [
+        "PRECTOTCORR",
+        "RH2M",
+        "T2M",
+        "WS10M"
+    ],
+    "significance_threshold": 0.05,
+    "fdr_method": "Benjamini-Hochberg correction inherited from Cells 20 and 23",
+    "important_limitations": [
+        "Only ten annual observations per calendar month",
+        "Autocorrelation estimates are uncertain",
+        "TFPW results depend on prewhitening assumptions",
+        "Spatial and temporal dependence may remain",
+        "FDR significance does not establish causality",
+        "Trend analysis does not establish future climate behavior"
+    ],
+    "created_at": "2026-11-12T20:35:34.124372"
+}

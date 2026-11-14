@@ -1,0 +1,5 @@
+feature,spatial_nodes,mean_residual_lag1_rho,original_significant_nodes,tfpw_significant_nodes,significant_in_both,lost_significance_after_tfpw,significant_only_after_tfpw,not_significant_in_either
+T2M,255,0.3984675933811963,48,75,46,2,29,178
+PRECTOTCORR,255,0.06514408082639253,3,4,2,1,2,250
+RH2M,255,0.37207601970238213,74,95,72,2,23,158
+WS10M,255,0.11678907963293597,17,20,17,0,3,235

@@ -1,0 +1,16 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "analysis": "Seasonal trend-free pre-whitening sensitivity analysis",
+    "historical_period": "2015-01 to 2024-12",
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "method": "Remove original seasonal Sen trend, estimate month-specific climatology, pre-whiten residuals using estimated lag-1 coefficient, restore trend and seasonal component, then apply Seasonal Mann-Kendall test.",
+    "fdr_method": "Benjamini-Hochberg",
+    "alpha": 0.05,
+    "important_limitation": "This is an approximate sensitivity implementation. It is not a validated replacement for a formally tested TFPW implementation. Residual dependence, short record length, and spatial dependence may still affect inference."
+}

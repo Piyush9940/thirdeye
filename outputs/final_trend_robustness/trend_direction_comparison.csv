@@ -1,0 +1,10 @@
+feature,original_direction,tfpw_direction,node_count
+PRECTOTCORR,no_trend,no_trend,15
+PRECTOTCORR,unknown,decreasing,78
+PRECTOTCORR,unknown,increasing,162
+RH2M,unknown,decreasing,31
+RH2M,unknown,increasing,224
+T2M,unknown,decreasing,74
+T2M,unknown,increasing,181
+WS10M,unknown,decreasing,136
+WS10M,unknown,increasing,119

@@ -1,0 +1,30 @@
+{
+  "selection_design": "2 granules per year-season",
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "seasons": [
+    "Monsoon",
+    "PostMonsoon",
+    "PreMonsoon",
+    "Winter"
+  ],
+  "strata": 24,
+  "selected_granules": 48,
+  "estimated_total_bytes": 3249039365,
+  "estimated_total_gb_decimal": 3.249039365,
+  "estimated_total_gib": 3.0259037064388394,
+  "online_status_counts": {
+    "True": 48
+  },
+  "selection_modes": {
+    "different_date_and_orbit": 24
+  },
+  "selected_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_selected_48_granules_proposal.csv",
+  "audit_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_selected_48_granules_audit.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "OCO-2 L2 Lite FP",
+  "version": "11.2r",
+  "year": 2024,
+  "india_bbox_west_south_east_north": [
+    68.0,
+    6.0,
+    98.0,
+    38.0
+  ],
+  "unfiltered_granule_count": 367,
+  "india_bbox_granule_count": 367,
+  "india_bbox_percentage": 100.0,
+  "excluded_by_spatial_filter": 0,
+  "csv_path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\oco2_cmr_catalogue\\oco2_v11_2r_2024_india_bbox_candidates.csv",
+  "interpretation": "CMR geographic filtering identifies candidate granules. It does not guarantee that every sounding in a returned granule lies inside India's national boundary."
+}

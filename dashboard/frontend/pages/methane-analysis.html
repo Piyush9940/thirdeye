@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methane Analysis — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot amber"></span> Sentinel-5P TROPOMI Pilot Data</span>
+      <span class="status-pill"><span class="status-dot"></span> QA ≥ 0.50 Strict Filtering</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link active"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Sentinel-5P <span>Methane Pilot</span></h1>
+        <p class="page-subtitle">Exploratory tropospheric column-averaged dry-air methane observations across India.</p>
+      </div>
+      <span class="badge badge-amber"><i class="fas fa-flask"></i> Exploratory Satellite Pilot</span>
+    </div>
+
+    <!-- Scientific Caveat Banner -->
+    <div class="card" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.05); margin-bottom: 2rem;">
+      <div class="card-header">
+        <div class="card-title text-amber">
+          <i class="fas fa-circle-exclamation"></i> Essential Scientific Principles & Integrity
+        </div>
+      </div>
+      <p style="font-size: 0.9rem; line-height: 1.6; color: #f8fafc;">
+        1. <b>Concentration ≠ Surface Emissions:</b> Sentinel-5P TROPOMI measures column-averaged dry-air mole fraction (XCH4 in ppb) integrated throughout the atmospheric column. High atmospheric methane concentrations do not directly locate localized point-source emissions without atmospheric transport inversion models.<br>
+        2. <b>Monsoon Cloud Cover Limitation:</b> Optical soundings require clear-sky conditions (QA ≥ 0.50). In August 2021 (Fold 2), intense monsoon convective cloud cover left only 11 valid soundings across all of India.<br>
+        3. <b>Southeast India Pilot Gap:</b> Southeast India has 0 valid soundings in this pilot release due to cloud filtering and orbit geometry. Missing data is shown transparently as unavailable, never as zero.
+      </p>
+    </div>
+
+    <!-- 4 Pilot Snapshot Cards -->
+    <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">Observation Snapshots (226 Node-Months)</h2>
+    <div class="scorecard-grid" id="methane-snapshots" style="margin-bottom: 2rem;">
+      <!-- Populated via JS -->
+    </div>
+
+    <!-- Regional Breakdown Table -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-satellite-dish text-cyan"></i> Regional Pixel Density & Median Column Concentration</div>
+        <span class="badge badge-cyan">73,045 Total Pixels</span>
+      </div>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border-subtle); color: var(--text-dim); text-transform: uppercase; font-size: 0.78rem;">
+              <th style="padding: 0.75rem 1rem;">Region</th>
+              <th style="padding: 0.75rem 1rem;">QA ≥ 0.50 Pixels</th>
+              <th style="padding: 0.75rem 1rem;">Median Methane (ppb)</th>
+              <th style="padding: 0.75rem 1rem;">Regional Context & Observations</th>
+            </tr>
+          </thead>
+          <tbody id="methane-regions-body">
+            <!-- Populated via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div><b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective</div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/methane-analysis.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.methaneApp = new MethaneAnalysis();
+    });
+  </script>
+</body>
+</html>

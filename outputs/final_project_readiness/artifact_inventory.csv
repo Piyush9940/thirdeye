@@ -1,0 +1,29 @@
+Category,Artifact,Exists,Size_MB,Path
+Dataset,Historical tensor,True,0.467,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\nasa_power_tensor.npy
+Dataset,Spatial nodes,True,0.004,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\spatial_nodes.csv
+Dataset,Tensor metadata,True,0.0,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\tensor_metadata.json
+Dataset,Time index,True,0.001,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\tensor_time_index.npy
+Dataset,Processed spatial dataset,True,0.573,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\data\processed\nasa_power_grid_2deg.parquet
+Model,Best model checkpoint,True,0.244,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\model_training\best_gcn_gru_model.pth
+Model,Model configuration,True,0.0,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\model_training\gcn_gru_config.json
+Model,Training history,True,0.007,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\model_training\training_history.csv
+Model,Training report,True,0.001,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\model_training\training_report.json
+Spatial graph,Raw adjacency,True,0.004,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\spatial_graph\adjacency_matrix.npz
+Spatial graph,Graph edges,True,0.034,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\spatial_graph\edge_index.npy
+Spatial graph,Graph weights,True,0.009,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\spatial_graph\edge_weights.npy
+Spatial graph,Graph metadata,True,0.0,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\spatial_graph\graph_metadata.json
+Spatial graph,Graph visualization,True,1.176,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\spatial_graph\spatial_graph.png
+Evaluation,2024 model metrics,True,0.001,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\evaluation\evaluation_metrics_2024.csv
+Evaluation,Node-wise predictions,True,0.737,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\evaluation\node_wise_predictions_2024.csv
+Evaluation,Corrected independent verification,True,0.001,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\independent_model_verification_corrected\corrected_test_metrics.csv
+Trend analysis,Feature trend summary,True,0.0,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\historical_trend_analysis\feature_trend_summary.csv
+Trend analysis,Node-wise trends,True,0.154,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\historical_trend_analysis\node_wise_seasonal_trends.csv
+Trend analysis,Trend robustness,True,0.001,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\final_trend_robustness\feature_wise_trend_robustness.csv
+Trend analysis,Significance summary,True,0.0,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\final_trend_robustness\significance_category_summary.csv
+Forecast,2025 physical forecast,True,0.047,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\future_forecasting\forecast_2025_physical.npy
+Forecast,2025 normalized forecast,True,0.047,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\future_forecasting\forecast_2025_normalized.npy
+Forecast,Forecast integrity report,True,0.002,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\final_forecast_integrity\final_forecast_integrity_report.json
+Final reports,Master scientific report,True,0.01,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\master_scientific_validation\master_scientific_validation_report.md
+Final reports,Master scientific JSON,True,0.014,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\master_scientific_validation\master_scientific_validation.json
+Final reports,Master model metrics,True,0.001,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\master_scientific_validation\master_model_performance.csv
+Final reports,Master trend summary,True,0.0,C:\Users\piyus\OneDrive\Desktop\nasa\earth-systems-trend-detective\outputs\master_scientific_validation\master_historical_trend_summary.csv

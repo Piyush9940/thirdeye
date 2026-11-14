@@ -1,0 +1,20 @@
+{
+  "source_file": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\raw\\copernicus_metadata\\copernicus_search_results.json",
+  "root_type": "dict",
+  "root_keys": [
+    "source",
+    "retrieved_at",
+    "total_products",
+    "products"
+  ],
+  "candidate_record_count": 2,
+  "keyword_occurrences": {
+    "S5P": 2,
+    "CH4": 3,
+    "TROPOMI": 1,
+    "Sentinel-5P": 1,
+    "20200101T055716": 2
+  },
+  "summary_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\copernicus_metadata_record_summary.csv",
+  "note": "Metadata structure inspection only. No new satellite data was downloaded."
+}

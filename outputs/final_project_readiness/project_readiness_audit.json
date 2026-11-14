@@ -1,0 +1,266 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "audit_type": "Final project readiness",
+    "generated_at": "2026-11-12T21:14:11.916685",
+    "artifact_inventory": [
+        {
+            "Category": "Dataset",
+            "Artifact": "Historical tensor",
+            "Exists": true,
+            "Size_MB": 0.467,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\nasa_power_tensor.npy"
+        },
+        {
+            "Category": "Dataset",
+            "Artifact": "Spatial nodes",
+            "Exists": true,
+            "Size_MB": 0.004,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\spatial_nodes.csv"
+        },
+        {
+            "Category": "Dataset",
+            "Artifact": "Tensor metadata",
+            "Exists": true,
+            "Size_MB": 0.0,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\tensor_metadata.json"
+        },
+        {
+            "Category": "Dataset",
+            "Artifact": "Time index",
+            "Exists": true,
+            "Size_MB": 0.001,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\tensor_time_index.npy"
+        },
+        {
+            "Category": "Dataset",
+            "Artifact": "Processed spatial dataset",
+            "Exists": true,
+            "Size_MB": 0.573,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\nasa_power_grid_2deg.parquet"
+        },
+        {
+            "Category": "Model",
+            "Artifact": "Best model checkpoint",
+            "Exists": true,
+            "Size_MB": 0.244,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\best_gcn_gru_model.pth"
+        },
+        {
+            "Category": "Model",
+            "Artifact": "Model configuration",
+            "Exists": true,
+            "Size_MB": 0.0,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\gcn_gru_config.json"
+        },
+        {
+            "Category": "Model",
+            "Artifact": "Training history",
+            "Exists": true,
+            "Size_MB": 0.007,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\training_history.csv"
+        },
+        {
+            "Category": "Model",
+            "Artifact": "Training report",
+            "Exists": true,
+            "Size_MB": 0.001,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\training_report.json"
+        },
+        {
+            "Category": "Spatial graph",
+            "Artifact": "Raw adjacency",
+            "Exists": true,
+            "Size_MB": 0.004,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\spatial_graph\\adjacency_matrix.npz"
+        },
+        {
+            "Category": "Spatial graph",
+            "Artifact": "Graph edges",
+            "Exists": true,
+            "Size_MB": 0.034,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\spatial_graph\\edge_index.npy"
+        },
+        {
+            "Category": "Spatial graph",
+            "Artifact": "Graph weights",
+            "Exists": true,
+            "Size_MB": 0.009,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\spatial_graph\\edge_weights.npy"
+        },
+        {
+            "Category": "Spatial graph",
+            "Artifact": "Graph metadata",
+            "Exists": true,
+            "Size_MB": 0.0,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\spatial_graph\\graph_metadata.json"
+        },
+        {
+            "Category": "Spatial graph",
+            "Artifact": "Graph visualization",
+            "Exists": true,
+            "Size_MB": 1.176,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\spatial_graph\\spatial_graph.png"
+        },
+        {
+            "Category": "Evaluation",
+            "Artifact": "2024 model metrics",
+            "Exists": true,
+            "Size_MB": 0.001,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\evaluation\\evaluation_metrics_2024.csv"
+        },
+        {
+            "Category": "Evaluation",
+            "Artifact": "Node-wise predictions",
+            "Exists": true,
+            "Size_MB": 0.737,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\evaluation\\node_wise_predictions_2024.csv"
+        },
+        {
+            "Category": "Evaluation",
+            "Artifact": "Corrected independent verification",
+            "Exists": true,
+            "Size_MB": 0.001,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\independent_model_verification_corrected\\corrected_test_metrics.csv"
+        },
+        {
+            "Category": "Trend analysis",
+            "Artifact": "Feature trend summary",
+            "Exists": true,
+            "Size_MB": 0.0,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\historical_trend_analysis\\feature_trend_summary.csv"
+        },
+        {
+            "Category": "Trend analysis",
+            "Artifact": "Node-wise trends",
+            "Exists": true,
+            "Size_MB": 0.154,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\historical_trend_analysis\\node_wise_seasonal_trends.csv"
+        },
+        {
+            "Category": "Trend analysis",
+            "Artifact": "Trend robustness",
+            "Exists": true,
+            "Size_MB": 0.001,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\final_trend_robustness\\feature_wise_trend_robustness.csv"
+        },
+        {
+            "Category": "Trend analysis",
+            "Artifact": "Significance summary",
+            "Exists": true,
+            "Size_MB": 0.0,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\final_trend_robustness\\significance_category_summary.csv"
+        },
+        {
+            "Category": "Forecast",
+            "Artifact": "2025 physical forecast",
+            "Exists": true,
+            "Size_MB": 0.047,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\future_forecasting\\forecast_2025_physical.npy"
+        },
+        {
+            "Category": "Forecast",
+            "Artifact": "2025 normalized forecast",
+            "Exists": true,
+            "Size_MB": 0.047,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\future_forecasting\\forecast_2025_normalized.npy"
+        },
+        {
+            "Category": "Forecast",
+            "Artifact": "Forecast integrity report",
+            "Exists": true,
+            "Size_MB": 0.002,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\final_forecast_integrity\\final_forecast_integrity_report.json"
+        },
+        {
+            "Category": "Final reports",
+            "Artifact": "Master scientific report",
+            "Exists": true,
+            "Size_MB": 0.01,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\master_scientific_validation\\master_scientific_validation_report.md"
+        },
+        {
+            "Category": "Final reports",
+            "Artifact": "Master scientific JSON",
+            "Exists": true,
+            "Size_MB": 0.014,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\master_scientific_validation\\master_scientific_validation.json"
+        },
+        {
+            "Category": "Final reports",
+            "Artifact": "Master model metrics",
+            "Exists": true,
+            "Size_MB": 0.001,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\master_scientific_validation\\master_model_performance.csv"
+        },
+        {
+            "Category": "Final reports",
+            "Artifact": "Master trend summary",
+            "Exists": true,
+            "Size_MB": 0.0,
+            "Path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\master_scientific_validation\\master_historical_trend_summary.csv"
+        }
+    ],
+    "documentation": {
+        "README": {
+            "found": true,
+            "paths": [
+                "README.md"
+            ]
+        },
+        "Requirements": {
+            "found": true,
+            "paths": [
+                "requirements.txt"
+            ]
+        },
+        "License": {
+            "found": true,
+            "paths": [
+                "LICENSE"
+            ]
+        },
+        "Project description": {
+            "found": false,
+            "paths": []
+        },
+        "Methodology": {
+            "found": false,
+            "paths": []
+        },
+        "Data provenance": {
+            "found": false,
+            "paths": []
+        },
+        "Presentation": {
+            "found": false,
+            "paths": []
+        }
+    },
+    "code_inventory": {
+        "notebook_count": 0,
+        "notebooks": [],
+        "source_file_count": 223
+    },
+    "readiness_checks": {
+        "all_core_artifacts_present": true,
+        "all_submission_documents_present": false,
+        "notebook_and_source_code_present": false,
+        "forecast_physical_constraints_satisfied": false
+    },
+    "missing_artifacts": [],
+    "missing_documentation": [
+        "Project description",
+        "Methodology",
+        "Data provenance",
+        "Presentation"
+    ],
+    "forecast_physical_validity": false,
+    "negative_precipitation_count": 181,
+    "negative_precipitation_percentage": 5.9150326797385615,
+    "recommendations": [
+        "Document NASA POWER variables, retrieval dates, spatial coverage, temporal coverage, and preprocessing.",
+        "Document graph construction, normalization, model architecture, training splits, evaluation, and trend tests.",
+        "Prepare a concise judge-facing presentation with results, visualizations, limitations, and a live demo.",
+        "Disclose negative precipitation predictions. Do not silently overwrite the original forecast; consider a separately labelled physically constrained output for visualization."
+    ]
+}

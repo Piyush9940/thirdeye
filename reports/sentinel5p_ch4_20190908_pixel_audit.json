@@ -1,0 +1,34 @@
+{
+    "granule": "S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc",
+    "product_id": "06362dca-4d18-4016-ad88-f8e6235bd53b",
+    "acquisition_date": "2019-09-08",
+    "stream": "RPRO",
+    "baseline": "020400",
+    "total_pixel_positions": 803240,
+    "valid_geolocation_pixels": 803240,
+    "india_polygon_pixels": 58461,
+    "india_valid_ch4_pixels": 2349,
+    "india_valid_precision_pixels": 2349,
+    "india_valid_data_pixels": 2349,
+    "india_high_quality_pixels_qa_gt_0_5": 282,
+    "qa_distribution_inside_india": {
+        "0.0": 56112,
+        "0.3999999761581421": 2067,
+        "1.0": 282
+    },
+    "quality_threshold": "qa_value > 0.5",
+    "methane_variable": "methane_mixing_ratio_bias_corrected",
+    "methane_units": "1e-9",
+    "precision_units": "1e-9",
+    "conversion_applied": "None; values in 1e-9 are numerically ppb",
+    "high_quality_ch4_statistics": {
+        "count": 282,
+        "mean_ppb": 1883.350999764517,
+        "median_ppb": 1883.743408203125,
+        "std_ppb": 32.93612645419528,
+        "min_ppb": 1812.817626953125,
+        "max_ppb": 1951.6444091796875,
+        "mean_precision_ppb": 2.305831045123702
+    },
+    "csv_output": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_pilot\\pilot_2019_monsoon_20190908_india_high_quality_pixels.csv"
+}

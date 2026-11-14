@@ -1,0 +1,6 @@
+feature_group,mean_MAE_difference_vs_full,seeds_better_than_full,seeds_equal_to_full
+Month-only,-4.643463134765625,2,0
+Climate-only,-25.516082191467284,0,0
+Location-only,-61.56579151153564,0,0
+Climate + location,-43.741255378723146,0,0
+Full 8 features,0.0,0,5

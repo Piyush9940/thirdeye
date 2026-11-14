@@ -1,0 +1,19 @@
+{
+    "architecture": "GCN-GRU",
+    "input_features": 4,
+    "gcn_hidden": 32,
+    "gru_hidden": 64,
+    "output_features": 4,
+    "dropout": 0.15,
+    "sequence_length": 12,
+    "spatial_nodes": 255,
+    "total_parameters": 20292,
+    "trainable_parameters": 20292,
+    "device": "cuda",
+    "feature_names": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ]
+}

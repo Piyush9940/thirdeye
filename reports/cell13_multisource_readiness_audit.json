@@ -1,0 +1,5264 @@
+{
+  "project": "NASA Space Apps - Earth Systems Trend Detective",
+  "cell": "13",
+  "total_files": 456,
+  "total_storage_mb": 906.551,
+  "source_summary": {
+    "OCO2": {
+      "files": 21,
+      "size_mb": 89.511,
+      "extensions": {
+        ".json": 3,
+        ".csv": 15,
+        ".nc4": 1,
+        ".parquet": 2
+      },
+      "locations": {
+        "data\\raw\\cmr_search": 5,
+        "data\\raw\\oco2_sample": 1,
+        "data\\interim\\oco2_cmr_catalogue": 9,
+        "data\\processed\\oco2_india_sample": 6
+      }
+    },
+    "SENTINEL_5P": {
+      "files": 161,
+      "size_mb": 781.36,
+      "extensions": {
+        ".nc": 6,
+        ".csv": 144,
+        ".json": 3,
+        ".txt": 2,
+        ".md": 2,
+        ".parquet": 1,
+        ".png": 3
+      },
+      "locations": {
+        "data\\raw\\copernicus": 1,
+        "data\\raw\\copernicus\\sentinel5p_ch4_selected_48": 5,
+        "data\\interim\\sentinel5p_ch4_catalogue_2019_2024": 31,
+        "data\\interim\\sentinel5p_ch4_coverage": 103,
+        "data\\processed\\sentinel5p_ch4_pilot": 7,
+        "data\\processed\\sentinel5p_ch4_sample": 14
+      }
+    },
+    "UNCLASSIFIED": {
+      "files": 7,
+      "size_mb": 0.136,
+      "extensions": {
+        ".json": 3,
+        ".csv": 2,
+        ".npy": 1,
+        ".geojson": 1
+      },
+      "locations": {
+        "data\\raw\\copernicus_metadata": 1,
+        "data\\processed": 4,
+        "data\\external\\india_boundary": 2
+      }
+    },
+    "NASA_POWER": {
+      "files": 267,
+      "size_mb": 35.542,
+      "extensions": {
+        ".nc": 264,
+        ".parquet": 2,
+        ".npy": 1
+      },
+      "locations": {
+        "data\\raw\\nasa_power": 4,
+        "data\\raw\\nasa_power\\tiles": 256,
+        "data\\interim\\nasa_power_monthly_2015_2024": 4,
+        "data\\processed": 3
+      }
+    },
+    "MODIS": {
+      "files": 1,
+      "size_mb": 0.005,
+      "extensions": {
+        ".csv": 1
+      },
+      "locations": {
+        "data\\interim\\sentinel5p_ch4_coverage": 1
+      }
+    }
+  },
+  "known_artifacts": {
+    "NASA POWER monthly corrected data": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\nasa_power_monthly_2015_2024",
+      "exists": true,
+      "file_count": 4,
+      "size_mb": 6.459
+    },
+    "NASA POWER processed grid": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\nasa_power_grid_2deg.parquet",
+      "exists": true,
+      "file_count": 1,
+      "size_mb": 0.573
+    },
+    "NASA POWER merged dataset": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\nasa_power_merged.parquet",
+      "exists": true,
+      "file_count": 1,
+      "size_mb": 2.264
+    },
+    "NASA POWER tensor": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\nasa_power_tensor.npy",
+      "exists": true,
+      "file_count": 1,
+      "size_mb": 0.467
+    },
+    "OCO2 CMR catalogue": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\oco2_cmr_catalogue",
+      "exists": true,
+      "file_count": 9,
+      "size_mb": 31.156
+    },
+    "OCO2 sample granule": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\raw\\oco2_sample",
+      "exists": true,
+      "file_count": 1,
+      "size_mb": 57.924
+    },
+    "OCO2 India extraction": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\oco2_india_sample",
+      "exists": true,
+      "file_count": 6,
+      "size_mb": 0.12
+    },
+    "Sentinel-5P raw directory": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\raw\\copernicus",
+      "exists": true,
+      "file_count": 6,
+      "size_mb": 342.537
+    },
+    "India administrative boundary": {
+      "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\external\\india_boundary",
+      "exists": true,
+      "file_count": 2,
+      "size_mb": 0.087
+    }
+  },
+  "dataset_readiness": [
+    {
+      "dataset": "NASA POWER",
+      "description": "Baseline climate and meteorological variables",
+      "matching_files": 267,
+      "status": "IMPLEMENTED BASELINE"
+    },
+    {
+      "dataset": "OCO-2",
+      "description": "Column-averaged atmospheric CO2 (XCO2)",
+      "matching_files": 21,
+      "status": "SAMPLE EXTRACTED - DECADE INTEGRATION PENDING"
+    },
+    {
+      "dataset": "Sentinel-5P",
+      "description": "CH4, NO2, SO2, CO and O3",
+      "matching_files": 161,
+      "status": "RAW PRODUCT PRESENT - VALIDATION PENDING"
+    },
+    {
+      "dataset": "MODIS",
+      "description": "NDVI, EVI, land surface temperature and aerosols",
+      "matching_files": 1,
+      "status": "FILES PRESENT - VALIDATION PENDING"
+    },
+    {
+      "dataset": "GPM IMERG",
+      "description": "Satellite precipitation",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "GLDAS",
+      "description": "Soil moisture, runoff and evapotranspiration",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "ERA5",
+      "description": "Atmospheric reanalysis and meteorology",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "MERRA-2",
+      "description": "Aerosols and atmospheric composition",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "CERES",
+      "description": "Earth radiation and energy budget",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "SMAP",
+      "description": "Satellite soil moisture",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "GRACE/GRACE-FO",
+      "description": "Terrestrial water storage anomalies",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "Landsat",
+      "description": "Land cover, land surface temperature and reflectance",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "NOAA",
+      "description": "Ocean temperature and greenhouse-gas observations",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "AIRS",
+      "description": "Atmospheric temperature and water vapour",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "OMPS",
+      "description": "Ozone and atmospheric composition",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "Ocean Color",
+      "description": "Chlorophyll and ocean productivity",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    },
+    {
+      "dataset": "Sentinel-1/2",
+      "description": "Radar, vegetation and land-cover observations",
+      "matching_files": 0,
+      "status": "NOT FOUND IN LOCAL INVENTORY"
+    }
+  ],
+  "inventory": [
+    {
+      "relative_path": "data\\raw\\cmr_search\\oco2_harmony_capabilities.json",
+      "filename": "oco2_harmony_capabilities.json",
+      "extension": ".json",
+      "size_bytes": 124950,
+      "size_mb": 0.1192,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\raw\\cmr_search"
+    },
+    {
+      "relative_path": "data\\raw\\cmr_search\\OCO2_L2_Lite_FP_collections.csv",
+      "filename": "OCO2_L2_Lite_FP_collections.csv",
+      "extension": ".csv",
+      "size_bytes": 2008,
+      "size_mb": 0.0019,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\raw\\cmr_search"
+    },
+    {
+      "relative_path": "data\\raw\\cmr_search\\OCO2_L2_Lite_FP_collections.json",
+      "filename": "OCO2_L2_Lite_FP_collections.json",
+      "extension": ".json",
+      "size_bytes": 2357,
+      "size_mb": 0.0022,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\raw\\cmr_search"
+    },
+    {
+      "relative_path": "data\\raw\\cmr_search\\OCO2_L2_Lite_FP_granules.csv",
+      "filename": "OCO2_L2_Lite_FP_granules.csv",
+      "extension": ".csv",
+      "size_bytes": 81232,
+      "size_mb": 0.0775,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\raw\\cmr_search"
+    },
+    {
+      "relative_path": "data\\raw\\cmr_search\\OCO2_L2_Lite_FP_granules.json",
+      "filename": "OCO2_L2_Lite_FP_granules.json",
+      "extension": ".json",
+      "size_bytes": 115064,
+      "size_mb": 0.1097,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\raw\\cmr_search"
+    },
+    {
+      "relative_path": "data\\raw\\copernicus\\S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+      "filename": "S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+      "extension": ".nc",
+      "size_bytes": 62503297,
+      "size_mb": 59.6078,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\raw\\copernicus"
+    },
+    {
+      "relative_path": "data\\raw\\copernicus_metadata\\copernicus_search_results.json",
+      "filename": "copernicus_search_results.json",
+      "extension": ".json",
+      "size_bytes": 45455,
+      "size_mb": 0.0433,
+      "dataset_candidates": [
+        "UNCLASSIFIED"
+      ],
+      "parent_directory": "data\\raw\\copernicus_metadata"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\PRECTOTCORR_2015_2024.nc",
+      "filename": "PRECTOTCORR_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1813172,
+      "size_mb": 1.7292,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\RH2M_2015_2024.nc",
+      "filename": "RH2M_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1866275,
+      "size_mb": 1.7798,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\T2M_2015_2024.nc",
+      "filename": "T2M_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1837158,
+      "size_mb": 1.7521,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\WS10M_2015_2024.nc",
+      "filename": "WS10M_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1798266,
+      "size_mb": 1.715,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power"
+    },
+    {
+      "relative_path": "data\\raw\\oco2_sample\\oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+      "filename": "oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+      "extension": ".nc4",
+      "size_bytes": 60737753,
+      "size_mb": 57.924,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\raw\\oco2_sample"
+    },
+    {
+      "relative_path": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc",
+      "filename": "S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc",
+      "extension": ".nc",
+      "size_bytes": 52894372,
+      "size_mb": 50.444,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48"
+    },
+    {
+      "relative_path": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc",
+      "filename": "S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc",
+      "extension": ".nc",
+      "size_bytes": 53791796,
+      "size_mb": 51.2999,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48"
+    },
+    {
+      "relative_path": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190909T064333_20190909T082503_09873_03_020400_20221114T123649.nc",
+      "filename": "S5P_RPRO_L2__CH4____20190909T064333_20190909T082503_09873_03_020400_20221114T123649.nc",
+      "extension": ".nc",
+      "size_bytes": 56645324,
+      "size_mb": 54.0212,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48"
+    },
+    {
+      "relative_path": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190910T080555_20190910T094724_09888_03_020400_20221114T123938.nc",
+      "filename": "S5P_RPRO_L2__CH4____20190910T080555_20190910T094724_09888_03_020400_20221114T123938.nc",
+      "extension": ".nc",
+      "size_bytes": 71633193,
+      "size_mb": 68.3147,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48"
+    },
+    {
+      "relative_path": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190926T080412_20190926T094541_10115_03_020400_20221115T020105.nc",
+      "filename": "S5P_RPRO_L2__CH4____20190926T080412_20190926T094541_10115_03_020400_20221115T020105.nc",
+      "extension": ".nc",
+      "size_bytes": 61708353,
+      "size_mb": 58.8497,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\raw\\copernicus\\sentinel5p_ch4_selected_48"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_001.nc",
+      "filename": "PRECTOTCORR_tile_001.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_002.nc",
+      "filename": "PRECTOTCORR_tile_002.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_003.nc",
+      "filename": "PRECTOTCORR_tile_003.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_004.nc",
+      "filename": "PRECTOTCORR_tile_004.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_005.nc",
+      "filename": "PRECTOTCORR_tile_005.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_006.nc",
+      "filename": "PRECTOTCORR_tile_006.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_007.nc",
+      "filename": "PRECTOTCORR_tile_007.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_008.nc",
+      "filename": "PRECTOTCORR_tile_008.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_009.nc",
+      "filename": "PRECTOTCORR_tile_009.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_010.nc",
+      "filename": "PRECTOTCORR_tile_010.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_011.nc",
+      "filename": "PRECTOTCORR_tile_011.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_012.nc",
+      "filename": "PRECTOTCORR_tile_012.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_013.nc",
+      "filename": "PRECTOTCORR_tile_013.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_014.nc",
+      "filename": "PRECTOTCORR_tile_014.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_015.nc",
+      "filename": "PRECTOTCORR_tile_015.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_016.nc",
+      "filename": "PRECTOTCORR_tile_016.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_017.nc",
+      "filename": "PRECTOTCORR_tile_017.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_018.nc",
+      "filename": "PRECTOTCORR_tile_018.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_019.nc",
+      "filename": "PRECTOTCORR_tile_019.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_020.nc",
+      "filename": "PRECTOTCORR_tile_020.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_021.nc",
+      "filename": "PRECTOTCORR_tile_021.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_022.nc",
+      "filename": "PRECTOTCORR_tile_022.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_023.nc",
+      "filename": "PRECTOTCORR_tile_023.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_024.nc",
+      "filename": "PRECTOTCORR_tile_024.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_025.nc",
+      "filename": "PRECTOTCORR_tile_025.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_026.nc",
+      "filename": "PRECTOTCORR_tile_026.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_027.nc",
+      "filename": "PRECTOTCORR_tile_027.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_028.nc",
+      "filename": "PRECTOTCORR_tile_028.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_029.nc",
+      "filename": "PRECTOTCORR_tile_029.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_030.nc",
+      "filename": "PRECTOTCORR_tile_030.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_031.nc",
+      "filename": "PRECTOTCORR_tile_031.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_032.nc",
+      "filename": "PRECTOTCORR_tile_032.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_033.nc",
+      "filename": "PRECTOTCORR_tile_033.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_034.nc",
+      "filename": "PRECTOTCORR_tile_034.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_035.nc",
+      "filename": "PRECTOTCORR_tile_035.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_036.nc",
+      "filename": "PRECTOTCORR_tile_036.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_037.nc",
+      "filename": "PRECTOTCORR_tile_037.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_038.nc",
+      "filename": "PRECTOTCORR_tile_038.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_039.nc",
+      "filename": "PRECTOTCORR_tile_039.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_040.nc",
+      "filename": "PRECTOTCORR_tile_040.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_041.nc",
+      "filename": "PRECTOTCORR_tile_041.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_042.nc",
+      "filename": "PRECTOTCORR_tile_042.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_043.nc",
+      "filename": "PRECTOTCORR_tile_043.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_044.nc",
+      "filename": "PRECTOTCORR_tile_044.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_045.nc",
+      "filename": "PRECTOTCORR_tile_045.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_046.nc",
+      "filename": "PRECTOTCORR_tile_046.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_047.nc",
+      "filename": "PRECTOTCORR_tile_047.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_048.nc",
+      "filename": "PRECTOTCORR_tile_048.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_049.nc",
+      "filename": "PRECTOTCORR_tile_049.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_050.nc",
+      "filename": "PRECTOTCORR_tile_050.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_051.nc",
+      "filename": "PRECTOTCORR_tile_051.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_052.nc",
+      "filename": "PRECTOTCORR_tile_052.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_053.nc",
+      "filename": "PRECTOTCORR_tile_053.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_054.nc",
+      "filename": "PRECTOTCORR_tile_054.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_055.nc",
+      "filename": "PRECTOTCORR_tile_055.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_056.nc",
+      "filename": "PRECTOTCORR_tile_056.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_057.nc",
+      "filename": "PRECTOTCORR_tile_057.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_058.nc",
+      "filename": "PRECTOTCORR_tile_058.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_059.nc",
+      "filename": "PRECTOTCORR_tile_059.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_060.nc",
+      "filename": "PRECTOTCORR_tile_060.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_061.nc",
+      "filename": "PRECTOTCORR_tile_061.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_062.nc",
+      "filename": "PRECTOTCORR_tile_062.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_063.nc",
+      "filename": "PRECTOTCORR_tile_063.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\PRECTOTCORR_tile_064.nc",
+      "filename": "PRECTOTCORR_tile_064.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_001.nc",
+      "filename": "RH2M_tile_001.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_002.nc",
+      "filename": "RH2M_tile_002.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_003.nc",
+      "filename": "RH2M_tile_003.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_004.nc",
+      "filename": "RH2M_tile_004.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_005.nc",
+      "filename": "RH2M_tile_005.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_006.nc",
+      "filename": "RH2M_tile_006.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_007.nc",
+      "filename": "RH2M_tile_007.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_008.nc",
+      "filename": "RH2M_tile_008.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_009.nc",
+      "filename": "RH2M_tile_009.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_010.nc",
+      "filename": "RH2M_tile_010.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_011.nc",
+      "filename": "RH2M_tile_011.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_012.nc",
+      "filename": "RH2M_tile_012.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_013.nc",
+      "filename": "RH2M_tile_013.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_014.nc",
+      "filename": "RH2M_tile_014.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_015.nc",
+      "filename": "RH2M_tile_015.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_016.nc",
+      "filename": "RH2M_tile_016.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_017.nc",
+      "filename": "RH2M_tile_017.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_018.nc",
+      "filename": "RH2M_tile_018.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_019.nc",
+      "filename": "RH2M_tile_019.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_020.nc",
+      "filename": "RH2M_tile_020.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_021.nc",
+      "filename": "RH2M_tile_021.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_022.nc",
+      "filename": "RH2M_tile_022.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_023.nc",
+      "filename": "RH2M_tile_023.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_024.nc",
+      "filename": "RH2M_tile_024.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_025.nc",
+      "filename": "RH2M_tile_025.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_026.nc",
+      "filename": "RH2M_tile_026.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_027.nc",
+      "filename": "RH2M_tile_027.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_028.nc",
+      "filename": "RH2M_tile_028.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_029.nc",
+      "filename": "RH2M_tile_029.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_030.nc",
+      "filename": "RH2M_tile_030.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_031.nc",
+      "filename": "RH2M_tile_031.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_032.nc",
+      "filename": "RH2M_tile_032.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_033.nc",
+      "filename": "RH2M_tile_033.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_034.nc",
+      "filename": "RH2M_tile_034.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_035.nc",
+      "filename": "RH2M_tile_035.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_036.nc",
+      "filename": "RH2M_tile_036.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_037.nc",
+      "filename": "RH2M_tile_037.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_038.nc",
+      "filename": "RH2M_tile_038.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_039.nc",
+      "filename": "RH2M_tile_039.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_040.nc",
+      "filename": "RH2M_tile_040.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_041.nc",
+      "filename": "RH2M_tile_041.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_042.nc",
+      "filename": "RH2M_tile_042.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_043.nc",
+      "filename": "RH2M_tile_043.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_044.nc",
+      "filename": "RH2M_tile_044.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_045.nc",
+      "filename": "RH2M_tile_045.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_046.nc",
+      "filename": "RH2M_tile_046.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_047.nc",
+      "filename": "RH2M_tile_047.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_048.nc",
+      "filename": "RH2M_tile_048.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_049.nc",
+      "filename": "RH2M_tile_049.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_050.nc",
+      "filename": "RH2M_tile_050.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_051.nc",
+      "filename": "RH2M_tile_051.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_052.nc",
+      "filename": "RH2M_tile_052.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_053.nc",
+      "filename": "RH2M_tile_053.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_054.nc",
+      "filename": "RH2M_tile_054.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_055.nc",
+      "filename": "RH2M_tile_055.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_056.nc",
+      "filename": "RH2M_tile_056.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_057.nc",
+      "filename": "RH2M_tile_057.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_058.nc",
+      "filename": "RH2M_tile_058.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_059.nc",
+      "filename": "RH2M_tile_059.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_060.nc",
+      "filename": "RH2M_tile_060.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_061.nc",
+      "filename": "RH2M_tile_061.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_062.nc",
+      "filename": "RH2M_tile_062.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_063.nc",
+      "filename": "RH2M_tile_063.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\RH2M_tile_064.nc",
+      "filename": "RH2M_tile_064.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_001.nc",
+      "filename": "T2M_tile_001.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_002.nc",
+      "filename": "T2M_tile_002.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_003.nc",
+      "filename": "T2M_tile_003.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_004.nc",
+      "filename": "T2M_tile_004.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_005.nc",
+      "filename": "T2M_tile_005.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_006.nc",
+      "filename": "T2M_tile_006.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_007.nc",
+      "filename": "T2M_tile_007.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_008.nc",
+      "filename": "T2M_tile_008.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_009.nc",
+      "filename": "T2M_tile_009.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_010.nc",
+      "filename": "T2M_tile_010.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_011.nc",
+      "filename": "T2M_tile_011.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_012.nc",
+      "filename": "T2M_tile_012.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_013.nc",
+      "filename": "T2M_tile_013.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_014.nc",
+      "filename": "T2M_tile_014.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_015.nc",
+      "filename": "T2M_tile_015.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_016.nc",
+      "filename": "T2M_tile_016.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_017.nc",
+      "filename": "T2M_tile_017.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_018.nc",
+      "filename": "T2M_tile_018.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_019.nc",
+      "filename": "T2M_tile_019.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_020.nc",
+      "filename": "T2M_tile_020.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_021.nc",
+      "filename": "T2M_tile_021.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_022.nc",
+      "filename": "T2M_tile_022.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_023.nc",
+      "filename": "T2M_tile_023.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_024.nc",
+      "filename": "T2M_tile_024.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_025.nc",
+      "filename": "T2M_tile_025.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_026.nc",
+      "filename": "T2M_tile_026.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_027.nc",
+      "filename": "T2M_tile_027.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_028.nc",
+      "filename": "T2M_tile_028.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_029.nc",
+      "filename": "T2M_tile_029.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_030.nc",
+      "filename": "T2M_tile_030.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_031.nc",
+      "filename": "T2M_tile_031.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_032.nc",
+      "filename": "T2M_tile_032.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_033.nc",
+      "filename": "T2M_tile_033.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_034.nc",
+      "filename": "T2M_tile_034.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_035.nc",
+      "filename": "T2M_tile_035.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_036.nc",
+      "filename": "T2M_tile_036.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_037.nc",
+      "filename": "T2M_tile_037.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_038.nc",
+      "filename": "T2M_tile_038.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_039.nc",
+      "filename": "T2M_tile_039.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_040.nc",
+      "filename": "T2M_tile_040.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_041.nc",
+      "filename": "T2M_tile_041.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_042.nc",
+      "filename": "T2M_tile_042.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_043.nc",
+      "filename": "T2M_tile_043.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_044.nc",
+      "filename": "T2M_tile_044.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_045.nc",
+      "filename": "T2M_tile_045.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_046.nc",
+      "filename": "T2M_tile_046.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_047.nc",
+      "filename": "T2M_tile_047.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_048.nc",
+      "filename": "T2M_tile_048.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_049.nc",
+      "filename": "T2M_tile_049.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_050.nc",
+      "filename": "T2M_tile_050.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_051.nc",
+      "filename": "T2M_tile_051.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_052.nc",
+      "filename": "T2M_tile_052.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_053.nc",
+      "filename": "T2M_tile_053.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_054.nc",
+      "filename": "T2M_tile_054.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_055.nc",
+      "filename": "T2M_tile_055.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_056.nc",
+      "filename": "T2M_tile_056.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_057.nc",
+      "filename": "T2M_tile_057.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_058.nc",
+      "filename": "T2M_tile_058.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_059.nc",
+      "filename": "T2M_tile_059.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_060.nc",
+      "filename": "T2M_tile_060.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_061.nc",
+      "filename": "T2M_tile_061.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_062.nc",
+      "filename": "T2M_tile_062.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_063.nc",
+      "filename": "T2M_tile_063.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\T2M_tile_064.nc",
+      "filename": "T2M_tile_064.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_001.nc",
+      "filename": "WS10M_tile_001.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_002.nc",
+      "filename": "WS10M_tile_002.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_003.nc",
+      "filename": "WS10M_tile_003.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_004.nc",
+      "filename": "WS10M_tile_004.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_005.nc",
+      "filename": "WS10M_tile_005.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_006.nc",
+      "filename": "WS10M_tile_006.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_007.nc",
+      "filename": "WS10M_tile_007.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_008.nc",
+      "filename": "WS10M_tile_008.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_009.nc",
+      "filename": "WS10M_tile_009.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_010.nc",
+      "filename": "WS10M_tile_010.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_011.nc",
+      "filename": "WS10M_tile_011.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_012.nc",
+      "filename": "WS10M_tile_012.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_013.nc",
+      "filename": "WS10M_tile_013.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_014.nc",
+      "filename": "WS10M_tile_014.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_015.nc",
+      "filename": "WS10M_tile_015.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_016.nc",
+      "filename": "WS10M_tile_016.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_017.nc",
+      "filename": "WS10M_tile_017.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_018.nc",
+      "filename": "WS10M_tile_018.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_019.nc",
+      "filename": "WS10M_tile_019.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_020.nc",
+      "filename": "WS10M_tile_020.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_021.nc",
+      "filename": "WS10M_tile_021.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_022.nc",
+      "filename": "WS10M_tile_022.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_023.nc",
+      "filename": "WS10M_tile_023.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_024.nc",
+      "filename": "WS10M_tile_024.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_025.nc",
+      "filename": "WS10M_tile_025.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_026.nc",
+      "filename": "WS10M_tile_026.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_027.nc",
+      "filename": "WS10M_tile_027.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_028.nc",
+      "filename": "WS10M_tile_028.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_029.nc",
+      "filename": "WS10M_tile_029.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_030.nc",
+      "filename": "WS10M_tile_030.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_031.nc",
+      "filename": "WS10M_tile_031.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_032.nc",
+      "filename": "WS10M_tile_032.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_033.nc",
+      "filename": "WS10M_tile_033.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_034.nc",
+      "filename": "WS10M_tile_034.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_035.nc",
+      "filename": "WS10M_tile_035.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_036.nc",
+      "filename": "WS10M_tile_036.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_037.nc",
+      "filename": "WS10M_tile_037.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_038.nc",
+      "filename": "WS10M_tile_038.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_039.nc",
+      "filename": "WS10M_tile_039.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_040.nc",
+      "filename": "WS10M_tile_040.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_041.nc",
+      "filename": "WS10M_tile_041.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_042.nc",
+      "filename": "WS10M_tile_042.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_043.nc",
+      "filename": "WS10M_tile_043.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_044.nc",
+      "filename": "WS10M_tile_044.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_045.nc",
+      "filename": "WS10M_tile_045.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_046.nc",
+      "filename": "WS10M_tile_046.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_047.nc",
+      "filename": "WS10M_tile_047.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_048.nc",
+      "filename": "WS10M_tile_048.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_049.nc",
+      "filename": "WS10M_tile_049.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_050.nc",
+      "filename": "WS10M_tile_050.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_051.nc",
+      "filename": "WS10M_tile_051.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_052.nc",
+      "filename": "WS10M_tile_052.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_053.nc",
+      "filename": "WS10M_tile_053.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_054.nc",
+      "filename": "WS10M_tile_054.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_055.nc",
+      "filename": "WS10M_tile_055.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_056.nc",
+      "filename": "WS10M_tile_056.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_057.nc",
+      "filename": "WS10M_tile_057.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_058.nc",
+      "filename": "WS10M_tile_058.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_059.nc",
+      "filename": "WS10M_tile_059.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_060.nc",
+      "filename": "WS10M_tile_060.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_061.nc",
+      "filename": "WS10M_tile_061.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_062.nc",
+      "filename": "WS10M_tile_062.nc",
+      "extension": ".nc",
+      "size_bytes": 85223,
+      "size_mb": 0.0813,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_063.nc",
+      "filename": "WS10M_tile_063.nc",
+      "extension": ".nc",
+      "size_bytes": 75855,
+      "size_mb": 0.0723,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\raw\\nasa_power\\tiles\\WS10M_tile_064.nc",
+      "filename": "WS10M_tile_064.nc",
+      "extension": ".nc",
+      "size_bytes": 47751,
+      "size_mb": 0.0455,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\raw\\nasa_power\\tiles"
+    },
+    {
+      "relative_path": "data\\interim\\nasa_power_monthly_2015_2024\\PRECTOTCORR_monthly_2015_2024.nc",
+      "filename": "PRECTOTCORR_monthly_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1672665,
+      "size_mb": 1.5952,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\interim\\nasa_power_monthly_2015_2024"
+    },
+    {
+      "relative_path": "data\\interim\\nasa_power_monthly_2015_2024\\RH2M_monthly_2015_2024.nc",
+      "filename": "RH2M_monthly_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1729016,
+      "size_mb": 1.6489,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\interim\\nasa_power_monthly_2015_2024"
+    },
+    {
+      "relative_path": "data\\interim\\nasa_power_monthly_2015_2024\\T2M_monthly_2015_2024.nc",
+      "filename": "T2M_monthly_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1702404,
+      "size_mb": 1.6235,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\interim\\nasa_power_monthly_2015_2024"
+    },
+    {
+      "relative_path": "data\\interim\\nasa_power_monthly_2015_2024\\WS10M_monthly_2015_2024.nc",
+      "filename": "WS10M_monthly_2015_2024.nc",
+      "extension": ".nc",
+      "size_bytes": 1668396,
+      "size_mb": 1.5911,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\interim\\nasa_power_monthly_2015_2024"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_2r_2024_india_bbox_candidates.csv",
+      "filename": "oco2_v11_2r_2024_india_bbox_candidates.csv",
+      "extension": ".csv",
+      "size_bytes": 37504,
+      "size_mb": 0.0358,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_2r_clean_2015_2024.csv",
+      "filename": "oco2_v11_2r_clean_2015_2024.csv",
+      "extension": ".csv",
+      "size_bytes": 16486344,
+      "size_mb": 15.7226,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_2r_clean_yearly_summary.csv",
+      "filename": "oco2_v11_2r_clean_yearly_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 952,
+      "size_mb": 0.0009,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_2r_granules_2015_2024.csv",
+      "filename": "oco2_v11_2r_granules_2015_2024.csv",
+      "extension": ".csv",
+      "size_bytes": 15987008,
+      "size_mb": 15.2464,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_2r_retrieval_audit_2015_2024.csv",
+      "filename": "oco2_v11_2r_retrieval_audit_2015_2024.csv",
+      "extension": ".csv",
+      "size_bytes": 238,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_3r_complete_granules.csv",
+      "filename": "oco2_v11_3r_complete_granules.csv",
+      "extension": ".csv",
+      "size_bytes": 157098,
+      "size_mb": 0.1498,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_3r_temporal_comparison.csv",
+      "filename": "oco2_v11_3r_temporal_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 178,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_v11_3r_yearly_coverage.csv",
+      "filename": "oco2_v11_3r_yearly_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 50,
+      "size_mb": 0.0,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\oco2_cmr_catalogue\\oco2_version_temporal_coverage_2014_2026.csv",
+      "filename": "oco2_version_temporal_coverage_2014_2026.csv",
+      "extension": ".csv",
+      "size_bytes": 193,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\interim\\oco2_cmr_catalogue"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_catalogue_all.csv",
+      "filename": "sentinel5p_ch4_catalogue_all.csv",
+      "extension": ".csv",
+      "size_bytes": 3489235,
+      "size_mb": 3.3276,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_catalogue_all.json",
+      "filename": "sentinel5p_ch4_catalogue_all.json",
+      "extension": ".json",
+      "size_bytes": 270161112,
+      "size_mb": 257.6457,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_catalogue_india.csv",
+      "filename": "sentinel5p_ch4_catalogue_india.csv",
+      "extension": ".csv",
+      "size_bytes": 582602,
+      "size_mb": 0.5556,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_catalogue_india.json",
+      "filename": "sentinel5p_ch4_catalogue_india.json",
+      "extension": ".json",
+      "size_bytes": 43426827,
+      "size_mb": 41.415,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_dominant_baseline_by_stratum.csv",
+      "filename": "sentinel5p_ch4_dominant_baseline_by_stratum.csv",
+      "extension": ".csv",
+      "size_bytes": 1163,
+      "size_mb": 0.0011,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_dominant_baseline_regional_candidates.csv",
+      "filename": "sentinel5p_ch4_dominant_baseline_regional_candidates.csv",
+      "extension": ".csv",
+      "size_bytes": 1105,
+      "size_mb": 0.0011,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_all_streams.csv",
+      "filename": "sentinel5p_ch4_india_all_streams.csv",
+      "extension": ".csv",
+      "size_bytes": 1356017,
+      "size_mb": 1.2932,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_all_streams.json",
+      "filename": "sentinel5p_ch4_india_all_streams.json",
+      "extension": ".json",
+      "size_bytes": 125268587,
+      "size_mb": 119.4654,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_area_weighted_geographic_inventory.csv",
+      "filename": "sentinel5p_ch4_india_area_weighted_geographic_inventory.csv",
+      "extension": ".csv",
+      "size_bytes": 1669189,
+      "size_mb": 1.5919,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_area_weighted_season_region.csv",
+      "filename": "sentinel5p_ch4_india_area_weighted_season_region.csv",
+      "extension": ".csv",
+      "size_bytes": 195,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_area_weighted_year_region.csv",
+      "filename": "sentinel5p_ch4_india_area_weighted_year_region.csv",
+      "extension": ".csv",
+      "size_bytes": 220,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_cross_stream_overlap_candidates.csv",
+      "filename": "sentinel5p_ch4_india_cross_stream_overlap_candidates.csv",
+      "extension": ".csv",
+      "size_bytes": 62,
+      "size_mb": 0.0001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_geographic_footprint_inventory.csv",
+      "filename": "sentinel5p_ch4_india_geographic_footprint_inventory.csv",
+      "extension": ".csv",
+      "size_bytes": 1858440,
+      "size_mb": 1.7723,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_region_distribution.csv",
+      "filename": "sentinel5p_ch4_india_region_distribution.csv",
+      "extension": ".csv",
+      "size_bytes": 73,
+      "size_mb": 0.0001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_seasonal_stream_coverage.csv",
+      "filename": "sentinel5p_ch4_india_seasonal_stream_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 1571,
+      "size_mb": 0.0015,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_season_region_distribution.csv",
+      "filename": "sentinel5p_ch4_india_season_region_distribution.csv",
+      "extension": ".csv",
+      "size_bytes": 139,
+      "size_mb": 0.0001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_three_region_inventory.csv",
+      "filename": "sentinel5p_ch4_india_three_region_inventory.csv",
+      "extension": ".csv",
+      "size_bytes": 2002585,
+      "size_mb": 1.9098,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_three_region_year_coverage.csv",
+      "filename": "sentinel5p_ch4_india_three_region_year_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 313,
+      "size_mb": 0.0003,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_three_region_year_season.csv",
+      "filename": "sentinel5p_ch4_india_three_region_year_season.csv",
+      "extension": ".csv",
+      "size_bytes": 784,
+      "size_mb": 0.0007,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_yearly_seasonal_distribution.csv",
+      "filename": "sentinel5p_ch4_india_yearly_seasonal_distribution.csv",
+      "extension": ".csv",
+      "size_bytes": 545,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_yearly_stream_coverage.csv",
+      "filename": "sentinel5p_ch4_india_yearly_stream_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 505,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_yearly_stream_distribution.csv",
+      "filename": "sentinel5p_ch4_india_yearly_stream_distribution.csv",
+      "extension": ".csv",
+      "size_bytes": 93,
+      "size_mb": 0.0001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_yearly_total_coverage.csv",
+      "filename": "sentinel5p_ch4_india_yearly_total_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 218,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_india_year_region_distribution.csv",
+      "filename": "sentinel5p_ch4_india_year_region_distribution.csv",
+      "extension": ".csv",
+      "size_bytes": 160,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_pixel_quality_audit.csv",
+      "filename": "sentinel5p_ch4_pixel_quality_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 4681,
+      "size_mb": 0.0045,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_seasonal_coverage.csv",
+      "filename": "sentinel5p_ch4_seasonal_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 474,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_selected_48_granules_audit.csv",
+      "filename": "sentinel5p_ch4_selected_48_granules_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 4230,
+      "size_mb": 0.004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_selected_48_granules_proposal.csv",
+      "filename": "sentinel5p_ch4_selected_48_granules_proposal.csv",
+      "extension": ".csv",
+      "size_bytes": 24936,
+      "size_mb": 0.0238,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_yearly_coverage.csv",
+      "filename": "sentinel5p_ch4_yearly_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 169,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_year_season_baseline_counts.csv",
+      "filename": "sentinel5p_ch4_year_season_baseline_counts.csv",
+      "extension": ".csv",
+      "size_bytes": 1312,
+      "size_mb": 0.0013,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_year_season_region_sampling_availability.csv",
+      "filename": "sentinel5p_ch4_year_season_region_sampling_availability.csv",
+      "extension": ".csv",
+      "size_bytes": 1104,
+      "size_mb": 0.0011,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_catalogue_2019_2024"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_2degree_coverage_2019_monsoon_3_granules.csv",
+      "filename": "ch4_2degree_coverage_2019_monsoon_3_granules.csv",
+      "extension": ".csv",
+      "size_bytes": 2604,
+      "size_mb": 0.0025,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_accepted_pixels_2019_monsoon.csv",
+      "filename": "ch4_accepted_pixels_2019_monsoon.csv",
+      "extension": ".csv",
+      "size_bytes": 37863,
+      "size_mb": 0.0361,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_accepted_pixels_2019_monsoon_3_granules.csv",
+      "filename": "ch4_accepted_pixels_2019_monsoon_3_granules.csv",
+      "extension": ".csv",
+      "size_bytes": 70129,
+      "size_mb": 0.0669,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell112_final_evidence_register.csv",
+      "filename": "ch4_cell112_final_evidence_register.csv",
+      "extension": ".csv",
+      "size_bytes": 5140,
+      "size_mb": 0.0049,
+      "dataset_candidates": [
+        "SENTINEL_5P",
+        "MODIS"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell112_scientific_limitations.txt",
+      "filename": "ch4_cell112_scientific_limitations.txt",
+      "extension": ".txt",
+      "size_bytes": 1213,
+      "size_mb": 0.0012,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell113_final_investigation_report.md",
+      "filename": "ch4_cell113_final_investigation_report.md",
+      "extension": ".md",
+      "size_bytes": 9930,
+      "size_mb": 0.0095,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell115_numerical_audit.csv",
+      "filename": "ch4_cell115_numerical_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 503,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell116_audited_final_report.md",
+      "filename": "ch4_cell116_audited_final_report.md",
+      "extension": ".md",
+      "size_bytes": 13445,
+      "size_mb": 0.0128,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell117_artifact_inventory.csv",
+      "filename": "ch4_cell117_artifact_inventory.csv",
+      "extension": ".csv",
+      "size_bytes": 17627,
+      "size_mb": 0.0168,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell117_inventory_summary.txt",
+      "filename": "ch4_cell117_inventory_summary.txt",
+      "extension": ".txt",
+      "size_bytes": 2354,
+      "size_mb": 0.0022,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell100_final_summary.csv",
+      "filename": "ch4_cell_34_78_cell100_final_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 203,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell100_full_sample_ranking.csv",
+      "filename": "ch4_cell_34_78_cell100_full_sample_ranking.csv",
+      "extension": ".csv",
+      "size_bytes": 488,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell100_leave_observation_out.csv",
+      "filename": "ch4_cell_34_78_cell100_leave_observation_out.csv",
+      "extension": ".csv",
+      "size_bytes": 23400,
+      "size_mb": 0.0223,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell100_leave_one_pair_winners.csv",
+      "filename": "ch4_cell_34_78_cell100_leave_one_pair_winners.csv",
+      "extension": ".csv",
+      "size_bytes": 2040,
+      "size_mb": 0.0019,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell100_leave_quadrant_out.csv",
+      "filename": "ch4_cell_34_78_cell100_leave_quadrant_out.csv",
+      "extension": ".csv",
+      "size_bytes": 2020,
+      "size_mb": 0.0019,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell100_quadrant_winner_stability.csv",
+      "filename": "ch4_cell_34_78_cell100_quadrant_winner_stability.csv",
+      "extension": ".csv",
+      "size_bytes": 190,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell100_rank_stability.csv",
+      "filename": "ch4_cell_34_78_cell100_rank_stability.csv",
+      "extension": ".csv",
+      "size_bytes": 465,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell101_bias_classification.csv",
+      "filename": "ch4_cell_34_78_cell101_bias_classification.csv",
+      "extension": ".csv",
+      "size_bytes": 847,
+      "size_mb": 0.0008,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell101_equal_weight_bias.csv",
+      "filename": "ch4_cell_34_78_cell101_equal_weight_bias.csv",
+      "extension": ".csv",
+      "size_bytes": 549,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell101_largest_solar_errors.csv",
+      "filename": "ch4_cell_34_78_cell101_largest_solar_errors.csv",
+      "extension": ".csv",
+      "size_bytes": 1146,
+      "size_mb": 0.0011,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell101_overall_residual_summary.csv",
+      "filename": "ch4_cell_34_78_cell101_overall_residual_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 1226,
+      "size_mb": 0.0012,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell101_quadrant_residual_summary.csv",
+      "filename": "ch4_cell_34_78_cell101_quadrant_residual_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 2640,
+      "size_mb": 0.0025,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell101_solar_vs_baseline_residuals.csv",
+      "filename": "ch4_cell_34_78_cell101_solar_vs_baseline_residuals.csv",
+      "extension": ".csv",
+      "size_bytes": 6361,
+      "size_mb": 0.0061,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell102_overall_calibration.csv",
+      "filename": "ch4_cell_34_78_cell102_overall_calibration.csv",
+      "extension": ".csv",
+      "size_bytes": 1727,
+      "size_mb": 0.0016,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell102_quadrant_calibration.csv",
+      "filename": "ch4_cell_34_78_cell102_quadrant_calibration.csv",
+      "extension": ".csv",
+      "size_bytes": 3498,
+      "size_mb": 0.0033,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell102_rank_group_errors.csv",
+      "filename": "ch4_cell_34_78_cell102_rank_group_errors.csv",
+      "extension": ".csv",
+      "size_bytes": 4646,
+      "size_mb": 0.0044,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell102_residual_trend.csv",
+      "filename": "ch4_cell_34_78_cell102_residual_trend.csv",
+      "extension": ".csv",
+      "size_bytes": 949,
+      "size_mb": 0.0009,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell102_solar_calibration_groups.csv",
+      "filename": "ch4_cell_34_78_cell102_solar_calibration_groups.csv",
+      "extension": ".csv",
+      "size_bytes": 816,
+      "size_mb": 0.0008,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell103_calibration_folds.csv",
+      "filename": "ch4_cell_34_78_cell103_calibration_folds.csv",
+      "extension": ".csv",
+      "size_bytes": 4077,
+      "size_mb": 0.0039,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell103_cross_fitted_predictions.csv",
+      "filename": "ch4_cell_34_78_cell103_cross_fitted_predictions.csv",
+      "extension": ".csv",
+      "size_bytes": 71402,
+      "size_mb": 0.0681,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell103_equal_weight_comparison.csv",
+      "filename": "ch4_cell_34_78_cell103_equal_weight_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 1171,
+      "size_mb": 0.0011,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell103_overall_comparison.csv",
+      "filename": "ch4_cell_34_78_cell103_overall_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 1863,
+      "size_mb": 0.0018,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell103_quadrant_comparison.csv",
+      "filename": "ch4_cell_34_78_cell103_quadrant_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 4608,
+      "size_mb": 0.0044,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell103_winner_summary.csv",
+      "filename": "ch4_cell_34_78_cell103_winner_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 166,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell104_coefficient_stability.csv",
+      "filename": "ch4_cell_34_78_cell104_coefficient_stability.csv",
+      "extension": ".csv",
+      "size_bytes": 2066,
+      "size_mb": 0.002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell104_range_transfer_folds.csv",
+      "filename": "ch4_cell_34_78_cell104_range_transfer_folds.csv",
+      "extension": ".csv",
+      "size_bytes": 6486,
+      "size_mb": 0.0062,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell105_calibration_impact.csv",
+      "filename": "ch4_cell_34_78_cell105_calibration_impact.csv",
+      "extension": ".csv",
+      "size_bytes": 1372,
+      "size_mb": 0.0013,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell105_final_model_ranking.csv",
+      "filename": "ch4_cell_34_78_cell105_final_model_ranking.csv",
+      "extension": ".csv",
+      "size_bytes": 2103,
+      "size_mb": 0.002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell105_raw_pooled_ranking.csv",
+      "filename": "ch4_cell_34_78_cell105_raw_pooled_ranking.csv",
+      "extension": ".csv",
+      "size_bytes": 677,
+      "size_mb": 0.0006,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell105_spatial_consistency.csv",
+      "filename": "ch4_cell_34_78_cell105_spatial_consistency.csv",
+      "extension": ".csv",
+      "size_bytes": 1463,
+      "size_mb": 0.0014,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell106_geometry_CH4_associations.csv",
+      "filename": "ch4_cell_34_78_cell106_geometry_CH4_associations.csv",
+      "extension": ".csv",
+      "size_bytes": 442,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell106_geometry_latitude_summary.csv",
+      "filename": "ch4_cell_34_78_cell106_geometry_latitude_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 644,
+      "size_mb": 0.0006,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell106_geometry_summary.csv",
+      "filename": "ch4_cell_34_78_cell106_geometry_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 885,
+      "size_mb": 0.0008,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell107_loo_robustness_details.csv",
+      "filename": "ch4_cell_34_78_cell107_loo_robustness_details.csv",
+      "extension": ".csv",
+      "size_bytes": 55204,
+      "size_mb": 0.0526,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell107_loo_robustness_summary.csv",
+      "filename": "ch4_cell_34_78_cell107_loo_robustness_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 1796,
+      "size_mb": 0.0017,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell108_geometry_interdependence.csv",
+      "filename": "ch4_cell_34_78_cell108_geometry_interdependence.csv",
+      "extension": ".csv",
+      "size_bytes": 1100,
+      "size_mb": 0.001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell108_methane_association_comparison.csv",
+      "filename": "ch4_cell_34_78_cell108_methane_association_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 409,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell108_spearman_matrix.csv",
+      "filename": "ch4_cell_34_78_cell108_spearman_matrix.csv",
+      "extension": ".csv",
+      "size_bytes": 1235,
+      "size_mb": 0.0012,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell109_reduced_geometry_model_comparison.csv",
+      "filename": "ch4_cell_34_78_cell109_reduced_geometry_model_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 2442,
+      "size_mb": 0.0023,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell110_fold_slopes.csv",
+      "filename": "ch4_cell_34_78_cell110_fold_slopes.csv",
+      "extension": ".csv",
+      "size_bytes": 2050,
+      "size_mb": 0.002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell110_loocv_predictions.csv",
+      "filename": "ch4_cell_34_78_cell110_loocv_predictions.csv",
+      "extension": ".csv",
+      "size_bytes": 9116,
+      "size_mb": 0.0087,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell110_quadrant_performance.csv",
+      "filename": "ch4_cell_34_78_cell110_quadrant_performance.csv",
+      "extension": ".csv",
+      "size_bytes": 510,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell111_leave_one_quadrant_out_predictions.csv",
+      "filename": "ch4_cell_34_78_cell111_leave_one_quadrant_out_predictions.csv",
+      "extension": ".csv",
+      "size_bytes": 6538,
+      "size_mb": 0.0062,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell111_leave_one_quadrant_out_summary.csv",
+      "filename": "ch4_cell_34_78_cell111_leave_one_quadrant_out_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 755,
+      "size_mb": 0.0007,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell97_final_audit.csv",
+      "filename": "ch4_cell_34_78_cell97_final_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 202,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell97_fold_reconstruction.csv",
+      "filename": "ch4_cell_34_78_cell97_fold_reconstruction.csv",
+      "extension": ".csv",
+      "size_bytes": 4623,
+      "size_mb": 0.0044,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell97_fold_size_audit.csv",
+      "filename": "ch4_cell_34_78_cell97_fold_size_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 207,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell97_observation_coverage.csv",
+      "filename": "ch4_cell_34_78_cell97_observation_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 818,
+      "size_mb": 0.0008,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell97_pairing_consistency.csv",
+      "filename": "ch4_cell_34_78_cell97_pairing_consistency.csv",
+      "extension": ".csv",
+      "size_bytes": 906,
+      "size_mb": 0.0009,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell98_positional_alignment.csv",
+      "filename": "ch4_cell_34_78_cell98_positional_alignment.csv",
+      "extension": ".csv",
+      "size_bytes": 2906,
+      "size_mb": 0.0028,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell98_repeated_ranks.csv",
+      "filename": "ch4_cell_34_78_cell98_repeated_ranks.csv",
+      "extension": ".csv",
+      "size_bytes": 3146,
+      "size_mb": 0.003,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell98_sequence_audit.csv",
+      "filename": "ch4_cell_34_78_cell98_sequence_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 899,
+      "size_mb": 0.0009,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell99_equal_weight_paired_comparison.csv",
+      "filename": "ch4_cell_34_78_cell99_equal_weight_paired_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 531,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell99_key_geometry_direct_comparison.csv",
+      "filename": "ch4_cell_34_78_cell99_key_geometry_direct_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 385,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell99_paired_error_details.csv",
+      "filename": "ch4_cell_34_78_cell99_paired_error_details.csv",
+      "extension": ".csv",
+      "size_bytes": 54595,
+      "size_mb": 0.0521,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell99_paired_model_by_quadrant.csv",
+      "filename": "ch4_cell_34_78_cell99_paired_model_by_quadrant.csv",
+      "extension": ".csv",
+      "size_bytes": 1765,
+      "size_mb": 0.0017,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_cell99_paired_model_overall.csv",
+      "filename": "ch4_cell_34_78_cell99_paired_model_overall.csv",
+      "extension": ".csv",
+      "size_bytes": 1056,
+      "size_mb": 0.001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_geometry_methane_correlations.csv",
+      "filename": "ch4_cell_34_78_geometry_methane_correlations.csv",
+      "extension": ".csv",
+      "size_bytes": 1437,
+      "size_mb": 0.0014,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_intercept_benchmark_by_quadrant.csv",
+      "filename": "ch4_cell_34_78_intercept_benchmark_by_quadrant.csv",
+      "extension": ".csv",
+      "size_bytes": 3294,
+      "size_mb": 0.0031,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_intercept_benchmark_equal_quadrants.csv",
+      "filename": "ch4_cell_34_78_intercept_benchmark_equal_quadrants.csv",
+      "extension": ".csv",
+      "size_bytes": 691,
+      "size_mb": 0.0007,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_intercept_benchmark_improvements.csv",
+      "filename": "ch4_cell_34_78_intercept_benchmark_improvements.csv",
+      "extension": ".csv",
+      "size_bytes": 862,
+      "size_mb": 0.0008,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_intercept_benchmark_pooled.csv",
+      "filename": "ch4_cell_34_78_intercept_benchmark_pooled.csv",
+      "extension": ".csv",
+      "size_bytes": 516,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_latitude_band_summary.csv",
+      "filename": "ch4_cell_34_78_latitude_band_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 368,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_matches_with_actual_geometry_angles.csv",
+      "filename": "ch4_cell_34_78_matches_with_actual_geometry_angles.csv",
+      "extension": ".csv",
+      "size_bytes": 28925,
+      "size_mb": 0.0276,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_matches_with_source_metadata.csv",
+      "filename": "ch4_cell_34_78_matches_with_source_metadata.csv",
+      "extension": ".csv",
+      "size_bytes": 18710,
+      "size_mb": 0.0178,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_matches_with_verified_pixel_metadata.csv",
+      "filename": "ch4_cell_34_78_matches_with_verified_pixel_metadata.csv",
+      "extension": ".csv",
+      "size_bytes": 14109,
+      "size_mb": 0.0135,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_multicollinearity_audit.csv",
+      "filename": "ch4_cell_34_78_multicollinearity_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 592,
+      "size_mb": 0.0006,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_mutual_pixel_matches.csv",
+      "filename": "ch4_cell_34_78_mutual_pixel_matches.csv",
+      "extension": ".csv",
+      "size_bytes": 9162,
+      "size_mb": 0.0087,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_parsimonious_model_comparison.csv",
+      "filename": "ch4_cell_34_78_parsimonious_model_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 1636,
+      "size_mb": 0.0016,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_pixels_2019-09-08.csv",
+      "filename": "ch4_cell_34_78_pixels_2019-09-08.csv",
+      "extension": ".csv",
+      "size_bytes": 5747,
+      "size_mb": 0.0055,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_pixels_2019-09-09.csv",
+      "filename": "ch4_cell_34_78_pixels_2019-09-09.csv",
+      "extension": ".csv",
+      "size_bytes": 7684,
+      "size_mb": 0.0073,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_precision_comparison.csv",
+      "filename": "ch4_cell_34_78_precision_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 11778,
+      "size_mb": 0.0112,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_quadrant_equal_weight_summary.csv",
+      "filename": "ch4_cell_34_78_quadrant_equal_weight_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 1071,
+      "size_mb": 0.001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_quadrant_model_rank_stability.csv",
+      "filename": "ch4_cell_34_78_quadrant_model_rank_stability.csv",
+      "extension": ".csv",
+      "size_bytes": 244,
+      "size_mb": 0.0002,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_quadrant_model_winners.csv",
+      "filename": "ch4_cell_34_78_quadrant_model_winners.csv",
+      "extension": ".csv",
+      "size_bytes": 310,
+      "size_mb": 0.0003,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_quadrant_summary.csv",
+      "filename": "ch4_cell_34_78_quadrant_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 415,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_scan_geometry_summary.csv",
+      "filename": "ch4_cell_34_78_scan_geometry_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 354,
+      "size_mb": 0.0003,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_solar_vs_baseline_quadrants.csv",
+      "filename": "ch4_cell_34_78_solar_vs_baseline_quadrants.csv",
+      "extension": ".csv",
+      "size_bytes": 825,
+      "size_mb": 0.0008,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_spatially_adjusted_geometry_audit.csv",
+      "filename": "ch4_cell_34_78_spatially_adjusted_geometry_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 968,
+      "size_mb": 0.0009,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_spatial_blocked_fold_results.csv",
+      "filename": "ch4_cell_34_78_spatial_blocked_fold_results.csv",
+      "extension": ".csv",
+      "size_bytes": 1854,
+      "size_mb": 0.0018,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_spatial_blocked_model_summary.csv",
+      "filename": "ch4_cell_34_78_spatial_blocked_model_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 457,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_spatial_blocked_predictions.csv",
+      "filename": "ch4_cell_34_78_spatial_blocked_predictions.csv",
+      "extension": ".csv",
+      "size_bytes": 32860,
+      "size_mb": 0.0313,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_spatial_difference_analysis.csv",
+      "filename": "ch4_cell_34_78_spatial_difference_analysis.csv",
+      "extension": ".csv",
+      "size_bytes": 14021,
+      "size_mb": 0.0134,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_spatial_predictions_with_positional_keys.csv",
+      "filename": "ch4_cell_34_78_spatial_predictions_with_positional_keys.csv",
+      "extension": ".csv",
+      "size_bytes": 35070,
+      "size_mb": 0.0334,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_cell_34_78_spatial_robustness_report.csv",
+      "filename": "ch4_cell_34_78_spatial_robustness_report.csv",
+      "extension": ".csv",
+      "size_bytes": 331,
+      "size_mb": 0.0003,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_daily_2degree_grid_2019_monsoon.csv",
+      "filename": "ch4_daily_2degree_grid_2019_monsoon.csv",
+      "extension": ".csv",
+      "size_bytes": 2183,
+      "size_mb": 0.0021,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_daily_grid_statistics_3_granules.csv",
+      "filename": "ch4_daily_grid_statistics_3_granules.csv",
+      "extension": ".csv",
+      "size_bytes": 3810,
+      "size_mb": 0.0036,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_repeated_cell_daily_quality_diagnostics.csv",
+      "filename": "ch4_repeated_cell_daily_quality_diagnostics.csv",
+      "extension": ".csv",
+      "size_bytes": 5481,
+      "size_mb": 0.0052,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_repeated_cell_differences_3_granules.csv",
+      "filename": "ch4_repeated_cell_differences_3_granules.csv",
+      "extension": ".csv",
+      "size_bytes": 1468,
+      "size_mb": 0.0014,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_repeated_cell_difference_summary_3_granules.csv",
+      "filename": "ch4_repeated_cell_difference_summary_3_granules.csv",
+      "extension": ".csv",
+      "size_bytes": 384,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_repeated_cell_quality_ranking.csv",
+      "filename": "ch4_repeated_cell_quality_ranking.csv",
+      "extension": ".csv",
+      "size_bytes": 2193,
+      "size_mb": 0.0021,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_repeated_cell_robustness_comparison.csv",
+      "filename": "ch4_repeated_cell_robustness_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 3967,
+      "size_mb": 0.0038,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\interim\\sentinel5p_ch4_coverage\\ch4_repeat_observation_coverage_2019_monsoon.csv",
+      "filename": "ch4_repeat_observation_coverage_2019_monsoon.csv",
+      "extension": ".csv",
+      "size_bytes": 1538,
+      "size_mb": 0.0015,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\interim\\sentinel5p_ch4_coverage"
+    },
+    {
+      "relative_path": "data\\processed\\multisource_file_inventory.csv",
+      "filename": "multisource_file_inventory.csv",
+      "extension": ".csv",
+      "size_bytes": 477,
+      "size_mb": 0.0005,
+      "dataset_candidates": [
+        "UNCLASSIFIED"
+      ],
+      "parent_directory": "data\\processed"
+    },
+    {
+      "relative_path": "data\\processed\\nasa_power_grid_2deg.parquet",
+      "filename": "nasa_power_grid_2deg.parquet",
+      "extension": ".parquet",
+      "size_bytes": 601161,
+      "size_mb": 0.5733,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\processed"
+    },
+    {
+      "relative_path": "data\\processed\\nasa_power_merged.parquet",
+      "filename": "nasa_power_merged.parquet",
+      "extension": ".parquet",
+      "size_bytes": 2373763,
+      "size_mb": 2.2638,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\processed"
+    },
+    {
+      "relative_path": "data\\processed\\nasa_power_tensor.npy",
+      "filename": "nasa_power_tensor.npy",
+      "extension": ".npy",
+      "size_bytes": 489728,
+      "size_mb": 0.467,
+      "dataset_candidates": [
+        "NASA_POWER"
+      ],
+      "parent_directory": "data\\processed"
+    },
+    {
+      "relative_path": "data\\processed\\spatial_nodes.csv",
+      "filename": "spatial_nodes.csv",
+      "extension": ".csv",
+      "size_bytes": 4023,
+      "size_mb": 0.0038,
+      "dataset_candidates": [
+        "UNCLASSIFIED"
+      ],
+      "parent_directory": "data\\processed"
+    },
+    {
+      "relative_path": "data\\processed\\tensor_metadata.json",
+      "filename": "tensor_metadata.json",
+      "extension": ".json",
+      "size_bytes": 467,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "UNCLASSIFIED"
+      ],
+      "parent_directory": "data\\processed"
+    },
+    {
+      "relative_path": "data\\processed\\tensor_time_index.npy",
+      "filename": "tensor_time_index.npy",
+      "extension": ".npy",
+      "size_bytes": 1088,
+      "size_mb": 0.001,
+      "dataset_candidates": [
+        "UNCLASSIFIED"
+      ],
+      "parent_directory": "data\\processed"
+    },
+    {
+      "relative_path": "data\\processed\\oco2_india_sample\\oco2_sample_india_all_quality.csv",
+      "filename": "oco2_sample_india_all_quality.csv",
+      "extension": ".csv",
+      "size_bytes": 55408,
+      "size_mb": 0.0528,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\processed\\oco2_india_sample"
+    },
+    {
+      "relative_path": "data\\processed\\oco2_india_sample\\oco2_sample_india_all_quality.parquet",
+      "filename": "oco2_sample_india_all_quality.parquet",
+      "extension": ".parquet",
+      "size_bytes": 18660,
+      "size_mb": 0.0178,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\processed\\oco2_india_sample"
+    },
+    {
+      "relative_path": "data\\processed\\oco2_india_sample\\oco2_sample_india_quality0.csv",
+      "filename": "oco2_sample_india_quality0.csv",
+      "extension": ".csv",
+      "size_bytes": 36937,
+      "size_mb": 0.0352,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\processed\\oco2_india_sample"
+    },
+    {
+      "relative_path": "data\\processed\\oco2_india_sample\\oco2_sample_india_quality0.parquet",
+      "filename": "oco2_sample_india_quality0.parquet",
+      "extension": ".parquet",
+      "size_bytes": 15002,
+      "size_mb": 0.0143,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\processed\\oco2_india_sample"
+    },
+    {
+      "relative_path": "data\\processed\\oco2_india_sample\\oco2_sample_india_quality0_2deg_coverage.csv",
+      "filename": "oco2_sample_india_quality0_2deg_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 64,
+      "size_mb": 0.0001,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\processed\\oco2_india_sample"
+    },
+    {
+      "relative_path": "data\\processed\\oco2_india_sample\\oco2_sample_india_quality0_daily_coverage.csv",
+      "filename": "oco2_sample_india_quality0_daily_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 47,
+      "size_mb": 0.0,
+      "dataset_candidates": [
+        "OCO2"
+      ],
+      "parent_directory": "data\\processed\\oco2_india_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_pilot\\pilot_2019_monsoon_20190908_india_high_quality_pixels.csv",
+      "filename": "pilot_2019_monsoon_20190908_india_high_quality_pixels.csv",
+      "extension": ".csv",
+      "size_bytes": 24379,
+      "size_mb": 0.0232,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_pilot"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_pilot\\pilot_2019_monsoon_20190909_orbit9873_india_high_quality_pixels.csv",
+      "filename": "pilot_2019_monsoon_20190909_orbit9873_india_high_quality_pixels.csv",
+      "extension": ".csv",
+      "size_bytes": 22669,
+      "size_mb": 0.0216,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_pilot"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_pilot\\pilot_2019_monsoon_20190910_orbit9888_india_high_quality_pixels.csv",
+      "filename": "pilot_2019_monsoon_20190910_orbit9888_india_high_quality_pixels.csv",
+      "extension": ".csv",
+      "size_bytes": 7430,
+      "size_mb": 0.0071,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_pilot"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_pilot\\pilot_2019_monsoon_20190926_india_high_quality_pixels.csv",
+      "filename": "pilot_2019_monsoon_20190926_india_high_quality_pixels.csv",
+      "extension": ".csv",
+      "size_bytes": 67,
+      "size_mb": 0.0001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_pilot"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_pilot\\pilot_2019_monsoon_india_high_quality_pixels.csv",
+      "filename": "pilot_2019_monsoon_india_high_quality_pixels.csv",
+      "extension": ".csv",
+      "size_bytes": 67,
+      "size_mb": 0.0001,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_pilot"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_pilot\\sentinel5p_ch4_2019_monsoon_two_granule_comparison.csv",
+      "filename": "sentinel5p_ch4_2019_monsoon_two_granule_comparison.csv",
+      "extension": ".csv",
+      "size_bytes": 444,
+      "size_mb": 0.0004,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_pilot"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_pilot\\sentinel5p_ch4_2019_monsoon_two_granule_pilot.csv",
+      "filename": "sentinel5p_ch4_2019_monsoon_two_granule_pilot.csv",
+      "extension": ".csv",
+      "size_bytes": 41880,
+      "size_mb": 0.0399,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_pilot"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\copernicus_metadata_record_summary.csv",
+      "filename": "copernicus_metadata_record_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 698,
+      "size_mb": 0.0007,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_2deg_grid.csv",
+      "filename": "sentinel5p_ch4_india_2deg_grid.csv",
+      "extension": ".csv",
+      "size_bytes": 5179,
+      "size_mb": 0.0049,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_bbox_pixels.csv",
+      "filename": "sentinel5p_ch4_india_bbox_pixels.csv",
+      "extension": ".csv",
+      "size_bytes": 6720024,
+      "size_mb": 6.4087,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_bbox_pixels.parquet",
+      "filename": "sentinel5p_ch4_india_bbox_pixels.parquet",
+      "extension": ".parquet",
+      "size_bytes": 1385905,
+      "size_mb": 1.3217,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_high_quality.csv",
+      "filename": "sentinel5p_ch4_india_high_quality.csv",
+      "extension": ".csv",
+      "size_bytes": 310083,
+      "size_mb": 0.2957,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_pixel_grid_coverage.csv",
+      "filename": "sentinel5p_ch4_india_pixel_grid_coverage.csv",
+      "extension": ".csv",
+      "size_bytes": 1114,
+      "size_mb": 0.0011,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_polygon_2deg_grid.csv",
+      "filename": "sentinel5p_ch4_india_polygon_2deg_grid.csv",
+      "extension": ".csv",
+      "size_bytes": 1450,
+      "size_mb": 0.0014,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_polygon_high_quality.csv",
+      "filename": "sentinel5p_ch4_india_polygon_high_quality.csv",
+      "extension": ".csv",
+      "size_bytes": 79189,
+      "size_mb": 0.0755,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_polygon_map.png",
+      "filename": "sentinel5p_ch4_india_polygon_map.png",
+      "extension": ".png",
+      "size_bytes": 312485,
+      "size_mb": 0.298,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_sample_map.png",
+      "filename": "sentinel5p_ch4_india_sample_map.png",
+      "extension": ".png",
+      "size_bytes": 194690,
+      "size_mb": 0.1857,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_scanline_spatial_audit.csv",
+      "filename": "sentinel5p_ch4_india_scanline_spatial_audit.csv",
+      "extension": ".csv",
+      "size_bytes": 12743,
+      "size_mb": 0.0122,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_scanline_summary.csv",
+      "filename": "sentinel5p_ch4_india_scanline_summary.csv",
+      "extension": ".csv",
+      "size_bytes": 9351,
+      "size_mb": 0.0089,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_ch4_india_scanline_track.png",
+      "filename": "sentinel5p_ch4_india_scanline_track.png",
+      "extension": ".png",
+      "size_bytes": 466843,
+      "size_mb": 0.4452,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\processed\\sentinel5p_ch4_sample\\sentinel5p_multi_year_sampling_design.csv",
+      "filename": "sentinel5p_multi_year_sampling_design.csv",
+      "extension": ".csv",
+      "size_bytes": 1354,
+      "size_mb": 0.0013,
+      "dataset_candidates": [
+        "SENTINEL_5P"
+      ],
+      "parent_directory": "data\\processed\\sentinel5p_ch4_sample"
+    },
+    {
+      "relative_path": "data\\external\\india_boundary\\india_adm0.geojson",
+      "filename": "india_adm0.geojson",
+      "extension": ".geojson",
+      "size_bytes": 89560,
+      "size_mb": 0.0854,
+      "dataset_candidates": [
+        "UNCLASSIFIED"
+      ],
+      "parent_directory": "data\\external\\india_boundary"
+    },
+    {
+      "relative_path": "data\\external\\india_boundary\\india_adm0_metadata.json",
+      "filename": "india_adm0_metadata.json",
+      "extension": ".json",
+      "size_bytes": 1806,
+      "size_mb": 0.0017,
+      "dataset_candidates": [
+        "UNCLASSIFIED"
+      ],
+      "parent_directory": "data\\external\\india_boundary"
+    }
+  ]
+}

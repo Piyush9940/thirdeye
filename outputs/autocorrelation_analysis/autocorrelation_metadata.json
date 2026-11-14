@@ -1,0 +1,19 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "analysis": "Temporal autocorrelation diagnostics",
+    "historical_period": "2015-01 to 2024-12",
+    "spatial_nodes": 255,
+    "monthly_observations": 120,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "lags": {
+        "1": "Consecutive monthly observations",
+        "12": "Same calendar month across consecutive years"
+    },
+    "correlation_threshold": 0.2,
+    "important_limitation": "Pearson autocorrelation is a diagnostic. It does not itself correct Mann-Kendall significance. The p-values are unadjusted and should be interpreted descriptively."
+}

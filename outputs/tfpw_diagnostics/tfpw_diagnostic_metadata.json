@@ -1,0 +1,23 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "analysis": "Seasonal residual autocorrelation estimator comparison",
+    "period": "2015-01 to 2024-12",
+    "historical_shape": [
+        120,
+        255,
+        4
+    ],
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "annual_observations_per_calendar_month": 10,
+    "estimators": {
+        "uncentered": "Sum(previous * current) / Sum(previous squared)",
+        "centered": "Apply the same estimator after subtracting the residual-series mean"
+    },
+    "limitations": "Autocorrelation estimates use only ten annual observations per calendar month. They are noisy diagnostics and do not establish valid corrected Mann-Kendall inference."
+}

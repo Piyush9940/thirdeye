@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Reports Generator — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Earth Explorer</a></li>
+        <li class="nav-item"><a href="dataset-explorer.html" class="nav-link"><i class="fa-solid fa-database"></i> Datasets</a></li>
+        <li class="nav-item nav-dropdown">
+          <a href="#" class="nav-link"><i class="fa-solid fa-flask"></i> Analysis <i class="fa-solid fa-chevron-down" style="font-size: 0.65rem;"></i></a>
+          <ul class="nav-dropdown-menu">
+            <li class="nav-dropdown-item"><a href="greenhouse-gases.html"><i class="fa-solid fa-smog"></i> Methane (CH₄)</a></li>
+            <li class="nav-dropdown-item"><a href="climate-analysis.html"><i class="fa-solid fa-cloud-sun"></i> Climate Context</a></li>
+            <li class="nav-dropdown-item"><a href="hotspot-detection.html"><i class="fa-solid fa-fire"></i> Hotspot Patterns</a></li>
+            <li class="nav-dropdown-item"><a href="trend-analysis.html"><i class="fa-solid fa-arrow-trend-up"></i> Temporal Trends</a></li>
+            <li class="nav-dropdown-item"><a href="ocean-analysis.html"><i class="fa-solid fa-water"></i> Marine Context</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="forecasting.html" class="nav-link"><i class="fa-solid fa-brain"></i> ML & Forecast</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="reports.html" class="nav-link active"><i class="fa-solid fa-file-lines"></i> Reports</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">
+    <div class="page-header">
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+        <span class="badge-scientific badge-verified">Automated Dossier Generation</span>
+        <span class="badge-scientific badge-satellite">PDF & Print Ready</span>
+      </div>
+      <h1 class="page-title"><i class="fa-solid fa-file-lines" style="color: var(--cyan-primary);"></i> Scientific Research Reports Module</h1>
+      <p class="page-description">
+        Generate research-oriented reports on demand. Export comprehensive environmental summaries, regional methane briefs, and machine learning reproducibility audits adhering to open-science reporting standards.
+      </p>
+    </div>
+
+    <!-- Report Generation Controls -->
+    <div class="nasa-card" style="margin-bottom: 2.5rem;">
+      <div class="nasa-card-header">
+        <span class="nasa-card-title"><i class="fa-solid fa-sliders" style="color: var(--cyan-primary);"></i> Configure Research Report</span>
+        <span class="badge-scientific badge-verified">Instant Generation</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 1.5rem;">
+        <div class="form-group">
+          <label class="form-label" for="reportType"><i class="fa-solid fa-file-invoice"></i> Report Archetype:</label>
+          <select class="form-control" id="reportType">
+            <option value="summary" selected>Comprehensive Dataset & Telemetry Dossier</option>
+            <option value="regional">Regional Atmospheric Methane Intelligence Brief</option>
+            <option value="ml_evaluation">Machine Learning Evaluation & Benchmarking Audit</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="reportRegionGroup" style="display: none;">
+          <label class="form-label" for="reportRegion"><i class="fa-solid fa-location-dot"></i> Target Region:</label>
+          <select class="form-control" id="reportRegion">
+            <option value="North_West">North-West India (Lat &ge; 25°, Lon &lt; 82°)</option>
+            <option value="North_East">North-East India (Lat &ge; 25°, Lon &ge; 82°)</option>
+            <option value="Central_West">Central-West India (15°–25°, Lon &lt; 82°)</option>
+            <option value="Central_East">Central-East India (15°–25°, Lon &ge; 82°)</option>
+            <option value="South_West">South-West India (Lat &lt; 15°, Lon &lt; 82°)</option>
+            <option value="South_East">South-East India (Lat &lt; 15°, Lon &ge; 82°)</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+        <button class="btn-nasa btn-nasa-primary" id="btnGenerateReport">
+          <i class="fa-solid fa-file-circle-plus"></i> Generate Scientific Report
+        </button>
+        <button class="btn-nasa btn-nasa-secondary" id="btnPrintReport" style="display: none;">
+          <i class="fa-solid fa-print"></i> Print / Save as PDF
+        </button>
+        <span id="reportStatus" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+          Select configuration and generate
+        </span>
+      </div>
+    </div>
+
+    <!-- Rendered Report Document (Print-friendly) -->
+    <div id="reportContainer" style="display: none;">
+      <article class="nasa-card" id="printableReport" style="background: rgba(10, 18, 38, 0.95); border: 1px solid var(--border-medium); padding: 2.5rem;">
+        
+        <!-- Document Header -->
+        <div style="border-bottom: 2px solid var(--border-medium); padding-bottom: 1.5rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--cyan-primary); letter-spacing: 1.5px; text-transform: uppercase;">
+              NASA SPACE APPS CHALLENGE • SCIENTIFIC DOSSIER
+            </div>
+            <h2 id="repTitle" style="font-size: 1.75rem; font-weight: 800; color: #ffffff; margin: 0.5rem 0;">
+              Report Title
+            </h2>
+            <div id="repMeta" style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
+              Generated: -- | System: Earth Systems Trend Detective
+            </div>
+          </div>
+          <div class="nasa-insignia" style="width: 48px; height: 48px; font-size: 1rem;">NASA</div>
+        </div>
+
+        <!-- Report Content Body -->
+        <div id="repBody"></div>
+
+        <!-- Mandatory Limitations Footer inside Report -->
+        <div style="margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+          <div class="scientific-warning-callout" style="margin: 0;">
+            <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="content" id="repLimitations">
+              Atmospheric column concentration ($X\text{CH}_4$) is not surface emissions. Models are experimental references not validated for operational forecasting.
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Scientific report generation service adhering to open science and responsible environmental reporting.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Platform</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="forecasting.html">ML Predictor</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Research</div>
+        <ul class="footer-links">
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="greenhouse-gases.html">Greenhouse Gases</a></li>
+          <li><a href="research-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Attribution</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P</li>
+          <li>NASA POWER Project</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Scientific Reporting Pipeline</div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const typeSelect = document.getElementById('reportType');
+      const regionGroup = document.getElementById('reportRegionGroup');
+      const regionSelect = document.getElementById('reportRegion');
+      const btnGen = document.getElementById('btnGenerateReport');
+      const btnPrint = document.getElementById('btnPrintReport');
+      const statusEl = document.getElementById('reportStatus');
+      const container = document.getElementById('reportContainer');
+      const repTitle = document.getElementById('repTitle');
+      const repMeta = document.getElementById('repMeta');
+      const repBody = document.getElementById('repBody');
+      const repLimitations = document.getElementById('repLimitations');
+
+      typeSelect.addEventListener('change', () => {
+        if (typeSelect.value === 'regional') {
+          regionGroup.style.display = 'block';
+        } else {
+          regionGroup.style.display = 'none';
+        }
+      });
+
+      btnGen.addEventListener('click', async () => {
+        const type = typeSelect.value;
+        const region = regionSelect.value;
+        statusEl.textContent = 'Generating dossier...';
+        btnGen.disabled = true;
+
+        try {
+          const res = await API.generateReport(type, { region });
+          if (res && res.data) {
+            const doc = res.data;
+            repTitle.textContent = doc.title;
+            repMeta.textContent = `Generated: ${new Date(doc.generatedAt).toUTCString()} | Scope: ${doc.type.toUpperCase()}`;
+
+            let bodyHtml = '';
+            if (doc.type === 'regional') {
+              bodyHtml = `
+                <div class="kpi-grid" style="margin-bottom: 1.5rem;">
+                  <div class="kpi-card">
+                    <div class="kpi-label">Mean Concentration</div>
+                    <div class="kpi-value">${doc.metrics.mean_ppb} ppb</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">Minimum Observed</div>
+                    <div class="kpi-value" style="color: var(--earth-green);">${doc.metrics.min_ppb} ppb</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">Maximum Observed</div>
+                    <div class="kpi-value" style="color: var(--danger-crimson);">${doc.metrics.max_ppb} ppb</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">Total Soundings in Zone</div>
+                    <div class="kpi-value">${doc.observationCount} records</div>
+                  </div>
+                </div>
+
+                <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">Methodology Summary</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                  ${doc.methodology}
+                </p>
+
+                <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">Sample Node Observations</h3>
+                <div class="nasa-table-container">
+                  <table class="nasa-table" style="font-size: 0.78rem;">
+                    <thead>
+                      <tr><th>Node ID</th><th>Period</th><th>Coordinates</th><th>CH₄ Median</th><th>T2M</th><th>Precip</th></tr>
+                    </thead>
+                    <tbody>
+                      ${doc.observations.slice(0, 10).map(o => `
+                        <tr>
+                          <td style="font-family: var(--font-mono); color: var(--cyan-primary);">${o.node_id}</td>
+                          <td>${o.observation_period}</td>
+                          <td>${o.latitude.toFixed(1)}°N, ${o.longitude.toFixed(1)}°E</td>
+                          <td style="font-weight: 700;">${o.methane_median_ppb.toFixed(2)} ppb</td>
+                          <td>${o.T2M.toFixed(1)} °C</td>
+                          <td>${o.PRECTOTCORR.toFixed(2)} mm/d</td>
+                        </tr>
+                      `).join('')}
+                    </tbody>
+                  </table>
+                </div>
+              `;
+              repLimitations.textContent = doc.scientificLimitations;
+            } else if (doc.type === 'ml_evaluation') {
+              bodyHtml = `
+                <div style="background: rgba(5,11,24,0.6); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); margin-bottom: 1.5rem;">
+                  <strong style="color: #fff;">Model Architecture:</strong> ${doc.model}<br>
+                  <strong style="color: #fff;">Status:</strong> <span class="badge-scientific badge-experimental">${doc.modelStatus}</span>
+                </div>
+
+                <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">Chronological Fold Results</h3>
+                <div class="nasa-table-container" style="margin-bottom: 1.5rem;">
+                  <table class="nasa-table" style="font-size: 0.8rem;">
+                    <thead>
+                      <tr><th>Fold</th><th>Eval Period</th><th>Seeds</th><th>Observations</th><th>Mean MAE</th><th>Mean RMSE</th><th>Mean R²</th><th>Mean Bias</th></tr>
+                    </thead>
+                    <tbody>
+                      ${doc.folds.map(f => `
+                        <tr>
+                          <td>Fold ${f.fold}</td>
+                          <td>${f.evaluation_period}</td>
+                          <td>${f.seed_count}</td>
+                          <td>${f.observations_per_seed}</td>
+                          <td>${f.mean_MAE_ppb.toFixed(2)} ppb</td>
+                          <td>${f.mean_RMSE_ppb.toFixed(2)} ppb</td>
+                          <td style="color: ${f.mean_R2 < 0 ? '#ef4444' : '#10b981'}; font-weight: 700;">${f.mean_R2.toFixed(3)}</td>
+                          <td style="color: #ef4444;">${f.mean_bias_ppb.toFixed(2)} ppb</td>
+                        </tr>
+                      `).join('')}
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">Audited Benchmark Comparison</h3>
+                <div class="nasa-table-container" style="margin-bottom: 1.5rem;">
+                  <table class="nasa-table" style="font-size: 0.8rem;">
+                    <thead>
+                      <tr><th>Model</th><th>Mean Fold MAE</th><th>Mean Fold RMSE</th><th>Mean Fold R²</th></tr>
+                    </thead>
+                    <tbody>
+                      ${doc.benchmarkComparison.map(b => `
+                        <tr>
+                          <td style="font-weight: 600;">${b.model || b.experiment}</td>
+                          <td>${(b.Mean_fold_MAE || b.equal_fold_MAE || 0).toFixed(2)} ppb</td>
+                          <td>${(b.Mean_fold_RMSE || b.equal_fold_RMSE || 0).toFixed(2)} ppb</td>
+                          <td>${(b.Mean_fold_R2 || b.equal_fold_R2 || 0).toFixed(3)}</td>
+                        </tr>
+                      `).join('')}
+                    </tbody>
+                  </table>
+                </div>
+
+                <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">Key Evaluation Conclusions</h3>
+                <ul style="padding-left: 1.5rem; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                  ${doc.conclusions.map(c => `<li>${c}</li>`).join('')}
+                </ul>
+              `;
+              repLimitations.textContent = doc.scientificLimitations;
+            } else {
+              // Summary
+              bodyHtml = `
+                <div class="kpi-grid" style="margin-bottom: 1.5rem;">
+                  <div class="kpi-card">
+                    <div class="kpi-label">Grid Nodes</div>
+                    <div class="kpi-value">${doc.coverage.spatialNodes}</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">Observations</div>
+                    <div class="kpi-value">${doc.coverage.observations}</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">ML Predictions</div>
+                    <div class="kpi-value">${doc.coverage.evaluationPredictions}</div>
+                  </div>
+                  <div class="kpi-card">
+                    <div class="kpi-label">Observation Periods</div>
+                    <div class="kpi-value">4 Months</div>
+                  </div>
+                </div>
+
+                <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">Telemetry & Provenance</h3>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                  <strong>Satellite Sensor:</strong> ${doc.satelliteTelemetry}<br>
+                  <strong>Contextual Climate:</strong> ${doc.climateContext}
+                </p>
+
+                <h3 style="font-size: 1.05rem; color: #fff; margin-bottom: 0.5rem;">Executive Findings</h3>
+                <ul style="padding-left: 1.5rem; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;">
+                  ${doc.keyFindings.map(k => `<li>${k}</li>`).join('')}
+                </ul>
+              `;
+              repLimitations.textContent = doc.scientificLimitations.join(' ');
+            }
+
+            repBody.innerHTML = bodyHtml;
+            container.style.display = 'block';
+            btnPrint.style.display = 'inline-flex';
+            statusEl.textContent = 'Report rendered successfully.';
+            window.showToast('Research report generated!', 'success');
+          }
+        } catch (err) {
+          console.error('Report generation error:', err);
+          statusEl.textContent = `Error: ${err.message}`;
+          window.showToast(`Error: ${err.message}`, 'error');
+        } finally {
+          btnGen.disabled = false;
+        }
+      });
+
+      btnPrint.addEventListener('click', () => {
+        window.print();
+      });
+    });
+  </script>
+</body>
+</html>

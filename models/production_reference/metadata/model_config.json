@@ -1,0 +1,71 @@
+{
+    "model_name": "Original MLP Reference Model",
+    "model_type": "MLP",
+    "status": "Experimental reference model",
+    "architecture": {
+        "input_features": 8,
+        "hidden_units": 32,
+        "hidden_activation": "ReLU",
+        "dropout": 0.2,
+        "output_features": 1,
+        "output_type": "Normalized methane regression"
+    },
+    "feature_order": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M",
+        "latitude",
+        "longitude",
+        "month_sin",
+        "month_cos"
+    ],
+    "target": {
+        "name": "methane_median_ppb",
+        "unit": "ppb",
+        "inverse_transform": "prediction_ppb = prediction_scaled * target_std + target_mean",
+        "scaling": "Fold-specific target mean and standard deviation"
+    },
+    "training": {
+        "epochs": 250,
+        "seeds": [
+            7,
+            21,
+            42,
+            77,
+            123
+        ],
+        "folds": [
+            1,
+            2,
+            3
+        ]
+    },
+    "inference": {
+        "framework": "PyTorch",
+        "evaluation_mode": true,
+        "checkpoint_format": "PyTorch state dictionary",
+        "feature_input_shape": [
+            null,
+            8
+        ]
+    },
+    "validation": {
+        "saved_predictions": 720,
+        "reproduced_predictions": 720,
+        "checkpoint_errors": 0,
+        "maximum_absolute_difference_ppb": 0.0001220703,
+        "mean_absolute_difference_ppb": 1.695e-07,
+        "prediction_correlation": 1.0,
+        "strict_tolerance_ppb": 0.0001,
+        "predictions_within_strict_tolerance": 719
+    },
+    "scientific_limitations": [
+        "Only four methane observation periods",
+        "Weak predictive performance in prior evaluation",
+        "No demonstrated GNN advantage",
+        "Not validated for operational forecasting",
+        "Predictions must be interpreted within the pilot dataset scope"
+    ],
+    "created_utc": "2026-11-14T07:07:59.866474+00:00"
+}

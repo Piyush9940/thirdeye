@@ -1,0 +1,110 @@
+{
+    "cell": "Cell 9",
+    "datasets": {
+        "nasa_power_grid_2deg.parquet": {
+            "exists": true,
+            "rows": 30600,
+            "columns": [
+                "time",
+                "grid_lat",
+                "grid_lon",
+                "grid_latitude",
+                "grid_longitude",
+                "T2M",
+                "PRECTOTCORR",
+                "RH2M",
+                "WS10M",
+                "node_id"
+            ],
+            "missing_values": {
+                "time": 0,
+                "grid_lat": 0,
+                "grid_lon": 0,
+                "grid_latitude": 0,
+                "grid_longitude": 0,
+                "T2M": 0,
+                "PRECTOTCORR": 0,
+                "RH2M": 0,
+                "WS10M": 0,
+                "node_id": 0
+            },
+            "latitude_candidates": [
+                "grid_lat",
+                "grid_latitude"
+            ],
+            "longitude_candidates": [
+                "grid_lon",
+                "grid_longitude"
+            ],
+            "time_candidates": [
+                "time"
+            ],
+            "node_candidates": [
+                "node_id"
+            ],
+            "latitude_range": [
+                0.0,
+                16.0
+            ],
+            "longitude_range": [
+                0.0,
+                14.0
+            ],
+            "unique_nodes": 255,
+            "time_column": "time"
+        },
+        "nasa_power_merged.parquet": {
+            "exists": true,
+            "rows": 374400,
+            "columns": [
+                "time",
+                "latitude",
+                "longitude",
+                "T2M",
+                "PRECTOTCORR",
+                "RH2M",
+                "WS10M"
+            ],
+            "missing_values": {
+                "time": 0,
+                "latitude": 0,
+                "longitude": 0,
+                "T2M": 0,
+                "PRECTOTCORR": 0,
+                "RH2M": 0,
+                "WS10M": 0
+            },
+            "latitude_candidates": [
+                "latitude"
+            ],
+            "longitude_candidates": [
+                "longitude"
+            ],
+            "time_candidates": [
+                "time"
+            ],
+            "node_candidates": [],
+            "latitude_range": [
+                6.0,
+                38.0
+            ],
+            "longitude_range": [
+                68.125,
+                97.5
+            ],
+            "time_column": "time"
+        }
+    },
+    "comparison": {
+        "grid_2deg_shape": [
+            30600,
+            10
+        ],
+        "merged_shape": [
+            374400,
+            7
+        ],
+        "identical_columns": false,
+        "same_row_count": false
+    }
+}

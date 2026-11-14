@@ -1,0 +1,118 @@
+/* ==========================================================================
+   EARTH SYSTEMS TREND DETECTIVE - DESIGN SYSTEM & THEME
+   NASA Space Apps Challenge: Environmental Intelligence Platform
+   ========================================================================== */
+
+:root {
+  /* Core Color Palette */
+  --bg-space: #030712;
+  --bg-deep: #070d1e;
+  --bg-card: rgba(13, 23, 48, 0.75);
+  --bg-card-hover: rgba(20, 35, 71, 0.85);
+  --bg-surface: #0e1a38;
+  --bg-input: rgba(10, 18, 38, 0.8);
+  
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(0, 210, 255, 0.18);
+  --border-focus: rgba(0, 210, 255, 0.6);
+  
+  /* Primary & Accent Glows */
+  --cyan-primary: #00d2ff;
+  --cyan-glow: rgba(0, 210, 255, 0.25);
+  --blue-nasa: #1e40af;
+  --blue-accent: #3b82f6;
+  --blue-glow: rgba(59, 130, 246, 0.25);
+  
+  /* Environmental Earth Accents */
+  --earth-green: #10b981;
+  --earth-green-glow: rgba(16, 185, 129, 0.25);
+  --warning-amber: #f59e0b;
+  --warning-glow: rgba(245, 158, 11, 0.2);
+  --danger-crimson: #ef4444;
+  --danger-glow: rgba(239, 68, 68, 0.25);
+  --info-purple: #8b5cf6;
+  
+  /* Scientific Data Palette (Choropleth & Concentrations) */
+  --ch4-low: #10b981;     /* < 1850 ppb */
+  --ch4-mid: #38bdf8;     /* 1850 - 1900 ppb */
+  --ch4-elevated: #f59e0b;/* 1900 - 1950 ppb */
+  --ch4-high: #ef4444;    /* > 1950 ppb */
+  --ch4-missing: #475569; /* Unobserved / QA filtered */
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-highlight: #38bdf8;
+  
+  /* Glassmorphism & Elevation */
+  --glass-backdrop: blur(14px);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 0 20px rgba(0, 210, 255, 0.15);
+  
+  /* Structural Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset & Globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-space);
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(14, 34, 77, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(6, 26, 45, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 0.8) 0%, transparent 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--cyan-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-space);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: var(--radius-sm);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

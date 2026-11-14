@@ -1,0 +1,130 @@
+{
+  "T2M": {
+    "source_file": "T2M_2015_2024.nc",
+    "corrected_file": "T2M_monthly_2015_2024.nc",
+    "original_record_count": 130,
+    "valid_month_count": 120,
+    "excluded_month13_count": 10,
+    "excluded_month13_values": [
+      201513,
+      201613,
+      201713,
+      201813,
+      201913,
+      202013,
+      202113,
+      202213,
+      202313,
+      202413
+    ],
+    "corrected_start": "2015-01-01 00:00:00",
+    "corrected_end": "2024-12-01 00:00:00",
+    "corrected_month_count": 120,
+    "spatial_shape": [
+      120,
+      65,
+      48
+    ],
+    "latitude_count": 65,
+    "longitude_count": 48,
+    "units": "C"
+  },
+  "PRECTOTCORR": {
+    "source_file": "PRECTOTCORR_2015_2024.nc",
+    "corrected_file": "PRECTOTCORR_monthly_2015_2024.nc",
+    "original_record_count": 130,
+    "valid_month_count": 120,
+    "excluded_month13_count": 10,
+    "excluded_month13_values": [
+      201513,
+      201613,
+      201713,
+      201813,
+      201913,
+      202013,
+      202113,
+      202213,
+      202313,
+      202413
+    ],
+    "corrected_start": "2015-01-01 00:00:00",
+    "corrected_end": "2024-12-01 00:00:00",
+    "corrected_month_count": 120,
+    "spatial_shape": [
+      120,
+      65,
+      48
+    ],
+    "latitude_count": 65,
+    "longitude_count": 48,
+    "units": "mm/day"
+  },
+  "RH2M": {
+    "source_file": "RH2M_2015_2024.nc",
+    "corrected_file": "RH2M_monthly_2015_2024.nc",
+    "original_record_count": 130,
+    "valid_month_count": 120,
+    "excluded_month13_count": 10,
+    "excluded_month13_values": [
+      201513,
+      201613,
+      201713,
+      201813,
+      201913,
+      202013,
+      202113,
+      202213,
+      202313,
+      202413
+    ],
+    "corrected_start": "2015-01-01 00:00:00",
+    "corrected_end": "2024-12-01 00:00:00",
+    "corrected_month_count": 120,
+    "spatial_shape": [
+      120,
+      65,
+      48
+    ],
+    "latitude_count": 65,
+    "longitude_count": 48,
+    "units": "%"
+  },
+  "WS10M": {
+    "source_file": "WS10M_2015_2024.nc",
+    "corrected_file": "WS10M_monthly_2015_2024.nc",
+    "original_record_count": 130,
+    "valid_month_count": 120,
+    "excluded_month13_count": 10,
+    "excluded_month13_values": [
+      201513,
+      201613,
+      201713,
+      201813,
+      201913,
+      202013,
+      202113,
+      202213,
+      202313,
+      202413
+    ],
+    "corrected_start": "2015-01-01 00:00:00",
+    "corrected_end": "2024-12-01 00:00:00",
+    "corrected_month_count": 120,
+    "spatial_shape": [
+      120,
+      65,
+      48
+    ],
+    "latitude_count": 65,
+    "longitude_count": 48,
+    "units": "m/s"
+  },
+  "cross_variable_validation": {
+    "expected_month_count": 120,
+    "time_coordinates_identical": true,
+    "spatial_coordinates_identical": true,
+    "latitude_count": 65,
+    "longitude_count": 48,
+    "study_period": "2015-01 to 2024-12"
+  }
+}

@@ -1,0 +1,4 @@
+fold,evaluation_period,training_labels,evaluation_labels,seen_test_nodes,unseen_test_nodes,seen_test_percentage,mean_history_count_seen_nodes
+1,202102,82,67,62,5,92.53731343283582,1.0
+2,202108,149,11,10,1,90.9090909090909,1.9
+3,202311,160,66,56,10,84.84848484848484,1.8928571428571428

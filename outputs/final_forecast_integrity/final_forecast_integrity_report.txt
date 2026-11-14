@@ -1,0 +1,67 @@
+NASA EARTH SYSTEMS TREND DETECTIVE
+FINAL 2025 FORECAST INTEGRITY REPORT
+=================================================================
+
+MODEL: GCN-GRU
+HISTORICAL PERIOD: January 2015 - December 2024
+FORECAST PERIOD: January 2025 - December 2025
+SPATIAL NODES: 255
+FEATURES: T2M, PRECTOTCORR, RH2M, WS10M
+
+1. FORECAST DIMENSIONS
+-----------------------------------------------------------------
+Historical tensor: (120, 255, 4)
+Original forecast: (12, 255, 4)
+Independent forecast: (12, 255, 4)
+
+2. REPRODUCIBILITY
+-----------------------------------------------------------------
+Maximum difference: 0.004348755
+Mean difference: 0.000032891
+95th percentile: 0.000148320
+99th percentile: 0.000705328
+Within 0.001: 99.4608%
+Exact match: False
+
+3. FEATURE STATISTICS
+-----------------------------------------------------------------
+    Feature  Historical_Min  Historical_Max  Forecast_Min  Forecast_Max  Forecast_Mean  Forecast_Std  Negative_Count
+        T2M      -24.705833       38.584999    -17.175859     37.301132      19.588923     13.275371             369
+PRECTOTCORR        0.000000       92.076668     -0.935331     29.520658       3.298449      3.746708             181
+       RH2M       12.520625       92.540001     18.422089     90.439758      65.022842     17.665028               0
+      WS10M        0.747500       11.236667      1.096688      8.669188       4.045323      1.563737               0
+
+4. PRECIPITATION PHYSICAL VALIDATION
+-----------------------------------------------------------------
+Negative predictions: 181
+Total predictions: 3060
+Negative percentage: 5.9150%
+Minimum precipitation: -0.935331 mm/day
+Non-negativity satisfied: False
+
+5. VALIDATION CHECKS
+-----------------------------------------------------------------
+historical_tensor_valid: PASS
+original_forecast_valid: PASS
+independent_forecast_valid: PASS
+original_forecast_finite: PASS
+independent_forecast_finite: PASS
+numerical_agreement_within_0_001: PASS
+precipitation_nonnegative: FAIL
+
+6. SCIENTIFIC LIMITATIONS
+-----------------------------------------------------------------
+- The forecast is exploratory and is not an operational climate prediction.
+- The model uses a limited 10-year historical period.
+- External climate forcing is not included.
+- Negative precipitation predictions violate physical non-negativity.
+- Numerical reproduction is close but not bit-for-bit identical.
+- Forecast uncertainty has not been fully quantified.
+
+CONCLUSION
+-----------------------------------------------------------------
+The independent 2025 forecast closely reproduces the saved forecast.
+The model output is finite and has the expected dimensions.
+However, precipitation non-negativity is not enforced.
+The forecast should be interpreted as an exploratory model scenario,
+not as an operational or causal climate prediction.

@@ -1,0 +1,114 @@
+{
+  "source": "Copernicus Data Space Ecosystem OData catalogue",
+  "query_period": {
+    "start": "2019-01-01",
+    "end_exclusive": "2025-01-01"
+  },
+  "product_prefix": "S5P_RPRO_L2__CH4",
+  "total_catalogue_records": 11000,
+  "validated_records": 11000,
+  "rejected_records": 0,
+  "india_intersecting_records": 1790,
+  "india_intersecting_online_records": 1790,
+  "missing_or_unreadable_footprints": 0,
+  "india_catalogue_size_gb": 107.3896580543369,
+  "yearly_coverage": [
+    {
+      "year": 2019,
+      "granules": 837,
+      "unique_orbits": 837,
+      "online_granules": 837,
+      "total_size_gb": 46.99023771006614
+    },
+    {
+      "year": 2020,
+      "granules": 844,
+      "unique_orbits": 844,
+      "online_granules": 844,
+      "total_size_gb": 52.759652002714574
+    },
+    {
+      "year": 2021,
+      "granules": 109,
+      "unique_orbits": 109,
+      "online_granules": 109,
+      "total_size_gb": 7.6397683415561914
+    }
+  ],
+  "seasonal_coverage": [
+    {
+      "year": 2019,
+      "season": "Monsoon",
+      "granules": 280,
+      "unique_orbits": 280,
+      "online_granules": 280,
+      "total_size_mb": 15251.253987312317
+    },
+    {
+      "year": 2019,
+      "season": "PostMonsoon",
+      "granules": 138,
+      "unique_orbits": 138,
+      "online_granules": 138,
+      "total_size_mb": 9543.63630771637
+    },
+    {
+      "year": 2019,
+      "season": "PreMonsoon",
+      "granules": 210,
+      "unique_orbits": 210,
+      "online_granules": 210,
+      "total_size_mb": 10650.559118270874
+    },
+    {
+      "year": 2019,
+      "season": "Winter",
+      "granules": 209,
+      "unique_orbits": 209,
+      "online_granules": 209,
+      "total_size_mb": 12672.554001808167
+    },
+    {
+      "year": 2020,
+      "season": "Monsoon",
+      "granules": 282,
+      "unique_orbits": 282,
+      "online_granules": 282,
+      "total_size_mb": 17040.355600357056
+    },
+    {
+      "year": 2020,
+      "season": "PostMonsoon",
+      "granules": 142,
+      "unique_orbits": 142,
+      "online_granules": 142,
+      "total_size_mb": 9560.73787021637
+    },
+    {
+      "year": 2020,
+      "season": "PreMonsoon",
+      "granules": 211,
+      "unique_orbits": 211,
+      "online_granules": 211,
+      "total_size_mb": 12791.06559753418
+    },
+    {
+      "year": 2020,
+      "season": "Winter",
+      "granules": 209,
+      "unique_orbits": 209,
+      "online_granules": 209,
+      "total_size_mb": 14633.72458267212
+    },
+    {
+      "year": 2021,
+      "season": "Winter",
+      "granules": 109,
+      "unique_orbits": 109,
+      "online_granules": 109,
+      "total_size_mb": 7823.12278175354
+    }
+  ],
+  "saved_catalogue": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\interim\\sentinel5p_ch4_catalogue_2019_2024\\sentinel5p_ch4_catalogue_india.json",
+  "note": "Catalogue footprint intersection is a preliminary geographic screen. Actual pixel-level India coverage and QA filtering must be verified after downloading selected granules. No NetCDF granules were downloaded in this cell."
+}

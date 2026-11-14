@@ -1,0 +1,148 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "verification_type": "Independent GCN-GRU test evaluation",
+    "model_architecture": "GCN-GRU",
+    "parameter_count": 20292,
+    "device": "cuda:0",
+    "test_input_shape": [
+        12,
+        12,
+        255,
+        4
+    ],
+    "test_target_shape": [
+        12,
+        255,
+        4
+    ],
+    "prediction_shape": [
+        12,
+        255,
+        4
+    ],
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "test_period": "January 2024 - December 2024",
+    "evaluation_method": "Rolling one-step-ahead evaluation using the observed preceding 12 months",
+    "metrics": [
+        {
+            "feature": "T2M",
+            "model_MAE": 9.63011694005734,
+            "model_RMSE": 12.043847184100647,
+            "model_R2": 0.19992839058436995,
+            "persistence_MAE": 2.4533549950002627,
+            "persistence_RMSE": 3.365838874421683,
+            "persistence_R2": 0.9375136681299903,
+            "MAE_improvement_percent": -292.52847466765843,
+            "RMSE_improvement_percent": -257.8260170332727
+        },
+        {
+            "feature": "PRECTOTCORR",
+            "model_MAE": 6.7828278459295,
+            "model_RMSE": 8.885754941421194,
+            "model_R2": -2.1857600454727795,
+            "persistence_MAE": 2.1343361352440273,
+            "persistence_RMSE": 3.7510270235717975,
+            "persistence_R2": 0.43229230143690767,
+            "MAE_improvement_percent": -217.79567116563823,
+            "RMSE_improvement_percent": -136.88858772763555
+        },
+        {
+            "feature": "RH2M",
+            "model_MAE": 16.696430551513206,
+            "model_RMSE": 20.4296501043534,
+            "model_R2": -0.2439893789180747,
+            "persistence_MAE": 5.733267785427669,
+            "persistence_RMSE": 8.35717768720384,
+            "persistence_R2": 0.7918319436035377,
+            "MAE_improvement_percent": -191.22014139912963,
+            "RMSE_improvement_percent": -144.45633285546174
+        },
+        {
+            "feature": "WS10M",
+            "model_MAE": 1.3528407184961027,
+            "model_RMSE": 1.676929556521111,
+            "model_R2": 0.022418121890822817,
+            "persistence_MAE": 0.706114243547372,
+            "persistence_RMSE": 1.0433623118297972,
+            "persistence_R2": 0.6215628233396433,
+            "MAE_improvement_percent": -91.58949573084811,
+            "RMSE_improvement_percent": -60.72360842516872
+        }
+    ],
+    "cell15_comparison": [
+        {
+            "feature": "T2M",
+            "recomputed_MAE": 9.63011694005734,
+            "reference_MAE": 1.5412,
+            "recomputed_RMSE": 12.043847184100647,
+            "reference_RMSE": 2.2789,
+            "recomputed_R2": 0.19992839058436995,
+            "reference_R2": 0.9714,
+            "MAE_absolute_difference": 8.08891694005734,
+            "RMSE_absolute_difference": 9.764947184100647,
+            "R2_absolute_difference": 0.7714716094156301
+        },
+        {
+            "feature": "PRECTOTCORR",
+            "recomputed_MAE": 6.7828278459295,
+            "reference_MAE": 1.3726,
+            "recomputed_RMSE": 8.885754941421194,
+            "reference_RMSE": 2.5789,
+            "recomputed_R2": -2.1857600454727795,
+            "reference_R2": 0.7317,
+            "MAE_absolute_difference": 5.4102278459295,
+            "RMSE_absolute_difference": 6.306854941421194,
+            "R2_absolute_difference": 2.9174600454727795
+        },
+        {
+            "feature": "RH2M",
+            "recomputed_MAE": 16.696430551513206,
+            "reference_MAE": 4.0046,
+            "recomputed_RMSE": 20.4296501043534,
+            "reference_RMSE": 5.6396,
+            "recomputed_R2": -0.2439893789180747,
+            "reference_R2": 0.9052,
+            "MAE_absolute_difference": 12.691830551513206,
+            "RMSE_absolute_difference": 14.7900501043534,
+            "R2_absolute_difference": 1.1491893789180747
+        },
+        {
+            "feature": "WS10M",
+            "recomputed_MAE": 1.3528407184961027,
+            "reference_MAE": 0.5185,
+            "recomputed_RMSE": 1.676929556521111,
+            "reference_RMSE": 0.71,
+            "recomputed_R2": 0.022418121890822817,
+            "reference_R2": 0.8248,
+            "MAE_absolute_difference": 0.8343407184961027,
+            "RMSE_absolute_difference": 0.9669295565211111,
+            "R2_absolute_difference": 0.8023818781091772
+        }
+    ],
+    "verification_checks": {
+        "test_input_shape_valid": true,
+        "test_target_shape_valid": true,
+        "model_parameter_count_valid": true,
+        "checkpoint_loaded_strictly": true,
+        "adjacency_shape_valid": true,
+        "adjacency_symmetric": true,
+        "prediction_shape_valid": true,
+        "predictions_finite": true,
+        "actual_values_finite": true,
+        "persistence_values_finite": true,
+        "metrics_available": true
+    },
+    "all_checks_passed": true,
+    "limitations": [
+        "Test evaluation covers only 12 months in 2024.",
+        "Evaluation is rolling one-step-ahead, not free-running.",
+        "The spatial graph represents geographic proximity.",
+        "The model does not establish causal climate relationships.",
+        "Results are based on NASA POWER meteorological variables."
+    ]
+}

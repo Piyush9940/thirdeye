@@ -1,0 +1,167 @@
+[
+    {
+        "fold": 1,
+        "seed": 7,
+        "target_mean": 1861.163330078125,
+        "target_std": 17.342565536499023,
+        "train_period_indices": [
+            0
+        ],
+        "evaluation_period_index": 1
+    },
+    {
+        "fold": 1,
+        "seed": 21,
+        "target_mean": 1861.163330078125,
+        "target_std": 17.342565536499023,
+        "train_period_indices": [
+            0
+        ],
+        "evaluation_period_index": 1
+    },
+    {
+        "fold": 1,
+        "seed": 42,
+        "target_mean": 1861.163330078125,
+        "target_std": 17.342565536499023,
+        "train_period_indices": [
+            0
+        ],
+        "evaluation_period_index": 1
+    },
+    {
+        "fold": 1,
+        "seed": 77,
+        "target_mean": 1861.163330078125,
+        "target_std": 17.342565536499023,
+        "train_period_indices": [
+            0
+        ],
+        "evaluation_period_index": 1
+    },
+    {
+        "fold": 1,
+        "seed": 123,
+        "target_mean": 1861.163330078125,
+        "target_std": 17.342565536499023,
+        "train_period_indices": [
+            0
+        ],
+        "evaluation_period_index": 1
+    },
+    {
+        "fold": 2,
+        "seed": 7,
+        "target_mean": 1876.375244140625,
+        "target_std": 22.91864585876465,
+        "train_period_indices": [
+            0,
+            1
+        ],
+        "evaluation_period_index": 2
+    },
+    {
+        "fold": 2,
+        "seed": 21,
+        "target_mean": 1876.375244140625,
+        "target_std": 22.91864585876465,
+        "train_period_indices": [
+            0,
+            1
+        ],
+        "evaluation_period_index": 2
+    },
+    {
+        "fold": 2,
+        "seed": 42,
+        "target_mean": 1876.375244140625,
+        "target_std": 22.91864585876465,
+        "train_period_indices": [
+            0,
+            1
+        ],
+        "evaluation_period_index": 2
+    },
+    {
+        "fold": 2,
+        "seed": 77,
+        "target_mean": 1876.375244140625,
+        "target_std": 22.91864585876465,
+        "train_period_indices": [
+            0,
+            1
+        ],
+        "evaluation_period_index": 2
+    },
+    {
+        "fold": 2,
+        "seed": 123,
+        "target_mean": 1876.375244140625,
+        "target_std": 22.91864585876465,
+        "train_period_indices": [
+            0,
+            1
+        ],
+        "evaluation_period_index": 2
+    },
+    {
+        "fold": 3,
+        "seed": 7,
+        "target_mean": 1881.9632568359375,
+        "target_std": 30.613935470581055,
+        "train_period_indices": [
+            0,
+            1,
+            2
+        ],
+        "evaluation_period_index": 3
+    },
+    {
+        "fold": 3,
+        "seed": 21,
+        "target_mean": 1881.9632568359375,
+        "target_std": 30.613935470581055,
+        "train_period_indices": [
+            0,
+            1,
+            2
+        ],
+        "evaluation_period_index": 3
+    },
+    {
+        "fold": 3,
+        "seed": 42,
+        "target_mean": 1881.9632568359375,
+        "target_std": 30.613935470581055,
+        "train_period_indices": [
+            0,
+            1,
+            2
+        ],
+        "evaluation_period_index": 3
+    },
+    {
+        "fold": 3,
+        "seed": 77,
+        "target_mean": 1881.9632568359375,
+        "target_std": 30.613935470581055,
+        "train_period_indices": [
+            0,
+            1,
+            2
+        ],
+        "evaluation_period_index": 3
+    },
+    {
+        "fold": 3,
+        "seed": 123,
+        "target_mean": 1881.9632568359375,
+        "target_std": 30.613935470581055,
+        "train_period_indices": [
+            0,
+            1,
+            2
+        ],
+        "evaluation_period_index": 3
+    }
+]

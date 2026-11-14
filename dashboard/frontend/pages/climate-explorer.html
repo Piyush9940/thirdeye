@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Explorer — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/charts.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> 10-Year Climatology (2015–2024)</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link active"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Climate <span>Explorer</span></h1>
+        <p class="page-subtitle">Monthly climatological cycles and seasonal distributions across 10 years of NASA POWER data.</p>
+      </div>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <select id="clim-region-select" class="form-select" style="width: auto;">
+          <option value="ALL">All India (National Grid)</option>
+          <option value="NW">Northwest India</option>
+          <option value="NE">Northeast India</option>
+          <option value="CW">Central-West India</option>
+          <option value="CE">Central-East India</option>
+          <option value="SW">Southwest India</option>
+          <option value="SE">Southeast India</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Variable Selection Bar -->
+    <div style="display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+      <button class="btn btn-secondary clim-var-pill active" data-var="T2M">
+        <i class="fas fa-temperature-high text-amber"></i> Air Temp (T2M)
+      </button>
+      <button class="btn btn-secondary clim-var-pill" data-var="PRECTOTCORR">
+        <i class="fas fa-cloud-rain text-cyan"></i> Precipitation
+      </button>
+      <button class="btn btn-secondary clim-var-pill" data-var="RH2M">
+        <i class="fas fa-droplet text-blue"></i> Relative Humidity
+      </button>
+      <button class="btn btn-secondary clim-var-pill" data-var="WS10M">
+        <i class="fas fa-wind text-emerald"></i> Wind Speed
+      </button>
+    </div>
+
+    <!-- Annual Cycle Climatology Chart -->
+    <div class="card" style="margin-bottom: 2rem;">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-chart-area text-cyan"></i> Annual Climatological Cycle (Jan - Dec)</div>
+        <span class="badge badge-cyan">10-Year Climatology & Range</span>
+      </div>
+      <div id="climatology-chart" style="width: 100%; height: 400px;"></div>
+    </div>
+
+    <!-- Seasonal Breakdown Cards -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-calendar-days text-cyan"></i> Indian Climatological Seasons</div>
+      </div>
+      <div class="scorecard-grid" id="seasonal-cards" style="margin-bottom: 0;">
+        <!-- Populated via JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div><b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective</div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/climate-explorer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.climExp = new ClimateExplorer();
+    });
+  </script>
+</body>
+</html>

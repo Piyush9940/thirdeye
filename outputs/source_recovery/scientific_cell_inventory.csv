@@ -1,0 +1,50 @@
+cell_index,execution_count,stage,source_lines,source_characters,has_imports,has_functions,has_classes
+0,1,Environment and configuration,1,122,False,False,False
+1,2,Environment and configuration,67,1606,True,False,False
+2,5,Environment and configuration,91,2534,True,False,False
+3,7,Environment and configuration,11,400,False,False,False
+4,8,NASA POWER acquisition and preprocessing,42,1063,True,False,False
+5,10,NASA POWER acquisition and preprocessing,49,1038,True,False,False
+6,11,NASA POWER acquisition and preprocessing,57,1380,True,False,False
+7,12,NASA POWER acquisition and preprocessing,360,8537,True,True,False
+8,13,NASA POWER acquisition and preprocessing,344,8200,True,True,False
+9,14,NASA POWER acquisition and preprocessing,212,4824,True,False,False
+10,15,NASA POWER acquisition and preprocessing,242,6014,True,False,False
+11,16,NASA POWER acquisition and preprocessing,199,4257,True,False,False
+12,17,NASA POWER acquisition and preprocessing,206,5829,True,False,False
+13,18,NASA POWER acquisition and preprocessing,341,7704,True,False,False
+14,19,Sequence preparation,269,5901,True,True,False
+15,20,GCN-GRU architecture,404,8910,True,True,True
+16,21,Model training,466,10788,True,True,False
+17,22,Training evaluation and checkpoint,251,5409,True,False,False
+18,23,Model testing and evaluation,424,9979,True,True,False
+19,26,Model testing and evaluation,67,1836,False,False,False
+20,25,Model testing and evaluation,19,401,True,False,False
+21,27,Autoregressive forecasting,452,10650,True,False,False
+22,28,Autoregressive forecasting,323,7046,True,False,False
+23,29,Autoregressive forecasting,331,6984,True,False,False
+24,30,Primary seasonal trend analysis,588,12270,True,True,False
+25,31,Autocorrelation analysis,391,8111,True,True,False
+26,32,Initial TFPW sensitivity analysis,709,14420,True,True,False
+27,33,Seasonally aligned TFPW sensitivity,706,14348,True,True,False
+28,34,TFPW autocorrelation diagnostics,638,13393,True,True,False
+29,36,Trend robustness analysis,1224,22351,True,True,False
+30,37,Scientific validation and reporting,56,1125,True,False,False
+31,38,Scientific validation and reporting,636,19246,True,False,False
+32,39,Scientific validation and reporting,513,11988,True,False,False
+33,40,Scientific validation and reporting,51,1263,True,True,True
+34,41,Scientific validation and reporting,62,1615,True,False,False
+35,43,Scientific validation and reporting,1045,22485,True,True,False
+36,44,Scientific validation and reporting,137,3413,True,False,False
+37,45,Scientific validation and reporting,81,2193,True,False,False
+38,46,Scientific validation and reporting,353,9035,True,False,False
+39,48,Scientific validation and reporting,330,8278,True,False,False
+40,49,Scientific validation and reporting,160,4025,True,False,False
+41,50,Scientific validation and reporting,253,7825,True,False,False
+42,51,Scientific validation and reporting,555,16644,True,False,False
+43,52,Scientific validation and reporting,171,4440,True,False,False
+44,53,Scientific validation and reporting,619,18055,True,False,False
+45,54,Scientific validation and reporting,608,15763,True,False,False
+46,55,Scientific validation and reporting,167,4542,True,False,False
+47,56,Scientific validation and reporting,111,2992,True,False,False
+48,57,Scientific validation and reporting,146,3651,True,False,False

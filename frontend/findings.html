@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Findings — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link active"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="content-wrapper" style="padding-top: 3.5rem; padding-bottom: 1.5rem; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <span class="badge-scientific badge-verified" style="margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-clipboard-check"></i> Evidence-Based Analysis
+      </span>
+      <h1 style="font-size: 2.85rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">
+        WHAT CAN WE LEARN FROM THE AVAILABLE DATA?
+      </h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+        Scientific integrity means celebrating what the data reveals while openly documenting its limits. Here is what the verified pilot observations show—and what they do not show.
+      </p>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Scientific Caution Standard -->
+    <div class="scientific-warning-callout" style="margin-bottom: 3rem;">
+      <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="content">
+        <strong>Scientific Integrity Standard: No Fabricated Claims</strong><br>
+        We do not invent unverified emission sources, illegal leak accusations, or long-term multi-decade trends. The verified dataset consists of 4 discrete temporal snapshot months (May 2019, Feb 2021, Aug 2021, Nov 2023) across a 2° spatial grid.
+      </div>
+    </div>
+
+    <!-- Verified Discoveries Grid -->
+    <div class="grid-2col" style="margin-bottom: 3.5rem;">
+      <!-- Finding 1 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-layer-group" style="color: var(--cyan-primary);"></i> 1. Satellite Coverage Is Unequal</span>
+          <span class="badge-scientific badge-satellite">98 of 255 Nodes</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          Spaceborne observations are not evenly distributed. Out of 255 grid nodes mapped across India, only <strong>98 unique nodes</strong> contain valid soundings passing quality filtering (QA ≥ 0.50). 
+        </p>
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 0.85rem 1rem; border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary); border: 1px solid var(--border-subtle);">
+          <strong>Key Example:</strong> The Southeast study region currently has 0 valid soundings in this pilot release due to optical cloud cover. It is categorized as <em>unavailable</em>, never zero.
+        </div>
+      </div>
+
+      <!-- Finding 2 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-cloud-showers-heavy" style="color: var(--blue-accent);"></i> 2. Monsoon Cloud Masking</span>
+          <span class="badge-scientific badge-warning">August 2021 Data Gap</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          During the peak Southwest monsoon in <strong>August 2021</strong>, deep convective cloud decks prevented optical satellite retrieval across almost the entire country.
+        </p>
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 0.85rem 1rem; border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary); border: 1px solid var(--border-subtle);">
+          <strong>Contrast:</strong> May 2019 yielded <strong>82</strong> observed nodes and Feb 2021 yielded <strong>67</strong>, but August 2021 recorded only <strong>11 nodes</strong>.
+        </div>
+      </div>
+
+      <!-- Finding 3 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-thermometer" style="color: var(--earth-green);"></i> 3. Climate Context Matters</span>
+          <span class="badge-scientific badge-verified">NASA POWER</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          Collocating surface meteorology (temperature, precipitation, humidity, wind) provides valuable context for examining methane variations, but correlations <strong>do not prove cause and effect</strong>.
+        </p>
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 0.85rem 1rem; border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary); border: 1px solid var(--border-subtle);">
+          <strong>Correlation ≠ Causality:</strong> Methane column abundance is governed by large-scale atmospheric transport and vertical mixing.
+        </div>
+      </div>
+
+      <!-- Finding 4 -->
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title"><i class="fa-solid fa-calendar-days" style="color: var(--warning-amber);"></i> 4. Four Snapshots, Not Continuous Time</span>
+          <span class="badge-scientific badge-experimental">Pilot Scope</span>
+        </div>
+        <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin-bottom: 1rem;">
+          The pilot dataset contains observations from four specific calendar months: May 2019, Feb 2021, Aug 2021, and Nov 2023.
+        </p>
+        <div style="background: rgba(5, 11, 24, 0.6); padding: 0.85rem 1rem; border-radius: 8px; font-size: 0.85rem; color: var(--text-secondary); border: 1px solid var(--border-subtle);">
+          <strong>Limitation:</strong> These discrete points are sufficient for spatial exploratory analysis, but cannot establish a continuous multi-year national trend line.
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Findings Visualizations -->
+    <div class="grid-2col" style="margin-bottom: 3.5rem;">
+      <div class="nasa-card">
+        <h3 class="nasa-card-title" style="margin-bottom: 1rem;">
+          <i class="fa-solid fa-chart-column" style="color: var(--cyan-primary);"></i> Observations by Snapshot Period
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+          Demonstrating severe monsoon cloud masking during August 2021.
+        </p>
+        <div id="findingsPeriodChart" style="height: 320px;"></div>
+      </div>
+
+      <div class="nasa-card">
+        <h3 class="nasa-card-title" style="margin-bottom: 1rem;">
+          <i class="fa-solid fa-box-archive" style="color: var(--earth-green);"></i> Regional Median Concentrations
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">
+          Comparing observed concentrations across study zones (Southeast unavailable).
+        </p>
+        <div id="findingsRegionChart" style="height: 320px;"></div>
+      </div>
+    </div>
+
+    <!-- Summary Table: What We Know vs What We Cannot Conclude -->
+    <div class="nasa-card" style="margin-bottom: 3.5rem;">
+      <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem;">
+        <i class="fa-solid fa-scale-balanced" style="color: var(--cyan-primary);"></i> Scientific Transparency Ledger
+      </h3>
+
+      <div class="table-responsive">
+        <table class="nasa-table">
+          <thead>
+            <tr>
+              <th style="width: 50%; color: var(--earth-green);"><i class="fa-solid fa-check"></i> What the Data Supports</th>
+              <th style="width: 50%; color: var(--warning-amber);"><i class="fa-solid fa-xmark"></i> What Cannot Be Claimed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Valid spatial variations in atmospheric column-averaged concentration (XCH₄ in ppb).</td>
+              <td>Pinpointing exact ground-level emission sources or industrial leak points.</td>
+            </tr>
+            <tr>
+              <td>Significant seasonal reduction in optical satellite soundings during monsoon months.</td>
+              <td>Assuming zero concentration in regions where observations were obscured by clouds.</td>
+            </tr>
+            <tr>
+              <td>Collocated meteorological context from NASA POWER (T2M, PRECTOTCORR, RH2M, WS10M).</td>
+              <td>Proving direct causality between surface temperature and column concentration.</td>
+            </tr>
+            <tr>
+              <td>Benchmarking experimental machine learning architectures under rigorous chronological validation.</td>
+              <td>Marketing experimental models (with negative R²) as operational forecasting tools.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Call to Explore -->
+    <div class="nasa-card" style="text-align: center; padding: 3rem 2rem;">
+      <h3 style="font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 1rem;">
+        Explore the Data Directly
+      </h3>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem;">
+        Use our interactive tools to verify these findings, inspect individual grid nodes, or download the raw scientific exports.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="dashboard.html" class="btn-nasa btn-nasa-primary">Launch Dashboard</a>
+        <a href="data-research.html" class="btn-nasa btn-nasa-outline">Download Data</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>
+          Transforming satellite Earth observations and climate datasets into an accessible, interactive environmental exploration platform that helps ordinary people understand atmospheric methane patterns across India.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="earth-explorer.html">Explore Earth</a></li>
+          <li><a href="why-methane.html">Why Methane?</a></li>
+          <li><a href="findings.html">Our Findings</a></li>
+          <li><a href="dashboard.html">India Explorer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Science & Data</div>
+        <ul class="footer-links">
+          <li><a href="impact.html">Environmental Impact</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="data-research.html">Data Downloads</a></li>
+          <li><a href="advanced-research.html">ML Lab (Experimental)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team. Built for the NASA Space Apps Challenge.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">
+        Status: Experimental Reference Model • Open Environmental Science
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Observations by period chart
+      const periodData = [{
+        x: ['May 2019 (Pre-monsoon)', 'Feb 2021 (Winter)', 'Aug 2021 (Monsoon Gap)', 'Nov 2023 (Post-monsoon)'],
+        y: [82, 67, 11, 66],
+        type: 'bar',
+        marker: {
+          color: ['#00d2ff', '#00ff88', '#f59e0b', '#3b82f6']
+        }
+      }];
+
+      Plotly.newPlot('findingsPeriodChart', periodData, {
+        title: false,
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent',
+        font: { color: '#94a3b8', family: 'Inter, sans-serif' },
+        yaxis: { title: 'Observed Grid Nodes', gridcolor: 'rgba(255,255,255,0.08)' },
+        xaxis: { gridcolor: 'transparent' },
+        margin: { t: 20, b: 60, l: 50, r: 20 }
+      }, { responsive: true, displayModeBar: false });
+
+      // 2. Regional Median Chart
+      const regionData = [{
+        x: ['Northwest', 'Northeast', 'Central-West', 'Central-East', 'Southwest', 'Southeast'],
+        y: [1895.2, 1928.4, 1876.5, 1912.0, 1860.8, null],
+        type: 'bar',
+        marker: {
+          color: ['#00d2ff', '#00d2ff', '#00ff88', '#00ff88', '#3b82f6', '#f59e0b']
+        }
+      }];
+
+      Plotly.newPlot('findingsRegionChart', regionData, {
+        title: false,
+        paper_bgcolor: 'transparent',
+        plot_bgcolor: 'transparent',
+        font: { color: '#94a3b8', family: 'Inter, sans-serif' },
+        yaxis: { title: 'Median CH₄ (ppb)', range: [1800, 1960], gridcolor: 'rgba(255,255,255,0.08)' },
+        xaxis: { gridcolor: 'transparent' },
+        margin: { t: 20, b: 60, l: 50, r: 20 }
+      }, { responsive: true, displayModeBar: false });
+    });
+  </script>
+</body>
+</html>

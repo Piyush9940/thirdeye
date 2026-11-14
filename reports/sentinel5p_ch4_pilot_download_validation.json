@@ -1,0 +1,54 @@
+{
+  "product_id": "d1e8f762-02db-4b75-b6af-297da26340c7",
+  "filename": "S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc",
+  "year": 2019,
+  "season": "Monsoon",
+  "stream": "RPRO",
+  "baseline": 20400,
+  "expected_bytes": 52894372,
+  "actual_bytes": 52894372,
+  "file_size_match": true,
+  "sha256": "2e6d933002ebd4e02b431ef758dbd9789fb289490d3cc8f509dfbf1991c6d81b",
+  "netcdf_validation": {
+    "groups": [
+      "PRODUCT",
+      "METADATA"
+    ],
+    "dimensions": {
+      "scanline": 3245,
+      "ground_pixel": 215,
+      "corner": 4,
+      "time": 1,
+      "layer": 12,
+      "level": 13
+    },
+    "required_variables": {
+      "latitude": [
+        1,
+        3245,
+        215
+      ],
+      "longitude": [
+        1,
+        3245,
+        215
+      ],
+      "qa_value": [
+        1,
+        3245,
+        215
+      ],
+      "methane_mixing_ratio_bias_corrected": [
+        1,
+        3245,
+        215
+      ]
+    }
+  },
+  "download_statistics": {
+    "downloaded_bytes": 52894372,
+    "elapsed_seconds": 0,
+    "average_mbps": null
+  },
+  "download_path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\raw\\copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc"
+}

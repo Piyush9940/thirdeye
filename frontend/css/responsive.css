@@ -1,0 +1,110 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN - EARTH SYSTEMS TREND DETECTIVE
+   Mobile, Tablet, Desktop Viewports
+   ========================================================================== */
+
+/* Large Desktops (> 1200px) */
+@media (min-width: 1200px) {
+  .dashboard-main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets & Small Desktops (768px - 1024px) */
+@media (max-width: 1024px) {
+  .grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .kpi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Mobile & Small Tablets (< 768px) */
+@media (max-width: 768px) {
+  .nav-mobile-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(4, 9, 20, 0.98);
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-medium);
+    gap: 0.5rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    display: block;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+
+  .grid-2col, .grid-3col {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-wrapper {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .filter-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-select, .form-input {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.25rem !important;
+  }
+  
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-cta-group .btn-nasa {
+    width: 100%;
+  }
+}

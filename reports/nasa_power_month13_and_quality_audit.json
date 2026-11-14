@@ -1,0 +1,530 @@
+{
+  "T2M": {
+    "month13_investigation": [
+      {
+        "year": 2015,
+        "month13_grid_mean": 19.770301282051282,
+        "monthly_mean_grid_mean": 19.749268696581197,
+        "monthly_median_grid_mean": 20.29371153846154,
+        "mae_vs_monthly_mean": 0.021180021367521406,
+        "bias_vs_monthly_mean": 0.021032585470085498,
+        "correlation_vs_monthly_mean": 0.9999996421225497,
+        "mae_vs_monthly_median": 0.6099967948717948
+      },
+      {
+        "year": 2016,
+        "month13_grid_mean": 20.127528846153847,
+        "monthly_mean_grid_mean": 20.11953044871795,
+        "monthly_median_grid_mean": 20.418868589743592,
+        "mae_vs_monthly_mean": 0.011458333333333426,
+        "bias_vs_monthly_mean": 0.00799839743589748,
+        "correlation_vs_monthly_mean": 0.9999997394652113,
+        "mae_vs_monthly_median": 0.6024903846153846
+      },
+      {
+        "year": 2017,
+        "month13_grid_mean": 19.8369358974359,
+        "monthly_mean_grid_mean": 19.8173141025641,
+        "monthly_median_grid_mean": 20.386902243589745,
+        "mae_vs_monthly_mean": 0.02032799145299147,
+        "bias_vs_monthly_mean": 0.019621794871794825,
+        "correlation_vs_monthly_mean": 0.9999994616191504,
+        "mae_vs_monthly_median": 0.6818092948717949
+      },
+      {
+        "year": 2018,
+        "month13_grid_mean": 19.728628205128206,
+        "monthly_mean_grid_mean": 19.710251869658123,
+        "monthly_median_grid_mean": 19.964120192307696,
+        "mae_vs_monthly_mean": 0.0191626602564103,
+        "bias_vs_monthly_mean": 0.018376335470085475,
+        "correlation_vs_monthly_mean": 0.9999994857125711,
+        "mae_vs_monthly_median": 0.5935849358974359
+      },
+      {
+        "year": 2019,
+        "month13_grid_mean": 19.58305769230769,
+        "monthly_mean_grid_mean": 19.562522435897435,
+        "monthly_median_grid_mean": 20.25693108974359,
+        "mae_vs_monthly_mean": 0.021763888888889,
+        "bias_vs_monthly_mean": 0.020535256410256414,
+        "correlation_vs_monthly_mean": 0.9999993157736793,
+        "mae_vs_monthly_median": 0.8593092948717947
+      },
+      {
+        "year": 2020,
+        "month13_grid_mean": 19.345647435897437,
+        "monthly_mean_grid_mean": 19.33560363247863,
+        "monthly_median_grid_mean": 19.980959935897435,
+        "mae_vs_monthly_mean": 0.011066773504273646,
+        "bias_vs_monthly_mean": 0.010043803418803477,
+        "correlation_vs_monthly_mean": 0.9999998920721067,
+        "mae_vs_monthly_median": 0.8045304487179488
+      },
+      {
+        "year": 2021,
+        "month13_grid_mean": 19.68519871794872,
+        "monthly_mean_grid_mean": 19.665066773504275,
+        "monthly_median_grid_mean": 20.062735576923078,
+        "mae_vs_monthly_mean": 0.020425747863247898,
+        "bias_vs_monthly_mean": 0.02013194444444442,
+        "correlation_vs_monthly_mean": 0.9999997732199966,
+        "mae_vs_monthly_median": 0.6804631410256411
+      },
+      {
+        "year": 2022,
+        "month13_grid_mean": 19.693608974358977,
+        "monthly_mean_grid_mean": 19.662122596153846,
+        "monthly_median_grid_mean": 20.26401923076923,
+        "mae_vs_monthly_mean": 0.031828792735042744,
+        "bias_vs_monthly_mean": 0.031486378205128174,
+        "correlation_vs_monthly_mean": 0.9999995170855966,
+        "mae_vs_monthly_median": 0.7000480769230769
+      },
+      {
+        "year": 2023,
+        "month13_grid_mean": 19.870121794871796,
+        "monthly_mean_grid_mean": 19.853322382478634,
+        "monthly_median_grid_mean": 20.208285256410257,
+        "mae_vs_monthly_mean": 0.017865117521367664,
+        "bias_vs_monthly_mean": 0.016799412393162485,
+        "correlation_vs_monthly_mean": 0.9999997139512741,
+        "mae_vs_monthly_median": 0.544176282051282
+      },
+      {
+        "year": 2024,
+        "month13_grid_mean": 20.120551282051284,
+        "monthly_mean_grid_mean": 20.110465544871797,
+        "monthly_median_grid_mean": 20.570927884615383,
+        "mae_vs_monthly_mean": 0.012084668803418899,
+        "bias_vs_monthly_mean": 0.01008573717948707,
+        "correlation_vs_monthly_mean": 0.9999998087533306,
+        "mae_vs_monthly_median": 0.6576298076923078
+      }
+    ]
+  },
+  "PRECTOTCORR": {
+    "month13_investigation": [
+      {
+        "year": 2015,
+        "month13_grid_mean": 3.1024999999999996,
+        "monthly_mean_grid_mean": 3.0921431623931626,
+        "monthly_median_grid_mean": 2.1239583333333334,
+        "mae_vs_monthly_mean": 0.01364316239316239,
+        "bias_vs_monthly_mean": 0.010356837606837607,
+        "correlation_vs_monthly_mean": 0.9999855990210514,
+        "mae_vs_monthly_median": 1.0670993589743587
+      },
+      {
+        "year": 2016,
+        "month13_grid_mean": 3.1393173076923078,
+        "monthly_mean_grid_mean": 3.1279372329059827,
+        "monthly_median_grid_mean": 1.9653589743589748,
+        "mae_vs_monthly_mean": 0.013094818376068395,
+        "bias_vs_monthly_mean": 0.011380074786324799,
+        "correlation_vs_monthly_mean": 0.9999870782505332,
+        "mae_vs_monthly_median": 1.251198717948718
+      },
+      {
+        "year": 2017,
+        "month13_grid_mean": 3.4029583333333333,
+        "monthly_mean_grid_mean": 3.3826097756410256,
+        "monthly_median_grid_mean": 2.4662419871794876,
+        "mae_vs_monthly_mean": 0.021262553418803398,
+        "bias_vs_monthly_mean": 0.02034855769230767,
+        "correlation_vs_monthly_mean": 0.9999938759984159,
+        "mae_vs_monthly_median": 1.0533733974358974
+      },
+      {
+        "year": 2018,
+        "month13_grid_mean": 3.131096153846154,
+        "monthly_mean_grid_mean": 3.1127473290598293,
+        "monthly_median_grid_mean": 2.073600961538461,
+        "mae_vs_monthly_mean": 0.019115918803418792,
+        "bias_vs_monthly_mean": 0.018348824786324776,
+        "correlation_vs_monthly_mean": 0.9999944161227171,
+        "mae_vs_monthly_median": 1.125559294871795
+      },
+      {
+        "year": 2019,
+        "month13_grid_mean": 3.393009615384615,
+        "monthly_mean_grid_mean": 3.376440972222222,
+        "monthly_median_grid_mean": 1.9771426282051285,
+        "mae_vs_monthly_mean": 0.018431891025641033,
+        "bias_vs_monthly_mean": 0.01656864316239317,
+        "correlation_vs_monthly_mean": 0.99999150322795,
+        "mae_vs_monthly_median": 1.463280448717949
+      },
+      {
+        "year": 2020,
+        "month13_grid_mean": 3.673496794871795,
+        "monthly_mean_grid_mean": 3.6632807158119656,
+        "monthly_median_grid_mean": 2.6176314102564104,
+        "mae_vs_monthly_mean": 0.011748130341880351,
+        "bias_vs_monthly_mean": 0.010216079059829073,
+        "correlation_vs_monthly_mean": 0.9999926292918913,
+        "mae_vs_monthly_median": 1.2272596153846154
+      },
+      {
+        "year": 2021,
+        "month13_grid_mean": 3.5221955128205127,
+        "monthly_mean_grid_mean": 3.504474626068376,
+        "monthly_median_grid_mean": 2.686894230769231,
+        "mae_vs_monthly_mean": 0.019344818376068378,
+        "bias_vs_monthly_mean": 0.017720886752136754,
+        "correlation_vs_monthly_mean": 0.9999893849832124,
+        "mae_vs_monthly_median": 1.0004326923076923
+      },
+      {
+        "year": 2022,
+        "month13_grid_mean": 3.5125576923076918,
+        "monthly_mean_grid_mean": 3.493130608974359,
+        "monthly_median_grid_mean": 2.4948333333333332,
+        "mae_vs_monthly_mean": 0.020665865384615383,
+        "bias_vs_monthly_mean": 0.019427083333333327,
+        "correlation_vs_monthly_mean": 0.9999789110004123,
+        "mae_vs_monthly_median": 1.1176538461538463
+      },
+      {
+        "year": 2023,
+        "month13_grid_mean": 3.1025160256410254,
+        "monthly_mean_grid_mean": 3.0880267094017095,
+        "monthly_median_grid_mean": 2.0876298076923074,
+        "mae_vs_monthly_mean": 0.015315170940170942,
+        "bias_vs_monthly_mean": 0.014489316239316236,
+        "correlation_vs_monthly_mean": 0.9999899071354709,
+        "mae_vs_monthly_median": 1.0551554487179486
+      },
+      {
+        "year": 2024,
+        "month13_grid_mean": 3.501807692307692,
+        "monthly_mean_grid_mean": 3.486865918803419,
+        "monthly_median_grid_mean": 2.1822756410256408,
+        "mae_vs_monthly_mean": 0.015908119658119654,
+        "bias_vs_monthly_mean": 0.014941773504273493,
+        "correlation_vs_monthly_mean": 0.9999925039245269,
+        "mae_vs_monthly_median": 1.4357980769230767
+      }
+    ]
+  },
+  "RH2M": {
+    "month13_investigation": [
+      {
+        "year": 2015,
+        "month13_grid_mean": 64.11730769230769,
+        "monthly_mean_grid_mean": 64.08575133547008,
+        "monthly_median_grid_mean": 63.740205128205126,
+        "mae_vs_monthly_mean": 0.054313835470085954,
+        "bias_vs_monthly_mean": 0.0315563568376071,
+        "correlation_vs_monthly_mean": 0.9999922732822982,
+        "mae_vs_monthly_median": 1.6627019230769229
+      },
+      {
+        "year": 2016,
+        "month13_grid_mean": 63.075923076923075,
+        "monthly_mean_grid_mean": 63.03742334401711,
+        "monthly_median_grid_mean": 62.58708974358974,
+        "mae_vs_monthly_mean": 0.04163595085470114,
+        "bias_vs_monthly_mean": 0.038499732905983054,
+        "correlation_vs_monthly_mean": 0.9999974781812405,
+        "mae_vs_monthly_median": 2.121230769230769
+      },
+      {
+        "year": 2017,
+        "month13_grid_mean": 64.36108012820513,
+        "monthly_mean_grid_mean": 64.30259348290599,
+        "monthly_median_grid_mean": 64.34377884615384,
+        "mae_vs_monthly_mean": 0.07374465811965826,
+        "bias_vs_monthly_mean": 0.05848664529914526,
+        "correlation_vs_monthly_mean": 0.999989256150421,
+        "mae_vs_monthly_median": 2.2308012820512824
+      },
+      {
+        "year": 2018,
+        "month13_grid_mean": 63.36991346153845,
+        "monthly_mean_grid_mean": 63.328923611111115,
+        "monthly_median_grid_mean": 62.6409375,
+        "mae_vs_monthly_mean": 0.05657051282051268,
+        "bias_vs_monthly_mean": 0.04098985042735022,
+        "correlation_vs_monthly_mean": 0.9999934842490095,
+        "mae_vs_monthly_median": 2.0312227564102563
+      },
+      {
+        "year": 2019,
+        "month13_grid_mean": 66.15962820512821,
+        "monthly_mean_grid_mean": 66.12886591880343,
+        "monthly_median_grid_mean": 67.09580448717949,
+        "mae_vs_monthly_mean": 0.05943536324786354,
+        "bias_vs_monthly_mean": 0.030762286324786677,
+        "correlation_vs_monthly_mean": 0.999984548607223,
+        "mae_vs_monthly_median": 1.8303621794871794
+      },
+      {
+        "year": 2020,
+        "month13_grid_mean": 67.32116346153845,
+        "monthly_mean_grid_mean": 67.28975213675214,
+        "monthly_median_grid_mean": 67.83586378205129,
+        "mae_vs_monthly_mean": 0.03468322649572653,
+        "bias_vs_monthly_mean": 0.03141132478632482,
+        "correlation_vs_monthly_mean": 0.999997757501996,
+        "mae_vs_monthly_median": 1.8814631410256408
+      },
+      {
+        "year": 2021,
+        "month13_grid_mean": 65.7766858974359,
+        "monthly_mean_grid_mean": 65.70816506410256,
+        "monthly_median_grid_mean": 67.634375,
+        "mae_vs_monthly_mean": 0.07359561965811987,
+        "bias_vs_monthly_mean": 0.06852083333333348,
+        "correlation_vs_monthly_mean": 0.9999909100658207,
+        "mae_vs_monthly_median": 2.6333685897435894
+      },
+      {
+        "year": 2022,
+        "month13_grid_mean": 66.87372435897437,
+        "monthly_mean_grid_mean": 66.83811805555555,
+        "monthly_median_grid_mean": 67.69117948717948,
+        "mae_vs_monthly_mean": 0.056924145299145266,
+        "bias_vs_monthly_mean": 0.03560630341880351,
+        "correlation_vs_monthly_mean": 0.9999891880628737,
+        "mae_vs_monthly_median": 2.085778846153846
+      },
+      {
+        "year": 2023,
+        "month13_grid_mean": 65.64246153846155,
+        "monthly_mean_grid_mean": 65.57731036324786,
+        "monthly_median_grid_mean": 65.78823878205128,
+        "mae_vs_monthly_mean": 0.08175373931623935,
+        "bias_vs_monthly_mean": 0.06515117521367535,
+        "correlation_vs_monthly_mean": 0.9999808136294528,
+        "mae_vs_monthly_median": 1.783415064102564
+      },
+      {
+        "year": 2024,
+        "month13_grid_mean": 66.07823717948718,
+        "monthly_mean_grid_mean": 66.05030395299146,
+        "monthly_median_grid_mean": 66.47003365384616,
+        "mae_vs_monthly_mean": 0.042408119658119796,
+        "bias_vs_monthly_mean": 0.027933226495726608,
+        "correlation_vs_monthly_mean": 0.9999942841425753,
+        "mae_vs_monthly_median": 2.151735576923077
+      }
+    ]
+  },
+  "WS10M": {
+    "month13_investigation": [
+      {
+        "year": 2015,
+        "month13_grid_mean": 3.977673076923077,
+        "monthly_mean_grid_mean": 3.97607905982906,
+        "monthly_median_grid_mean": 3.7928814102564106,
+        "mae_vs_monthly_mean": 0.005104166666666678,
+        "bias_vs_monthly_mean": 0.001594017094017088,
+        "correlation_vs_monthly_mean": 0.9999884501088904,
+        "mae_vs_monthly_median": 0.23947435897435895
+      },
+      {
+        "year": 2016,
+        "month13_grid_mean": 4.0791891025641025,
+        "monthly_mean_grid_mean": 4.078235576923078,
+        "monthly_median_grid_mean": 3.960793269230769,
+        "mae_vs_monthly_mean": 0.0037767094017094214,
+        "bias_vs_monthly_mean": 0.0009535256410256481,
+        "correlation_vs_monthly_mean": 0.9999945426010978,
+        "mae_vs_monthly_median": 0.21559134615384615
+      },
+      {
+        "year": 2017,
+        "month13_grid_mean": 4.066516025641026,
+        "monthly_mean_grid_mean": 4.064966613247862,
+        "monthly_median_grid_mean": 3.8982371794871793,
+        "mae_vs_monthly_mean": 0.0056984508547008724,
+        "bias_vs_monthly_mean": 0.0015494123931624085,
+        "correlation_vs_monthly_mean": 0.9999880196418112,
+        "mae_vs_monthly_median": 0.21989423076923076
+      },
+      {
+        "year": 2018,
+        "month13_grid_mean": 4.050150641025642,
+        "monthly_mean_grid_mean": 4.047563034188034,
+        "monthly_median_grid_mean": 3.750501602564103,
+        "mae_vs_monthly_mean": 0.006937500000000026,
+        "bias_vs_monthly_mean": 0.002587606837606843,
+        "correlation_vs_monthly_mean": 0.9999815761366008,
+        "mae_vs_monthly_median": 0.3242291666666667
+      },
+      {
+        "year": 2019,
+        "month13_grid_mean": 4.052900641025641,
+        "monthly_mean_grid_mean": 4.0515817307692314,
+        "monthly_median_grid_mean": 3.9428493589743585,
+        "mae_vs_monthly_mean": 0.006740384615384614,
+        "bias_vs_monthly_mean": 0.0013189102564102558,
+        "correlation_vs_monthly_mean": 0.9999808107735272,
+        "mae_vs_monthly_median": 0.204224358974359
+      },
+      {
+        "year": 2020,
+        "month13_grid_mean": 3.9537243589743585,
+        "monthly_mean_grid_mean": 3.95181891025641,
+        "monthly_median_grid_mean": 3.886206730769231,
+        "mae_vs_monthly_mean": 0.003517094017094028,
+        "bias_vs_monthly_mean": 0.0019054487179487238,
+        "correlation_vs_monthly_mean": 0.9999958838932512,
+        "mae_vs_monthly_median": 0.18279326923076925
+      },
+      {
+        "year": 2021,
+        "month13_grid_mean": 4.005740384615384,
+        "monthly_mean_grid_mean": 4.002666666666666,
+        "monthly_median_grid_mean": 3.8940240384615383,
+        "mae_vs_monthly_mean": 0.00443643162393165,
+        "bias_vs_monthly_mean": 0.0030737179487179463,
+        "correlation_vs_monthly_mean": 0.9999945427330476,
+        "mae_vs_monthly_median": 0.20035096153846155
+      },
+      {
+        "year": 2022,
+        "month13_grid_mean": 3.9703749999999998,
+        "monthly_mean_grid_mean": 3.967651175213675,
+        "monthly_median_grid_mean": 3.8961586538461543,
+        "mae_vs_monthly_mean": 0.006206730769230763,
+        "bias_vs_monthly_mean": 0.0027238247863247845,
+        "correlation_vs_monthly_mean": 0.9999876904464272,
+        "mae_vs_monthly_median": 0.18533814102564106
+      },
+      {
+        "year": 2023,
+        "month13_grid_mean": 3.9744070512820517,
+        "monthly_mean_grid_mean": 3.97314983974359,
+        "monthly_median_grid_mean": 3.815559294871795,
+        "mae_vs_monthly_mean": 0.005145566239316253,
+        "bias_vs_monthly_mean": 0.001257211538461545,
+        "correlation_vs_monthly_mean": 0.9999890114263316,
+        "mae_vs_monthly_median": 0.21651442307692306
+      },
+      {
+        "year": 2024,
+        "month13_grid_mean": 4.056753205128205,
+        "monthly_mean_grid_mean": 4.05696233974359,
+        "monthly_median_grid_mean": 3.897419871794872,
+        "mae_vs_monthly_mean": 0.00394951923076926,
+        "bias_vs_monthly_mean": -0.00020913461538462686,
+        "correlation_vs_monthly_mean": 0.9999936641391236,
+        "mae_vs_monthly_median": 0.22560576923076922
+      }
+    ]
+  },
+  "monthly_quality": {
+    "T2M": {
+      "shape": [
+        120,
+        65,
+        48
+      ],
+      "total_values": 374400,
+      "missing_values": 0,
+      "infinite_values": 0,
+      "finite_values": 374400,
+      "minimum": -28.11,
+      "maximum": 40.57,
+      "mean": 19.7585468482906,
+      "median": 26.52,
+      "std": 13.381206074052372,
+      "percentile_1": -17.5,
+      "percentile_25": 14.01,
+      "percentile_75": 28.47,
+      "percentile_99": 35.66,
+      "below_screening_limit": 0,
+      "above_screening_limit": 0,
+      "screening_limits": [
+        -90.0,
+        65.0
+      ]
+    },
+    "PRECTOTCORR": {
+      "shape": [
+        120,
+        65,
+        48
+      ],
+      "total_values": 374400,
+      "missing_values": 0,
+      "infinite_values": 0,
+      "finite_values": 374400,
+      "minimum": 0.0,
+      "maximum": 128.18,
+      "mean": 3.332765705128205,
+      "median": 1.3,
+      "std": 5.101463169156449,
+      "percentile_1": 0.0,
+      "percentile_25": 0.19,
+      "percentile_75": 4.82,
+      "percentile_99": 22.23,
+      "below_screening_limit": 0,
+      "above_screening_limit": 0,
+      "screening_limits": [
+        0.0,
+        500.0
+      ]
+    },
+    "RH2M": {
+      "shape": [
+        120,
+        65,
+        48
+      ],
+      "total_values": 374400,
+      "missing_values": 0,
+      "infinite_values": 0,
+      "finite_values": 374400,
+      "minimum": 10.66,
+      "maximum": 96.24,
+      "mean": 65.23472072649572,
+      "median": 72.34,
+      "std": 18.78061865447647,
+      "percentile_1": 20.22,
+      "percentile_25": 51.07,
+      "percentile_75": 80.68,
+      "percentile_99": 89.87,
+      "below_screening_limit": 0,
+      "above_screening_limit": 0,
+      "screening_limits": [
+        0.0,
+        100.0
+      ]
+    },
+    "WS10M": {
+      "shape": [
+        120,
+        65,
+        48
+      ],
+      "total_values": 374400,
+      "missing_values": 0,
+      "infinite_values": 0,
+      "finite_values": 374400,
+      "minimum": 0.6,
+      "maximum": 11.54,
+      "mean": 4.01706749465812,
+      "median": 3.7,
+      "std": 1.7387933190103617,
+      "percentile_1": 1.0,
+      "percentile_25": 2.71,
+      "percentile_75": 5.09,
+      "percentile_99": 8.82,
+      "below_screening_limit": 0,
+      "above_screening_limit": 0,
+      "screening_limits": [
+        0.0,
+        100.0
+      ]
+    }
+  },
+  "precipitation_check": {
+    "negative_count": 0,
+    "zero_count": 23224,
+    "positive_count": 351176,
+    "total_count": 374400
+  }
+}

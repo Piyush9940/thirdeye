@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dataset Explorer — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/explorer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link" style="font-size: 0.78rem; opacity: 0.85;"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions" id="navAuthContainer">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+        <a href="register.html" class="btn-nasa btn-nasa-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="content-wrapper">
+    <div class="page-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+          <span class="badge-scientific badge-verified"><i class="fa-solid fa-database"></i> Verified Catalogue</span>
+          <span class="badge-scientific badge-satellite">Sentinel-5P & NASA POWER</span>
+        </div>
+        <h1 class="page-title"><i class="fa-solid fa-database" style="color: var(--cyan-primary);"></i> Scientific Dataset Explorer</h1>
+        <p class="page-description">
+          Examine raw telemetry, quality-filtered observations, spatial graph nodes, and machine learning predictions with multi-column sorting, pagination, and CSV export.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 0.5rem;">
+        <button class="btn-nasa btn-nasa-primary btn-sm" id="btnExportCSV"><i class="fa-solid fa-download"></i> Export Filtered CSV</button>
+      </div>
+    </div>
+
+    <!-- Data Provenance Cards -->
+    <div class="grid-3col" style="margin-bottom: 1.5rem;">
+      <div class="nasa-card" style="padding: 1rem;">
+        <span class="badge-scientific badge-satellite" style="margin-bottom: 0.4rem;">Quality Filtered</span>
+        <div style="font-weight: 600; font-size: 0.9rem; color: #fff;">QA &ge; 0.50 Threshold</div>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">
+          Removes cloud-obscured, snow, and low-solar-elevation pixels. Yields 226 verified node-period aggregations.
+        </p>
+      </div>
+
+      <div class="nasa-card" style="padding: 1rem;">
+        <span class="badge-scientific badge-verified" style="margin-bottom: 0.4rem;">Spatial Aggregation</span>
+        <div style="font-weight: 600; font-size: 0.9rem; color: #fff;">2° Lattice Binning</div>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">
+          Satellite soundings within each 2° spherical bin are aggregated into median, mean, and standard deviation.
+        </p>
+      </div>
+
+      <div class="nasa-card" style="padding: 1rem;">
+        <span class="badge-scientific badge-experimental" style="margin-bottom: 0.4rem;">Model Predictions</span>
+        <div style="font-weight: 600; font-size: 0.9rem; color: #fff;">Chronological Evaluations</div>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">
+          720 evaluation predictions across 3 chronological folds and 5 seeds. Clearly separated from empirical observations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="observations"><i class="fa-solid fa-satellite-dish"></i> Methane Observations (226)</button>
+      <button class="tab-btn" data-tab="predictions"><i class="fa-solid fa-microchip"></i> ML Predictions (720)</button>
+      <button class="tab-btn" data-tab="nodes"><i class="fa-solid fa-network-wired"></i> Spatial Nodes (255)</button>
+    </div>
+
+    <!-- Filter & Search Toolbar -->
+    <div class="filter-toolbar">
+      <div class="filter-group">
+        <label class="filter-label" for="searchBox"><i class="fa-solid fa-magnifying-glass"></i> Search:</label>
+        <input type="text" class="form-input" id="searchBox" placeholder="Node ID, coordinates, period..." style="width: 200px;">
+      </div>
+
+      <div class="filter-group" id="periodFilterGroup">
+        <label class="filter-label" for="tblPeriodFilter"><i class="fa-solid fa-calendar"></i> Period:</label>
+        <select class="form-select" id="tblPeriodFilter">
+          <option value="ALL">All Periods</option>
+          <option value="2019-05">2019-05 (Pre-monsoon)</option>
+          <option value="2021-02">2021-02 (Winter)</option>
+          <option value="2021-08">2021-08 (Monsoon)</option>
+          <option value="2023-11">2023-11 (Post-monsoon)</option>
+        </select>
+      </div>
+
+      <div class="filter-group" id="foldFilterGroup" style="display: none;">
+        <label class="filter-label" for="tblFoldFilter"><i class="fa-solid fa-diagram-project"></i> Fold:</label>
+        <select class="form-select" id="tblFoldFilter">
+          <option value="ALL">All Folds (1, 2, 3)</option>
+          <option value="1">Fold 1 (Eval: 2021-02)</option>
+          <option value="2">Fold 2 (Eval: 2021-08)</option>
+          <option value="3">Fold 3 (Eval: 2023-11)</option>
+        </select>
+      </div>
+
+      <div class="filter-group" id="seedFilterGroup" style="display: none;">
+        <label class="filter-label" for="tblSeedFilter"><i class="fa-solid fa-seedling"></i> Seed:</label>
+        <select class="form-select" id="tblSeedFilter">
+          <option value="ALL">All Seeds</option>
+          <option value="7">Seed 7</option>
+          <option value="21">Seed 21</option>
+          <option value="42">Seed 42</option>
+          <option value="77">Seed 77</option>
+          <option value="123">Seed 123</option>
+        </select>
+      </div>
+
+      <div style="margin-left: auto; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);" id="tblRowCount">
+        Loading records...
+      </div>
+    </div>
+
+    <!-- Data Table Container -->
+    <div class="nasa-table-container">
+      <table class="nasa-table" id="dataTable">
+        <thead id="tableHead"></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="table-pagination">
+      <div id="paginationInfo">Showing 1 to 20 of 226 records</div>
+      <div class="pagination-controls">
+        <button class="btn-nasa btn-nasa-secondary btn-sm" id="btnPrevPage" disabled><i class="fa-solid fa-chevron-left"></i> Previous</button>
+        <button class="btn-nasa btn-nasa-secondary btn-sm" id="btnNextPage">Next <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Record Details Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="record-drawer" id="recordDrawer">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+      <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700;">Record Inspector</h3>
+      <button id="btnCloseDrawer" style="background: none; border: none; color: var(--text-muted); font-size: 1.25rem; cursor: pointer;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div id="drawerContent"></div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>Scientific data explorer for Copernicus Sentinel-5P observations and machine learning evaluations.</p>
+      </div>
+      <div>
+        <div class="footer-heading">Platform</div>
+        <ul class="footer-links">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="earth-explorer.html">Earth Explorer</a></li>
+          <li><a href="dataset-explorer.html">Datasets</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Documentation</div>
+        <ul class="footer-links">
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="reports.html">Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Attribution</div>
+        <ul class="footer-links">
+          <li>Copernicus Sentinel-5P</li>
+          <li>NASA POWER Project</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">Status: Verified Exports Only</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentTab = 'observations';
+      let allData = [];
+      let filteredData = [];
+      let currentPage = 1;
+      const pageSize = 20;
+
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tableHead = document.getElementById('tableHead');
+      const tableBody = document.getElementById('tableBody');
+      const searchBox = document.getElementById('searchBox');
+      const periodFilter = document.getElementById('tblPeriodFilter');
+      const foldFilter = document.getElementById('tblFoldFilter');
+      const seedFilter = document.getElementById('tblSeedFilter');
+      const periodGroup = document.getElementById('periodFilterGroup');
+      const foldGroup = document.getElementById('foldFilterGroup');
+      const seedGroup = document.getElementById('seedFilterGroup');
+      const rowCountEl = document.getElementById('tblRowCount');
+      const paginationInfo = document.getElementById('paginationInfo');
+      const btnPrev = document.getElementById('btnPrevPage');
+      const btnNext = document.getElementById('btnNextPage');
+      const btnExport = document.getElementById('btnExportCSV');
+      const recordDrawer = document.getElementById('recordDrawer');
+      const drawerOverlay = document.getElementById('drawerOverlay');
+      const btnCloseDrawer = document.getElementById('btnCloseDrawer');
+      const drawerContent = document.getElementById('drawerContent');
+
+      // Tab Switch
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentTab = btn.getAttribute('data-tab');
+
+          // Toggle visibility of fold/seed controls
+          if (currentTab === 'predictions') {
+            foldGroup.style.display = 'flex';
+            seedGroup.style.display = 'flex';
+            periodGroup.style.display = 'flex';
+          } else if (currentTab === 'observations') {
+            foldGroup.style.display = 'none';
+            seedGroup.style.display = 'none';
+            periodGroup.style.display = 'flex';
+          } else {
+            foldGroup.style.display = 'none';
+            seedGroup.style.display = 'none';
+            periodGroup.style.display = 'none';
+          }
+
+          loadTabData();
+        });
+      });
+
+      async function loadTabData() {
+        currentPage = 1;
+        rowCountEl.textContent = 'Loading records...';
+
+        try {
+          if (currentTab === 'observations') {
+            const res = await API.getMethaneObservations({ limit: 10000 });
+            allData = res.records || [];
+          } else if (currentTab === 'predictions') {
+            const res = await API.getMLPPredictions({ limit: 10000 });
+            allData = res.records || [];
+          } else {
+            const res = await API.getSpatialNodes();
+            allData = res.data || [];
+          }
+          applyFilters();
+        } catch (err) {
+          console.error('Error fetching data:', err);
+          rowCountEl.textContent = `Error: ${err.message}`;
+        }
+      }
+
+      function applyFilters() {
+        const query = searchBox.value.trim().toLowerCase();
+        const period = periodFilter.value;
+        const fold = foldFilter.value;
+        const seed = seedFilter.value;
+
+        filteredData = allData.filter(row => {
+          // Period filter
+          if (currentTab === 'observations' && period !== 'ALL') {
+            if (row.observation_period !== period) return false;
+          }
+          if (currentTab === 'predictions' && period !== 'ALL') {
+            if (row.evaluation_period !== period) return false;
+          }
+
+          // Fold & Seed filters (predictions only)
+          if (currentTab === 'predictions') {
+            if (fold !== 'ALL' && row.fold !== parseInt(fold)) return false;
+            if (seed !== 'ALL' && row.seed !== parseInt(seed)) return false;
+          }
+
+          // Free text search
+          if (query) {
+            const matchId = (row.node_id || '').toLowerCase().includes(query);
+            const matchLat = String(row.latitude || '').includes(query);
+            const matchLon = String(row.longitude || '').includes(query);
+            const matchPeriod = String(row.observation_period || row.evaluation_period || '').includes(query);
+            if (!matchId && !matchLat && !matchLon && !matchPeriod) return false;
+          }
+
+          return true;
+        });
+
+        currentPage = 1;
+        renderTable();
+      }
+
+      function renderTable() {
+        const total = filteredData.length;
+        rowCountEl.textContent = `${total} matching records`;
+
+        // Render Head
+        if (currentTab === 'observations') {
+          tableHead.innerHTML = `
+            <tr>
+              <th>Node ID</th>
+              <th>Period</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>CH₄ Median</th>
+              <th>CH₄ Mean</th>
+              <th>T2M (°C)</th>
+              <th>Precip (mm/d)</th>
+              <th>RH2M (%)</th>
+              <th>WS10M (m/s)</th>
+              <th>Action</th>
+            </tr>
+          `;
+        } else if (currentTab === 'predictions') {
+          tableHead.innerHTML = `
+            <tr>
+              <th>Fold</th>
+              <th>Seed</th>
+              <th>Node ID</th>
+              <th>Period</th>
+              <th>Lat / Lon</th>
+              <th>Actual (ppb)</th>
+              <th>Predicted (ppb)</th>
+              <th>Error (ppb)</th>
+              <th>Abs Error</th>
+              <th>Action</th>
+            </tr>
+          `;
+        } else {
+          tableHead.innerHTML = `
+            <tr>
+              <th>Node ID</th>
+              <th>Node Index</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+              <th>Degree</th>
+              <th>Component</th>
+              <th>Has Observation</th>
+              <th>Action</th>
+            </tr>
+          `;
+        }
+
+        // Render Body
+        const start = (currentPage - 1) * pageSize;
+        const pageRecords = filteredData.slice(start, start + pageSize);
+
+        if (pageRecords.length === 0) {
+          tableBody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 2rem;">No matching records found.</td></tr>`;
+          paginationInfo.textContent = 'Showing 0 records';
+          btnPrev.disabled = true;
+          btnNext.disabled = true;
+          return;
+        }
+
+        let rowsHtml = '';
+        pageRecords.forEach(r => {
+          if (currentTab === 'observations') {
+            rowsHtml += `
+              <tr>
+                <td style="font-family: var(--font-mono); font-weight: 600; color: var(--cyan-primary);">${r.node_id}</td>
+                <td><span class="badge-scientific badge-satellite">${r.observation_period}</span></td>
+                <td>${r.latitude.toFixed(1)}°N</td>
+                <td>${r.longitude.toFixed(1)}°E</td>
+                <td style="font-weight: 600; color: ${window.APP_CONFIG.getCH4Color(r.methane_median_ppb)}">${r.methane_median_ppb.toFixed(2)}</td>
+                <td>${r.methane_mean_ppb.toFixed(2)}</td>
+                <td>${r.T2M.toFixed(1)}</td>
+                <td>${r.PRECTOTCORR.toFixed(2)}</td>
+                <td>${r.RH2M.toFixed(1)}</td>
+                <td>${r.WS10M.toFixed(2)}</td>
+                <td><button class="btn-nasa btn-nasa-outline btn-sm btn-inspect" data-id="${r.node_id}">Inspect</button></td>
+              </tr>
+            `;
+          } else if (currentTab === 'predictions') {
+            const errColor = r.error_ppb < 0 ? '#ef4444' : '#10b981';
+            rowsHtml += `
+              <tr>
+                <td><span class="badge-scientific badge-verified">Fold ${r.fold}</span></td>
+                <td><span class="badge-scientific badge-experimental">Seed ${r.seed}</span></td>
+                <td style="font-family: var(--font-mono); color: var(--cyan-primary);">${r.node_id}</td>
+                <td>${r.evaluation_period}</td>
+                <td>${r.latitude.toFixed(1)}°N, ${r.longitude.toFixed(1)}°E</td>
+                <td style="font-weight: 600;">${r.actual_methane_ppb.toFixed(2)}</td>
+                <td style="font-weight: 600; color: var(--cyan-primary);">${r.predicted_methane_ppb.toFixed(2)}</td>
+                <td style="color: ${errColor}; font-weight: 600;">${r.error_ppb > 0 ? '+' : ''}${r.error_ppb.toFixed(2)}</td>
+                <td>${r.absolute_error_ppb.toFixed(2)}</td>
+                <td><button class="btn-nasa btn-nasa-outline btn-sm btn-inspect-pred" data-pred="${encodeURIComponent(JSON.stringify(r))}">Inspect</button></td>
+              </tr>
+            `;
+          } else {
+            rowsHtml += `
+              <tr>
+                <td style="font-family: var(--font-mono); font-weight: 600; color: var(--cyan-primary);">${r.node_id}</td>
+                <td>${r.node_index}</td>
+                <td>${r.latitude.toFixed(1)}°N</td>
+                <td>${r.longitude.toFixed(1)}°E</td>
+                <td>${r.degree || 8}</td>
+                <td>${r.connected_component || 0}</td>
+                <td>
+                  <span class="badge-scientific ${r.has_methane_observation ? 'badge-verified' : 'badge-missing'}">
+                    ${r.has_methane_observation ? 'Observed' : 'Unobserved'}
+                  </span>
+                </td>
+                <td><button class="btn-nasa btn-nasa-outline btn-sm btn-inspect-node" data-node="${encodeURIComponent(JSON.stringify(r))}">Inspect</button></td>
+              </tr>
+            `;
+          }
+        });
+
+        tableBody.innerHTML = rowsHtml;
+
+        // Pagination UI
+        const end = Math.min(start + pageSize, total);
+        paginationInfo.textContent = `Showing ${start + 1} to ${end} of ${total} records`;
+        btnPrev.disabled = currentPage <= 1;
+        btnNext.disabled = end >= total;
+
+        // Attach Inspect listeners
+        document.querySelectorAll('.btn-inspect').forEach(b => {
+          b.addEventListener('click', () => {
+            const nodeId = b.getAttribute('data-id');
+            const rec = filteredData.find(x => x.node_id === nodeId);
+            openDrawer(rec, 'observation');
+          });
+        });
+
+        document.querySelectorAll('.btn-inspect-pred').forEach(b => {
+          b.addEventListener('click', () => {
+            const rec = JSON.parse(decodeURIComponent(b.getAttribute('data-pred')));
+            openDrawer(rec, 'prediction');
+          });
+        });
+
+        document.querySelectorAll('.btn-inspect-node').forEach(b => {
+          b.addEventListener('click', () => {
+            const rec = JSON.parse(decodeURIComponent(b.getAttribute('data-node')));
+            openDrawer(rec, 'node');
+          });
+        });
+      }
+
+      function openDrawer(rec, type) {
+        if (!rec) return;
+        let contentHtml = '';
+
+        if (type === 'observation') {
+          contentHtml = `
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--cyan-primary); margin-bottom: 1rem;">
+              Node ID: ${rec.node_id}
+            </div>
+            <div class="map-popup-row"><span class="map-popup-label">Period:</span><span class="map-popup-val">${rec.observation_period}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Latitude:</span><span class="map-popup-val">${rec.latitude}°N</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Longitude:</span><span class="map-popup-val">${rec.longitude}°E</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">CH₄ Median:</span><span class="map-popup-val" style="color: var(--cyan-primary);">${rec.methane_median_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">CH₄ Mean:</span><span class="map-popup-val">${rec.methane_mean_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">CH₄ Std Dev:</span><span class="map-popup-val">&plusmn;${rec.methane_std_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Pixel Count:</span><span class="map-popup-val">${rec.methane_pixel_count || 'N/A'}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">T2M (Air Temp):</span><span class="map-popup-val">${rec.T2M.toFixed(1)} °C</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Precipitation:</span><span class="map-popup-val">${rec.PRECTOTCORR.toFixed(2)} mm/day</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Relative Humidity:</span><span class="map-popup-val">${rec.RH2M.toFixed(1)} %</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Wind Speed:</span><span class="map-popup-val">${rec.WS10M.toFixed(2)} m/s</span></div>
+          `;
+        } else if (type === 'prediction') {
+          contentHtml = `
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--cyan-primary); margin-bottom: 1rem;">
+              Evaluation: Node ${rec.node_id}
+            </div>
+            <div class="map-popup-row"><span class="map-popup-label">Fold:</span><span class="map-popup-val">${rec.fold}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Seed:</span><span class="map-popup-val">${rec.seed}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Period:</span><span class="map-popup-val">${rec.evaluation_period}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Actual CH₄:</span><span class="map-popup-val">${rec.actual_methane_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Predicted CH₄:</span><span class="map-popup-val" style="color: var(--cyan-primary);">${rec.predicted_methane_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Error (ppb):</span><span class="map-popup-val">${rec.error_ppb.toFixed(2)} ppb</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Abs Error:</span><span class="map-popup-val">${rec.absolute_error_ppb.toFixed(2)} ppb</span></div>
+            <div class="scientific-warning-callout" style="margin-top: 1rem; font-size: 0.75rem;">
+              <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <div class="content">Evaluation output from Original MLP Reference Model. Not an operational future forecast.</div>
+            </div>
+          `;
+        } else {
+          contentHtml = `
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--cyan-primary); margin-bottom: 1rem;">
+              Grid Node: ${rec.node_id}
+            </div>
+            <div class="map-popup-row"><span class="map-popup-label">Node Index:</span><span class="map-popup-val">${rec.node_index}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Latitude:</span><span class="map-popup-val">${rec.latitude}°N</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Longitude:</span><span class="map-popup-val">${rec.longitude}°E</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Connected Degree:</span><span class="map-popup-val">${rec.degree || 8}</span></div>
+            <div class="map-popup-row"><span class="map-popup-label">Has Observation:</span><span class="map-popup-val">${rec.has_methane_observation ? 'YES' : 'NO'}</span></div>
+          `;
+        }
+
+        drawerContent.innerHTML = contentHtml;
+        recordDrawer.classList.add('open');
+        drawerOverlay.classList.add('active');
+      }
+
+      function closeDrawer() {
+        recordDrawer.classList.remove('open');
+        drawerOverlay.classList.remove('active');
+      }
+
+      btnCloseDrawer.addEventListener('click', closeDrawer);
+      drawerOverlay.addEventListener('click', closeDrawer);
+
+      // Pagination events
+      btnPrev.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderTable();
+        }
+      });
+
+      btnNext.addEventListener('click', () => {
+        if (currentPage * pageSize < filteredData.length) {
+          currentPage++;
+          renderTable();
+        }
+      });
+
+      // Filter events
+      searchBox.addEventListener('input', applyFilters);
+      periodFilter.addEventListener('change', applyFilters);
+      foldFilter.addEventListener('change', applyFilters);
+      seedFilter.addEventListener('change', applyFilters);
+
+      // CSV Export
+      btnExport.addEventListener('click', () => {
+        if (!filteredData.length) {
+          window.showToast('No records to export', 'warning');
+          return;
+        }
+
+        const keys = Object.keys(filteredData[0]);
+        let csv = keys.join(',') + '\n';
+        filteredData.forEach(row => {
+          csv += keys.map(k => JSON.stringify(row[k] ?? '')).join(',') + '\n';
+        });
+
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `earth_detective_${currentTab}_export.csv`;
+        a.click();
+        URL.revokeObjectURL(url);
+        window.showToast('Filtered records exported to CSV!', 'success');
+      });
+
+      // Initial load
+      loadTabData();
+    });
+  </script>
+</body>
+</html>

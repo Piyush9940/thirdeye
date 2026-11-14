@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Research & ML Lab — Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nasa-nav">
+    <div class="nav-container">
+      <a href="index.html" class="brand-wrapper">
+        <div class="nasa-insignia">NASA</div>
+        <div class="brand-text-group">
+          <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+          <div class="brand-subtitle">Space Apps • Environmental Intelligence</div>
+        </div>
+      </a>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li class="nav-item"><a href="earth-explorer.html" class="nav-link"><i class="fa-solid fa-earth-asia"></i> Explore Earth</a></li>
+        <li class="nav-item"><a href="why-methane.html" class="nav-link"><i class="fa-solid fa-smog"></i> Why Methane?</a></li>
+        <li class="nav-item"><a href="dashboard.html" class="nav-link"><i class="fa-solid fa-chart-line"></i> India Explorer</a></li>
+        <li class="nav-item"><a href="findings.html" class="nav-link"><i class="fa-solid fa-magnifying-glass-chart"></i> Our Findings</a></li>
+        <li class="nav-item"><a href="impact.html" class="nav-link"><i class="fa-solid fa-leaf"></i> Impact</a></li>
+        <li class="nav-item"><a href="methodology.html" class="nav-link"><i class="fa-solid fa-book-journal-whills"></i> Methodology</a></li>
+        <li class="nav-item"><a href="data-research.html" class="nav-link"><i class="fa-solid fa-database"></i> Data & Research</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="research-assistant.html" class="nav-link" style="color: var(--cyan-primary);"><i class="fa-solid fa-robot"></i> AI Assistant</a></li>
+        <li class="nav-item"><a href="advanced-research.html" class="nav-link active" style="font-size: 0.78rem; color: var(--warning-amber);"><i class="fa-solid fa-microchip"></i> ML Lab</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-nasa btn-nasa-outline btn-sm">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="content-wrapper" style="padding-top: 3.5rem; padding-bottom: 1.5rem; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <span class="badge-scientific badge-experimental" style="margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-microchip"></i> Secondary Technical Module
+      </span>
+      <h1 style="font-size: 2.85rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">
+        ADVANCED RESEARCH & ML LAB
+      </h1>
+      <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+        Empirical evaluation of spatial graph neural networks (GCN) and multi-layer perceptrons (MLP) on sparse atmospheric satellite observations.
+      </p>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Mandatory Scientific Disclaimer Banner -->
+    <div class="scientific-warning-callout" style="margin-bottom: 3rem; border-color: rgba(245, 158, 11, 0.6); background: rgba(30, 20, 10, 0.75);">
+      <div class="icon" style="color: var(--warning-amber);"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <div class="content">
+        <strong style="color: #fff; font-size: 1.05rem;">MANDATORY SCIENTIFIC STATUS: EXPERIMENTAL REFERENCE MODEL — NOT PRODUCTION APPROVED</strong><br>
+        <p style="margin: 0.5rem 0 0; color: var(--text-secondary); font-size: 0.92rem; line-height: 1.55;">
+          • Negative $R^2$ scores across evaluation folds confirm that models perform worse than predicting the target mean.<br>
+          • Graph Neural Networks (GCN) did <strong>not</strong> outperform the multi-layer perceptron (MLP).<br>
+          • The month-only calendar diagnostic achieved the lowest MAE (49.04 ppb), showing that simple seasonal baselines dominate sparse spatial signals.<br>
+          • This model is an exploratory reference artifact for research benchmarking, NOT an operational forecasting engine.
+        </p>
+      </div>
+    </div>
+
+    <!-- Benchmark Comparison Table -->
+    <div class="nasa-card" style="margin-bottom: 3.5rem;">
+      <div class="nasa-card-header">
+        <div>
+          <h3 class="nasa-card-title"><i class="fa-solid fa-table-list" style="color: var(--cyan-primary);"></i> Chronological Benchmark Matrix</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.25rem 0 0;">
+            Mean performance across 3 temporal expanding folds and 5 random seeds (7, 21, 42, 77, 123).
+          </p>
+        </div>
+        <span class="badge-scientific badge-verified">15 Checkpoints</span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="nasa-table">
+          <thead>
+            <tr>
+              <th>Model Architecture</th>
+              <th>Features Input</th>
+              <th style="text-align: right;">Equal-Fold MAE</th>
+              <th style="text-align: right;">Equal-Fold RMSE</th>
+              <th style="text-align: right;">Equal-Fold R²</th>
+              <th style="text-align: right;">Mean Bias</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background: rgba(0, 210, 255, 0.05);">
+              <td><strong>Month-only Diagnostic</strong></td>
+              <td>Month Sine & Cosine</td>
+              <td style="text-align: right; color: var(--cyan-primary); font-weight: bold;">49.04 ppb</td>
+              <td style="text-align: right;">52.68 ppb</td>
+              <td style="text-align: right;">-10.49</td>
+              <td style="text-align: right;">-46.49 ppb</td>
+            </tr>
+            <tr style="background: rgba(0, 255, 136, 0.05); font-weight: 600;">
+              <td><strong style="color: var(--earth-green);">Original MLP Reference</strong></td>
+              <td>8 Features (Climate + Geo + Month)</td>
+              <td style="text-align: right; color: var(--earth-green);">53.79 ppb</td>
+              <td style="text-align: right;">56.87 ppb</td>
+              <td style="text-align: right;">-13.35</td>
+              <td style="text-align: right;">-50.85 ppb</td>
+            </tr>
+            <tr>
+              <td>Distance-Weighted GCN</td>
+              <td>8 Features + Adjacency Graph</td>
+              <td style="text-align: right;">58.48 ppb</td>
+              <td style="text-align: right;">60.76 ppb</td>
+              <td style="text-align: right;">-11.49</td>
+              <td style="text-align: right;">-58.01 ppb</td>
+            </tr>
+            <tr>
+              <td>Climate-only Ablation</td>
+              <td>T2M, Precip, RH, Wind, Lat, Lon</td>
+              <td style="text-align: right;">59.09 ppb</td>
+              <td style="text-align: right;">63.26 ppb</td>
+              <td style="text-align: right;">-13.09</td>
+              <td style="text-align: right;">-58.66 ppb</td>
+            </tr>
+            <tr>
+              <td>Global Training Mean Baseline</td>
+              <td>Constant Historical Target Mean</td>
+              <td style="text-align: right;">62.72 ppb</td>
+              <td style="text-align: right;">65.07 ppb</td>
+              <td style="text-align: right;">-11.90</td>
+              <td style="text-align: right;">-62.43 ppb</td>
+            </tr>
+            <tr>
+              <td>Unweighted GCN</td>
+              <td>8 Features + Binary Graph</td>
+              <td style="text-align: right;">70.93 ppb</td>
+              <td style="text-align: right;">75.87 ppb</td>
+              <td style="text-align: right;">-23.94</td>
+              <td style="text-align: right;">-64.82 ppb</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">
+        *Note: Negative bias across all architectures demonstrates systematic underprediction caused by historical upward background atmospheric shifts.
+      </div>
+    </div>
+
+    <!-- 3 Chronological Folds Breakdown -->
+    <div class="grid-3col" style="margin-bottom: 3.5rem;">
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">Fold 1 • Winter 2021</span>
+          <span class="badge-scientific badge-verified">67 Eval Nodes</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
+          Trained on Pre-monsoon May 2019 (82 nodes). Evaluated on Winter Feb 2021 (67 nodes).
+        </p>
+        <ul style="list-style: none; padding: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+          <li>MAE: <strong>45.60 ppb</strong></li>
+          <li>RMSE: <strong>47.58 ppb</strong></li>
+          <li>R²: <strong>-12.41</strong></li>
+          <li>Bias: <strong>-45.60 ppb</strong></li>
+        </ul>
+      </div>
+
+      <div class="nasa-card" style="border-color: rgba(245, 158, 11, 0.4);">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">Fold 2 • Monsoon 2021</span>
+          <span class="badge-scientific badge-warning">Only 11 Nodes</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
+          Trained on 2019-05 + 2021-02. Evaluated on August 2021. Extreme monsoon cloud masking.
+        </p>
+        <ul style="list-style: none; padding: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+          <li>MAE: <strong>99.93 ppb</strong></li>
+          <li>RMSE: <strong>102.17 ppb</strong></li>
+          <li>R²: <strong>-27.67</strong></li>
+          <li>Bias: <strong>-99.93 ppb</strong></li>
+        </ul>
+      </div>
+
+      <div class="nasa-card">
+        <div class="nasa-card-header">
+          <span class="nasa-card-title">Fold 3 • Nov 2023</span>
+          <span class="badge-scientific badge-verified">66 Eval Nodes</span>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1rem;">
+          Trained on all preceding periods. Evaluated on Post-monsoon Nov 2023. (56 repeated nodes).
+        </p>
+        <ul style="list-style: none; padding: 0; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 0.35rem;">
+          <li>MAE: <strong>15.82 ppb</strong></li>
+          <li>RMSE: <strong>20.87 ppb</strong></li>
+          <li>R²: <strong>+0.043</strong></li>
+          <li>Bias: <strong>-7.01 ppb</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Interactive Live Predictor Test Bench (PyTorch on CPU) -->
+    <div class="nasa-card" style="margin-bottom: 3.5rem;">
+      <div class="nasa-card-header">
+        <div>
+          <h3 class="nasa-card-title"><i class="fa-solid fa-play" style="color: var(--cyan-primary);"></i> Interactive Live Predictor Test Bench</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.25rem 0 0;">
+            Directly test the production reference PyTorch model running on CPU across the 8 input features.
+          </p>
+        </div>
+        <span class="badge-scientific badge-experimental">Live Inference Bridge</span>
+      </div>
+
+      <div class="grid-2col" style="margin-top: 1.5rem; align-items: start;">
+        <form id="liveInferForm" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Air Temp T2M (°C)</label>
+              <input type="number" step="0.1" id="inferT2M" class="nasa-input" value="30.5" required>
+            </div>
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Precipitation (mm/day)</label>
+              <input type="number" step="0.1" id="inferPrecip" class="nasa-input" value="1.2" required>
+            </div>
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Relative Humidity (%)</label>
+              <input type="number" step="0.1" id="inferRH" class="nasa-input" value="55.0" required>
+            </div>
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Wind Speed WS10M (m/s)</label>
+              <input type="number" step="0.1" id="inferWind" class="nasa-input" value="3.8" required>
+            </div>
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Latitude (°N)</label>
+              <input type="number" step="0.5" id="inferLat" class="nasa-input" value="23.0" required>
+            </div>
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Longitude (°E)</label>
+              <input type="number" step="0.5" id="inferLon" class="nasa-input" value="78.0" required>
+            </div>
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Checkpoint Fold</label>
+              <select id="inferFold" class="nasa-select">
+                <option value="1">Fold 1 (Feb 2021 Eval)</option>
+                <option value="2">Fold 2 (Aug 2021 Eval)</option>
+                <option value="3" selected>Fold 3 (Nov 2023 Eval)</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-secondary); display: block; margin-bottom: 0.3rem;">Random Seed</label>
+              <select id="inferSeed" class="nasa-select">
+                <option value="7">Seed 7</option>
+                <option value="21">Seed 21</option>
+                <option value="42" selected>Seed 42</option>
+                <option value="77">Seed 77</option>
+                <option value="123">Seed 123</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-nasa btn-nasa-primary" style="margin-top: 0.5rem;">
+            <i class="fa-solid fa-bolt"></i> Run Live PyTorch Inference
+          </button>
+        </form>
+
+        <div style="background: rgba(5, 11, 24, 0.85); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.5rem; text-align: center;">
+          <h4 style="font-size: 0.85rem; font-family: var(--font-mono); color: var(--cyan-primary); margin-bottom: 1rem;">
+            MODEL PREDICTION OUTPUT
+          </h4>
+          <div id="inferResultBox" style="font-size: 2.5rem; font-weight: 800; color: #fff; font-family: var(--font-mono); margin-bottom: 0.5rem;">
+            1861.22 <span style="font-size: 1rem; color: var(--text-muted);">ppb</span>
+          </div>
+          <div id="inferStatusText" style="font-size: 0.8rem; color: var(--earth-green); margin-bottom: 1rem;">
+            ✓ Real-time inference on CPU via MethanePredictor
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.45; text-align: left; background: rgba(0,0,0,0.4); padding: 0.75rem; border-radius: 6px;">
+            <strong>Warning:</strong> Value represents experimental Multi-Layer Perceptron response. Do not use for actual environmental decision-making or compliance verification.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="nasa-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-wrapper">
+          <div class="nasa-insignia">NASA</div>
+          <div class="brand-text-group">
+            <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+            <div class="brand-subtitle">Space Apps Challenge</div>
+          </div>
+        </div>
+        <p>
+          Transforming satellite Earth observations and climate datasets into an accessible, interactive environmental exploration platform that helps ordinary people understand atmospheric methane patterns across India.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-heading">Pages</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="earth-explorer.html">Explore Earth</a></li>
+          <li><a href="why-methane.html">Why Methane?</a></li>
+          <li><a href="findings.html">Our Findings</a></li>
+          <li><a href="dashboard.html">India Explorer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-heading">Science & Data</div>
+        <ul class="footer-links">
+          <li><a href="impact.html">Environmental Impact</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="data-research.html">Data Downloads</a></li>
+          <li><a href="advanced-research.html">ML Lab (Experimental)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Earth Systems Trend Detective Team. Built for the NASA Space Apps Challenge.</div>
+      <div style="font-family: var(--font-mono); color: var(--cyan-primary);">
+        Status: Experimental Reference Model • Open Environmental Science
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.getElementById('liveInferForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const resBox = document.getElementById('inferResultBox');
+      const statusText = document.getElementById('inferStatusText');
+
+      resBox.innerHTML = '<span style="font-size: 1.5rem; color: var(--cyan-primary);"><i class="fa-solid fa-spinner fa-spin"></i> Inferring...</span>';
+
+      try {
+        const t2m = parseFloat(document.getElementById('inferT2M').value);
+        const precip = parseFloat(document.getElementById('inferPrecip').value);
+        const rh = parseFloat(document.getElementById('inferRH').value);
+        const wind = parseFloat(document.getElementById('inferWind').value);
+        const lat = parseFloat(document.getElementById('inferLat').value);
+        const lon = parseFloat(document.getElementById('inferLon').value);
+        const fold = parseInt(document.getElementById('inferFold').value);
+        const seed = parseInt(document.getElementById('inferSeed').value);
+
+        // Compute month cyclic features (assuming May/Snapshot representation)
+        const month = 5;
+        const month_sin = Math.sin(2 * Math.PI * month / 12);
+        const month_cos = Math.cos(2 * Math.PI * month / 12);
+
+        const features = [t2m, precip, rh, wind, lat, lon, month_sin, month_cos];
+
+        const response = await fetch('/api/predictions/infer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ features, fold, seed })
+        });
+
+        const data = await response.json();
+        if (data.success) {
+          const val = data.data.prediction_ppb[0];
+          resBox.innerHTML = `${val.toFixed(2)} <span style="font-size: 1rem; color: var(--text-muted);">ppb</span>`;
+          statusText.innerHTML = `✓ Evaluated via Checkpoint: Fold ${fold}, Seed ${seed}`;
+        } else {
+          resBox.innerHTML = '<span style="color: red; font-size: 1rem;">Error</span>';
+          statusText.textContent = data.message;
+        }
+      } catch (err) {
+        resBox.innerHTML = '<span style="color: red; font-size: 1rem;">Request Failed</span>';
+        statusText.textContent = err.message;
+      }
+    });
+  </script>
+</body>
+</html>

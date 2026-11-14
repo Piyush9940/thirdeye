@@ -1,0 +1,5 @@
+feature,spatial_nodes,mean_seasonal_residual_rho,original_significant_nodes,seasonal_tfpw_significant_nodes,significant_in_both,lost_significance_after_tfpw,significant_only_after_tfpw,not_significant_in_either
+T2M,255,-0.06641037103510909,48,61,47,1,14,193
+PRECTOTCORR,255,-0.033617172211877926,3,26,3,0,23,229
+RH2M,255,-0.0605506638445746,74,90,68,6,22,159
+WS10M,255,-0.05345322157822221,17,22,17,0,5,233

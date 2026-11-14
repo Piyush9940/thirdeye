@@ -1,0 +1,16 @@
+SCIENTIFIC LIMITATIONS: SENTINEL-5P CH4 INVESTIGATION
+===========================================================================
+
+1. The methane comparison uses only 48 matched pixel pairs.
+2. The matched observations come from two acquisition dates in September 2019.
+3. The matched pixels are not a representative India-wide sample.
+4. Spatial matching uses nearby pixels; matched pixels are not necessarily identical ground footprints.
+5. Satellite viewing and solar geometry variables are strongly interdependent.
+6. The negative solar-azimuth association is predictive and observational, not proof of a physical causal effect.
+7. Leave-one-quadrant-out validation uses only four spatial blocks.
+8. Two spatial quadrants contain only six observations each.
+9. Quadrant boundaries were calculated from the complete matched sample.
+10. The pooled spatial-validation R2 uses the overall held-out target mean as reference.
+11. The rank-based model results and ppb-based methane results measure different prediction tasks.
+12. Two acquisition dates cannot establish a long-term methane trend.
+13. The analysis does not independently validate the results against ground-based methane measurements.

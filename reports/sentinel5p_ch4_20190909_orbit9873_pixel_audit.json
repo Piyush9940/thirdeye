@@ -1,0 +1,21 @@
+{
+  "acquisition_date": "2019-09-09",
+  "orbit_number": 9873,
+  "filename": "S5P_RPRO_L2__CH4____20190909T064333_20190909T082503_09873_03_020400_20221114T123649.nc",
+  "total_pixel_positions": 896980,
+  "valid_geolocation_pixels": 896980,
+  "pixels_inside_india": 46135,
+  "india_valid_ch4_and_precision": 1988,
+  "india_high_quality_pixels_qa_gt_0_5": 209,
+  "qa_distribution_inside_india": {
+    "0.0": 44147,
+    "0.3999999761581421": 1779,
+    "1.0": 209
+  },
+  "ch4_units": "ppb (product numerical values in 1e-9)",
+  "precision_units": "ppb (product numerical values in 1e-9)",
+  "quality_filter": "qa_value > 0.5",
+  "india_boundary_filter": "pixel point within India polygon",
+  "accepted_pixel_count": 209,
+  "occupied_2degree_grid_cells": 18
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dataset Explorer & Scientific Ingestion — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/charts.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <style>
+    .dropzone-container {
+      border: 2px dashed rgba(0, 240, 255, 0.35);
+      border-radius: var(--radius-lg, 12px);
+      background: rgba(10, 25, 47, 0.4);
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .dropzone-container:hover, .dropzone-container.dragover {
+      border-color: #00f0ff;
+      background: rgba(0, 240, 255, 0.08);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 240, 255, 0.15);
+    }
+    .dropzone-icon {
+      font-size: 2.4rem;
+      color: #00f0ff;
+      margin-bottom: 12px;
+    }
+    .badge-quality {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-quality.excellent {
+      background: rgba(0, 255, 136, 0.15);
+      color: #00ff88;
+      border: 1px solid rgba(0, 255, 136, 0.4);
+    }
+    .badge-quality.good {
+      background: rgba(0, 240, 255, 0.15);
+      color: #00f0ff;
+      border: 1px solid rgba(0, 240, 255, 0.4);
+    }
+    .badge-quality.acceptable {
+      background: rgba(255, 184, 0, 0.15);
+      color: #ffb800;
+      border: 1px solid rgba(255, 184, 0, 0.4);
+    }
+    .badge-quality.deficient {
+      background: rgba(255, 68, 68, 0.15);
+      color: #ff4444;
+      border: 1px solid rgba(255, 68, 68, 0.4);
+    }
+    .mapping-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .table-responsive {
+      max-height: 340px;
+      overflow-y: auto;
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .preview-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+    .preview-table th {
+      position: sticky;
+      top: 0;
+      background: #0f1c30;
+      color: #00f0ff;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+      white-space: nowrap;
+    }
+    .preview-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: #cbd5e1;
+      white-space: nowrap;
+    }
+    .preview-table tr:hover td {
+      background: rgba(0, 240, 255, 0.04);
+    }
+    .audit-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0 0;
+    }
+    .audit-list li {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .audit-list li i {
+      color: #00f0ff;
+      font-size: 0.75rem;
+    }
+    .datasets-list-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+    .datasets-list-table th {
+      padding: 10px;
+      text-align: left;
+      color: #94a3b8;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .datasets-list-table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .btn-action-sm {
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-action-select {
+      background: rgba(0, 240, 255, 0.15);
+      color: #00f0ff;
+      border: 1px solid rgba(0, 240, 255, 0.3);
+    }
+    .btn-action-select:hover {
+      background: #00f0ff;
+      color: #0b132b;
+    }
+    .btn-action-delete {
+      background: rgba(255, 68, 68, 0.15);
+      color: #ff4444;
+      border: 1px solid rgba(255, 68, 68, 0.3);
+      margin-left: 6px;
+    }
+    .btn-action-delete:hover {
+      background: #ff4444;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> Dynamic Scientific Ingestion: Active</span>
+      <span class="status-pill"><span class="status-dot"></span> Mann-Kendall Engine: Ready</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link active"><i class="fas fa-database text-cyan"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Workspace Container -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title"><i class="fas fa-database text-cyan"></i> Scientific Dataset Explorer & Ingestion</h1>
+        <p class="page-subtitle">Upload custom Earth-science observation datasets (CSV, NetCDF), validate quality and geographical bounds, map variables, and calculate rate of change & statistical significance.</p>
+      </div>
+      <div class="header-actions">
+        <button id="btn-load-sample" class="btn btn-secondary">
+          <i class="fas fa-flask"></i> Load Sample India Dataset
+        </button>
+        <a href="/pages/trend-detective.html" class="btn btn-primary">
+          <i class="fas fa-chart-line"></i> Baseline Detective
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: Ingestion & Upload -->
+    <div class="dashboard-grid grid-2" style="margin-bottom: 24px;">
+      <!-- Upload Card -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-cloud-arrow-up text-cyan"></i> Upload Scientific Dataset</div>
+          <span class="badge">CSV • NetCDF • TSV</span>
+        </div>
+        <div class="card-body">
+          <div id="dropzone" class="dropzone-container">
+            <i class="fas fa-file-csv dropzone-icon"></i>
+            <h3 style="font-size: 1.05rem; margin-bottom: 6px;">Drag & Drop Scientific Dataset File</h3>
+            <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 16px;">Supports CSV, TSV, NetCDF (.nc) up to 50MB</p>
+            <input type="file" id="file-input" accept=".csv,.tsv,.txt,.nc,.netcdf,.nc4,.json" style="display: none;">
+            <button type="button" class="btn btn-secondary" onclick="document.getElementById('file-input').click()">
+              <i class="fas fa-folder-open"></i> Browse Files
+            </button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+            <div>
+              <label class="control-label">Dataset Name (Optional)</label>
+              <input type="text" id="dataset-name-input" class="control-input" placeholder="e.g. New Delhi Air & Methane 2015-2024">
+            </div>
+            <div>
+              <label class="control-label">Description (Optional)</label>
+              <input type="text" id="dataset-desc-input" class="control-input" placeholder="e.g. Monthly surface monitor observations">
+            </div>
+          </div>
+
+          <div style="margin-top: 16px; display: flex; justify-content: flex-end;">
+            <button id="btn-upload-submit" class="btn btn-primary" disabled>
+              <i class="fas fa-upload"></i> Upload & Validate Dataset
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ingestion / Quality Scorecard -->
+      <div class="card" id="validation-card">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-shield-halved text-cyan"></i> Data Quality & Dimension Audit</div>
+          <span id="quality-badge" class="badge-quality excellent"><i class="fas fa-circle-check"></i> Ready for Ingestion</span>
+        </div>
+        <div class="card-body">
+          <div class="scorecard-grid" style="grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
+            <div class="stat-card">
+              <div class="stat-label">Total Observations & Fields</div>
+              <div class="stat-value" id="val-rows-cols">-- / --</div>
+              <div class="stat-subtext" id="val-filesize">No dataset loaded</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Completeness Score</div>
+              <div class="stat-value" id="val-completeness">--%</div>
+              <div class="stat-subtext" id="val-duplicates">0 duplicates</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Temporal Coverage</div>
+              <div class="stat-value" id="val-temporal-span" style="font-size: 1.1rem;">--</div>
+              <div class="stat-subtext" id="val-frequency">Frequency: Undetected</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Spatial Coordinates</div>
+              <div class="stat-value" id="val-spatial-bounds" style="font-size: 1.1rem;">--</div>
+              <div class="stat-subtext" id="val-spatial-status">Domain: Pending</div>
+            </div>
+          </div>
+
+          <div style="background: rgba(15, 23, 42, 0.6); padding: 12px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05);">
+            <div style="font-size: 0.8rem; font-weight: 700; color: #00f0ff; text-transform: uppercase;">Scientific Audit Observations</div>
+            <ul id="audit-notes-list" class="audit-list">
+              <li><i class="fas fa-info-circle"></i> Upload a dataset or load the sample India dataset to trigger real-time quality validation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Variable Mapping & Execution Controls -->
+    <div class="card" id="mapping-card" style="margin-bottom: 24px; display: none;">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-sliders text-cyan"></i> Variable Dimension Mapping & Analysis Configuration</div>
+        <span class="badge">NASA Space Apps Trend Requirements</span>
+      </div>
+      <div class="card-body">
+        <p style="font-size: 0.88rem; color: #94a3b8; margin-bottom: 12px;">Map the columns in your uploaded dataset to standardized Earth-science dimensions. Our auto-detection engine has pre-selected the best candidates.</p>
+        
+        <div class="mapping-grid">
+          <div>
+            <label class="control-label">Timestamp / Date Column</label>
+            <select id="map-time-col" class="control-select"></select>
+          </div>
+          <div>
+            <label class="control-label">Environmental Variable (Target)</label>
+            <select id="map-var-col" class="control-select"></select>
+          </div>
+          <div>
+            <label class="control-label">Measurement Unit</label>
+            <input type="text" id="map-unit" class="control-input" value="units" placeholder="e.g. °C, ppb, mm/day">
+          </div>
+          <div>
+            <label class="control-label">Latitude Column (Optional)</label>
+            <select id="map-lat-col" class="control-select"></select>
+          </div>
+          <div>
+            <label class="control-label">Longitude Column (Optional)</label>
+            <select id="map-lon-col" class="control-select"></select>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap: 12px;">
+          <div style="font-size: 0.85rem; color: #94a3b8;">
+            <i class="fas fa-circle-info text-cyan"></i> Engine computes: Ordinary Least Squares (OLS) slope, Theil-Sen median estimator, Mann-Kendall rank test with ties, and 95% confidence intervals.
+          </div>
+          <button id="btn-run-analysis" class="btn btn-primary">
+            <i class="fas fa-calculator"></i> Run Statistical Trend Analysis
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Data Preview Table -->
+    <div class="card" id="preview-card" style="margin-bottom: 24px; display: none;">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-table text-cyan"></i> Ingested Dataset Preview (First 25 Rows)</div>
+        <span id="preview-row-count" class="badge">0 rows</span>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="preview-table" id="data-preview-table">
+            <thead id="preview-thead"></thead>
+            <tbody id="preview-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 4: Statistical Trend Analysis Output -->
+    <div id="analysis-results-section" style="display: none; margin-bottom: 24px;">
+      <!-- Verdict Banner -->
+      <div class="verdict-banner" id="user-verdict-banner">
+        <i class="fas fa-chart-line verdict-icon"></i>
+        <div class="verdict-content">
+          <div class="verdict-title" id="user-verdict-title">Scientific Trend Verdict</div>
+          <div class="verdict-text" id="user-verdict-text">Analysis pending...</div>
+        </div>
+      </div>
+
+      <!-- Statistical Scorecard (4 Cards) -->
+      <div class="scorecard-grid" style="margin: 20px 0;">
+        <div class="stat-card">
+          <div class="stat-label">Rate of Change (Theil-Sen / OLS)</div>
+          <div class="stat-value" id="user-rate-val">--</div>
+          <div class="stat-subtext" id="user-rate-sub">per decade</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Mann-Kendall Significance</div>
+          <div class="stat-value" id="user-p-val">--</div>
+          <div class="stat-subtext" id="user-sig-badge">Null Hypothesis Status</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Goodness of Fit (R²)</div>
+          <div class="stat-value" id="user-r2-val">--</div>
+          <div class="stat-subtext" id="user-corr-val">Correlation (r)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Sample Span & Net Change</div>
+          <div class="stat-value" id="user-net-val">--</div>
+          <div class="stat-subtext" id="user-obs-val">-- observations</div>
+        </div>
+      </div>
+
+      <!-- Interactive Plotly Visualizer -->
+      <div class="card" style="margin-bottom: 24px;">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-chart-area text-cyan"></i> Custom Dataset Time Series & Trend Regression</div>
+          <span class="badge">OLS Fit • Theil-Sen Median • 95% Confidence Band</span>
+        </div>
+        <div class="card-body">
+          <div id="user-trend-plot" style="width: 100%; height: 460px;"></div>
+        </div>
+      </div>
+
+      <!-- Climatological Baseline Comparison -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-scale-balanced text-cyan"></i> Climatological Comparison vs NASA POWER Baseline</div>
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <select id="compare-baseline-select" class="control-select" style="padding: 4px 10px; font-size: 0.85rem;">
+              <option value="T2M" selected>NASA POWER Temperature (T2M)</option>
+              <option value="PRECTOTCORR">NASA POWER Precipitation (PRECTOTCORR)</option>
+              <option value="RH2M">NASA POWER Relative Humidity (RH2M)</option>
+              <option value="WS10M">NASA POWER Wind Speed (WS10M)</option>
+            </select>
+            <button id="btn-trigger-compare" class="btn btn-secondary" style="padding: 4px 12px; font-size: 0.8rem;">
+              <i class="fas fa-arrows-rotate"></i> Compare
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="scorecard-grid" style="grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px;">
+            <div class="stat-card">
+              <div class="stat-label">Pearson Correlation (r)</div>
+              <div class="stat-value" id="cmp-corr-val">--</div>
+              <div class="stat-subtext">Linear Agreement</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Root Mean Square Error</div>
+              <div class="stat-value" id="cmp-rmse-val">--</div>
+              <div class="stat-subtext">RMSE vs Baseline</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Mean Absolute Error</div>
+              <div class="stat-value" id="cmp-mae-val">--</div>
+              <div class="stat-subtext">MAE</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Mean Bias (User - Baseline)</div>
+              <div class="stat-value" id="cmp-bias-val">--</div>
+              <div class="stat-subtext">Systemic Offset</div>
+            </div>
+          </div>
+
+          <div id="compare-plot" style="width: 100%; height: 380px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Registered Dataset Library -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fas fa-folder-tree text-cyan"></i> Ingested Scientific Datasets Repository</div>
+        <button id="btn-refresh-datasets" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.8rem;">
+          <i class="fas fa-sync"></i> Refresh
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="datasets-list-table">
+            <thead>
+              <tr>
+                <th>Dataset Name</th>
+                <th>File Name</th>
+                <th>Rows / Cols</th>
+                <th>Quality Status</th>
+                <th>Completeness</th>
+                <th>Uploaded</th>
+                <th style="text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="datasets-table-body">
+              <tr>
+                <td colspan="7" style="text-align: center; color: #94a3b8; padding: 20px;">
+                  No datasets ingested yet. Upload a CSV/NetCDF dataset above.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">NASA Space Apps Challenge 2026 — Earth Systems Trend Detective</div>
+      <div class="footer-subtext">Dynamic Scientific Ingestion • OLS Linear Regression • Mann-Kendall Rank Trend Test • Theil-Sen Robust Estimator</div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/dataset-explorer.js"></script>
+</body>
+</html>

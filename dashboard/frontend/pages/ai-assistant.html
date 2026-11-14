@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Environmental Assistant — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> Grounded Scientific Engine: Active</span>
+      <span class="status-pill"><span class="status-dot"></span> Hallucination Guardrails: Enabled</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link active"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">AI Environmental <span>Research Assistant</span></h1>
+        <p class="page-subtitle">Ask questions about statistical trends, hypothesis tests, and data limitations.</p>
+      </div>
+      <span class="badge badge-cyan"><i class="fas fa-shield-halved"></i> Strictly Grounded</span>
+    </div>
+
+    <!-- Suggested Question Pills -->
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+      <span class="text-dim" style="font-size: 0.85rem; display: flex; align-items: center; margin-right: 0.5rem;">Try asking:</span>
+      <button class="btn btn-secondary suggestion-pill" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+        Is temperature increasing in Northwest India?
+      </button>
+      <button class="btn btn-secondary suggestion-pill" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+        What does the Mann-Kendall p-value mean?
+      </button>
+      <button class="btn btn-secondary suggestion-pill" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+        What is Sen's robust slope?
+      </button>
+      <button class="btn btn-secondary suggestion-pill" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">
+        What are the limitations of satellite methane data?
+      </button>
+    </div>
+
+    <!-- Chat Workspace -->
+    <div class="card" style="display: flex; flex-direction: column; height: 580px; padding: 0; overflow: hidden;">
+      <!-- Chat Message Stream -->
+      <div id="chat-messages" style="flex: 1; padding: 1.5rem; overflow-y: auto;">
+        <div class="chat-bubble" style="background: rgba(14, 21, 38, 0.85); border: 1px solid var(--border-glow); padding: 1rem 1.25rem; border-radius: var(--radius-sm); max-width: 85%; line-height: 1.6; font-size: 0.92rem; margin-bottom: 1rem;">
+          <b>Hello! I am your NASA Earth Systems Trend Detective Research Assistant.</b><br><br>
+          I have access to verified decadal statistical results across India. I can answer inquiries regarding:<br>
+          • Rates of change (°C/year, mm/day/year) and decadal projections<br>
+          • Mann-Kendall statistical significance and 95% confidence intervals<br>
+          • Differences between parametric OLS regression and Sen's slope<br>
+          • Sentinel-5P satellite observations and Southeast India data gaps
+        </div>
+      </div>
+
+      <!-- Chat Input Bar -->
+      <div style="padding: 1rem 1.5rem; background: rgba(11, 17, 33, 0.9); border-top: 1px solid var(--border-subtle); display: flex; gap: 0.75rem;">
+        <input type="text" id="chat-input" class="form-input" placeholder="Type your environmental science question here..." style="flex: 1;">
+        <button id="btn-chat-send" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Send
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div><b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective</div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/ai-assistant.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.aiApp = new AIAssistant();
+    });
+  </script>
+</body>
+</html>

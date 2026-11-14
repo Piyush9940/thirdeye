@@ -1,0 +1,18 @@
+{
+  "file": "oco2_LtCO2_240101_B11210Ar_240919185807s.nc4",
+  "xco2_variables": [
+    "xco2",
+    "xco2_x2019",
+    "xco2_uncertainty",
+    "xco2_apriori"
+  ],
+  "quality_flag_zero_count": 79836,
+  "quality_flag_one_count": 66703,
+  "geometry_libraries": {
+    "shapely": true,
+    "geopandas": true,
+    "fiona": false,
+    "cartopy": false,
+    "pyshp": false
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "model": "GCNGRU",
+    "forecast_method": "Autoregressive GCN-GRU",
+    "forecast_period": "January 2025 to December 2025",
+    "historical_period": "January 2015 to December 2024",
+    "forecast_months": 12,
+    "sequence_length": 12,
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "feature_units": {
+        "T2M": "\u00b0C",
+        "PRECTOTCORR": "mm/day",
+        "RH2M": "%",
+        "WS10M": "m/s"
+    },
+    "input_shape": [
+        12,
+        255,
+        4
+    ],
+    "output_shape": [
+        12,
+        255,
+        4
+    ],
+    "normalization": "Training-set mean and standard deviation",
+    "limitations": [
+        "Experimental autoregressive extrapolation",
+        "Model trained on 2015-2021 observations",
+        "No external future climate forcing supplied",
+        "Prediction errors may accumulate during recursive forecasting",
+        "Not an operational climate forecast"
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "project": "NASA Earth Systems Trend Detective",
+    "generated_at": "2026-11-14T12:26:13",
+    "selection_status": "Provisional research selection",
+    "reference_model": "MLP",
+    "reference_experiment": "Original_model_comparison",
+    "operational_deployment_approved": false,
+    "selected_model_reason": "The original MLP has the lowest equal-fold MAE and RMSE within the original three-model comparison.",
+    "secondary_diagnostic_reference": "Month_only",
+    "secondary_reference_reason": "Lowest equal-fold MAE and RMSE in the reconstructed three-way feature ablation, but it is not spatially predictive.",
+    "metrics": {
+        "original_mlp": {
+            "experiment": "Original_model_comparison",
+            "model": "MLP",
+            "equal_fold_MAE": 53.7859544496092,
+            "equal_fold_RMSE": 56.87154898895552,
+            "equal_fold_R2": -13.345131527517658,
+            "equal_fold_bias": -50.849500061982944,
+            "fold_count": 3
+        },
+        "month_only_reconstructed": {
+            "experiment": "Reconstructed_three_way_ablation",
+            "model": "Month_only",
+            "equal_fold_MAE": 49.03886039293355,
+            "equal_fold_RMSE": 52.68403424643896,
+            "equal_fold_R2": -10.486276413227314,
+            "equal_fold_bias": -46.49017522988161,
+            "fold_count": 3
+        },
+        "distance_weighted_gcn": {
+            "experiment": "Original_model_comparison",
+            "model": "GCN_distance_weighted",
+            "equal_fold_MAE": 58.478510019298646,
+            "equal_fold_RMSE": 60.76492397028408,
+            "equal_fold_R2": -11.4920146424656,
+            "equal_fold_bias": -58.01492864895457,
+            "fold_count": 3
+        },
+        "unweighted_gcn": {
+            "experiment": "Original_model_comparison",
+            "model": "GCN_unweighted",
+            "equal_fold_MAE": 70.93434732852076,
+            "equal_fold_RMSE": 75.87145429278407,
+            "equal_fold_R2": -23.943517998812897,
+            "equal_fold_bias": -64.82184091674675,
+            "fold_count": 3
+        },
+        "global_training_mean": {
+            "experiment": "Prepared_fold_baseline",
+            "model": "Global_training_mean",
+            "equal_fold_MAE": 62.71748050923767,
+            "equal_fold_RMSE": 65.06570603211132,
+            "equal_fold_R2": -11.899117779287463,
+            "equal_fold_bias": -62.43409612831911,
+            "fold_count": 3
+        }
+    },
+    "model_registry": [
+        {
+            "model": "MLP",
+            "experiment": "Original_model_comparison",
+            "status": "Provisional reference model",
+            "selected": true,
+            "reason": "Best equal-fold MAE and RMSE among the three models in the original model-comparison experiment.",
+            "limitations": "Negative equal-fold R2; substantial period-dependent underprediction; November 2023 influenced model selection."
+        },
+        {
+            "model": "GCN_distance_weighted",
+            "experiment": "Original_model_comparison",
+            "status": "Research comparator",
+            "selected": false,
+            "reason": "Better than original MLP on folds 1 and 2, but worse on fold 3 and worse overall.",
+            "limitations": "No consistent graph advantage; negative equal-fold R2."
+        },
+        {
+            "model": "GCN_unweighted",
+            "experiment": "Original_model_comparison",
+            "status": "Not selected",
+            "selected": false,
+            "reason": "Higher equal-fold MAE and RMSE than the original MLP.",
+            "limitations": "Weak performance across chronological folds."
+        },
+        {
+            "model": "Month_only",
+            "experiment": "Reconstructed_three_way_ablation",
+            "status": "Diagnostic temporal reference",
+            "selected": false,
+            "reason": "Lowest equal-fold MAE and RMSE in the reconstructed three-way ablation.",
+            "limitations": "Month features are identical across spatial nodes; predictions are period-level rather than spatial."
+        },
+        {
+            "model": "Climate_only",
+            "experiment": "Reconstructed_three_way_ablation",
+            "status": "Ablation comparator",
+            "selected": false,
+            "reason": "Did not outperform month-only in the corrected three-way ablation.",
+            "limitations": "Substantial negative R2 and period-dependent bias."
+        },
+        {
+            "model": "Climate_plus_month",
+            "experiment": "Reconstructed_three_way_ablation",
+            "status": "Not selected",
+            "selected": false,
+            "reason": "Did not consistently improve on the simpler feature groups.",
+            "limitations": "High fold-2 error and seed variability."
+        },
+        {
+            "model": "Global_training_mean",
+            "experiment": "Prepared_fold_baseline",
+            "status": "Naive baseline",
+            "selected": false,
+            "reason": "Provides a simple reference for evaluating the effect of target-distribution shift.",
+            "limitations": "Cannot capture spatial differences or temporal changes."
+        }
+    ],
+    "scientific_limitations": [
+        "Only four methane observation periods are available: May 2019, February 2021, August 2021, and November 2023.",
+        "August 2021 has only 11 evaluation observations.",
+        "November 2023 has previously influenced model selection and is not an untouched final holdout.",
+        "Most model-fold R2 values are negative. Reliable generalization has not been demonstrated.",
+        "The month-only model produces the same prediction across spatial nodes within an evaluation period.",
+        "The corrected three-way ablation uses a reconstructed Adam/MSE/full-batch training implementation. The original MLP optimizer and loss implementation were not recovered.",
+        "Original model-comparison metrics and reconstructed ablation metrics must not be treated as a single controlled ranking because their training protocols are not confirmed to be identical.",
+        "The current results do not establish causal relationships between climate variables and methane concentration.",
+        "The current dataset is a pilot dataset and does not support claims of a validated long-term India methane forecast.",
+        "An untouched future-period holdout and additional independent methane observations are required before operational use."
+    ]
+}

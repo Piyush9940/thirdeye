@@ -1,0 +1,76 @@
+{
+  "dataset": "Sentinel-5P TROPOMI CH4",
+  "period": "2019-2024",
+  "existing_sentinel5p_files": 6,
+  "existing_granule_metadata": [
+    {
+      "filename": "S5P_RPRO_L2__CH4____20200101T055716_20200101T073846_11490_03_020400_20221120T010556.nc",
+      "size_mb": 59.608,
+      "product_type": "RPRO",
+      "start_time_from_filename": "20200101T055716",
+      "end_time_from_filename": "20221120T010556.nc",
+      "orbit_number": "",
+      "processing_version": "020400"
+    },
+    {
+      "filename": "S5P_RPRO_L2__CH4____20190716T053755_20190716T071924_09092_03_020400_20221111T222608.nc",
+      "size_mb": 50.444,
+      "product_type": "RPRO",
+      "start_time_from_filename": "20190716T053755",
+      "end_time_from_filename": "20221111T222608.nc",
+      "orbit_number": "",
+      "processing_version": "020400"
+    },
+    {
+      "filename": "S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc",
+      "size_mb": 51.3,
+      "product_type": "RPRO",
+      "start_time_from_filename": "20190908T070241",
+      "end_time_from_filename": "20221114T120625.nc",
+      "orbit_number": "",
+      "processing_version": "020400"
+    },
+    {
+      "filename": "S5P_RPRO_L2__CH4____20190909T064333_20190909T082503_09873_03_020400_20221114T123649.nc",
+      "size_mb": 54.021,
+      "product_type": "RPRO",
+      "start_time_from_filename": "20190909T064333",
+      "end_time_from_filename": "20221114T123649.nc",
+      "orbit_number": "",
+      "processing_version": "020400"
+    },
+    {
+      "filename": "S5P_RPRO_L2__CH4____20190910T080555_20190910T094724_09888_03_020400_20221114T123938.nc",
+      "size_mb": 68.315,
+      "product_type": "RPRO",
+      "start_time_from_filename": "20190910T080555",
+      "end_time_from_filename": "20221114T123938.nc",
+      "orbit_number": "",
+      "processing_version": "020400"
+    },
+    {
+      "filename": "S5P_RPRO_L2__CH4____20190926T080412_20190926T094541_10115_03_020400_20221115T020105.nc",
+      "size_mb": 58.85,
+      "product_type": "RPRO",
+      "start_time_from_filename": "20190926T080412",
+      "end_time_from_filename": "20221115T020105.nc",
+      "orbit_number": "",
+      "processing_version": "020400"
+    }
+  ],
+  "sampling_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "seasonal_strata_count": 24,
+  "target_granules_per_stratum": 2,
+  "initial_target_granules": 48,
+  "estimated_granule_size_mb": 57.089666666666666,
+  "estimated_initial_storage_gb": 2.676078125,
+  "note": "This is a sampling plan only. No additional satellite data has been downloaded or validated.",
+  "sampling_design_csv": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\processed\\sentinel5p_ch4_sample\\sentinel5p_multi_year_sampling_design.csv"
+}

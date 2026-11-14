@@ -1,0 +1,25 @@
+{
+  "dataset": "Sentinel-5P TROPOMI CH4",
+  "spatial_scope": "India ADM0 polygon",
+  "qa_threshold": "> 0.5",
+  "observation_count": 749,
+  "timestamp_column": "observation_time_utc",
+  "start_utc": "2020-01-01T07:00:23.462000+00:00",
+  "end_utc": "2020-01-01T07:01:10.501000+00:00",
+  "unique_utc_dates": 1,
+  "pass_duration_seconds": 47.039,
+  "duplicate_timestamp_count": 695,
+  "occupied_2_degree_grid_cells": 10,
+  "latitude_min": 18.488316,
+  "latitude_max": 23.815182,
+  "longitude_min": 83.51928,
+  "longitude_max": 91.86585,
+  "hourly_distribution": [
+    {
+      "utc_hour": 7,
+      "observation_count": 749,
+      "methane_mean_ppb": 1901.207479706275,
+      "methane_std_ppb": 13.054350982349208
+    }
+  ]
+}

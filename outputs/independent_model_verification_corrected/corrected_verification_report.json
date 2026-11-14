@@ -1,0 +1,78 @@
+{
+    "model": "GCN-GRU",
+    "evaluation": "2024 rolling one-step-ahead test",
+    "graph_input": "Original normalized adjacency tensor",
+    "checkpoint": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\best_gcn_gru_model.pth",
+    "test_input_shape": [
+        12,
+        12,
+        255,
+        4
+    ],
+    "test_target_shape": [
+        12,
+        255,
+        4
+    ],
+    "prediction_shape": [
+        12,
+        255,
+        4
+    ],
+    "all_predictions_finite": true,
+    "model_beats_persistence_all_features": true,
+    "metrics": [
+        {
+            "Feature": "T2M",
+            "Unit": "\u00b0C",
+            "Model_MAE": 1.5410915613174438,
+            "Model_RMSE": 2.2789220558954892,
+            "Model_R2": 0.9713544249534607,
+            "Persistence_MAE": 2.453355073928833,
+            "Persistence_RMSE": 3.365838791938115,
+            "Persistence_R2": 0.9375136494636536,
+            "MAE_Improvement_Percent": 37.18432453197568,
+            "RMSE_Improvement_Percent": 32.29259638477095,
+            "Model_Beats_Persistence": true
+        },
+        {
+            "Feature": "PRECTOTCORR",
+            "Unit": "mm/day",
+            "Model_MAE": 1.3725987672805786,
+            "Model_RMSE": 2.578827455941143,
+            "Model_R2": 0.7316701412200928,
+            "Persistence_MAE": 2.134335994720459,
+            "Persistence_RMSE": 3.7510269030564967,
+            "Persistence_R2": 0.43229228258132935,
+            "MAE_Improvement_Percent": 35.689658485080635,
+            "RMSE_Improvement_Percent": 31.25009437176245,
+            "Model_Beats_Persistence": true
+        },
+        {
+            "Feature": "RH2M",
+            "Unit": "%",
+            "Model_MAE": 4.004636287689209,
+            "Model_RMSE": 5.639538266645764,
+            "Model_R2": 0.9052057862281799,
+            "Persistence_MAE": 5.733267784118652,
+            "Persistence_RMSE": 8.357177445522922,
+            "Persistence_R2": 0.7918319702148438,
+            "MAE_Improvement_Percent": 30.15089407157663,
+            "RMSE_Improvement_Percent": 32.518624817916745,
+            "Model_Beats_Persistence": true
+        },
+        {
+            "Feature": "WS10M",
+            "Unit": "m/s",
+            "Model_MAE": 0.518505334854126,
+            "Model_RMSE": 0.7100048025398625,
+            "Model_R2": 0.8247548341751099,
+            "Persistence_MAE": 0.7061142325401306,
+            "Persistence_RMSE": 1.0433623182111706,
+            "Persistence_R2": 0.6215628385543823,
+            "MAE_Improvement_Percent": 26.569199293875194,
+            "RMSE_Improvement_Percent": 31.950311972435873,
+            "Model_Beats_Persistence": true
+        }
+    ]
+}

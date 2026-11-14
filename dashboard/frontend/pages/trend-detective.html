@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trend Detective Workspace — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/charts.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> 30,600 Verified Climate Records</span>
+      <span class="status-pill"><span class="status-dot"></span> Mann-Kendall Statistical Engine: Active</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link active"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Workspace Container -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Trend Detective <span>Workspace</span></h1>
+        <p class="page-subtitle">Analyze Earth-science time series, calculate rates of change, and test statistical significance.</p>
+      </div>
+      <div>
+        <button id="btn-generate-report" class="btn btn-outline-cyan">
+          <i class="fas fa-file-pdf"></i> Download Research Dossier (PDF)
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Workspace Split Grid -->
+    <div class="workspace-grid">
+      <!-- Left Column: Controls & Filters -->
+      <aside class="control-panel">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title"><i class="fas fa-sliders text-cyan"></i> Analysis Parameters</div>
+          </div>
+
+          <!-- Variable Selector -->
+          <div class="form-group">
+            <label class="form-label">
+              <span>Target Earth-Science Variable</span>
+              <span class="helper">NASA POWER</span>
+            </label>
+            <div class="variable-selector">
+              <div class="variable-pill active" data-var="T2M">
+                <span class="var-title"><i class="fas fa-temperature-high text-amber"></i> Air Temp (2m)</span>
+                <span class="var-units">°C</span>
+              </div>
+              <div class="variable-pill" data-var="PRECTOTCORR">
+                <span class="var-title"><i class="fas fa-cloud-rain text-cyan"></i> Precipitation</span>
+                <span class="var-units">mm/day</span>
+              </div>
+              <div class="variable-pill" data-var="RH2M">
+                <span class="var-title"><i class="fas fa-droplet text-blue"></i> Relative Humidity</span>
+                <span class="var-units">%</span>
+              </div>
+              <div class="variable-pill" data-var="WS10M">
+                <span class="var-title"><i class="fas fa-wind text-emerald"></i> Wind Speed (10m)</span>
+                <span class="var-units">m/s</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Region Dropdown -->
+          <div class="form-group" style="margin-top: 1rem;">
+            <label class="form-label" for="region-select">
+              <span>Geographic Region</span>
+              <span class="helper">Custom 6-Zone Partition</span>
+            </label>
+            <select id="region-select" class="form-select">
+              <option value="ALL">All India (National Grid — 255 Nodes)</option>
+              <option value="NW">Northwest India (56 Nodes)</option>
+              <option value="NE">Northeast India (64 Nodes)</option>
+              <option value="CW">Central-West India (35 Nodes)</option>
+              <option value="CE">Central-East India (40 Nodes)</option>
+              <option value="SW">Southwest India (28 Nodes)</option>
+              <option value="SE">Southeast India (32 Nodes)</option>
+            </select>
+          </div>
+
+          <!-- Date Range Inputs -->
+          <div class="form-group" style="margin-top: 1rem;">
+            <label class="form-label">Observation Window (2015-2024)</label>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <input type="text" id="start-date-input" class="form-input font-mono" value="2015-01" placeholder="YYYY-MM">
+              <span class="text-dim">to</span>
+              <input type="text" id="end-date-input" class="form-input font-mono" value="2024-12" placeholder="YYYY-MM">
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+            <button id="btn-analyze" class="btn btn-primary" style="flex: 1;">
+              <i class="fas fa-bolt"></i> Analyze
+            </button>
+            <button id="btn-reset" class="btn btn-secondary">
+              <i class="fas fa-rotate-left"></i> Reset
+            </button>
+          </div>
+        </div>
+
+        <!-- Rigor Specs Card -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title" style="font-size: 0.9rem;"><i class="fas fa-flask text-cyan"></i> Statistical Methodology</div>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-dim); line-height: 1.5;">
+            • <b>Parametric:</b> OLS linear regression slope with Student's <i>t</i> 95% confidence interval.<br>
+            • <b>Non-parametric:</b> Theil-Sen median slope estimator robust against seasonal spikes.<br>
+            • <b>Hypothesis Test:</b> Exact Mann-Kendall rank trend test with tie correction (α = 0.05).
+          </p>
+        </div>
+      </aside>
+
+      <!-- Right Column: Visualization & Scorecard -->
+      <section class="main-display">
+        <!-- Statistical Scorecard (4 Core Cards) -->
+        <div class="scorecard-grid">
+          <div class="stat-card">
+            <div class="stat-header">Sen's Robust Slope</div>
+            <div class="stat-value" id="stat-sen-rate">—</div>
+            <div class="stat-sub" id="stat-sen-decade">—</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">Mann-Kendall Significance</div>
+            <div class="stat-value" id="stat-mk-pval">—</div>
+            <div class="stat-sub"><span id="stat-mk-verdict" class="badge badge-cyan">Calculating...</span></div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">Rank Correlation (τ) & S</div>
+            <div class="stat-value" id="stat-mk-tau">—</div>
+            <div class="stat-sub">Test Statistic for Monotonic Drift</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">OLS Regression Fit</div>
+            <div class="stat-value" id="stat-ols-r2">—</div>
+            <div class="stat-sub" id="stat-ols-ci">—</div>
+          </div>
+        </div>
+
+        <!-- Large Time-Series Plotly Chart -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fas fa-chart-line text-cyan"></i> Decadal Time Series & Statistical Trajectory
+            </div>
+            <div class="font-mono text-dim" style="font-size: 0.8rem;">
+              10-Year Continuous Record (N = 120 Months)
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <div id="chart-loading" style="position: absolute; inset: 0; background: rgba(7, 11, 20, 0.7); display: none; align-items: center; justify-content: center; z-index: 10;">
+              <span class="spinner"></span>
+            </div>
+            <div id="trend-chart" style="width: 100%; height: 440px;"></div>
+          </div>
+        </div>
+
+        <!-- Dynamic Plain-Language Interpretation Banner -->
+        <div class="interpretation-box">
+          <div class="interpretation-header">
+            <div class="interpretation-title" id="interp-title">
+              <i class="fas fa-circle-check text-cyan"></i> Trend Synthesis & Verdict
+            </div>
+            <span class="badge badge-cyan">Scientific Evaluation</span>
+          </div>
+          <p class="interpretation-text" id="interp-text">
+            Loading environmental observations and computing statistical trajectory...
+          </p>
+          <div class="interpretation-caveat" id="interp-caveat">
+            Data assimilated from NASA POWER 2.0° grid (255 nodes). Seasonality is accounted for.
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective<br>
+        <span class="text-dim">Verified 2-degree spatial grid • OLS, Sen's Slope, and Mann-Kendall hypothesis testing.</span>
+      </div>
+      <div class="footer-badges">
+        <span class="badge badge-cyan"><i class="fas fa-satellite"></i> NASA POWER</span>
+        <span class="badge badge-emerald"><i class="fas fa-square-root-variable"></i> SciPy Stats</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/trend-detective.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.trendWorkspace = new TrendDetectiveWorkspace();
+    });
+  </script>
+</body>
+</html>

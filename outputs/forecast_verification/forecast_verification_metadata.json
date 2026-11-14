@@ -1,0 +1,23 @@
+{
+    "forecast_year": 2025,
+    "model": "GCN-GRU",
+    "checkpoint": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\outputs\\model_training\\best_gcn_gru_model.pth",
+    "historical_period": "2015-01 to 2024-12",
+    "input_period": "2024-01 to 2024-12",
+    "forecast_months": 12,
+    "spatial_nodes": 255,
+    "features": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M"
+    ],
+    "adjacency": "Normalized symmetric adjacency",
+    "forecast_method": "Autoregressive",
+    "forecast_shape": [
+        12,
+        255,
+        4
+    ],
+    "finite_predictions": true
+}

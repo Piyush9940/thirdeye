@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth Explorer Map — NASA Earth Systems Trend Detective</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/charts.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Top System Telemetry Bar -->
+  <header class="status-bar">
+    <div class="status-group">
+      <span class="status-pill" id="status-server"><span class="status-dot"></span> Node.js API: Connected</span>
+      <span class="status-pill"><span class="status-dot"></span> 255 Spatial Nodes</span>
+      <span class="status-pill"><span class="status-dot"></span> 8-Nearest Neighbor Graph</span>
+    </div>
+    <div class="status-group">
+      <span>NASA Space Apps Challenge 2026</span>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <span class="brand-badge">NASA Space Apps</span>
+      <div class="brand-title">Earth Systems <span>Trend Detective</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/" class="nav-link"><i class="fas fa-globe"></i> 3D Earth</a></li>
+      <li><a href="/pages/trend-detective.html" class="nav-link"><i class="fas fa-chart-line text-cyan"></i> Trend Detective</a></li>
+      <li><a href="/pages/dataset-explorer.html" class="nav-link"><i class="fas fa-database"></i> Dataset Explorer</a></li>
+      <li><a href="/pages/overview.html" class="nav-link"><i class="fas fa-gauge"></i> Overview</a></li>
+      <li><a href="/pages/earth-explorer.html" class="nav-link active"><i class="fas fa-map-location-dot"></i> Earth Explorer</a></li>
+      <li><a href="/pages/regional-comparison.html" class="nav-link"><i class="fas fa-table-columns"></i> Comparison</a></li>
+      <li><a href="/pages/climate-explorer.html" class="nav-link"><i class="fas fa-cloud-sun-rain"></i> Climate</a></li>
+      <li><a href="/pages/methane-analysis.html" class="nav-link"><i class="fas fa-satellite"></i> Methane</a></li>
+      <li><a href="/pages/ml-insights.html" class="nav-link"><i class="fas fa-brain"></i> ML Research</a></li>
+      <li><a href="/pages/ai-assistant.html" class="nav-link"><i class="fas fa-robot"></i> AI Assistant</a></li>
+      <li><a href="/pages/reports.html" class="nav-link nav-cta"><i class="fas fa-file-pdf"></i> Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- Map Main Content -->
+  <main class="main-content">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Earth <span>Explorer</span></h1>
+        <p class="page-subtitle">Interactive Leaflet dark-matter map displaying 255 spatial graph nodes across India.</p>
+      </div>
+      <!-- Map Controls Header -->
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <select id="map-region-filter" class="form-select" style="width: auto;">
+          <option value="ALL">All Regions (255 Nodes)</option>
+          <option value="NW">Northwest (56)</option>
+          <option value="NE">Northeast (64)</option>
+          <option value="CW">Central-West (35)</option>
+          <option value="CE">Central-East (40)</option>
+          <option value="SW">Southwest (28)</option>
+          <option value="SE">Southeast (32)</option>
+        </select>
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+          <input type="checkbox" id="toggle-edges" checked> 8-NN Edges
+        </label>
+      </div>
+    </div>
+
+    <!-- Map & Inspector Layout -->
+    <div style="display: grid; grid-template-columns: 1fr 340px; gap: 1.5rem; align-items: start;">
+      <div id="leaflet-map"></div>
+
+      <!-- Node Inspector Sidebar -->
+      <div class="card" id="node-inspector" style="display: block;">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-crosshairs text-cyan"></i> Node Inspector</div>
+          <span class="badge badge-cyan" id="insp-region">Selected Node</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+          <div>
+            <span class="text-dim">Node ID:</span>
+            <span class="font-mono text-cyan" id="insp-node-id">Click any node on map</span>
+          </div>
+          <div>
+            <span class="text-dim">Coordinates:</span>
+            <span class="font-mono" id="insp-coords">—</span>
+          </div>
+          <div>
+            <span class="text-dim">Graph Connectivity:</span>
+            <span class="font-mono" id="insp-degree">—</span>
+          </div>
+          <div style="margin-top: 0.5rem; border-top: 1px solid var(--border-subtle); padding-top: 0.75rem;">
+            <div style="font-weight: 600; color: #fff; margin-bottom: 0.35rem;">Localized Decadal Trend (T2M)</div>
+            <div id="insp-status" class="text-dim font-mono" style="font-size: 0.8rem;">
+              Click any node marker to calculate its individual 10-year time series trend.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div><b>NASA Space Apps Challenge 2026</b> — Earth Systems Trend Detective</div>
+      <div class="footer-badges">
+        <span class="badge badge-cyan">Leaflet.js</span>
+        <span class="badge badge-emerald">255 Spatial Nodes</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/earth-explorer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.earthExplorer = new EarthExplorer('leaflet-map');
+    });
+  </script>
+</body>
+</html>

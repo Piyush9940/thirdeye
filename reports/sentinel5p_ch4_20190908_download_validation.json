@@ -1,0 +1,20 @@
+{
+  "product_id": "06362dca-4d18-4016-ad88-f8e6235bd53b",
+  "filename": "S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc",
+  "expected_size_bytes": 53791796,
+  "actual_size_bytes": 53791796,
+  "sha256": "826c5ff0da1f5b71d3019078716ed38d4be48a8e389bd99dd4672023c5884709",
+  "netcdf_product_group_valid": true,
+  "required_variables_valid": true,
+  "dimensions": {
+    "time": 1,
+    "scanline": 3736,
+    "ground_pixel": 215,
+    "corner": 4,
+    "layer": 12,
+    "level": 13
+  },
+  "methane_units": "1e-9",
+  "precision_units": "1e-9",
+  "path": "C:\\Users\\piyus\\OneDrive\\Desktop\\nasa\\earth-systems-trend-detective\\data\\raw\\copernicus\\sentinel5p_ch4_selected_48\\S5P_RPRO_L2__CH4____20190908T070241_20190908T084411_09859_03_020400_20221114T120625.nc"
+}

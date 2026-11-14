@@ -1,0 +1,41 @@
+{
+    "cell": "Cell 10",
+    "source_rows": 374400,
+    "reconstructed_rows": 30600,
+    "saved_grid_rows": 30600,
+    "reconstructed_nodes": 255,
+    "coordinate_mapping_complete": true,
+    "node_id_mapping_complete": true,
+    "all_nodes_have_120_months": true,
+    "all_time_space_rows_match": true,
+    "node_month_counts": {
+        "minimum": 120,
+        "maximum": 120
+    },
+    "variable_comparison": {
+        "T2M": {
+            "compared_rows": 30600,
+            "mae": 0.0,
+            "rmse": 0.0,
+            "max_absolute_difference": 0.0
+        },
+        "PRECTOTCORR": {
+            "compared_rows": 30600,
+            "mae": 0.0,
+            "rmse": 0.0,
+            "max_absolute_difference": 0.0
+        },
+        "RH2M": {
+            "compared_rows": 30600,
+            "mae": 0.0,
+            "rmse": 0.0,
+            "max_absolute_difference": 0.0
+        },
+        "WS10M": {
+            "compared_rows": 30600,
+            "mae": 0.0,
+            "rmse": 0.0,
+            "max_absolute_difference": 0.0
+        }
+    }
+}

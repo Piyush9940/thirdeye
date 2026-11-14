@@ -1,0 +1,36 @@
+{
+    "T2M": {
+        "minimum": -17.175859451293945,
+        "maximum": 37.30113220214844,
+        "mean": 19.58892250061035,
+        "negative_value_count": 369,
+        "non_finite_count": 0
+    },
+    "PRECTOTCORR": {
+        "minimum": -0.9353306293487549,
+        "maximum": 29.520658493041992,
+        "mean": 3.2984492778778076,
+        "negative_value_count": 181,
+        "non_finite_count": 0
+    },
+    "RH2M": {
+        "minimum": 18.422088623046875,
+        "maximum": 90.43975830078125,
+        "mean": 65.02284240722656,
+        "negative_value_count": 0,
+        "non_finite_count": 0
+    },
+    "WS10M": {
+        "minimum": 1.0966875553131104,
+        "maximum": 8.669187545776367,
+        "mean": 4.045323371887207,
+        "negative_value_count": 0,
+        "non_finite_count": 0
+    },
+    "plausibility_flags": {
+        "negative_precipitation": true,
+        "humidity_below_zero": false,
+        "humidity_above_100": false,
+        "negative_wind_speed": false
+    }
+}

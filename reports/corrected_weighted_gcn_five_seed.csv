@@ -1,0 +1,16 @@
+fold,evaluation_period_index,model,seed,train_observations,evaluation_observations,MAE_ppb,RMSE_ppb,R2,epochs,hidden_units,dropout,learning_rate,weight_decay,adjacency_file
+1,1,GCN_distance_weighted_corrected,7,82,67,83.63787078857422,86.30663299560547,-42.7632942199707,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+1,1,GCN_distance_weighted_corrected,21,82,67,88.57514953613281,90.20902252197266,-46.8103141784668,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+1,1,GCN_distance_weighted_corrected,42,82,67,85.36183166503906,89.31517028808594,-45.86753463745117,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+1,1,GCN_distance_weighted_corrected,77,82,67,85.59952545166016,88.41570281982422,-44.928306579589844,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+1,1,GCN_distance_weighted_corrected,123,82,67,58.907936096191406,62.79984664916992,-22.170682907104492,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+2,2,GCN_distance_weighted_corrected,7,149,11,103.39539337158203,105.20935821533203,-29.36891746520996,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+2,2,GCN_distance_weighted_corrected,21,149,11,92.4677734375,94.29410552978516,-23.394372940063477,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+2,2,GCN_distance_weighted_corrected,42,149,11,93.25810241699219,95.40017700195312,-23.970022201538086,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+2,2,GCN_distance_weighted_corrected,77,149,11,103.72516632080078,105.54122924804688,-29.560810089111328,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+2,2,GCN_distance_weighted_corrected,123,149,11,108.44953155517578,110.79327392578125,-32.67808532714844,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+3,3,GCN_distance_weighted_corrected,7,160,66,26.451950073242188,31.12413787841797,-1.0162513256072998,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+3,3,GCN_distance_weighted_corrected,21,160,66,29.506284713745117,39.89090347290039,-2.312056303024292,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+3,3,GCN_distance_weighted_corrected,42,160,66,23.224441528320312,31.872819900512695,-1.1144185066223145,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+3,3,GCN_distance_weighted_corrected,77,160,66,36.38364028930664,48.06610107421875,-3.8087010383605957,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz
+3,3,GCN_distance_weighted_corrected,123,160,66,42.33818054199219,55.348114013671875,-5.376107215881348,250,32,0.2,0.01,0.0001,adjacency_distance_weighted_rescaled_normalized.npz

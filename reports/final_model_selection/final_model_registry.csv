@@ -1,0 +1,8 @@
+model,experiment,status,selected,reason,limitations
+MLP,Original_model_comparison,Provisional reference model,True,Best equal-fold MAE and RMSE among the three models in the original model-comparison experiment.,Negative equal-fold R2; substantial period-dependent underprediction; November 2023 influenced model selection.
+GCN_distance_weighted,Original_model_comparison,Research comparator,False,"Better than original MLP on folds 1 and 2, but worse on fold 3 and worse overall.",No consistent graph advantage; negative equal-fold R2.
+GCN_unweighted,Original_model_comparison,Not selected,False,Higher equal-fold MAE and RMSE than the original MLP.,Weak performance across chronological folds.
+Month_only,Reconstructed_three_way_ablation,Diagnostic temporal reference,False,Lowest equal-fold MAE and RMSE in the reconstructed three-way ablation.,Month features are identical across spatial nodes; predictions are period-level rather than spatial.
+Climate_only,Reconstructed_three_way_ablation,Ablation comparator,False,Did not outperform month-only in the corrected three-way ablation.,Substantial negative R2 and period-dependent bias.
+Climate_plus_month,Reconstructed_three_way_ablation,Not selected,False,Did not consistently improve on the simpler feature groups.,High fold-2 error and seed variability.
+Global_training_mean,Prepared_fold_baseline,Naive baseline,False,Provides a simple reference for evaluating the effect of target-distribution shift.,Cannot capture spatial differences or temporal changes.

@@ -1,0 +1,60 @@
+# ==========================================================
+# Earth Systems Trend Detective — .gitignore
+# NASA Space Apps Challenge 2026
+# ==========================================================
+
+# --- Environment & Credentials Secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.pfx
+
+# --- Dependencies ---
+node_modules/
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python Caches & Compiled Bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# --- Runtime Temporary Data & Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Local Databases & Uploads ---
+dashboard/backend/data/store.json
+dashboard/backend/uploads/*
+!dashboard/backend/uploads/.gitkeep
+dashboard/backend/public/reports/*.pdf
+dashboard/backend/public/reports/*.json
+
+# --- Raw Satellite Data Granules (> 100MB binaries) ---
+# Raw satellite downloads (Copernicus Sentinel-5P L2 NetCDF and interim extracts)
+# Reproducible via scripts/data_acquisition with NASA Earthdata & Copernicus credentials.
+data/raw/
+data/interim/
+
+# --- OS / Editor Metadata ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
