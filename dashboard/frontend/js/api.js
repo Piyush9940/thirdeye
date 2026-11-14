@@ -74,10 +74,22 @@ class ApiClient {
   // Methane
   getMethaneSummary() { return this.request('/methane/summary'); }
 
-  // ML Insights
+  // ML Insights & Microservice Bridge
+  getMLHealth() { return this.request('/ml/health'); }
+  getMLMetadata() { return this.request('/ml/metadata'); }
   getMLMetrics() { return this.request('/ml/metrics'); }
+  getMLPredictions(params = {}) {
+    const q = new URLSearchParams(params).toString();
+    return this.request(`/ml/predictions${q ? '?' + q : ''}`);
+  }
   runMLInference(payload) {
     return this.request('/ml/inference', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+  }
+  runMLBatchInference(payload) {
+    return this.request('/ml/batch', {
       method: 'POST',
       body: JSON.stringify(payload)
     });

@@ -1,18 +1,20 @@
 const mlService = require('../services/mlService');
+const dataService = require('../services/dataService');
 const { success, error } = require('../utils/responseFormatter');
+
+const getHealth = async (req, res, next) => {
+  try {
+    const health = await mlService.getHealth();
+    return success(res, health, 'ML service health verified');
+  } catch (err) {
+    next(err);
+  }
+};
 
 const getMetadata = async (req, res, next) => {
   try {
-    const metrics = await mlService.getMetrics();
-    return success(res, {
-      model_name: metrics.model_name,
-      status: metrics.status,
-      architecture: metrics.architecture,
-      training_context: metrics.training_context,
-      features: metrics.features,
-      target: metrics.target,
-      key_findings: metrics.key_findings
-    }, 'ML metadata retrieved successfully');
+    const meta = await mlService.getMetadata();
+    return success(res, meta, 'ML metadata retrieved successfully');
   } catch (err) {
     next(err);
   }
@@ -26,8 +28,6 @@ const getMetrics = async (req, res, next) => {
     next(err);
   }
 };
-
-const dataService = require('../services/dataService');
 
 const getPredictions = async (req, res, next) => {
   try {
@@ -75,15 +75,34 @@ const postInference = async (req, res, next) => {
       seed: parseInt(seed || '42', 10),
       features: features || null
     });
-    return success(res, prediction, 'Live CPU model inference executed successfully');
+    return success(res, prediction, 'Live model inference executed successfully');
+  } catch (err) {
+    next(err);
+  }
+};
+
+const postBatchInference = async (req, res, next) => {
+  try {
+    const { fold, seed, items } = req.body;
+    if (!items || !Array.isArray(items) || items.length === 0) {
+      return error(res, 'Batch items array is required.', 400);
+    }
+    const result = await mlService.predictBatch({
+      fold: parseInt(fold || '1', 10),
+      seed: parseInt(seed || '42', 10),
+      items
+    });
+    return success(res, result, 'Batch model inference executed successfully');
   } catch (err) {
     next(err);
   }
 };
 
 module.exports = {
+  getHealth,
   getMetadata,
   getMetrics,
   getPredictions,
-  postInference
+  postInference,
+  postBatchInference
 };

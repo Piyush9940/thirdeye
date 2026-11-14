@@ -28,6 +28,11 @@ module.exports = {
   OPENAI_API_KEY: process.env.OPENAI_API_KEY || '',
   OPENAI_MODEL: process.env.OPENAI_MODEL || 'gpt-4o-mini',
 
+  // Standalone ML Inference Service (FastAPI / Render)
+  MODEL_SERVICE_URL: process.env.MODEL_SERVICE_URL || '',
+  MODEL_SERVICE_TIMEOUT_MS: parseInt(process.env.MODEL_SERVICE_TIMEOUT_MS || '10000', 10),
+  MODEL_SERVICE_API_KEY: process.env.MODEL_SERVICE_API_KEY || '',
+
   // Paths
   PATHS: {
     ROOT_DIR,

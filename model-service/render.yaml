@@ -1,0 +1,29 @@
+# ==============================================================================
+# Render Blueprint Specification — ML Inference Microservice
+# Earth Systems Trend Detective — NASA Space Apps Challenge 2026
+# ==============================================================================
+
+services:
+  - type: web
+    name: earth-trend-ml-service
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: model-service
+    buildCommand: pip install --upgrade pip && pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 2
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: INFERENCE_DEVICE
+        value: cpu
+      - key: LOG_LEVEL
+        value: INFO
+      - key: ENVIRONMENT
+        value: production
+      - key: MODEL_PACKAGE_DIR
+        value: ./models/production_reference
+      - key: MODEL_SERVICE_API_KEY
+        generateValue: false

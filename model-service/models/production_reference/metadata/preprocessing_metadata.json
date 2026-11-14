@@ -1,0 +1,148 @@
+{
+    "feature_order": [
+        "T2M",
+        "PRECTOTCORR",
+        "RH2M",
+        "WS10M",
+        "latitude",
+        "longitude",
+        "month_sin",
+        "month_cos"
+    ],
+    "feature_units": {
+        "T2M": "K",
+        "PRECTOTCORR": "mm/day",
+        "RH2M": "%",
+        "WS10M": "m/s",
+        "latitude": "degrees",
+        "longitude": "degrees",
+        "month_sin": "unitless",
+        "month_cos": "unitless"
+    },
+    "scaled_feature_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "month_feature_indices": [
+        6,
+        7
+    ],
+    "scaling_method": "Standardization using training-period statistics",
+    "folds": {
+        "1": {
+            "feature_mean": [
+                23.070378272498356,
+                2.0548782696007004,
+                57.24702559078441,
+                4.240503264875973,
+                23.0,
+                83.0
+            ],
+            "feature_std": [
+                12.417061755833934,
+                2.802681427009841,
+                22.009143969330914,
+                1.3080151594853902,
+                9.797958971132712,
+                8.640987597877148
+            ],
+            "target_mean": 1861.163330078125,
+            "target_std": 17.342565536499023,
+            "train_period_indices": [
+                0
+            ],
+            "evaluation_period_index": 1,
+            "scaled_feature_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "month_feature_indices": [
+                6,
+                7
+            ]
+        },
+        "2": {
+            "feature_mean": [
+                18.877071901797954,
+                1.2853022890868506,
+                56.227880874334595,
+                3.9053308783792984,
+                23.0,
+                83.0
+            ],
+            "feature_std": [
+                14.392788875173329,
+                2.2762462987596597,
+                19.83254020893258,
+                1.3138399742913087,
+                9.797958971132712,
+                8.640987597877148
+            ],
+            "target_mean": 1876.375244140625,
+            "target_std": 22.91864585876465,
+            "train_period_indices": [
+                0,
+                1
+            ],
+            "evaluation_period_index": 2,
+            "scaled_feature_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "month_feature_indices": [
+                6,
+                7
+            ]
+        },
+        "3": {
+            "feature_mean": [
+                20.240229324222195,
+                2.7713221681389495,
+                62.03330649082957,
+                4.086049558056725,
+                23.0,
+                83.0
+            ],
+            "feature_std": [
+                12.878051054478576,
+                4.0335882525863225,
+                20.649916946032562,
+                1.5248614541857755,
+                9.797958971132712,
+                8.640987597877148
+            ],
+            "target_mean": 1881.9632568359375,
+            "target_std": 30.613935470581055,
+            "train_period_indices": [
+                0,
+                1,
+                2
+            ],
+            "evaluation_period_index": 3,
+            "scaled_feature_indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "month_feature_indices": [
+                6,
+                7
+            ]
+        }
+    }
+}
