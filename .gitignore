@@ -52,6 +52,7 @@ data/raw/
 data/interim/
 
 # --- OS / Editor Metadata ---
+.netlify/
 .DS_Store
 Thumbs.db
 .vscode/

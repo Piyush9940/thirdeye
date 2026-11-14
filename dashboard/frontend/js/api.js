@@ -3,8 +3,9 @@
  */
 
 class ApiClient {
-  constructor(baseUrl = '/api') {
-    this.baseUrl = baseUrl;
+  constructor(baseUrl) {
+    const customBase = (typeof window !== 'undefined' && (window.API_BASE_URL || localStorage.getItem('API_BASE_URL')));
+    this.baseUrl = baseUrl || customBase || '/api';
   }
 
   async request(endpoint, options = {}) {

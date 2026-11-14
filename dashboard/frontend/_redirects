@@ -1,0 +1,19 @@
+# ==============================================================================
+# Netlify Redirects & API Proxy Configuration
+# Earth Systems Trend Detective
+# ==============================================================================
+
+# Proxy API calls to backend when configured or keep relative fallback
+# /api/*  https://earth-systems-backend.onrender.com/api/:splat  200
+
+# Client-side SPA fallback for subpages if accessed directly without .html
+/overview               /pages/overview.html            200
+/trend-detective        /pages/trend-detective.html     200
+/dataset-explorer       /pages/dataset-explorer.html    200
+/earth-explorer         /pages/earth-explorer.html      200
+/regional-comparison    /pages/regional-comparison.html 200
+/climate-explorer       /pages/climate-explorer.html    200
+/methane-analysis       /pages/methane-analysis.html    200
+/ml-insights            /pages/ml-insights.html         200
+/ai-assistant           /pages/ai-assistant.html        200
+/reports                /pages/reports.html             200

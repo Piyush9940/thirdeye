@@ -59,11 +59,18 @@ def verify_api_key(x_api_key: Optional[str] = Header(None)):
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request, exc):
     """Formats validation errors into clean structured JSON."""
+    formatted_errors = []
+    for err in exc.errors():
+        formatted_errors.append({
+            "loc": [str(x) for x in err.get("loc", [])],
+            "msg": str(err.get("msg", "")),
+            "type": str(err.get("type", ""))
+        })
     return JSONResponse(
         status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
         content={
             "error": "Validation Error",
-            "detail": exc.errors(),
+            "detail": formatted_errors,
             "status": "invalid_input"
         }
     )
