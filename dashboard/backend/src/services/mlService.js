@@ -29,7 +29,7 @@ class MLService {
         clearTimeout(timeout);
         if (res.ok) {
           const data = await res.json();
-          return { ...data, remote_service: true, service_url: this.serviceUrl };
+          return { ...data, remote_service: true, service_origin: 'fastapi_microservice', service_url: this.serviceUrl };
         }
       } catch (err) {
         logger.warn(`[MLService] Remote healthcheck failed (${err.message}). Reporting local fallback status.`);

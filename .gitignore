@@ -32,6 +32,7 @@ build/
 *.egg-info/
 
 # --- Runtime Temporary Data & Logs ---
+.service_pids.json
 *.log
 npm-debug.log*
 yarn-debug.log*
